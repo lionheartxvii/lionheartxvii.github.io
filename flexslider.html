@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexslider</title>
+
+    <link rel="stylesheet" href="./libs/prism.css">
+
+    <link rel="stylesheet" href="./css/dokumentation.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Anonymous+Pro&family=Cutive+Mono&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Lato:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+   <!-- Flexslider
+    1.1 Datei auf GitHub runterladen 
+    1.2 Flexslider einbinden, wie in der Website gezeigt: https://woocommerce.com/flexslider/#
+    In dem Script ist ein veraltetes jQuery drin, das wie folgt korrigiert werden muss:
+        <script type="text/javascript" charset="utf-8">
+            $(window).on('load', function() {
+            $('.flexslider').flexslider();
+            });
+        </script>
+        Außerdem muss das komplette jQuery runtergeladen sein
+    1.3 Bilder austauschen
+    1.4 CSS anpassen
+        .big-slider{
+            max-width: 700px;
+            margin: 4rem auto 2rem auto;
+        }
+
+
+    2.1 Wenn man einen weiteren Slider einbauen will
+    2.2 Html vorbereiten
+        <div class="small-slider">
+        <div class="slider1">
+        </div>
+        <div class="slider2">
+        </div>
+    </div>
+    2.3 Html für die Bilder dementsprechend in die div container kopieren
+    2.4 Bilder anpassen
+    2.5 In der CSS anpassen, braucht eine Breite, um die Slide Animation einzusetzen
+        .small-slider{
+            max-width: 700px;
+            margin: 4rem auto 2rem auto;
+            display: flex;
+        }
+
+        .small-slider > div{
+            flex-basis: 50%;
+        }
+
+    Um die Konfigurationen an den Flexslider weiterzugeben, muss das in die Funktionsaufruf von Flexslider einfügen, indem man ein
+    Objekt übergibt
+    Beispiel:
+        $(window).on('load', function() {
+      $('.flexslider').flexslider({
+        animation: "slide",
+      });
+
+    Wenn man sie einzeln ansprechen will, muss man die Elternelemente ansprechen
+    Beispiel:
+        $(window).on('load', function() {
+      $('.big-slider .flexslider').flexslider({
+        animation: "slide",
+      });
+
+    Um die Flexslider ohne Navigationselemente einzubauen:
+    Beispiel:
+          $('.small-slider .flexslider').flexslider({
+        directionNav: false,
+        controllNav: false,
+      });
+
+-->
+
+
+<body>
+
+
+
+  <div id="mainnav">
+
+    <div class="mainnav-content">
+    
+    
+        <div class="menuicon-container">
+             
+            <svg id="menu-toggle" viewBox="0 0 100 100">
+                <path id="top" class="cls-1" d="M62.73,37.27,37.27,62.73c-2.92,2.92-7.49,6.14-12.63,6.14-9.84,0-16.52-7.64-16.52-15.29,0-10.17,7.28-16.79,16-16.79H68"/>
+                <path id="center" class="cls-1" d="M32,50H68"/>
+                <path id="bottom" class="cls-1" d="M37.33,62.72,62.79,37.27c2.92-2.92,7.5-6.14,12.63-6.14,9.84,0,16.52,7.64,16.52,15.29,0,10.17-7.28,16.79-16,16.79H32.06"/>
+            </svg>
+    
+        </div>     
+    
+        <a class="welcome" href="index.html">back home</a>
+        
+    
+    </div>
+        <div class="buntelinie"></div>
+    </div>
+
+    <nav id="menucontent">
+        <ul>
+            <li> <a href="scrollmagic.html">Scroll into View</a> </li>
+            <li> <a href="parallax.html">Parallax</a> </li>
+            <li> <a href="chocolat.html">Chocolat</a> </li>
+            <li> <a href="svganimation.html">SVG Animation</a> </li>
+            <li> <a href="accordion.html">Accordion</a> </li>
+            <li> <a href="typewriter.html">Typewriter</a> </li>
+            <li> <a href="flexslider.html">Flexslider</a> </li>
+            <li> <a href="animejs.html">AnimeJS</a> </li>
+            <li> <a href="leaflet.html">Leaflet</a> </li>
+            <li> <a href="hamburgermenu.html">Hamburgermenu</a> </li>
+            <li> <a href="jumpermenu.html">Jumpermenu</a> </li>
+            <li> <a href="tippyjs.html">Tippyjs</a> </li>
+        </ul>
+    </nav>      
+
+
+    <div class="page">
+
+            <h1>Flexslider</h1>
+
+            <h2>1. Flexslider herunterladen</h2>
+            <p>Datei auf GitHub runterladen und im Libs Ordner entpacken:</p> 
+             <a href="https://github.com/woocommerce/FlexSlider">Flexslider hier herunterladen</a>
+            
+            
+             <h2>2. Flexslider einbinden</h2>
+            <p>Die Ordnerstruktur muss für das Einbinden angepasst werden.</p>
+<pre><code class="language-html line-numbers">&lt;script src=&quot;./libs/flexslider/jquery.flexslider-min.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./libs/flexslider/flexslider.css&quot;&gt;
+</code></pre>
+
+
+            <h2>3. Flexslider initiieren</h2>
+            <p>Flexslider einbinden, wie auf der Website gezeigt: </p>
+            <a href="https://woocommerce.com/flexslider/#">Flexslider Tutorial</a>
+            <p>In dem Script ist ein veraltetes jQuery drin, das wie folgt korrigiert werden muss:</p>
+  <pre><code class="language-javascript line-numbers">&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
+    $(window).on(&#39;load&#39;, function() {
+    $(&#39;.flexslider&#39;).flexslider();
+    });
+&lt;/script&gt;</code></pre>
+<p>Außerdem muss das komplette jQuery runtergeladen und eingebunden sein.</p>
+
+
+
+            <h2>4. Html Gerüst erstellen</h2>
+    <p>Der Flexslider soll zwei Bilder nebeneinander zeigen und je nachdem wie viele Bilder der Slider haben soll, fügt man diese im HTML hinzu. <br>
+        Der Eltern Container muss die Klasse 'flexslider' haben und danach soll eine ul mit der Klasse 'slides' erstellt werden, in denen sich die Listen Elemente der Bilder befinden.
+        </p>
+<pre><code class="language-html line-numbers">&lt;div class=&quot;flexslider&quot;&gt;
+    &lt;ul class=&quot;slides&quot;&gt;
+      &lt;li&gt;
+        &lt;img src=&quot;./assets/acrylpour1.jpg&quot; /&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;img src=&quot;./assets/acrylpour8.jpg&quot; /&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;img src=&quot;./assets/acrylpour14.jpg&quot; /&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;img src=&quot;./assets/acrylpour6.jpg&quot; /&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+            <h2>5. CSS einfügen</h2>
+            <p>Die Container stylen und den Border entfernen.</p>
+<pre><code class="language-css line-numbers">#flexslider{
+    height: 100vh;
+    max-width: 100vw;
+    background-color: #18182c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexslider{
+    width: 60vw;
+    height: 42vh;
+    background-color: #18182c;
+    border: 0px;
+}</code></pre>            
+
+
+<h2>6. Script anpassen</h2>
+            <p>Auf dieser Website sind alle Optionen aufgelistet, welche man auf die Slider anwenden kann:
+                <a href="https://woocommerce.com/flexslider/#">Flexslider Tutorial</a>
+        </p>
+<pre><code class="language-javascript line-numbers">$(window).on(&#39;load&#39;, function() {
+    $(&#39;.flexslider&#39;).flexslider({
+      animation: &quot;slide&quot;,
+      slideshow: true,
+      slideshowSpeed: 7000,
+      easing: &quot;swing&quot;,
+      itemWidth: 460,
+      itemMargin: 5, 
+      maxItems: 2,  
+      smoothHeight: true,
+    });
+});
+</code></pre>  
+
+
+
+
+</div>
+
+           
+    <script src="./libs/prism.js"></script>
+    <script src="./javascipt/scripts.js"></script>
+
+
+    <script>
+          var menuToggle = document.querySelector("#menu-toggle");
+var mnclasses = menucontent.classList;
+menuToggle.addEventListener("click", function (event) {
+    mnclasses.toggle('active');
+});
+
+
+document.getElementById('menu-toggle').addEventListener('click', function (event) {
+    if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        this.classList.add('backwards');
+    } else {
+        this.classList.add('active');
+        this.classList.remove('backwards');
+    }
+})
+    </script>
+</body>
+</html>

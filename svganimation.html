@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Animation</title>
+
+    <link rel="stylesheet" href="./libs/prism.css">
+
+    <link rel="stylesheet" href="./css/dokumentation.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Anonymous+Pro&family=Cutive+Mono&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Lato:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <div id="mainnav">
+
+        <div class="mainnav-content">
+        
+        
+            <div class="menuicon-container">
+                 
+                <svg id="menu-toggle" viewBox="0 0 100 100">
+                    <path id="top" class="cls-1" d="M62.73,37.27,37.27,62.73c-2.92,2.92-7.49,6.14-12.63,6.14-9.84,0-16.52-7.64-16.52-15.29,0-10.17,7.28-16.79,16-16.79H68"/>
+                    <path id="center" class="cls-1" d="M32,50H68"/>
+                    <path id="bottom" class="cls-1" d="M37.33,62.72,62.79,37.27c2.92-2.92,7.5-6.14,12.63-6.14,9.84,0,16.52,7.64,16.52,15.29,0,10.17-7.28,16.79-16,16.79H32.06"/>
+                </svg>
+        
+            </div>     
+        
+            <a class="welcome" href="index.html">back home</a>
+            
+        
+        </div>
+            <div class="buntelinie"></div>
+        </div>
+
+        <nav id="menucontent">
+            <ul>
+                <li> <a href="scrollmagic.html">Scroll into View</a> </li>
+                <li> <a href="parallax.html">Parallax</a> </li>
+                <li> <a href="chocolat.html">Chocolat</a> </li>
+                <li> <a href="svganimation.html">SVG Animation</a> </li>
+                <li> <a href="accordion.html">Accordion</a> </li>
+                <li> <a href="typewriter.html">Typewriter</a> </li>
+                <li> <a href="flexslider.html">Flexslider</a> </li>
+                <li> <a href="animejs.html">AnimeJS</a> </li>
+                <li> <a href="leaflet.html">Leaflet</a> </li>
+                <li> <a href="hamburgermenu.html">Hamburgermenu</a> </li>
+                <li> <a href="jumpermenu.html">Jumpermenu</a> </li>
+                <li> <a href="tippyjs.html">Tippyjs</a> </li>
+            </ul>
+        </nav>      
+
+
+
+    <div class="page">
+
+            <h1>SVG Animation</h1>
+
+            <h2>1. Anime.js herunterladen und einbauen</h2>
+            <p>Auf <a href="https://github.com/juliangarnier/anime/">Github</a> herunterladen. <br>
+                Und im HTML das Script einbauen:
+            </p> 
+            <pre><code class="language-html line-numbers">&lt;script src=&quot;./libs/anime-master/lib/anime.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+            <h2>2. Datei exportieren</h2>
+            <p>In Illustrator die Schrift in Pfade umwandeln und die Gruppen benennen.
+                Unter 'für Bildschirme exportieren', darauf achten, dass SVG angewählt ist. 
+                Bei SVG Einstellungen darauf achten, dass interne CSS ausgewählt ist.</p> 
+
+            
+             <h2>3. SVG hinzufügen</h2>
+            <p>Einen div.svg-container erstellen. <br>
+                Die SVG in VSC öffnen und den Code in den svg-container kopieren. <br>
+                Gegebenfalls die Style Attribute in CSS einfügen. <br>
+                Der SVG die Klasse 'imd' geben. Mit 'imd path' in der css ansprechbar.
+
+            </p>
+
+            <h2>4. CSS für Grafik</h2>
+<pre><code class="language-css line-numbers">#svg-container{
+    width: 480px;
+    opacity: 0;
+    transition: all 1s;
+}
+    
+#svg-container.active{
+    opacity: 1;
+}
+    
+#imd path{
+    fill: transparent;
+    stroke: #7321df;
+    stroke-width: 4px;
+}
+</code></pre>            
+
+
+<h2>5. Script hinzufügen</h2>
+            <p>In der Dokumentation von Anime.js unter SVG folgenden Code heraus kopieren, in ein Script einfügen und anpassen:
+        </p>
+<pre><code class="language-javascript line-numbers">
+    function AnimeSVG(event) {
+        //console.log(&quot;Event fired! (&quot; + event.type + &quot;)&quot;);
+        anime({
+            targets: &#39;#imd path&#39;,
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: &#39;easeInOutSine&#39;,
+            duration: 1000,
+            delay: function (el, i) {
+                return i * 150
+            },
+            begin: function (anime) {   //callback begin-&gt;sobald anime startet
+                SVGScene.remove();      //Scene aus controller entfernen 
+            }                           //um mehrfaches triggern zu verhindern
+        });
+    }
+    
+    var SVGScene = new ScrollMagic.Scene({
+            triggerElement: &#39;#svg-container&#39;,
+            triggerHook: 0.35,
+        })
+        .addTo(controller)
+        // .addIndicators({name: &#39;SVG&#39;})
+        .setClassToggle(&#39;#svg-container&#39;, &quot;active&quot;)
+        .on(&quot;enter&quot;, AnimeSVG);</code></pre>  
+
+
+</div>
+
+           
+    <script src="./libs/prism.js"></script>
+    <script src="./javascipt/scripts.js"></script>
+
+    <script>
+            var menuToggle = document.querySelector("#menu-toggle");
+var mnclasses = menucontent.classList;
+menuToggle.addEventListener("click", function (event) {
+    mnclasses.toggle('active');
+});
+
+
+document.getElementById('menu-toggle').addEventListener('click', function (event) {
+    if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        this.classList.add('backwards');
+    } else {
+        this.classList.add('active');
+        this.classList.remove('backwards');
+    }
+})
+
+    </script>
+</body>
+</html>

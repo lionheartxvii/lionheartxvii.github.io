@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeJS</title>
+
+    <link rel="stylesheet" href="./libs/prism.css">
+    <link rel="stylesheet" href="./css/dokumentation.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Anonymous+Pro&family=Cutive+Mono&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Lato:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+    
+    <div id="mainnav">
+
+        <div class="mainnav-content">
+        
+        
+            <div class="menuicon-container">
+                 
+                <svg id="menu-toggle" viewBox="0 0 100 100">
+                    <path id="top" class="cls-1" d="M62.73,37.27,37.27,62.73c-2.92,2.92-7.49,6.14-12.63,6.14-9.84,0-16.52-7.64-16.52-15.29,0-10.17,7.28-16.79,16-16.79H68"/>
+                    <path id="center" class="cls-1" d="M32,50H68"/>
+                    <path id="bottom" class="cls-1" d="M37.33,62.72,62.79,37.27c2.92-2.92,7.5-6.14,12.63-6.14,9.84,0,16.52,7.64,16.52,15.29,0,10.17-7.28,16.79-16,16.79H32.06"/>
+                </svg>
+        
+            </div>     
+        
+            <a class="welcome" href="index.html">back home</a>
+            
+        
+        </div>
+            <div class="buntelinie"></div>
+        </div>
+
+        <nav id="menucontent">
+            <ul>
+                <li> <a href="scrollmagic.html">Scroll into View</a> </li>
+                <li> <a href="parallax.html">Parallax</a> </li>
+                <li> <a href="chocolat.html">Chocolat</a> </li>
+                <li> <a href="svganimation.html">SVG Animation</a> </li>
+                <li> <a href="accordion.html">Accordion</a> </li>
+                <li> <a href="typewriter.html">Typewriter</a> </li>
+                <li> <a href="flexslider.html">Flexslider</a> </li>
+                <li> <a href="animejs.html">AnimeJS</a> </li>
+                <li> <a href="leaflet.html">Leaflet</a> </li>
+                <li> <a href="hamburgermenu.html">Hamburgermenu</a> </li>
+                <li> <a href="jumpermenu.html">Jumpermenu</a> </li>
+                <li> <a href="tippyjs.html">Tippyjs</a> </li>
+            </ul>
+        </nav>      
+
+
+        
+
+    <div class="page">
+
+            <h1>AnimeJS</h1>
+
+            <h2>1. Anime.js herunterladen und einbauen</h2>
+            <p>Auf <a href="https://github.com/juliangarnier/anime/">Github</a> herunterladen. <br>
+                Und im HTML das Script einbauen:
+            </p> 
+            <pre><code class="language-html line-numbers">&lt;script src=&quot;./libs/anime-master/lib/anime.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+
+            <h2>2. HTML Struktur</h2>
+            <p>Es sollen viele Div Elememte aneinander gereiht werden. Dafür kann man entweder eine section 
+                mit der Klasse 'grid' erstellen, viele divs einfügen und daraus ein grid bilden. Oder man 
+                erstellt ebenfalls eine section und erstellt die divs mit einem Script. <br>
+                <br> Beispiel 1  </p> 
+<pre><code class="language-html line-numbers">&lt;section class=&quot;grid&quot;&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/section&gt;</code></pre> 
+
+<br>
+
+<p>Beispiel 2</p>
+
+<pre><code class="language-html line-numbers">&lt;section class=&quot;grid&quot; id =&quot;gridTest&quot;&gt;&lt;/section&gt;</code></pre> 
+           
+
+            
+        
+
+            <h2>4. CSS für Grid</h2>
+<pre><code class="language-css line-numbers">section.grid {
+    display: grid;
+    gap: 10px;
+    min-width: 30vw;
+    min-height: 50vh;
+}
+
+section.grid>div {
+    max-height: 12px;
+    background-color: #00ffff;
+}
+</code></pre>            
+
+
+<h2>5. Script hinzufügen</h2>
+            <p> Durch die Funktion wird ein Grid aus vielen Divboxen erstellt. Diese werden im HTML eingesetzt 
+                und durch AnimeJS wird die Animation definiert. Außerdem kann man bestimmen wie viele Reihen und Zeilen das Grid haben soll.
+        </p>
+<pre><code class="language-javascript line-numbers">
+    //Funktion erzeugt ein x,y Feld an Divboxen, welche eine Animation abspielen
+    //Animation selbst ist in der Funktion definiert 
+    function GridAnime(x, y) {
+        text = &quot;&quot;;
+        var element;
+    
+        //in for-schleife werden x*y divboxen geschrieben
+        for (i = 0; i &lt; (x * y); i++) {
+            text += &quot;&lt;div&gt;&lt;/div&gt;&quot;;
+        }
+        //die Divboxen werden an gebrauchter Stelle der HTML eingefügt
+        element = document.getElementById(&quot;gridTest&quot;);
+        element.style.gridTemplateColumns = (&quot;repeat(&quot; + x + &quot;, 1fr)&quot;);
+        element.innerHTML = text;
+    
+        //Animation mit animejs für divs
+        anime({
+            targets: &#39;.grid &gt; div&#39;,
+            scale: [{
+                    value: .1,
+                    easing: &#39;easeOutSine&#39;,
+                    duration: 500
+                },
+                {
+                    value: 1,
+                    easing: &#39;easeInOutQuad&#39;,
+                    duration: 600
+                },
+                {
+                    value: 1,
+                    easing: &#39;easeInOutQuad&#39;,
+                    duration: 700
+                },
+    
+            ],
+            backgroundColor: [{
+                    value: &#39;#E23FE3&#39;,
+                    easing: &#39;linear&#39;,
+                    duration: 500
+                },
+                {
+                    value: &#39;#7321df&#39;,
+                    easing: &#39;linear&#39;,
+                    duration: 600
+                },
+                {
+                    value: &#39;#FF0561&#39;,
+                    easing: &#39;linear&#39;,
+                    duration: 700
+                },
+            ],
+            delay: anime.stagger(100, {
+                from: &#39;center&#39;
+            }),
+            direction: &#39;alternate&#39;,
+            loop: true,
+            easing: &#39;easeInOutSine&#39;,
+        });
+    }
+    
+    //Bestimmen wie viele Reihen und Zeilen das Grid haben soll
+    GridAnime(20, 5);</code></pre>  
+
+
+</div>
+
+           
+    <script src="./libs/prism.js"></script>
+    <script src="./javascipt/scripts.js"></script>
+    
+
+    <script>
+        
+    var menuToggle = document.querySelector("#menu-toggle");
+var mnclasses = menucontent.classList;
+menuToggle.addEventListener("click", function (event) {
+    mnclasses.toggle('active');
+});
+
+
+document.getElementById('menu-toggle').addEventListener('click', function (event) {
+    if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        this.classList.add('backwards');
+    } else {
+        this.classList.add('active');
+        this.classList.remove('backwards');
+    }
+})
+    </script>
+</body>
+</html>

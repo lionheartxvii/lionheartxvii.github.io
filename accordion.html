@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+
+    <link rel="stylesheet" href="./libs/prism.css">
+    <link rel="stylesheet" href="./css/dokumentation.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Anonymous+Pro&family=Cutive+Mono&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Lato:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+
+        <style>
+            
+.accordion-toggle:before{
+    content: '\25B8';
+    display: inline-block;
+    padding-right: 0.5rem;
+    transition: all 0.5s;
+    transform-origin: 30% 50%;
+}
+
+.accordion-toggle.active:before{
+    transform: rotate(90deg);
+}
+
+.accordion-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.accordion-toggle:hover{
+    cursor: pointer;
+}
+
+
+.example{
+    background-color: rgb(126, 0, 230);
+    padding: 1rem;
+}
+        </style>
+</head>
+
+
+<body>
+
+
+        <div id="mainnav">
+
+            <div class="mainnav-content">
+            
+            
+                <div class="menuicon-container">
+                     
+                    <svg id="menu-toggle" viewBox="0 0 100 100">
+                        <path id="top" class="cls-1" d="M62.73,37.27,37.27,62.73c-2.92,2.92-7.49,6.14-12.63,6.14-9.84,0-16.52-7.64-16.52-15.29,0-10.17,7.28-16.79,16-16.79H68"/>
+                        <path id="center" class="cls-1" d="M32,50H68"/>
+                        <path id="bottom" class="cls-1" d="M37.33,62.72,62.79,37.27c2.92-2.92,7.5-6.14,12.63-6.14,9.84,0,16.52,7.64,16.52,15.29,0,10.17-7.28,16.79-16,16.79H32.06"/>
+                    </svg>
+            
+                </div>     
+            
+                <a class="welcome" href="index.html">back home</a>
+                
+            
+            </div>
+                <div class="buntelinie"></div>
+            </div>
+    
+            <nav id="menucontent">
+                <ul>
+                    <li> <a href="scrollmagic.html">Scroll into View</a> </li>
+                    <li> <a href="parallax.html">Parallax</a> </li>
+                    <li> <a href="chocolat.html">Chocolat</a> </li>
+                    <li> <a href="svganimation.html">SVG Animation</a> </li>
+                    <li> <a href="accordion.html">Accordion</a> </li>
+                    <li> <a href="typewriter.html">Typewriter</a> </li>
+                    <li> <a href="flexslider.html">Flexslider</a> </li>
+                    <li> <a href="animejs.html">AnimeJS</a> </li>
+                    <li> <a href="leaflet.html">Leaflet</a> </li>
+                    <li> <a href="hamburgermenu.html">Hamburgermenu</a> </li>
+                    <li> <a href="jumpermenu.html">Jumpermenu</a> </li>
+                    <li> <a href="tippyjs.html">Tippyjs</a> </li>
+                </ul>
+            </nav>      
+
+
+
+
+
+    <div class="page">
+
+        <h1>Accordion</h1>
+
+        <h2>1. CSS und Javascript-Datei einbetten</h2>
+
+        <p>Es bietet sich an, das Javascript am Ende des HTML-Dokuments (vor schließendem body-tag) zu platzieren. Es
+            muss im Quellcode nach dem Accordion-Inhalten platziert werden.</p>
+
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;mylib/accordion.css&quot;&gt;
+&lt;script src=&quot;mylib/accordion.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+    <h2>2. Folgende HTML-Struktur für Accordion-Funktionalität einsetzten</h2>
+
+<pre><code id="example-code">
+</code></pre>
+
+
+
+<h2>3. CSS einfügen</h2>
+
+<pre><code class="language-css line-numbers">
+    #accordion{
+        height: 100vh;
+        max-width: 100vw;
+        background-color: #121427;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #accordion-section{
+        width: 60vw;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        padding: 2rem 0;
+        background-image: linear-gradient( #5F24AA, #2D0B6E);
+    }
+    
+    .accordionheadline{
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-size: 22px;
+    }
+    
+    .accordion-content p{
+        font-family: 'Nunito', sans-serif;
+        font-weight: 300;
+        
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin: 0 5rem 0 5rem;
+    }
+    
+    pre[class*="language-"] {
+        margin: 0 0;
+    }
+    
+    
+    h2.accordion-toggle{
+        font-weight: 800;
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+    
+    .accordion-toggle{
+        padding: 0.1rem 3rem 0 3rem;
+    }
+    </code></pre>
+
+
+
+    <h2>4. CSS Animation einfügen</h2>
+
+    <pre><code class="language-css line-numbers">.accordion-toggle:before{
+        content: '\25B8';
+        display: inline-block;
+        padding-right: 0.5rem;
+        transition: all 0.5s;
+        transform-origin: 30% 50%;
+    }
+    
+    .accordion-toggle.active:before{
+        transform: rotate(90deg);
+    }
+    
+    .accordion-content{
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.5s; 
+    }
+    
+    .accordion-toggle:hover{
+        cursor: pointer;
+    }</code></pre>
+
+
+    <h2>Beispiel</h2>
+<div id="example-div-container" class="example"><p class="accordion-toggle" data-accordionmode="single">you wanna see?</p>
+<div class="accordion-content">
+<p> visible/hidden content-html...</p>
+</div>
+<p class="accordion-toggle" data-accordionmode="single">you wanna see?</p>
+<div class="accordion-content">
+<p> visible/hidden content-html...</p>
+</div>
+</div><!--example-->
+
+    <h2>Einstellung Einzel- / multipler Modus</h2>
+    <p>
+        Soll immer nur ein Inhalt entfaltet werden (nicht gewählte Inhalte werden versteckt), 
+        so muss dem ersten "accordion-toggle"-Element das Attribut data-accordionmode="single" zugewiesen werden.
+    </p>
+
+<pre><code class="language-html line-numbers">&lt;h2 class=&quot;accordion-toggle&quot; data-accordionmode=&quot;single&quot;&gt;you wanna see?&lt;/h2&gt;
+&lt;div class=&quot;accordion-content&quot;&gt;
+&lt;p&gt; visible/hidden content-html...&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 class=&quot;accordion-toggle&quot; data-accordionmode=&quot;single&quot;&gt;you wanna see?&lt;/h2&gt;
+&lt;div class=&quot;accordion-content&quot;&gt;
+&lt;p&gt; visible/hidden content-html...&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2>Dateien und Pfade</h2>
+
+<pre><code class="language-treeview">mylib
+|--accordion.js
+|--accordion.css
+</code></pre>
+
+    </div> <!--page-->
+
+<script src="./libs/prism.js"></script>
+<script src="./libs/accordion.js"></script>
+<script src="./javascipt/scripts.js"></script>
+
+
+<script>
+    function htmlEntities(str) {
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+    let exampleDivContainerCode = document.getElementById('example-div-container').innerHTML;
+
+    let exampleCodeView = document.getElementById('example-code');
+
+    exampleCodeView.classList.add('language-html', 'line-numbers')
+
+    exampleCodeView.innerHTML = htmlEntities(exampleDivContainerCode);
+
+    Prism.highlightElement(exampleCodeView);
+
+
+
+    var menuToggle = document.querySelector("#menu-toggle");
+var mnclasses = menucontent.classList;
+menuToggle.addEventListener("click", function (event) {
+    mnclasses.toggle('active');
+});
+
+
+document.getElementById('menu-toggle').addEventListener('click', function (event) {
+    if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        this.classList.add('backwards');
+    } else {
+        this.classList.add('active');
+        this.classList.remove('backwards');
+    }
+})
+
+
+</script>
+
+
+</body>
+</html>

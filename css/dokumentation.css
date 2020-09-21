@@ -1,0 +1,280 @@
+/*    font-family: 'Anonymous Pro', monospace;
+
+    font-family: 'Cutive Mono', monospace;
+
+    font-family: 'Nunito', sans-serif;
+
+    font-family: 'Oswald', sans-serif;
+*/
+
+html, body{
+margin: 0;
+padding: 0;
+}
+
+body{
+    background-color: #18182c;
+    color: white;
+}
+
+
+
+
+.page{
+    max-width: 60vw;
+    margin: 7rem auto;
+}
+
+h1{
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 14px;
+    font-size: 26px;
+    padding-top: 1.7rem;
+}
+
+h2, h3{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding-top: 2rem;
+}
+
+p{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+}
+
+a{
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    color: rgb(158, 57, 241);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+code{
+    font-family: 'Cutive Mono', monospace;
+}
+
+.example{
+    background-color: rgb(126, 0, 230);
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
+/* Hamburgermenu */
+
+.cls-1 {
+    fill: none;
+    stroke: #7321df;
+    stroke-width: 3px;
+    width: 10px;
+  }
+
+  #top, #bottom{
+      stroke-dasharray: 36px 200px;
+      stroke-dashoffset: 127;
+  }
+
+  .active #top,
+  .active #bottom{
+      animation-name: hamburger2x;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+  }
+
+  .backwards #top,
+  .backwards #bottom{
+      animation-name: x2hamburger;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+  }
+
+  @keyframes hamburger2x {
+      0%{
+          stroke-dashoffset: 127;
+          stroke: #7321df;
+          stroke-dasharray: 36px 200px;
+      }
+
+      25%{
+          stroke: #1fddff ;
+      }
+
+      50%{
+          stroke: #ff0eff;
+          stroke-dasharray: 66px 170px;
+      }
+
+      75%{
+          stroke: #ff0550;
+      }
+
+      100%{
+          stroke-dashoffset: 236;
+          stroke: #7321df;
+          stroke-dasharray: 36px 200px;
+      }
+  }
+
+  @keyframes x2hamburger {
+      0%{
+          stroke: #7321df;
+          stroke-dashoffset: 236;
+          stroke-dasharray: 36px 200px;
+      }
+
+      25%{
+          stroke: #ff0550;
+      }
+
+      50%{
+          stroke:  #ff0eff;
+          stroke-dasharray: 26px 210px;
+          
+      }
+
+      75%{
+          stroke:#1fddff;
+      }
+
+      100%{
+          stroke-dashoffset: 127;
+          stroke: #7321df;
+          stroke-dasharray: 36px 200px;
+
+      }
+  }
+
+  #center{
+      transform-origin: 50px 50px;
+      transform: rotate( 0deg ) ;
+      transition: all 0.5s;
+  }
+
+  .active #center{
+      transform: rotate( 225deg ) ;
+  }
+
+  .menuicon-container{
+    position: relative;
+      max-width: 65px;
+      margin-top: 5px;
+}
+
+/* mainnav */
+
+#mainnav {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    height: 10vh;
+    background-color: #0f101b;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.mainnav-content{
+    min-width: 64vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#mainnav p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-left: 0.7rem;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.buntelinie {
+    height: 2px;
+    width: 100vw;
+    background-color: #7235c1; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #7235c1, #3296f6);
+    align-self: flex-end;
+}
+
+
+
+/* NAV CONTENT */
+  
+#menucontent{
+    position: fixed;
+      width: 100vw;
+      bottom: 100vh;
+      transition: all 0.8s;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    z-index: 900;
+  }
+  
+  #menucontent.active{
+  bottom: calc( 100vh - 10.7rem )
+  }
+  
+  #menucontent ul{
+      list-style: none;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      background-color: #0f101b;
+      padding: 1rem 15rem 1rem 15rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+  
+  #menucontent a{
+      
+      font-family: 'Lato', sans-serif;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: lowercase;
+      padding: 1rem 0rem 0.2rem 4rem;
+      display: block; 
+  }
+
+/*   
+  #menucontent::after{
+      color: #475372;
+      position: fixed;
+      left: 0; top: 0;
+      padding: 1rem 1rem;
+      
+  }
+*/
+
+  #menucontent a:hover{
+      color: #3296f6;
+  }
+  
+
+.welcome{
+    padding-left: 1rem;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+

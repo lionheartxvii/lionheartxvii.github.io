@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollmagic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        html, body{
+            margin: 0; padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        section{
+            min-height: 100vh;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 3rem;
+            background-color: magenta;
+            color: #fff;
+        }
+
+        section:nth-child(odd){
+            background-color:orange;
+        }
+
+        .big,
+        .einblenden{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <section id="item-1">
+        <div>Section 1</div>
+    </section>
+    <section id="item-2">
+        <div class="einblenden">Section 2</div>
+    </section>
+    <section id="item-3">
+        <div>Section 3</div>
+        <div class="big">MovingElement</div>
+    </section>
+    <section id="item-4">
+        <div>Section 4</div>
+    </section>
+    <section id="item-5">
+        <div>Section 5</div>
+    </section>
+    
+</body>
+</html>

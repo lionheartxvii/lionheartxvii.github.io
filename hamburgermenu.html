@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+
+    <link rel="stylesheet" href="./libs/prism.css">
+
+    <link rel="stylesheet" href="./css/dokumentation.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Anonymous+Pro&family=Cutive+Mono&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Lato:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <div id="mainnav">
+
+        <div class="mainnav-content">
+        
+        
+            <div class="menuicon-container">
+                 
+                <svg id="menu-toggle" viewBox="0 0 100 100">
+                    <path id="top" class="cls-1" d="M62.73,37.27,37.27,62.73c-2.92,2.92-7.49,6.14-12.63,6.14-9.84,0-16.52-7.64-16.52-15.29,0-10.17,7.28-16.79,16-16.79H68"/>
+                    <path id="center" class="cls-1" d="M32,50H68"/>
+                    <path id="bottom" class="cls-1" d="M37.33,62.72,62.79,37.27c2.92-2.92,7.5-6.14,12.63-6.14,9.84,0,16.52,7.64,16.52,15.29,0,10.17-7.28,16.79-16,16.79H32.06"/>
+                </svg>
+        
+            </div>     
+        
+            <a class="welcome" href="index.html">back home</a>
+            
+        
+        </div>
+            <div class="buntelinie"></div>
+        </div>
+
+        <nav id="menucontent">
+            <ul>
+                <li> <a href="scrollmagic.html">Scroll into View</a> </li>
+                <li> <a href="parallax.html">Parallax</a> </li>
+                <li> <a href="chocolat.html">Chocolat</a> </li>
+                <li> <a href="svganimation.html">SVG Animation</a> </li>
+                <li> <a href="accordion.html">Accordion</a> </li>
+                <li> <a href="typewriter.html">Typewriter</a> </li>
+                <li> <a href="flexslider.html">Flexslider</a> </li>
+                <li> <a href="animejs.html">AnimeJS</a> </li>
+                <li> <a href="leaflet.html">Leaflet</a> </li>
+                <li> <a href="hamburgermenu.html">Hamburgermenu</a> </li>
+                <li> <a href="jumpermenu.html">Jumpermenu</a> </li>
+                <li> <a href="tippyjs.html">Tippyjs</a> </li>
+            </ul>
+        </nav>      
+
+
+    <div class="page">
+
+            <h1>Hamburger Menu</h1>
+
+            <h2>1. Illustrator Datei</h2>
+            <p>1.1  Eine Illustrator Datei anlegen und Datei erstellen. <br>
+            1.2  SVG korrekt exportieren. <br>
+            1.3  Einen div.svg-container erstellen. <br>
+            1.4  Die SVG in VSC öffnen und den Code in den svg-container kopieren. <br>
+            1.5  SVG bekommt die id "hamburger-icon". <br>
+            1.6  CSS herauskopieren und in den head kopieren. <br>
+            1.7  Stroke-miterlimit: 10; kann man löschen. <br>
+            1.8  Den .svg-container, top und bottom stylen: <br>
+            1.9  In der Konsole kann man testen, wie die Werte sein sollen. <br>
+
+        </p> 
+<pre><code class="language-css line-numbers">.svg-container{
+    max-width: 400px;
+    margin: 3rem auto;
+}
+
+#top, #bottom{
+    stroke-dasharray: 36px 200px;
+    stroke-dashoffset: 127;
+}
+</code></pre>
+        
+        
+            
+            
+             <h2>2. Script für Klasse active einbauen</h2>
+            <p>Den folgenden Code in einem Script oder in der Javascipt-Datei einfügen.</p>
+<pre><code class="language-javascript line-numbers">&lt;script&gt;
+    document.getElementById(&#39;hamburger-icon&#39;).addEventListener(&#39;click&#39;, function(event){
+    this.classList.toggle(&#39;active&#39;);
+    })
+&lt;/script&gt;
+</code></pre>
+
+
+            <h2>3. Animation erstellen</h2>
+            <p>Top und Bottom wird eine Animation hinzugefügt und die Strokes werden definiert. <br>
+                Auch 'active' muss definiert werden.</p>
+  <pre><code class="language-css line-numbers">#top, #bottom{
+    stroke-dasharray: 36px 200px;
+    stroke-dashoffset: 127;
+    transition: all 0.5s;
+}
+      
+.active #top,
+.active #bottom{
+     stroke-dashoffset: 236;
+}
+</code></pre>
+<br>
+<p>Für den mittleren Balken muss die Mitte und die Rotation festgelegt werden und dann wird die Animation definiert. <br>
+    Ebenfalls wird die active Version gestylt.
+</p>
+
+<pre><code class="language-css line-numbers">#center{
+    transform-origin: 50px 50px;
+    transform: rotate( 0deg ) ;
+    transition: all 0.5s;
+}
+
+.active #center{
+    transform: rotate( 225deg ) ;
+}
+</code></pre>
+
+
+            <h2>4. CSS Animationen Property</h2>
+    <p>Durch die CSS Eigenschaften kann man weitere Eigenschaften der Animationen verändern. <br>
+        Dazu muss man die transition für top und bottom verändern. <br>
+        Ebenfalls kann man bereits die Keyframes definieren.
+        </p>
+<pre><code class="language-css line-numbers">.active #top,
+.active #bottom{
+    animation-name: hamburger2x;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;          
+}
+
+@keyframes hamburger2x {
+    0%{
+        stroke-dashoffset: 127;
+    }
+
+    100%{
+        stroke-dashoffset: 236;
+    }
+}
+</code></pre>
+
+
+
+            <h2>5. Damit die Animation auch rückwärts abspielt</h2>
+            <p>Damit die Animation auch rückwärts abspielt, erstellt man die Animation x2hamburger. <br>
+                Ebenfalls legt man die Klasse backwards fest. </p>
+<pre><code class="language-css line-numbers">@keyframes x2hamburger {
+    0%{
+        stroke-dashoffset: 236;
+    }
+
+    100%{
+        stroke-dashoffset: 127;
+    }
+}
+
+.backwards #top,
+.backwards #bottom{
+    animation-name: x2hamburger;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}</code></pre>            
+
+
+            <h2>6. Script anpassen</h2>
+            
+<pre><code class="language-javascript line-numbers">&lt;script&gt;
+    document.getElementById(&#39;hamburger-icon&#39;).addEventListener(&#39;click&#39;, function(event){
+        if(this.classList.contains(&#39;active&#39;) ){
+            this.classList.remove(&#39;active&#39;);
+            this.classList.add(&#39;backwards&#39;);
+        }else{
+            this.classList.add(&#39;active&#39;);
+            this.classList.remove(&#39;backwards&#39;);
+        }
+})
+
+&lt;/script&gt;</code></pre>       
+
+
+<h2>7. Keyframes anpassen</h2>
+            
+<pre><code class="language-css line-numbers">@keyframes hamburger2x {
+    0%{
+        stroke-dashoffset: 127;
+        stroke: #008197;
+        stroke-dasharray: 36px 200px;
+    }
+
+    50%{
+        stroke: blueviolet;
+        stroke-dasharray: 66px 170px;
+    }
+
+    100%{
+        stroke-dashoffset: 236;
+        stroke: #008197;
+        stroke-dasharray: 36px 200px;
+    }
+}
+
+@keyframes x2hamburger {
+    0%{
+        stroke: #008197;
+        stroke-dashoffset: 236;
+        stroke-dasharray: 36px 200px;
+    }
+
+    50%{
+        stroke: rgb(247, 232, 20);
+        stroke-dasharray: 26px 210px;
+        
+    }
+
+    100%{
+        stroke-dashoffset: 127;
+        stroke: #008197;
+        stroke-dasharray: 36px 200px;
+
+    }
+}
+</code></pre>   
+
+
+
+<h2>Um es funktionstüchtig zu machen</h2>
+    <p>Der SVG eine ID zuordnen:</p>
+<pre><code class="language-html line-numbers">&lt;svg  class=&quot;menu-toggle&quot; id=&quot;menu-toggle&quot;&gt;
+    &lt;path id=&quot;top&quot; class=&quot;cls-1&quot; d=&quot;M62.73,37.27,37.27,62.73c-2.92,2.92-7.49,6.14-12.63,6.14-9.84,0-16.52-7.64-16.52-15.29,0-10.17,7.28-16.79,16-16.79H68&quot;/&gt;
+    &lt;path id=&quot;center&quot; class=&quot;cls-1&quot; d=&quot;M32,50H68&quot;/&gt;
+    &lt;path id=&quot;bottom&quot; class=&quot;cls-1&quot; d=&quot;M37.33,62.72,62.79,37.27c2.92-2.92,7.5-6.14,12.63-6.14,9.84,0,16.52,7.64,16.52,15.29,0,10.17-7.28,16.79-16,16.79H32.06&quot;/&gt;
+  &lt;/svg&gt;</code></pre>
+<br>
+
+  <p>Das Script dementsprechend anpassen</p>
+  <pre><code class="language-javascript line-numbers">&lt;script type=&quot;text/javascript&quot;&gt;
+var menuToggle = document.querySelector(&quot;#menu-toggle&quot;);
+var mnclasses = mainnav.classList;
+menuToggle.addEventListener(&quot;click&quot;, function(event) {
+mnclasses.toggle(&#39;active&#39;);
+    });
+         
+document.getElementById(&#39;menu-toggle&#39;).addEventListener(&#39;click&#39;, function(event){
+    if(this.classList.contains(&#39;active&#39;) ){
+    this.classList.remove(&#39;active&#39;);
+    this.classList.add(&#39;backwards&#39;);
+    }else{
+        this.classList.add(&#39;active&#39;);
+        this.classList.remove(&#39;backwards&#39;);
+    }
+})</code></pre>
+
+
+
+  
+</div>
+
+           
+    <script src="./libs/prism.js"></script>
+    <script src="./javascipt/scripts.js"></script>
+
+
+    <script>
+            var menuToggle = document.querySelector("#menu-toggle");
+var mnclasses = menucontent.classList;
+menuToggle.addEventListener("click", function (event) {
+    mnclasses.toggle('active');
+});
+
+
+document.getElementById('menu-toggle').addEventListener('click', function (event) {
+    if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        this.classList.add('backwards');
+    } else {
+        this.classList.add('active');
+        this.classList.remove('backwards');
+    }
+})
+    </script>
+</body>
+</html>

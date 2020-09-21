@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollmagic</title>
+
+    <link rel="stylesheet" href="./libs/prism.css">
+
+    <link rel="stylesheet" href="./css/dokumentation.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Anonymous+Pro&family=Cutive+Mono&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Lato:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+
+    <div id="mainnav">
+
+        <div class="mainnav-content">
+        
+        
+            <div class="menuicon-container">
+                 
+                <svg id="menu-toggle" viewBox="0 0 100 100">
+                    <path id="top" class="cls-1" d="M62.73,37.27,37.27,62.73c-2.92,2.92-7.49,6.14-12.63,6.14-9.84,0-16.52-7.64-16.52-15.29,0-10.17,7.28-16.79,16-16.79H68"/>
+                    <path id="center" class="cls-1" d="M32,50H68"/>
+                    <path id="bottom" class="cls-1" d="M37.33,62.72,62.79,37.27c2.92-2.92,7.5-6.14,12.63-6.14,9.84,0,16.52,7.64,16.52,15.29,0,10.17-7.28,16.79-16,16.79H32.06"/>
+                </svg>
+        
+            </div>     
+        
+            <a class="welcome" href="index.html">back home</a>
+            
+        
+        </div>
+            <div class="buntelinie"></div>
+        </div>
+
+        <nav id="menucontent">
+            <ul>
+                <li> <a href="scrollmagic.html">Scroll into View</a> </li>
+                <li> <a href="parallax.html">Parallax</a> </li>
+                <li> <a href="chocolat.html">Chocolat</a> </li>
+                <li> <a href="svganimation.html">SVG Animation</a> </li>
+                <li> <a href="accordion.html">Accordion</a> </li>
+                <li> <a href="typewriter.html">Typewriter</a> </li>
+                <li> <a href="flexslider.html">Flexslider</a> </li>
+                <li> <a href="animejs.html">AnimeJS</a> </li>
+                <li> <a href="leaflet.html">Leaflet</a> </li>
+                <li> <a href="hamburgermenu.html">Hamburgermenu</a> </li>
+                <li> <a href="jumpermenu.html">Jumpermenu</a> </li>
+                <li> <a href="tippyjs.html">Tippyjs</a> </li>
+            </ul>
+        </nav>      
+
+
+
+    <div class="page">
+
+            <h1>Scrollmagic - SIV</h1>
+
+            <h2>1. Scrollmagic herunterladen</h2>
+            <p>Auf der Website von Scrollmagic die Bibliothek herunterladen und im Libs Ordner entpacken:</p> 
+             <a href="https://scrollmagic.io/">Scrollmagic hier herunterladen</a>
+            
+            
+             <h2>2. Scrollmagic wie folgt einbinden</h2>
+            <p>Die Ordnerstruktur muss für das Einbinden angepasst werden.</p>
+<pre><code class="language-html line-numbers">&lt;script src=&quot;./libs/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./libs/ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js&quot;&gt;</script>
+</code></pre>
+
+
+            <h2>3. Scrollmagic initiieren</h2>
+            <p>Den folgenden Code in einem Script oder in der Javascipt-Datei einfügen.</p>
+  <pre><code class="language-javascript line-numbers">&lt;script&gt;
+    let controller = new Scrollmagic.controller();
+&lt;/script&gt;</code></pre>
+
+
+
+
+            <h2>4. Neue Szene erstellen</h2>
+    <p>Um eine Animation mit ScrollMagic einzusetzen, muss eine Szene hinzugeügt werden. <br>   
+        Durch triggerElement gibt man das Element an, durch welches das Ereignis ausgelöst werden soll. <br>
+        Und durch triggerHook kann man den Auslöser verschieben. <br>
+        Mit .setClassToggle() kann man eine Klasse hinzufügen, mit der man die Animation auslöst. <br>
+    </p>
+<pre><code class="language-javascript line-numbers">new ScrollMagic.Scene({
+    triggerElement: '#item-2',
+    triggerHook: 0.35
+})
+.addTo( controller )
+.addIndicators({name: 'ClassToggle'})
+.setClassToggle("#item-2", "active");
+</code></pre>
+<br>
+
+<h1>Scroll in View</h1>
+
+            <h2>1. HTML Gerüst bauen</h2>
+            <p>In dem Beispiel sind es drei Rechtecke, die nacheinander die Horizontale erreichen sollen. <br>
+            Mit der Klasse 'rechteck' können später alle Elemente angesprochen werden. <br>
+            Durch revealElements werden später im Script der Container angesprochen.
+        
+        </p>
+<pre><code class="language-html line-numbers">&lt;div id=&quot;scrollintoview&quot;&gt;
+    &lt;div class=&quot;sivcontent-container&quot;&gt;
+
+        &lt;div class=&quot;rechtecke reveal-elements&quot;&gt;
+            &lt;div class=&quot;rechteck pinkesrechteck&quot;&gt;
+                &lt;p&gt;&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;rechteck lilarechteck&quot;&gt;
+                &lt;p&gt;&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;rechteck blauesrechteck&quot;&gt;
+                &lt;p&gt;&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>            
+
+
+            <h2>2. CSS einfügen</h2>
+            <p>1. Die Container stylen.</p>
+<pre><code class="language-css line-numbers">#scrollintoview{
+    background-color: #18182c;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.sivcontent-container{
+    max-width: 80vw;
+    margin: 0rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}</code></pre>            
+<br>
+
+<p>2. Die Rechtecke stylen.</p>
+<pre><code class="language-css line-numbers">.rechtecke{
+    display: flex;
+    flex-direction: row;
+    width: 60vw; /* oder doch eher 60? */
+    justify-content: space-between;
+    padding: 2rem 0;
+}  
+
+.pinkesrechteck{
+    height: 250px;
+    width: 250px;
+    background-image: linear-gradient( rgba(190,27,230,1), rgba(190,27,230,0));
+    border-radius: 20%;
+    margin: 2rem 2rem 2rem 0rem;
+}
+
+.lilarechteck{
+    height: 250px;
+    width: 250px;
+    background-image: linear-gradient( rgba(149,14,241,1), rgba(149,14,241,0));
+    border-radius: 20%;
+    margin: 2rem 0rem;
+}
+
+.blauesrechteck{
+    height: 250px;
+    width: 250px;
+    background-image: linear-gradient( rgba(37,153,231,1), rgba(37,153,231,0));
+    border-radius: 20%;
+    margin: 2rem 0rem 2rem 2rem;
+}</code></pre> 
+<br>
+
+<p>3. Animation für ScrollMagic einbauen. <br>
+     Mit der Klasse 'visible' wird die Opacity der Elemente aktiviert. </p>
+<pre><code class="language-css line-numbers">.rechteck{
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+         -moz-transform: translateY(40px);
+            -ms-transform: translateY(40px);
+             -o-transform: translateY(40px);
+                    transform: translateY(40px);
+    -webkit-transition: all 0.6s ease-out;
+         -moz-transition: all 0.6s ease-out;
+            -ms-transition: all 0.6s ease-out;
+             -o-transition: all 0.6s ease-out;
+                    transition: all 0.6s ease-out;
+}
+
+.rechteck.visible {
+    opacity: 1;
+    -webkit-transform: none;
+         -moz-transform: none;
+            -ms-transform: none;
+             -o-transform: none;
+                    transform: none;}</code></pre> 
+   
+
+<h2>3. Javascipt einbauen</h2>
+    <p>ScrollMagic initiieren</p>
+    <pre><code class="language-javascript line-numbers">let controller = new Scrollmagic.controller();
+</code></pre>
+
+<p>Die Szene erstellen. <br>
+    Mit der Funktion 'ScrollIn' werden die Elemente einzeln angesprochen und der offsetvalue kann ebenfalls einzeln angespasst werden, wodurch die Elemente nacheinander auftauchen. <br>
+    Auf der Seite von ScrollMagic befinden sich einige Beispiele, deren Code man anpassen kann. <br>
+    <a href="https://scrollmagic.io/examples/basic/reveal_on_scroll.html">Hier sind Beispiele</a>
+    
+</p>
+<pre><code class="language-javascript line-numbers">function  ScrollIn(className, offsetvalue ){
+    var revealElements = document.getElementsByClassName(className);
+        for (var i=0; i&lt;revealElements.length; i++) { 
+            new ScrollMagic.Scene({
+                                triggerElement: revealElements[i], 
+                                offset: offsetvalue,												 
+                                triggerHook: 0.92,
+                                delay: 150,
+                            })
+                            .setClassToggle(revealElements[i], &quot;visible&quot;) 
+                            .addIndicators({name: className+ (i+1) }) 
+                            .addTo(controller);
+        }
+}
+
+ScrollIn(&quot;pinkesrechteck&quot;, 50);
+ScrollIn(&quot;lilarechteck&quot;, 150);
+ScrollIn(&quot;blauesrechteck&quot;, 250);
+</code></pre>
+
+
+
+
+</div>
+
+           
+    <script src="./libs/prism.js"></script>
+    <script src="./javascipt/scripts.js"></script>
+
+
+    <script>
+        
+    var menuToggle = document.querySelector("#menu-toggle");
+var mnclasses = menucontent.classList;
+menuToggle.addEventListener("click", function (event) {
+    mnclasses.toggle('active');
+});
+
+
+document.getElementById('menu-toggle').addEventListener('click', function (event) {
+    if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        this.classList.add('backwards');
+    } else {
+        this.classList.add('active');
+        this.classList.remove('backwards');
+    }
+})
+
+    </script>
+</body>
+</html>

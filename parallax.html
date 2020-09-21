@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollmagic</title>
+
+    <link rel="stylesheet" href="./libs/prism.css">
+
+    <link rel="stylesheet" href="./css/dokumentation.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Anonymous+Pro&family=Cutive+Mono&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Lato:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <div id="mainnav">
+
+        <div class="mainnav-content">
+        
+        
+            <div class="menuicon-container">
+                 
+                <svg id="menu-toggle" viewBox="0 0 100 100">
+                    <path id="top" class="cls-1" d="M62.73,37.27,37.27,62.73c-2.92,2.92-7.49,6.14-12.63,6.14-9.84,0-16.52-7.64-16.52-15.29,0-10.17,7.28-16.79,16-16.79H68"/>
+                    <path id="center" class="cls-1" d="M32,50H68"/>
+                    <path id="bottom" class="cls-1" d="M37.33,62.72,62.79,37.27c2.92-2.92,7.5-6.14,12.63-6.14,9.84,0,16.52,7.64,16.52,15.29,0,10.17-7.28,16.79-16,16.79H32.06"/>
+                </svg>
+        
+            </div>     
+        
+            <a class="welcome" href="index.html">back home</a>
+            
+        
+        </div>
+            <div class="buntelinie"></div>
+        </div>
+
+        <nav id="menucontent">
+            <ul>
+                <li> <a href="scrollmagic.html">Scroll into View</a> </li>
+                <li> <a href="parallax.html">Parallax</a> </li>
+                <li> <a href="chocolat.html">Chocolat</a> </li>
+                <li> <a href="svganimation.html">SVG Animation</a> </li>
+                <li> <a href="accordion.html">Accordion</a> </li>
+                <li> <a href="typewriter.html">Typewriter</a> </li>
+                <li> <a href="flexslider.html">Flexslider</a> </li>
+                <li> <a href="animejs.html">AnimeJS</a> </li>
+                <li> <a href="leaflet.html">Leaflet</a> </li>
+                <li> <a href="hamburgermenu.html">Hamburgermenu</a> </li>
+                <li> <a href="jumpermenu.html">Jumpermenu</a> </li>
+                <li> <a href="tippyjs.html">Tippyjs</a> </li>
+            </ul>
+        </nav>      
+
+
+    <div class="page">
+
+            <h1>Scrollmagic - Parallax</h1>
+
+            <h2>1. Scrollmagic herunterladen</h2>
+            <p>Auf der Website von Scrollmagic die Bibliothek herunterladen und im Libs Ordner entpacken:</p> 
+             <a href="https://scrollmagic.io/">Scrollmagic hier herunterladen</a>
+            
+            
+             <h2>2. Scrollmagic wie folgt einbinden</h2>
+            <p>Die Ordnerstruktur muss für das Einbinden angepasst werden.</p>
+<pre><code class="language-html line-numbers">&lt;script src=&quot;./libs/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./libs/ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js&quot;&gt;</script>
+</code></pre>
+
+
+            <h2>3. Scrollmagic initiieren</h2>
+            <p>Den folgenden Code in einem Script oder in der Javascipt-Datei einfügen.</p>
+  <pre><code class="language-javascript line-numbers">&lt;script&gt;
+    let controller = new Scrollmagic.controller();
+&lt;/script&gt;</code></pre>
+
+
+            <h2>4. Neue Szene erstellen</h2>
+    <p>Um eine Animation mit ScrollMagic einzusetzen, muss eine Szene hinzugeügt werden. <br>   
+        Durch triggerElement gibt man das Element an, durch welches das Ereignis ausgelöst werden soll. <br>
+        Und durch triggerHook kann man den Auslöser verschieben. <br>
+        Mit .setClassToggle() kann man eine Klasse hinzufügen, mit der man die Animation auslöst. <br>
+    </p>
+<pre><code class="language-javascript line-numbers">new ScrollMagic.Scene({
+    triggerElement: '#item-2',
+    triggerHook: 0.35
+})
+.addTo( controller )
+.addIndicators({name: 'ClassToggle'})
+.setClassToggle("#item-2", "active");
+</code></pre>
+<br>
+
+<h1>Parallax</h1>
+
+    <h2>1. HTML Gerüst bauen</h2>
+<p>Mit der id 'parallax werden später die Elemente im Script angesprochen.'</p>
+<pre><code class="language-html line-numbers">&lt;div&gt;
+
+    &lt;section id=&quot;parallax&quot;&gt;
+        &lt;p class=&quot;parallaxtext&quot;&gt;how to parallax&lt;/p&gt;
+        &lt;div class=&quot;parallaxrahmen&quot;&gt;&lt;/div&gt;
+    &lt;/section&gt;
+
+&lt;/div&gt;</code></pre>
+
+
+<h2>2. CSS einfügen</h2>
+            <p>Mit 'background-attachment: fixed' bleibt das Hintergrundbild stehen.
+                 Mit 'background-position: center 100%' kann man das Bild verschieben, geht auch mit Pixelangaben.
+                </p>
+<pre><code class="language-css line-numbers">#parallax{
+    background-color: #070602;
+    height: 60vh;
+    background-image: url(../assets/acrylpour13.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}</code></pre>    
+
+
+            <h2>3. Script anpassen</h2>
+            <p>Für den Parallax Effekt muss man das Script wie folgt anpassen.  <br>
+                Durch die Variable 'verschiebung' kommt der Effekt zustande und kann angepasst werden.
+        </p>
+<pre><code class="language-javascript line-numbers">let parallaxsection = document.getElementById(&#39;parallax&#39;);
+    new ScrollMagic.Scene({
+        triggerElement: &#39;#parallax&#39;,
+        triggerHook: &#39;on enter&#39;,
+        duration: &#39;100%&#39;
+    })
+    .addTo( controller )
+    .addIndicators({name: &#39;Parallax&#39;, colorStart:&#39;#ffffff&#39;, colorEnd:&#39;#ffffff&#39;,  colorTrigger:&#39;#ffffff&#39;})
+    .on(&quot;progress&quot;, function (event) {
+        console.log( window.innerHeight );
+        let verschiebung = event.progress * window.innerHeight * -0.5;
+        parallaxsection.style.backgroundPosition = &#39;center &#39; + verschiebung + &#39;px&#39;;
+    });
+</code></pre>            
+
+
+                    
+
+
+
+</div>
+
+           
+    <script src="./libs/prism.js"></script>
+    <script src="./javascipt/scripts.js"></script>
+
+
+    <script>
+           var menuToggle = document.querySelector("#menu-toggle");
+var mnclasses = menucontent.classList;
+menuToggle.addEventListener("click", function (event) {
+    mnclasses.toggle('active');
+});
+
+
+document.getElementById('menu-toggle').addEventListener('click', function (event) {
+    if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        this.classList.add('backwards');
+    } else {
+        this.classList.add('active');
+        this.classList.remove('backwards');
+    }
+})
+
+    </script>
+</body>
+</html>

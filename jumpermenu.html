@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JumperMenu</title>
+
+    <link rel="stylesheet" href="./libs/prism.css">
+
+    <link rel="stylesheet" href="./css/dokumentation.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Anonymous+Pro&family=Cutive+Mono&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Lato:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <div id="mainnav">
+
+        <div class="mainnav-content">
+        
+        
+            <div class="menuicon-container">
+                 
+                <svg id="menu-toggle" viewBox="0 0 100 100">
+                    <path id="top" class="cls-1" d="M62.73,37.27,37.27,62.73c-2.92,2.92-7.49,6.14-12.63,6.14-9.84,0-16.52-7.64-16.52-15.29,0-10.17,7.28-16.79,16-16.79H68"/>
+                    <path id="center" class="cls-1" d="M32,50H68"/>
+                    <path id="bottom" class="cls-1" d="M37.33,62.72,62.79,37.27c2.92-2.92,7.5-6.14,12.63-6.14,9.84,0,16.52,7.64,16.52,15.29,0,10.17-7.28,16.79-16,16.79H32.06"/>
+                </svg>
+        
+            </div>     
+        
+            <a class="welcome" href="index.html">back home</a>
+            
+        
+        </div>
+            <div class="buntelinie"></div>
+        </div>
+
+        <nav id="menucontent">
+            <ul>
+                <li> <a href="scrollmagic.html">Scroll into View</a> </li>
+                <li> <a href="parallax.html">Parallax</a> </li>
+                <li> <a href="chocolat.html">Chocolat</a> </li>
+                <li> <a href="svganimation.html">SVG Animation</a> </li>
+                <li> <a href="accordion.html">Accordion</a> </li>
+                <li> <a href="typewriter.html">Typewriter</a> </li>
+                <li> <a href="flexslider.html">Flexslider</a> </li>
+                <li> <a href="animejs.html">AnimeJS</a> </li>
+                <li> <a href="leaflet.html">Leaflet</a> </li>
+                <li> <a href="hamburgermenu.html">Hamburgermenu</a> </li>
+                <li> <a href="jumpermenu.html">Jumpermenu</a> </li>
+                <li> <a href="tippyjs.html">Tippyjs</a> </li>
+            </ul>
+        </nav>      
+
+
+    <div class="page">
+
+        <h1>Jumpermenu</h1>
+
+        <h2>1. Scrollmagic herunterladen</h2>
+        <p>Auf der Website von Scrollmagic die Bibliothek herunterladen und im Libs Ordner entpacken:</p> 
+         <a href="https://scrollmagic.io/">Scrollmagic hier herunterladen</a>
+        
+        
+         <h2>2. Scrollmagic und Jumper wie folgt einbinden</h2>
+        <p>Die Ordnerstruktur muss für das Einbinden angepasst werden.</p>
+<pre><code class="language-html line-numbers">&lt;link rel=&quot;stylesheet&quot; href=&quot;./libs/autoJumperMenu.css&quot;&gt;  
+&lt;script src=&quot;./libs/autoJumperModule.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./libs/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./libs/ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js&quot;&gt;</script>
+</code></pre>
+
+
+<h2>3. JumperMenu Script einfügen</h2>
+            <p>Den folgenden Code in einem Script oder in der Javascipt-Datei einfügen. <br>
+                Falls bereits ein Controller in der Datei vorhanden ist, diese ersetzen oder individuelle Datei erstellen. <br>
+                Dieser Controller dient dazu, dass die Punkte wieder kleiner werden, sobald man an ihnen vorbei scrollt.
+            </p>
+  <pre><code class="language-javascript line-numbers">autoJumperMenu.init({
+        targetElementsSelector: &#39;section&#39;,
+        jumpLinkTextSelector: &#39;div&#39;
+})
+
+    let controller = new ScrollMagic.Controller({globalSceneOptions: {duration: &#39;100%&#39;}});
+    let sections = document.querySelectorAll(&#39;section&#39;);
+    let jumperElements = document.querySelectorAll(&#39;#jumperMenuContainer a&#39;);
+
+    sections.forEach( (element, index) =&gt; {
+        new ScrollMagic.Scene({triggerElement: element})
+        .setClassToggle(jumperElements[index], &quot;active&quot;)
+        .addTo(controller)
+});</code></pre>
+
+
+            <h2>4. Html Gerüst gegebenenfalls anpassen</h2>
+    <p>Alle Abschnitte als sections anlegen. <br>
+        Die erste Div Box nach der section sollte den Titel der Bubble beinhalten und eine Klasse mit der man jede dieser Divs ansprechen kann. <br>
+        Beispiel:        
+        </p>
+<pre><code class="language-html line-numbers">&lt;section id=&quot;parallax&quot;&gt;
+    &lt;div class=&quot;JumpermenuBubbleText&quot;&gt;Parallax&lt;/div&gt; &lt;!-- Für Jumpermenu --&gt;
+    &lt;div class=&quot;parallaxtext&quot;&gt;
+        &lt;a href=&quot;parallax.html&quot;&gt;how to parallax&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;parallaxrahmen&quot;&gt;&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+
+
+            <h2>Bubbles anpassen</h2>
+            <p>Mit der Klasse 'JumpermenuBubbleText', in der CSS den Text 
+                ausblenden damit er nicht in den Sektionen auftaucht sondern bloß in den Bubbles. <br>
+                In der autoJumperMenu.css können weitere Eiegenschaften angepasst werden.
+            </p>
+<pre><code class="language-css line-numbers">.JumpermenuBubbleText{
+    display: none;
+}
+</code></pre>            
+
+
+
+           
+    <script src="./libs/prism.js"></script>
+    <script src="./javascipt/scripts.js"></script>
+
+
+    <script>
+            var menuToggle = document.querySelector("#menu-toggle");
+var mnclasses = menucontent.classList;
+menuToggle.addEventListener("click", function (event) {
+    mnclasses.toggle('active');
+});
+
+
+document.getElementById('menu-toggle').addEventListener('click', function (event) {
+    if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        this.classList.add('backwards');
+    } else {
+        this.classList.add('active');
+        this.classList.remove('backwards');
+    }
+})
+    </script>
+</body>
+</html>

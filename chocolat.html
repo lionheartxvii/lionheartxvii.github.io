@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolat</title>
+
+    <link rel="stylesheet" href="./libs/prism.css">
+
+    <link rel="stylesheet" href="./css/dokumentation.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Anonymous+Pro&family=Cutive+Mono&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Lato:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+
+    <div id="mainnav">
+
+        <div class="mainnav-content">
+        
+        
+            <div class="menuicon-container">
+                 
+                <svg id="menu-toggle" viewBox="0 0 100 100">
+                    <path id="top" class="cls-1" d="M62.73,37.27,37.27,62.73c-2.92,2.92-7.49,6.14-12.63,6.14-9.84,0-16.52-7.64-16.52-15.29,0-10.17,7.28-16.79,16-16.79H68"/>
+                    <path id="center" class="cls-1" d="M32,50H68"/>
+                    <path id="bottom" class="cls-1" d="M37.33,62.72,62.79,37.27c2.92-2.92,7.5-6.14,12.63-6.14,9.84,0,16.52,7.64,16.52,15.29,0,10.17-7.28,16.79-16,16.79H32.06"/>
+                </svg>
+        
+            </div>     
+        
+            <a class="welcome" href="index.html">back home</a>
+            
+        
+        </div>
+            <div class="buntelinie"></div>
+        </div>
+
+        <nav id="menucontent">
+            <ul>
+                <li> <a href="scrollmagic.html">Scroll into View</a> </li>
+                <li> <a href="parallax.html">Parallax</a> </li>
+                <li> <a href="chocolat.html">Chocolat</a> </li>
+                <li> <a href="svganimation.html">SVG Animation</a> </li>
+                <li> <a href="accordion.html">Accordion</a> </li>
+                <li> <a href="typewriter.html">Typewriter</a> </li>
+                <li> <a href="flexslider.html">Flexslider</a> </li>
+                <li> <a href="animejs.html">AnimeJS</a> </li>
+                <li> <a href="leaflet.html">Leaflet</a> </li>
+                <li> <a href="hamburgermenu.html">Hamburgermenu</a> </li>
+                <li> <a href="jumpermenu.html">Jumpermenu</a> </li>
+                <li> <a href="tippyjs.html">Tippyjs</a> </li>
+            </ul>
+        </nav>      
+
+
+
+    <div class="page">
+
+            <h1>Chocolat</h1>
+
+            <h2>1. Chocolat herunterladen</h2>
+            <p>Auf der Website von Chocolat.gitbook.io den folgenden Link öffnen und im Libs Ordner entpacken:</p> 
+             <a href="https://github.com/nicolas-t/chocolat/archive/master.zip">Chocolat hier herunterladen</a>
+            
+            
+             <h2>2. Chocolat wie folgt einbinden</h2>
+            <p>Die Ordnerstruktur muss für das Einbinden angepasst werden.</p>
+<pre><code class="language-html line-numbers">&lt;link rel=&quot;stylesheet&quot; href=&quot;./libs/Chocolat-master/dist/css/chocolat.css&quot;&gt;
+&lt;script src=&quot;./libs/Chocolat-master/dist/js/chocolat.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+
+            <h2>3. Chocolat initiieren</h2>
+            <p>Den folgenden Code in einem Script oder in der Javascipt-Datei einfügen.</p>
+  <pre><code class="language-javascript line-numbers">Chocolat(document.querySelectorAll(&#39;.chocolat-image&#39;), {
+        // options here
+    });</code></pre>
+
+            <h2>4. Html Gerüst erstellen</h2>
+    <p>Für eine Gallerie eine wird eine Div-Box mit Bildern erstellt und diese als Grid angelegt. <br>
+        Die Klasse der Links muss 'Chocolat' beinhalten, damit die Bibliothek greift. <br>
+        Das Bild muss als Link und als   eingebettet werden.
+        </p>
+<pre><code class="language-html line-numbers">&lt;div class=&quot;img-grid&quot;&gt;
+&lt;a class=&quot;chocolat&quot; href=&quot;./assets/acrylpour14.jpg&quot;&gt;
+&lt;img src=&quot;./assets/acrylpour14.jpg&quot; alt=&quot;&quot;&gt;
+&lt;/a&gt;
+
+&lt;a class=&quot;chocolat&quot; href=&quot;./assets/acrylpour12.jpg&quot;&gt;
+&lt;img src=&quot;./assets/acrylpour12.jpg&quot; alt=&quot;&quot;&gt;
+&lt;/a&gt;
+
+&lt;a class=&quot;chocolat&quot; href=&quot;./assets/acrylpour18.jpg&quot;&gt;
+&lt;img src=&quot;./assets/acrylpour18.jpg&quot; alt=&quot;&quot;&gt;
+&lt;/a&gt;
+&lt;/div</code></pre>
+
+
+
+            <h2>5. CSS einfügen</h2>
+            <p>Das Grid in der CSS festlegen und stylen. <br>
+            Das Overlay von Chocolat kann ebenfalls angepasst werden.</p>
+<pre><code class="language-css line-numbers">.img-grid{
+    width: 60vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 5px;
+    padding-top: 3rem;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.chocolat-overlay {
+    background-color: #000;
+}</code></pre>            
+
+
+
+
+</div>
+
+           
+    <script src="./libs/prism.js"></script>
+    <script src="./javascipt/scripts.js"></script>
+
+    <script>
+        
+    var menuToggle = document.querySelector("#menu-toggle");
+var mnclasses = menucontent.classList;
+menuToggle.addEventListener("click", function (event) {
+    mnclasses.toggle('active');
+});
+
+
+document.getElementById('menu-toggle').addEventListener('click', function (event) {
+    if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        this.classList.add('backwards');
+    } else {
+        this.classList.add('active');
+        this.classList.remove('backwards');
+    }
+})
+    </script>
+</body>
+</html>

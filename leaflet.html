@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet</title>
+
+    <link rel="stylesheet" href="./libs/prism.css">
+
+    <link rel="stylesheet" href="./css/dokumentation.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Anonymous+Pro&family=Cutive+Mono&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Lato:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+
+    <div id="mainnav">
+
+        <div class="mainnav-content">
+        
+        
+            <div class="menuicon-container">
+                 
+                <svg id="menu-toggle" viewBox="0 0 100 100">
+                    <path id="top" class="cls-1" d="M62.73,37.27,37.27,62.73c-2.92,2.92-7.49,6.14-12.63,6.14-9.84,0-16.52-7.64-16.52-15.29,0-10.17,7.28-16.79,16-16.79H68"/>
+                    <path id="center" class="cls-1" d="M32,50H68"/>
+                    <path id="bottom" class="cls-1" d="M37.33,62.72,62.79,37.27c2.92-2.92,7.5-6.14,12.63-6.14,9.84,0,16.52,7.64,16.52,15.29,0,10.17-7.28,16.79-16,16.79H32.06"/>
+                </svg>
+        
+            </div>     
+        
+            <a class="welcome" href="index.html">back home</a>
+            
+        
+        </div>
+            <div class="buntelinie"></div>
+        </div>
+
+        <nav id="menucontent">
+            <ul>
+                <li> <a href="scrollmagic.html">Scroll into View</a> </li>
+                <li> <a href="parallax.html">Parallax</a> </li>
+                <li> <a href="chocolat.html">Chocolat</a> </li>
+                <li> <a href="svganimation.html">SVG Animation</a> </li>
+                <li> <a href="accordion.html">Accordion</a> </li>
+                <li> <a href="typewriter.html">Typewriter</a> </li>
+                <li> <a href="flexslider.html">Flexslider</a> </li>
+                <li> <a href="animejs.html">AnimeJS</a> </li>
+                <li> <a href="leaflet.html">Leaflet</a> </li>
+                <li> <a href="hamburgermenu.html">Hamburgermenu</a> </li>
+                <li> <a href="jumpermenu.html">Jumpermenu</a> </li>
+                <li> <a href="tippyjs.html">Tippyjs</a> </li>
+            </ul>
+        </nav>      
+
+
+    <div class="page">
+
+            <h1>Leaflet</h1>
+
+            <h2>1. Leaflet herunterladen</h2>
+            <p>Auf der Website von Leaflet die Bibliothek herunterladen und im Libs Ordner entpacken:</p> 
+             <a href="https://leafletjs.com/download.html">Leaflet hier herunterladen</a>
+            
+            
+             <h2>2. Leaflet wie folgt einbinden</h2>
+            <p>Die Ordnerstruktur muss für das Einbinden angepasst werden.</p>
+<pre><code class="language-html line-numbers">&lt;link rel=&quot;stylesheet&quot; href=&quot;./libs/leaflet/leaflet.css&quot;&gt;
+&lt;script src=&quot;./libs/leaflet/leaflet.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+
+            <h2>3. Leaflet initiieren</h2>
+            <p>Den folgenden Code in einem Script oder in der Javascipt-Datei einfügen.</p>
+  <pre><code class="language-javascript line-numbers">let map = L.map('map-container', {
+    fullscreenControl: true,
+}).setView([49.75911, 6.63203], 15);
+
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([49.75911, 6.63203]).addTo(map)
+    .bindPopup('Irminenfreihof 8, Intermedia Design')
+    .openPopup();</code></pre>
+
+            <h2>4. In HTML einbauen</h2>
+    <p>Für die Karte muss bloß ein Container erstellt werden.</p>
+<pre><code class="language-html line-numbers">&lt;div id=&quot;map-container&quot;&gt;&lt;/div&gt;</code></pre>
+
+
+
+            <h2>5. CSS einfügen</h2>
+            <p>Die Karte durch CSS anpassen.</p>
+<pre><code class="language-css line-numbers">#map-container{
+    width: 70%;
+    height: 300px;
+    margin: 1rem auto;
+}
+</code></pre>            
+
+
+            <h2>6. Stil der Karte ändern</h2>
+            <p>Auf dieser Seite sich ein Format aussuchen: </p>
+             <a href="http://leaflet-extras.github.io/leaflet-providers/preview/">Hier eine Karte aussuchen</a>   
+             <p>JavaScript kopieren und tileLayer Link und Attribution austauschen. Danach wieder löschen.</p>   
+                
+             <h2>7. Geografischen Daten anpassen</h2>
+            <p>Auf dieser Seite kann man sich die geografischen Daten ausgeben lassen und diese im Script einfügen.</p>
+             <a href="https://www.geoplaner.de/">Hier geografische Daten ermitteln</a>   
+             
+             <h2>8. Karte weiter anpassen</h2>
+             <p>An dieser Stelle des Scripts lassen sich die Koordinaten sowie Zoom Faktor ändern.</p>
+           
+             <pre><code class="language-javascript line-numbers">.setView([49.75911, 6.63203], 15)</code></pre> 
+             
+             <h2>9. Plugin einfügen</h2>
+            <p>Mit dem Plugin kann man die Karte in einem Vollbild Modus öffnen. <br>
+                Unter PlugIns > Leaflet.fullscreen > Auf Github runterladen und im Libs Ordner entpacken. <br><br>
+                Script und CSS einbinden:
+            </p>
+<pre><code class="language-html line-numbers">&lt;script src=&quot;./libs/Leaflet.fullscreen-gh-pages/dist/Leaflet.fullscreen.min.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./libs/Leaflet.fullscreen-gh-pages/dist/leaflet.fullscreen.css&quot;&gt;</code></pre>            
+<br>
+            <p>Plugin initiieren, indem man das Script dazufügt und fullscreenControl auf true setzt. </p>
+<pre><code class="language-html line-numbers">&lt;script&gt;
+let map = L.map(&#39;map-container&#39;, {
+fullscreenControl: true,
+}).setView([49.75911, 6.63203], 15);
+&lt;/script&gt;
+</code></pre>                
+
+   
+
+</div>
+
+           
+    <script src="./libs/prism.js"></script>
+    <script src="./javascipt/scripts.js"></script>
+
+    <script>
+            var menuToggle = document.querySelector("#menu-toggle");
+var mnclasses = menucontent.classList;
+menuToggle.addEventListener("click", function (event) {
+    mnclasses.toggle('active');
+});
+
+
+document.getElementById('menu-toggle').addEventListener('click', function (event) {
+    if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        this.classList.add('backwards');
+    } else {
+        this.classList.add('active');
+        this.classList.remove('backwards');
+    }
+})
+    </script>
+</body>
+</html>

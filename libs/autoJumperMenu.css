@@ -1,0 +1,62 @@
+html{
+    scroll-behavior: smooth;
+}
+
+#jumperMenuContainer{
+    position: fixed;
+    right: 0; top: 0;
+    z-index: 5000;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align:right;
+}
+
+#jumperMenuContainer a{
+    display: block;
+    color: #555;
+    position: relative;
+    padding-bottom: 0.3rem;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+#jumperMenuContainer span{
+    position: absolute;
+    right: 2rem;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 0.6rem;
+    line-height: 1;
+    padding: 0.2rem 0.5rem;
+    transition: all 0.3s;
+    transform: scale(0);
+    transform-origin: right center;
+    opacity: 0;
+    white-space: nowrap;
+    background-color: #7e47ff;
+    background-image: linear-gradient(to bottom, #557cf3, #7e47ff);
+}
+
+#jumperMenuContainer a:hover span{
+    transform: scale(1);
+    opacity: 1;
+}
+
+#jumperMenuContainer a:after{
+    content: '';
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    margin: 0 1rem 0 0.5rem;
+    background-color: #64b4ff;
+}
+
+#jumperMenuContainer a:hover:after,
+#jumperMenuContainer a.active:after{
+    transform: scale(1.5);
+}
