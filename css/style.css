@@ -568,7 +568,8 @@ header {
     .hamburger:before {
         content: '';
         display: block;
-        width: 100%;
+        /* width: 100%; */
+        width: 25px;
         height: 1px;
         background-color: var(--main-fg-color);
         margin: 6px 0px;
