@@ -641,6 +641,16 @@ h3 {
         transform: translateY(-2%);
     }
 
+    .bg-color{
+        position: absolute;
+        transform: translate(-50%, -50%);
+    
+        left: 50%;
+        top: 50%;
+        width: 100vw;
+        height: 100vh;
+    }
+
     /* Articles */
 
 
@@ -713,4 +723,13 @@ h3 {
     .ind-number {
         font-size: 1.2rem !important;
     }
+
+    /* Chapter */
+    .chapter-title {
+        max-width: 55%;
+      }
+
+      .dark {
+        width: 70vw;
+      }
 }

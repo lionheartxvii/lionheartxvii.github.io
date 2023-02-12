@@ -264,14 +264,14 @@ header {
 .sound-btn {
     height: 36px;
     width: 36px;
-    background-color: rgba(37, 35, 63, 0.5);
+    background-color: rgba(63, 35, 35, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     position: fixed;
     bottom: 4%;
-    right: 40px;
+    right: 25px;
 
     z-index: 1000;
 
@@ -283,7 +283,7 @@ header {
 }
 
 .bar-container {
-    width: 18px;
+    width: 15px;
     height: 25px;
     display: flex;
     flex-direction: row;
@@ -294,7 +294,7 @@ header {
 
 .bar {
     background-color: var(--tertiary-fg-color);
-    width: 4px;
+    width: 3px;
     align-self: flex-end;
     margin-bottom: 3px;
 }
@@ -312,19 +312,18 @@ header {
 }
 
 
-
 /* Info Button */
 .info-btn {
     height: 36px;
     width: 36px;
-    background-color: rgba(37, 35, 63, 0.5);
+    background-color: rgba(63, 35, 35, 0.5);
     display: flex;
     justify-content: center;
     align-content: center;
     cursor: pointer;
     position: fixed;
     bottom: 4%;
-    right: 90px;
+    right: 75px;
 
     z-index: 1000;
 
@@ -341,6 +340,11 @@ header {
     font-family: 'Playfair Display', sans-serif;
     font-weight: 700;
     color: var(--tertiary-fg-color);
+}
+
+
+.blue{
+    background-color: rgba(37, 35, 63, 0.5) !important;
 }
 
 /* Info Text */
