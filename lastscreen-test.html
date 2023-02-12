@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
+    maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Her History</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/room.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Nunito+Sans:wght@400;600&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <a href="index.html" class="menu-item active">home</a>
+            <a href="select.html" class="menu-item">übersicht</a>
+            <a href="datenschutz.html" class="menu-item">about</a>
+            <a href="impressum.html" class="menu-item">imprint</a>
+        </div>
+
+        <div class="languages">
+            <a href="datenschutz.html" class="menu-item narrow">DE</a>
+            <a href="impressum.html" class="menu-item narrow">FR</a>
+            <a href="impressum.html" class="menu-item narrow">ENG</a>
+        </div>
+    </header>
+
+
+    <div class="change-person">
+
+        <div class="cp-content">
+            <h2 class="next" >wähle die nächste Persönlichkeit</h2>
+            <div class="persons">
+                <a href="fassbinder.html"><img class="frame" src="/assets/portraits/fassbinder-frame.png"></a>
+                <a href="waha.html"><img class="frame" src="/assets/portraits/deWaha-frame.png"></a>
+                <a href="hubert.html"><img class="frame" src="/assets/portraits/deSaintHubert-frame.png"></a>
+                <a href="marvingt.html"><img class="frame" src="/assets/portraits/marvingt-frame.png"></a>
+            </div>
+            <div class="go-back">
+                <a href="select.html"><img class="arrow" src="/assets/rest/arrow.png"></a>
+                <a class="text light" >oder kehre zur Übersicht zurück</a>
+            </div>
+            
+        </div>
+
+        <div class="dimmer"></div>
+    </div>
+
+
+    <main>
+
+        <!-- <div class="content"> -->
+
+
+        <div class="indicator" onclick="func(1)" id="ind-1">
+            <a class="text ind-number" onclick="func(1)">I</a>
+        </div>
+
+        <div class="indicator" onclick="func(2)" id="ind-2">
+            <a class="text ind-number" onclick="func(2)">II</a>
+        </div>
+
+        <div class="indicator" onclick="func(3)" id="ind-3">
+            <a class="text ind-number" onclick="func(3)">III</a>
+        </div>
+
+        <div class="indicator" onclick="getGallery(4)" id="ind-4">
+            <a class="text ind-number" onclick="getGallery()">IV</a>
+        </div>
+
+        <div class="indicator" onclick="func(5)" id="ind-5">
+            <a class="text ind-number" onclick="func(5)">V</a>
+        </div>
+
+        <div class="indicator" onclick="func(6)" id="ind-6">
+            <a class="text ind-number" onclick="func(6)">VI</a>
+        </div>
+
+
+        <div><img class="asset" src="/assets/vonderLeyen/room.jpg"></div>
+
+
+        <!-- </div> -->
+
+
+    </main>
+
+</body>
+
+</html>

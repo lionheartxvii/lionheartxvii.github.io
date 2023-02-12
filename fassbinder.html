@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
+    maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Her History</title>
+
+    <link rel="stylesheet" href="/libs/splide-4.1.3/dist/css/splide.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/room.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Nunito+Sans:wght@400;600&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+
+        <style>
+            #ind-1 {
+                top: 51.5%;
+                left: 58.5%;
+            }
+    
+            #ind-2 {
+                top: 18%;
+                left: 88%;
+            }
+    
+            #ind-3 {
+                top: 42%;
+                left: 15%;
+            }
+    
+            #ind-4 {
+                top: 13.5%;
+                left: 69%;
+            }
+    
+            #ind-5 {
+                top: 62%;
+                left: 48%;
+            }
+    
+            #ind-6 {
+                top: 34%;
+                left: 36%;
+            }
+        </style>
+</head>
+
+<body>
+    <header>
+        <div class="navigation hidden">
+            <a href="index.html" class="menu-item">home</a>
+            <a href="select.html" class="menu-item">übersicht</a>
+            <a href="datenschutz.html" class="menu-item">about</a>
+            <a href="impressum.html" class="menu-item">imprint</a>
+        </div>
+
+        <div class="languages hidden">
+            <a href="datenschutz.html" class="menu-item narrow">DE</a>
+            <a href="impressum.html" class="menu-item narrow">FR</a>
+            <a href="impressum.html" class="menu-item narrow">ENG</a>
+        </div>
+
+        <button class="chevron">
+            <div class="lang">DE &#x25BC</div>
+        </button>
+
+        <button class="hamburger">
+            <div class="bar"></div>
+        </button>
+
+    </header>
+
+    <div class="mobile-nav">
+        <div class="hamburger-content">
+        <a href="index.html" class="menu-item">home</a>
+        <a href="select.html" class="menu-item">übersicht</a>
+        <a href="datenschutz.html" class="menu-item">about</a>
+        <a href="impressum.html" class="menu-item">imprint</a>
+        </div>
+    </div>
+
+    <div class="mobile-languages">
+        <div class="chevron-content">
+            <a href="datenschutz.html" class="menu-item bold">deutsch</a>
+            <a href="impressum.html" class="menu-item">französisch</a>
+            <a href="impressum.html" class="menu-item">englisch</a>
+        </div>
+    </div>
+
+    <tw-link onclick='showInfo()'>
+        <div class="info-btn">
+            <h2 class="question-mark">?</h2>
+        </div>
+    </tw-link>
+    <div Id="infoBox" class="infoText">
+        <p> Durch das Anklicken der Indikatoren kannst du mehr über Informationen über die Persönlichkeiten erhalten.
+            <br>
+            Es ist möglich die unterschiedlichen Artikel chronologisch zu lesen, doch es ist nicht zwingend notwendig.
+            <br>
+            Habe Spaß bei der Suche!
+        </p>
+    </div>
+
+    <tw-link onclick='muteSound.muteButton()'>
+        <div class="sound-btn">
+
+            <div class="bar-container">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+
+        </div>
+    </tw-link>
+
+
+    <div class="all-articles">
+        <div class="articles" id="article-container-1">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(1)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Familiengeschichte und Herkunft</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Am 15. Februar 1890 wurde Klara Marie Fassbinder im rheinland-pfälzischen Trier geboren und 
+                    wuchs als das fünfte von sieben Kindern in einer katholischen und kaisertreuen Familie auf. 
+                    Dennoch war die Lehrerfamilie offen für soziale und politische Fragen und so gingen sechs der 
+                    sieben Geschwister der Tätigkeit als Lehrerinnen und Lehrer nach. <br>
+                    Ein weiterer Grund für Klara Fassbinder, Lehrerinnen zu werden, war ihre schnelle 
+                    Auffassungsgabe, durch die sie bei anderen Kindern aneckte wodurch sie eine gerechte Lehrerin 
+                    für die zukünftigen Generationen werden wollte. Bereits mit 16 Jahren kam sie somit auf das 
+                    Höhere Leh­re­rin­nen­semi­nar nach Koblenz und drei Jahre später erreichte sie ihr Leh­re­rin­nen­examen für mittlere und hö­he­re Mäd­chen­schu­len. Nach weiteren drei Jahren, in denen sie in 
+                    Darmstadt einer Lehrtätigkeit nachging, gelang es ihr 1913 ihr externes Abitur im noch 
+                    preußischen Münster abzuschließen, was ihr ermöglichte, einer der ersten weiblichen 
+                    Studierenden an der Bonner Universität zu werden. <br>
+                    Dort absolvierte sie 1917 ihr Staatsexamen für das höhere Lehramt in Französisch, Deutsch, 
+                    Geschichte und Philosophie und folgend promovierte sie in der Romanistik. <br>
+                </div>
+
+                <div class="picture-container">
+                    <div class="rectangle"><img class="article-picture" src="/assets/fassbinder/family.jpg"></div>
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(1)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="articles" id="article-container-2">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(2)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Krieg und deutsch französische Freundschaft </h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Obwohl Klara Fassbinder ein tiefes Verständnis der französischen Sprache innehielt, spiegelt dies 
+                    nicht ihre Einstellung dem Land wider. Sie hielt eine negative Haltung Frankreich gegenüber, 
+                    wodurch sie 1918 freiwillig in den Krieg zog, mit der festen Überzeugung, dass Deutschland 
+                    diesen gewinnen würde. <br>
+                    In der kaiserlichen Armee wurde sie in den französischen Ardennen eingesetzt, um die Moral der 
+                    Truppen zu stärken. Dadurch hielt sie „Vaterländischen Unterricht“, organisierte Kirchenkonzerte 
+                    sowie Diskussionsabende und stellte eine kleine Leihbücherei zusammen. <br>
+                    Erst als sie an der Front mit dem Leid der Menschen konfrontiert wurde, regte sich Protest in ihr 
+                    und ihre Vorstellung änderte sich abrupt. Denn sie wurde zusätzlich als Ver­mitt­le­rin zwi­schen der 
+                    fran­zö­si­schen Be­völ­ke­rung und der deut­schen Be­sat­zungs­ar­mee eingesetzt. Somit stand sie im 
+                    direkten Kontakt mit der französischen Bevölkerung, die sie nun besser kennenlernte und 
+                    fortgehend nicht mehr den „Erbfeind“ erkannte. <br>
+                    Letztendlich veränderte sie sich von der entschlossen Nationalistin zu einer Verfechterin der 
+                    deutsch-französische Freundschaft und des Pazifismus. Im Nachhinein fragte sie sich später oft, 
+                    wie sie so lange blind sein konnte.
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(2)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="articles" id="article-container-3">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(3)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Frauenbewegung und Friedensbewegung</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Vor dem ersten Weltkrieg war Klara Marie Fassbinder der Überzeugung, dass es besser wäre, sich 
+                    nicht in der Politik zu beteiligen und auch das Frauenwahlrecht schien kein wichtiges Thema für 
+                    sie darzustellen. Doch nachdem sie aus dem Krieg zurückkehrte, wird die Diskussion immer 
+                    prominenter, bis sie 1926 auf dem internationalen Frauenstimmrechtskongress in Paris zur 
+                    Frauenbewegung Anschluss fand. In diesem Kongress wurde sie in den Friedensausschluss 
+                    gewählt und setzte sich seitdem ebenfalls für Gleichberechtigung der Geschlechter ein. <br>
+                    Nachdem 1950 Konrad Adenauer die Wiederbewaffnung der Bundesrepublik anstrebte, schloss 
+                    sich Fassbinder der Friedensbewegung an und engagierte sich für eine Verständigung mit dem 
+                    Osten und für die Wiedervereinigung Deutschlands. Durch ihre klare pazifistische Stellungnahme 
+                    wurde sie vom Verfassungsschutz bespitzelt mit dem Vorwand, prokommunistische Äußerungen 
+                    zu denunzieren und 1953 wurde ein Dienstverfahren gegen sie eröffnet. Dies wurde aufgrund 
+                    haltloser Anschuldigungen geschlossen, doch wurde Kla­ra Ma­rie Fass­bin­der auf Anweisung der 
+                    damaligen Kultusministerin von ihrem Amt suspendiert und in den vorzeitigen Ruhestand 
+                    geschickt. <br>
+                    Trotz zahlreicher Anfeindungen setzt sie sich weiterhin für die Friedensbewegung ein und blieb 
+                    ihren Werten unermüdlich treu.
+                </div>
+
+                <div class="picture-container">
+                    <div class="square"><img class="article-picture" src="/assets/fassbinder/proteste-1.jpg"></div>
+                    <div class="puffer"></div>
+                    <div class="square"><img class="article-picture" src="/assets/fassbinder/proteste-2.jpg"></div>
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(3)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="gallery-wrapper">
+
+            <div class="pictures" id="picture-gallery">
+
+                <!-- <div href="javascript:void(0)" type="button" class="closebtn right" onclick="closeGallery()">
+                <div class="btn-line"></div>
+                <div class="btn-line-2"></div>
+                </div> -->
+
+                <section class="splide" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide"><img class="portrait" src="/assets/fassbinder/gallery-1.jpg">
+                                <h3 class="text">Klara Fassbinder als Studentin</h3>
+                            </li>
+                            <li class="splide__slide"><img class="portrait" src="/assets/fassbinder/gallery-2.png">
+                                <h3 class="text">Ein Portrait von Klara Fassbinder 1955</h3>
+                            </li>
+                            <!-- <li class="splide__slide"><img class="portrait" src="/assets/fassbinder/gallery-3.jpg">
+                                <h3 class="text">Klara Fassbinder auf einer Pressekonferenz</h3>
+                            </li> -->
+                            <li class="splide__slide"><img class="portrait" src="/assets/fassbinder/gallery-4.png">
+                                <h3 class="text">Klara Marie Faßbinder und Elly Steinmann bei einer Demonstration gegen Atomwaffen, 1965</h3>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <div class="click-indicator">
+                    <p>click around to close</p>
+                </div>
+
+                <div class="dimmer" onclick="closeGallery()"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="articles" id="article-container-5">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(5)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Tätigkeit als Lehrerin und Professorin</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Nachdem sie aus dem Ersten Weltkrieg zurückkehrte, setzte sie sich tatkräftig für eine Versöhnung 
+                    mit Frankreich ein und beschloss somit 1920 ins Saarland zu ziehen, das zu diesem Zeitpunkt 
+                    weiterhin unter französischer Besatzung stand. Dort lehrte sie an einer Schule in Saarbrücken und 
+                    wurde später Leiterin des Bühnenvolksbundes, mit dem sie versuchte, das Theater für alle 
+                    Schichten zugänglicher zu gestalten. <br>
+                    Durch ihre offene und kritische Haltung gegenüber des nationalsozialistischen und antisemitischen 
+                    Reiches wurde sie 1935, nach dem Anschluss des Saarlands an NS-Deutschland, fristlos entlassen. 
+                    Sie flüchtete, entgegen der Ratschläge ihrer französischen Freunde, nicht ins benachbarte 
+                    Frankreich und blieb stattdessen in Deutschland, um Leiterin einer kleinen katholischen Schule für 
+                    Mädchen zu werden. Nachdem diese geschlossen wurde, gibt Fassbinder weiterhin 
+                    Nachhilfestunden und hielt sich mit Übersetzungen von Paul Claudels Werken finanziell über 
+                    Wasser. <br>
+                    Als der Krieg endete, kehrte sie jedoch als Schulleiterin an die Mädchenschule zurück und wurde 
+                    gleichzeitig an der Pädagogischen Akademie in Bonn Professorin für Geschichte. Sie legte 
+                    besonderen Wert darauf, die jüngsten Ereignisse zu analysieren, um ihren Studenten zu 
+                    vermitteln, wie es dazu kam und wie eine Wiederholung verhindert wird.
+                    Dort lehrte sie, bis ihr durch ihre klare politische Haltung die Lehrbefugnis entzogen und gegen 
+                    ihren Willen pensioniert wurde. Ihr wurde trotz zahlreicher Proteste der Studierenden nicht mehr 
+                    erlaubt, die Universität zu betreten und auch eine Abschiedsvorlesung wurde ihr nicht 
+                    zugesprochen. Dies hielt sie nicht davon ab 1967 vor 800 Studenten*innen in der Mensa ihren 
+                    Vortrag „Schluss mit Deutschland“ zu halten. <br>
+                    Durch den Kultusminister Prof. Paul Luchtenberg wurde sie 1957 rehabilitiert, sodass eine 
+                    Danksagung in ihrer Ruhestandsurkunde steht.
+                    
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(5)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="articles" id="article-container-6">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(6)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Auszeichnungen</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    1919 sollte ihr das Eiserne Kreuz verliehen werden, was sie jedoch ablehnte, da es nicht mehr zu 
+                    ihrer pazifistischen Weltanschauung passte. <br>
+                    Durch ihre Bemühungen für die Deutsch-Französische-Freundschaft und als Übersetzerin von Paul 
+                    Claudel sollte ihr 1966 der französische Orden „Ordre des Palmes Académiques" übergeben 
+                    werden. Dieser stellt einer der höchsten Auszeichnungen in Frankreich für Verdienste im 
+                    Bildungswesen dar. Allerdings untersagte der damalige Bundespräsident, Heinrich Lübke, die 
+                    Annahme des Ordens, was zu einem politischen Skandal und großem Aufsehen führte. Erst 
+                    nachdem Gustav Heinemann zum neuen Bundespräsidenten ernannt wurde, war es ihr möglich, 
+                    den Orden entgegen zu nehmen. <br>
+                    Im Alter von 84 Jahren verstarb Kla­ra Ma­rie Fassbinder in ei­nem Al­ters­heim in Ber­kum bei Bonn. 
+                    Einer ihrer letzten Wünsche bestand darin, mit dem verliehenen Orden begraben zu werden.
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(6)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <main>
+
+        <!-- <div class="chapter-container" id="chapter" onclick=startChapter()>
+            <h1 class="chapter-title"> click around to discover </h1>
+            <div id="pointer"></div>
+            <div class="dark"></div>
+        </div> -->
+
+        <div class="indicator" onclick="func(1)" id="ind-1">
+            <a class="text ind-number" onclick="func(1)">I</a>
+        </div>
+
+        <div class="indicator" onclick="func(2)" id="ind-2">
+            <a class="text ind-number" onclick="func(2)">II</a>
+        </div>
+
+        <div class="indicator" onclick="func(3)" id="ind-3">
+            <a class="text ind-number" onclick="func(3)">III</a>
+        </div>
+
+        <div class="indicator" onclick="getGallery(4)" id="ind-4">
+            <a class="text ind-number" onclick="getGallery()">IV</a>
+        </div>
+
+        <div class="indicator" onclick="func(5)" id="ind-5">
+            <a class="text ind-number" onclick="func(5)">V</a>
+        </div>
+
+        <div class="indicator" onclick="func(6)" id="ind-6">
+            <a class="text ind-number" onclick="func(6)">VI</a>
+        </div>
+
+        <div id="particles-leyen"></div>
+
+        <div class="room-container"><img class="asset" src="/assets/fassbinder/room.jpg"></div>
+
+
+    </main>
+
+
+    <script src="/libs/howler.js-master/dist/howler.js"></script>
+    <script src="/libs/particles.js-master/particles.js"></script>
+    <script src="/libs/anime-master/lib/anime.min.js"></script>
+    <script src="/libs/splide-4.1.3/dist/js/splide.min.js"></script>
+
+    <script src="/javascript/script.js" defer></script>
+
+    <script>
+        function on() {
+            document.getElementById("pointer").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("pointer").style.display = "none";
+        }
+
+        particlesJS.load('particles-leyen', 'json/particles-leyen.json');
+    </script>
+
+    <script>
+        new Splide('.splide', {
+            height: '65vh',
+            width: '50vw',
+            type: 'loop',
+            rewind: 'true',
+            heightRatio: 0.5,
+            arrowPath: 'M40,19.5h0c-.12-.04-12.03-3.34-13.11-13.05l-.99,.11c.82,7.41,7.45,11.31,11.23,12.94H0v1H37.12c-3.78,1.64-10.4,5.53-11.23,12.94l.99,.11c1.08-9.71,12.99-13.02,13.11-13.05h0v-1Z',
+        }).mount();
+    </script>
+    
+</body>
+
+</html>
