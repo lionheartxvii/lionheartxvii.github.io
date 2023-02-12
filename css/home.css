@@ -164,20 +164,17 @@ main {
         height: 25vh;
         width: 85vw;
         padding-top: 20%;
-        padding-bottom: 2%;
     }
 
     .content-grafik {
-        height: 45vh;
+        height: 35vh;
         width: 80vw;
         
     }
 
     /* Items in Divs */
     .map {
-        height: 76%;
-        padding-bottom: 12%;
-        padding-top: 0;
+        height: 85%;
     }
 
     .logo {
