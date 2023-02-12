@@ -175,6 +175,7 @@ main {
     /* Items in Divs */
     .map {
         height: 85%;
+        padding-top: 10%;
     }
 
     .logo {
@@ -194,7 +195,7 @@ main {
 
     .bottom{
         position: absolute;
-        bottom: -125%;
+        bottom: -130%;
     }
 }
 
