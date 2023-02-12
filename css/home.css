@@ -167,7 +167,7 @@ main {
     }
 
     .content-grafik {
-        height: 35vh;
+        height: 40vh;
         width: 80vw;
         
     }
@@ -175,7 +175,7 @@ main {
     /* Items in Divs */
     .map {
         height: 85%;
-        padding-top: 10%;
+        padding-top: 0%;
     }
 
     .logo {
