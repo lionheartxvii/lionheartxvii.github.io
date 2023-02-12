@@ -30,7 +30,7 @@ document.querySelector('.hamburger').onclick = animation1.play;
 
 var animation2 = anime({
   targets: '.menu-item',
-  delay: anime.stagger(80, {
+  delay: anime.stagger(50, {
     start: 40,
     easing: 'easeInSine'
   }),
