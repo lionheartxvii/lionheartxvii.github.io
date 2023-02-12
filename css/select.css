@@ -152,13 +152,17 @@ main {
 
     /* Smaller Divs */
     .content-text {
-        height: 50vh;
-        width: 75vw;
+        height: 36vh;
+        width: 80vw;
         justify-content: center;
     }
 
     .portrait {
-        height: 58%;
+        height: 50%;
+    }
+
+    .marvingt-portrait{
+        height: 44%;
     }
 
     .line {
