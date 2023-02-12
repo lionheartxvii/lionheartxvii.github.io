@@ -153,7 +153,7 @@ main {
     /* Main Div */
     .content {
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         height: 95vh;
         width: 90vw;
@@ -161,8 +161,10 @@ main {
 
     /* Smaller Divs */
     .content-text {
-        height: 40vh;
-        width: 75vw;
+        height: 25vh;
+        width: 85vw;
+        padding-top: 20%;
+        padding-bottom: 5%;
     }
 
     .content-grafik {
@@ -179,7 +181,7 @@ main {
     }
 
     .logo {
-        height: 28%;
+        height: 45%;
         padding-bottom: 0.5rem;
     }
 
@@ -195,7 +197,7 @@ main {
 
     .bottom{
         position: absolute;
-        bottom: -115%;
+        bottom: -130%;
     }
 }
 

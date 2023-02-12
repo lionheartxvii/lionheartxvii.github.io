@@ -521,6 +521,10 @@ header {
         padding-bottom: 1rem;
     }
 
+    .hidden-text {
+        display: none;
+    }
+
     .hidden {
         display: none;
     }

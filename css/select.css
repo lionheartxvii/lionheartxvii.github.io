@@ -111,9 +111,7 @@ main {
 /* Mobile */
 @media (max-width: 1050px) {
 
-    .hidden-text {
-        display: none;
-    }
+
 
     /* Smaller Divs */
     .content-text {
