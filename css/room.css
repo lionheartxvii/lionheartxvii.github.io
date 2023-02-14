@@ -477,24 +477,9 @@ h3 {
 /* Tablett */
 @media (max-width: 1400px) {
 
-    /* Fixed version */
-    /* .room-container {
-        position: relative;
-        z-index: 100;
-        width: auto;
-        height: 88vh;
-        
-    }
-    
-    .room-container img {
-        width: 112%;
-        height: 102%;
-        object-fit: cover;
-        transform: translateX(-10%);
-    } */
 
         /* Fixed version */
-        .room-container {
+        /* .room-container {
             position: relative;
             z-index: 100;
             width: auto;
@@ -507,7 +492,7 @@ h3 {
             height: 102%;
             object-fit: cover;
             transform: translateX(-8%);
-        }
+        } */
 
     /* 100% version */
     /* .room-container {
@@ -524,7 +509,7 @@ h3 {
     } */
 
     /* Scroll Version */
-    /* .room-container {
+    .room-container {
         position: relative;
         z-index: 100;
         width: 100%;
@@ -537,7 +522,7 @@ h3 {
         width: 120%;
         height: 90vh;
         object-fit: cover;
-    } */
+    }
 
 
     /* Articles */
