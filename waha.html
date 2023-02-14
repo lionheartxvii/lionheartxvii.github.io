@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
+    maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Her History</title>
+
+    <link rel="stylesheet" href="/libs/splide-4.1.3/dist/css/splide.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/room.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Nunito+Sans:wght@400;600&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+
+        <style>
+            #ind-1 {
+                top: 30%;
+                left: 20%;
+            }
+    
+            #ind-2 {
+                top: 74%;
+                left: 84.2%;
+            }
+    
+            #ind-3 {
+                top: 62%;
+                left: 57%;
+            }
+    
+            #ind-4 {
+                top: 28%;
+                left: 83%;
+            }
+    
+            #ind-5 {
+                top: 76%;
+                left: 37.5%;   
+            }
+    
+            #ind-6 {
+                top: 85%;
+                left: 10%;
+            }
+        </style>
+</head>
+
+<body>
+    <header>
+        <div class="navigation hidden">
+            <a href="index.html" class="menu-item">home</a>
+            <a href="select.html" class="menu-item">übersicht</a>
+            <a href="datenschutz.html" class="menu-item">about</a>
+            <a href="impressum.html" class="menu-item">imprint</a>
+        </div>
+
+        <div class="languages hidden">
+            <a href="datenschutz.html" class="menu-item narrow">DE</a>
+            <a href="impressum.html" class="menu-item narrow">FR</a>
+            <a href="impressum.html" class="menu-item narrow">ENG</a>
+        </div>
+
+        <button class="chevron">
+            <div class="lang">DE &#x25BC</div>
+        </button>
+
+        <button class="hamburger">
+            <div class="bar"></div>
+        </button>
+
+    </header>
+
+    <div class="mobile-nav">
+        <div class="hamburger-content">
+        <a href="index.html" class="menu-item">home</a>
+        <a href="select.html" class="menu-item">übersicht</a>
+        <a href="datenschutz.html" class="menu-item">about</a>
+        <a href="impressum.html" class="menu-item">imprint</a>
+        </div>
+    </div>
+
+    <div class="mobile-languages">
+        <div class="chevron-content">
+            <a href="datenschutz.html" class="menu-item bold">deutsch</a>
+            <a href="impressum.html" class="menu-item">französisch</a>
+            <a href="impressum.html" class="menu-item">englisch</a>
+        </div>
+    </div>
+
+    <tw-link onclick='showInfo()'>
+        <div class="info-btn">
+            <h2 class="question-mark">?</h2>
+        </div>
+    </tw-link>
+    <div Id="infoBox" class="infoText">
+        <p> Durch das Anklicken der Indikatoren kannst du mehr über Informationen über die Persönlichkeiten erhalten.
+            <br>
+            Es ist möglich die unterschiedlichen Artikel chronologisch zu lesen, doch es ist nicht zwingend notwendig.
+            <br>
+            Habe Spaß bei der Suche!
+        </p>
+    </div>
+
+    <tw-link onclick='muteSound.muteButton()'>
+        <div class="sound-btn">
+
+            <div class="bar-container">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+
+        </div>
+    </tw-link>
+
+
+    <div class="all-articles">
+        <div class="articles" id="article-container-1">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(1)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Familiengeschichte</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Als Tochter aus zwei großen liberalen Adelsfamilien wurde Léonie Marie Laurence de Chestret de Haneffe 
+                    am 03. März 1836 in Tilff in der Provinz Lüttich geboren. Ihr Vater war der Baron und spätere Senator 
+                    Hyacinthe de Chestret de Haneffe und ihre Mutter die adlige Amanda Laurence de Sélys Longchamps.
+                    Im Alter von zwei Jahren verstarb bereits ihre Mutter, weshalb Léonie im Schloss Colonster aufwuchs und 
+                    durch ihren Vater und private Tutoren erzogen wurde. Sie entwickelte sich zu einer liberalen, 
+                    demokratischen, toleranten und gläubigen Frau, die ein großes Interesse an Geschichte innehielt und lernte 
+                    mehrere Sprachen zu sprechen. <br>
+                    Mit 27 Jahren heiratete sie 1863 den Baron und Rechtswissenschaftler Louis Auguste de Waha-Baillonville, 
+                    mit dem sie nach drei Jahren Ehe eine Tochter bekam. Diese verstarb jedoch noch im Säuglingsalter und 
+                    kurz darauf erlitt Léonie de Waha einen weiteren Schicksalsschlag, als ein Jahr später auch ihr Ehemann 
+                    starb. <br>
+                    Nach dem Tod ihres Mannes entschloss sie, sich vermehrt für ihre Mitmenschen einzusetzen, sich der 
+                    Emanzipation zu widmen und darüber hinaus die gemeinnützige Arbeit ihres Mannes fortzusetzen.
+                    Am 8. Juli 1926 verstarb sie im hohen Alter von 90 Jahren in ihrem Zuhause in Tilff und wurde 2012 
+                    posthum zum „officier du Mérite wallon“ (dt. Wallonischer Verdienstoffizier) ernannt.
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(1)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="articles" id="article-container-2">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(2)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Errichtung von Schulen und Bibliotheken</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Nachdem sie in jungen Jahren ihren Mann verlor, beschloss sie mehr in die Ausbildung von Mädchen und 
+                    Frauen zu investieren, die meist bloß von katholischen Institutionen unterstützt wurden. Doch sie wollte 
+                    auch außerhalb dessen Anlaufstellen anbieten, um einer breiteren Bevölkerung Zugang zu erlauben.
+                    Die Arbeit ihres Mannes führte sie weiter, indem sie Bibliotheken in Chênée und Esneux erbauen ließ und 
+                    zahlreiche Wohltätigkeitsorganisationen unterstützte. <br>
+                    Sie gründete eine Schneiderschule in Tilff, sie trug zur Entwicklung von Kindergärten und Schulen bei und 
+                    schuf 1868 das „Institut supérieur de demoiselles“ (dt. „Höheres Institut für junge Damen“), eine 
+                    weiterführende Schule für Mädchen, in dem weltliche Lehrerinnen und Lehrer unterrichteten. 
+                    Die Schule sollte jungen Frauen schließlich den Zugang zu einer Hochschulbildung ermöglichen.
+                    Besonders der optionale Religionsunterricht wurde pluralistisch gestaltet, indem dieser bei katholischen, 
+                    protestantischen oder jüdischen Geistlichen genommen werden konnte. Gerade dies stieß bei dem Bischof 
+                    von Lüttich auf Kritik und er drohte mit der Exkommunikation aller, die die Schule besuchten. Erst der 
+                    nachfolgende Bischof widerruf dieses Urteil. <br>
+                    Später wurde die Schule von der Provinz subventioniert, was ebenfalls zur Verbesserung des lokalen 
+                    Bildungssystems beitrug.
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(2)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="articles" id="article-container-3">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(3)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Ihr Einsatz für bessere Frauenrechte</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Neben ihrem Engagement für bessere Bildungschancen setzte sich Léonie de Waha bereits Ende des 19. 
+                    Jahrhunderts für die Verbesserung der Frauenrechte ein, die das Frauenwahlrecht und ein besseres 
+                    Arbeitsumfeld umfassten. <br>
+                    Dadurch war es unter anderem ihr Ziel, das Selbstvertrauen der Frauen zu verbessern, das Bewusstsein für 
+                    gleiche Rechte zu stärken sowie die finanzielle Unabhängigkeit zu unterstützen.
+                    Um das wallonische politische Bewusstsein der Frauen zu fördern, gründete Léonie de Waha die „Union des 
+                    femmes de Wallonie“ (dt. „Union der Wallonischen Frauen“), die sich mit der Autonomie Walloniens und 
+                    der Emanzipation befasste. <br>
+                    Alle Frauen waren dazu eingeladen, der Union beizutreten, die sich um Gerechtigkeit, Solidarität und die 
+                    Heimatliebe kümmerten. Um dies auszudrücken und das politische Bewusstsein zu stärken, unternahmen sie 
+                    verschiedene Aktivitäten und veröffentlichten ein passendes Bulletin. <br>
+                    Auch verfasste Léonie de Waha selbst Artikel für unterschiedliche wallonische Zeitschriften wie „La 
+                    Barricade“ und „La Femme wallonne“ und leitete die Union noch mit 90 Jahren, bis sie 1926 verstarb.
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(3)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="gallery-wrapper">
+
+            <div class="pictures" id="picture-gallery">
+
+                <!-- <div href="javascript:void(0)" type="button" class="closebtn right" onclick="closeGallery()">
+                <div class="btn-line"></div>
+                <div class="btn-line-2"></div>
+                </div> -->
+
+                <section class="splide" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide"><img class="portrait" src="/assets/vonderLeyen/gemaelde-1.jpg">
+                                <h3 class="text">Marianne von der Leyen</h3>
+                            </li>
+                            <li class="splide__slide"><img class="portrait" src="/assets/vonderLeyen/gemaelde-2.jpg">
+                                <h3 class="text">Marianne von der Leyen</h3>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <div class="click-indicator">
+                    <p>click around to close</p>
+                </div>
+
+                <div class="dimmer" onclick="closeGallery()"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="articles" id="article-container-5">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(5)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Autonomie Wallonie</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Die Autonomie Walloniens war ein langes und wichtiges Anliegen Léonie de Wahas. Besonders als die 
+                    Bewegung zu Beginn des 20. Jahrhunderts wuchs, korrespondierte sie mit den leitenden Personen Julien 
+                    Delaite und Jules Destrée. <br> 
+                    Auch an ihrer weiterführenden Schule legte sie einen großen Wert auf die lokale Geschichte und vermittelte 
+                    den Schülerinnen, sich mit ihrer Region verbunden zu fühlen. <br>
+                    Es war ihr Vorschlag, die Farben von Lüttich als Wahrzeichen der Wallonie zu verwenden. Auch die 
+                    Gaillarde, eine rot-gelbe Kokardenblume als Emblem zu nutzen, war ihr Vorschlag. Bis heute sind die 
+                    Farben und die Blume Zeichen der Wallonie. Eine der höchsten Auszeichnungen der Region stellt ebenfalls 
+                    eine silberne Gaillarde dar.
+                    
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(5)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="articles" id="article-container-6">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(6)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Literatur</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                ??? Bild einfügen
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(6)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <main>
+
+        <div class="chapter-container" id="chapter" onclick=startChapter()>
+            <h1 class="chapter-title"> click around to discover </h1>
+            <div id="pointer"></div>
+            <div class="dark"></div>
+        </div>
+
+        <div class="indicator" onclick="func(1)" id="ind-1">
+            <a class="text ind-number" onclick="func(1)">I</a>
+        </div>
+
+        <div class="indicator" onclick="func(2)" id="ind-2">
+            <a class="text ind-number" onclick="func(2)">II</a>
+        </div>
+
+        <div class="indicator" onclick="func(3)" id="ind-3">
+            <a class="text ind-number" onclick="func(3)">III</a>
+        </div>
+
+        <div class="indicator" onclick="getGallery(4)" id="ind-4">
+            <a class="text ind-number" onclick="getGallery()">IV</a>
+        </div>
+
+        <div class="indicator" onclick="func(5)" id="ind-5">
+            <a class="text ind-number" onclick="func(5)">V</a>
+        </div>
+
+        <div class="indicator" onclick="func(6)" id="ind-6">
+            <a class="text ind-number" onclick="func(6)">VI</a>
+        </div>
+
+        <div id="particles-leyen"></div>
+
+        <div class="room-container"><img class="asset" src="/assets/deWaha/room.jpg"></div>
+
+
+    </main>
+
+
+    <script src="/libs/howler.js-master/dist/howler.js"></script>
+    <script src="/libs/particles.js-master/particles.js"></script>
+    <script src="/libs/anime-master/lib/anime.min.js"></script>
+    <script src="/libs/splide-4.1.3/dist/js/splide.min.js"></script>
+
+    <script src="/javascript/script.js" defer></script>
+
+    <script>
+        function on() {
+            document.getElementById("pointer").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("pointer").style.display = "none";
+        }
+
+        particlesJS.load('particles-leyen', 'json/particles-leyen.json');
+    </script>
+
+    <script>
+        new Splide('.splide', {
+            height: '65vh',
+            width: '50vw',
+            type: 'loop',
+            rewind: 'true',
+            heightRatio: 0.5,
+            arrowPath: 'M40,19.5h0c-.12-.04-12.03-3.34-13.11-13.05l-.99,.11c.82,7.41,7.45,11.31,11.23,12.94H0v1H37.12c-3.78,1.64-10.4,5.53-11.23,12.94l.99,.11c1.08-9.71,12.99-13.02,13.11-13.05h0v-1Z',
+        }).mount();
+    </script>
+    
+</body>
+
+</html>

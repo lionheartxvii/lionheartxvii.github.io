@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
+    maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Her History</title>
+
+    <link rel="stylesheet" href="/libs/splide-4.1.3/dist/css/splide.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/room.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Nunito+Sans:wght@400;600&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+
+        <style>
+            #ind-1 {
+                top: 26%;
+                left: 26%;
+            }
+    
+            #ind-2 {
+                top: 53%;
+                left: 13.5%;
+            }
+    
+            #ind-3 {
+                top: 58%;
+                left: 73.5%;
+            }
+    
+            #ind-4 {
+                top: 60%;
+                left: 39%;
+            }
+    
+            #ind-5 {
+                top: 92%;
+                left: 49%;
+            }
+    
+            #ind-6 {
+                top: 49%;
+                left: 33.5%;
+            }
+        </style>
+</head>
+
+<body>
+    <header>
+        <div class="navigation hidden">
+            <a href="index.html" class="menu-item">home</a>
+            <a href="select.html" class="menu-item">übersicht</a>
+            <a href="datenschutz.html" class="menu-item">about</a>
+            <a href="impressum.html" class="menu-item">imprint</a>
+        </div>
+
+        <div class="languages hidden">
+            <a href="datenschutz.html" class="menu-item narrow">DE</a>
+            <a href="impressum.html" class="menu-item narrow">FR</a>
+            <a href="impressum.html" class="menu-item narrow">ENG</a>
+        </div>
+
+        <button class="chevron">
+            <div class="lang">DE &#x25BC</div>
+        </button>
+
+        <button class="hamburger">
+            <div class="bar"></div>
+        </button>
+
+    </header>
+
+    <div class="mobile-nav">
+        <div class="hamburger-content">
+        <a href="index.html" class="menu-item">home</a>
+        <a href="select.html" class="menu-item">übersicht</a>
+        <a href="datenschutz.html" class="menu-item">about</a>
+        <a href="impressum.html" class="menu-item">imprint</a>
+        </div>
+    </div>
+
+    <div class="mobile-languages">
+        <div class="chevron-content">
+            <a href="datenschutz.html" class="menu-item bold">deutsch</a>
+            <a href="impressum.html" class="menu-item">französisch</a>
+            <a href="impressum.html" class="menu-item">englisch</a>
+        </div>
+    </div>
+
+    <tw-link onclick='showInfo()'>
+        <div class="info-btn blue">
+            <h2 class="question-mark">?</h2>
+        </div>
+    </tw-link>
+    <div Id="infoBox" class="infoText">
+        <p> Durch das Anklicken der Indikatoren kannst du mehr über Informationen über die Persönlichkeiten erhalten.
+            <br>
+            Es ist möglich die unterschiedlichen Artikel chronologisch zu lesen, doch es ist nicht zwingend notwendig.
+            <br>
+            Habe Spaß bei der Suche!
+        </p>
+    </div>
+
+    <tw-link onclick='muteSound.muteButton()'>
+        <div class="sound-btn blue">
+
+            <div class="bar-container">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+
+        </div>
+    </tw-link>
+
+
+    <div class="all-articles">
+        <div class="articles" id="article-container-1">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(1)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Familiengeschichte und Herkunft</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Marie Félicie Élisabeth Marvingt wurde am 20. Februar 1875 im französischen Aurillac geboren, 
+                    welches im Süden des Landes liegt. Zuvor haben ihre Eltern, der Postbeamte Félix Marvingt und 
+                    seine Frau Élisabeth bereits drei Söhne verloren und auch ihr jüngerer Bruder, Eugène, blieb 
+                    zeitlebens kränklich. <br>
+                    Die Familie lebte bis 1870 in Metz an der Mosel, verließen es jedoch durch die deutsche 
+                    Besetzung und kehrten erst ein Jahrzehnt später erneut in die Stadt zurück. In Metz besuchte 
+                    Marie Marvingt die Privatschule Sainte-Chrétienne und zeigte bereits sehr früh ein sportliches 
+                    Talent. Dieses förderte vor allem ihr Vater, da er diese Tätigkeiten nicht mit seinem kranken Sohn 
+                    teilen konnte. <br>
+                    Als sie erst vierzehn Jahre als war, verstarb ihre Mutter und die Familie zog nach Nancy.
+                </div>
+
+                <div class="picture-container">
+                    <div class="rectangle"><img class="article-picture" src="/assets/marvingt/marvingtFamily-01.jpg"></div>
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(1)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="articles" id="article-container-2">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(2)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Sport</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Bereits in jungen Jahren wurde Marie durch ihren sportlichen Vater die Leidenschaft für den Sport 
+                    näher gebracht. Dadurch zeigt sie in zahlreichen Sportarten sehr früh ein unfassbares Talent. 
+                    Schwimmen, Fechten, Reiten, Skifahren, Bergsteigen und Eislauf sind bloß einige Sportarten, die 
+                    sie betrieb und sie zu einem sportlichen Universaltalent machte. <br>
+                    Im Alter von elf Jahren nahm sie an Radrennen teil und mit fünfzehn fuhr sie mit dem Kanu alleine 
+                    400 Kilometer von Nancy bis nach Koblenz. Mit 25 wurde sie französische Schießmeisterin, drei 
+                    Jahre später bestieg sie als erste Frau die höchsten Gipfel der Alpen und mit dreißig Jahren 
+                    schwamm sie innerhalb von vier Stunden in der Seine durch ganz Paris. Zu dieser Zeit galt sie als 
+                    beste Schwimmerin in Frankreich. <br>
+                    1908 bezweckte sie die Tour de France mitzufahren, doch als Frau wurde ihr dies verboten, 
+                    wodurch sie hinter dem Feld herfuhr. Da zwei Drittel der männlichen Teilnehmer es nicht ins Ziel 
+                    schafften, wäre sie am Ende im ersten Drittel der Fahrer angekommen. Ihre Leidenschaft zum 
+                    Fahrradfahren hat sie nie verloren, denn auch im Alter von 86 Jahren legte sie noch eine Strecke 
+                    von insgesamt 281 Kilometern von Nancy bis nach Paris zurück.
+                    Eine weitere große Leidenschaft von ihr, in der sie herausragende Leistung hervorbrachte, war das 
+                    Bergsteigen, welches sie vor allem zwischen 1903 und 1910 betrieb. Als erste Frau bezwang sie 
+                    den 3.096 Meter hohen Buet und den 4.013 Meter hohen Dent du Géant und bestieg die meisten 
+                    Berge in den Französischen und Schweizer Alpen. <br>
+                    All dies war für eine Frau zu dieser Zeit sehr unüblich, doch dies hielt sie nie davon ab, mehr zu 
+                    erreichen. Ihr Ehrgeiz und Eigensinn trieben sie dazu, immer weitere Herausforderungen zu 
+                    bestehen und über sich selbst hinauszuwachsen.
+                </div>
+
+                <div class="picture-container">
+                    <div class="square"><img class="article-picture" src="/assets/marvingt/marvingtSports-01.jpg"></div>
+                    <div class="puffer"></div>
+                    <div class="square"><img class="article-picture" src="/assets/marvingt/marvingtSports-05.jpg"></div>
+                    <div class="puffer"></div>
+                    <div class="square"><img class="article-picture" src="/assets/marvingt/marvingtSports-04.jpg"></div>
+                </div>
+
+                <!-- <div class="picture-container padding">
+                    <div class="square"><img class="article-picture" src="/assets/marvingt/marvingtSports-03.jpg"></div>
+                    <div class="square"><img class="article-picture" src="/assets/marvingt/marvingtSports-04.jpg"></div>
+                </div> -->
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(2)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="articles" id="article-container-3">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(3)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Fliegen</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Eine große Leidenschaft von Marie war stets das Fliegen, was sie wohl bereits zum ersten Mal 
+                    bemerkt hat, als sie in den Korb eines Heißluftballons stieg. Schnell gelang es ihr auch in diesem 
+                    neuen Interesse viele Erfolge zu erreichen. Als erste Frau schafft sie es, in einem Heißluftballon 
+                    über die Nordsee nach England zu fliegen, 1910 erhielt sie als weltweit dritte Frau ihre 
+                    Pilotenlizenz und stellte 1911 einen Weltrekord im Weitfliegen auf, mit dem sie den Coupe 
+                    Fémina in Turin gewann. <br>
+                    1909 bestand sie im Alter von 34 die Prüfung zur Ballonführerin und im gleichen Jahr traf sie den 
+                    Luftfahrtpionier Roger Sommer, mit dem sie ihren ersten Motorflug unternahm. Seither nahm sie 
+                    Flugstunden bei dem französischen Piloten Hubert Latham, der ihr das Fliegen in einem schwer zu 
+                    steuernden Eindecker des Types „Antoinette“ beibrachte. Schließlich bekam sie am 8. November 
+                    1910 nach Raymonde de Laroche und Marthe Niel als dritte Frau der Welt ihre Pilotenlizenz. <br>
+                    Auch im fortgeschrittenen Alter verlor sie nie ihr Interesse am Fliegen und so reiste sie 1955 in 
+                    einem amerikanischen Militärdüsenjäger mit. Im gleichen Jahr lernte sie mit 80 noch einen 
+                    Hubschrauber zu fliegen.
+                </div>
+
+                <div class="picture-container">
+                    <div class="rectangle"><img class="article-picture" src="/assets/marvingt/marvingtFlying-01.jpg"></div>
+                    <div class="puffer"></div>
+                    <div class="rectangle"><img class="article-picture" src="/assets/marvingt/marvingtFlying-02.JPG"></div>
+                </div>
+
+                <!-- <div class="picture-container">
+                    <div class="rectangle"><img class="article-picture" src="/assets/marvingt/marvingtFlying-01.jpg"></div> 
+                </div>
+                <div class="picture-container padding">
+                    <div class="rectangle"><img class="article-picture" src="/assets/marvingt/marvingtFlying-02.JPG"></div>
+                </div> -->
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(3)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="gallery-wrapper">
+
+            <div class="pictures" id="picture-gallery">
+
+                <!-- <div href="javascript:void(0)" type="button" class="closebtn right" onclick="closeGallery()">
+                <div class="btn-line"></div>
+                <div class="btn-line-2"></div>
+                </div> -->
+
+                <section class="splide" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide"><img class="portrait" src="/assets/marvingt/marvingtGallery-1.png">
+                                <h3 class="text">Marianne von der Leyen</h3>
+                            </li>
+                            <li class="splide__slide"><img class="portrait" src="/assets/marvingt/marvingtGallery-2.JPG">
+                                <h3 class="text">Marianne von der Leyen</h3>
+                            </li>
+                            <li class="splide__slide"><img class="portrait" src="/assets/marvingt/marvingtGallery-3.JPG">
+                                <h3 class="text">Marianne von der Leyen</h3>
+                            </li>
+                            <li class="splide__slide"><img class="portrait" src="/assets/marvingt/marvingtGallery-4.JPG">
+                                <h3 class="text">Marianne von der Leyen</h3>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <div class="click-indicator">
+                    <p>click around to close</p>
+                </div>
+
+                <div class="dimmer" onclick="closeGallery()"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="articles" id="article-container-5">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(5)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Krankenschwester</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Als in Europa der Erste Weltkrieg ausbrach, beschloss Marie Marvingt sich zur Krankenschwester 
+                    ausbilden zu lassen. Mit ihrer Idee, eine Luftambulanz zu gründen, um Verletzte besser versorgen 
+                    und bergen zu können, wandte sie sich an die französischen Behörden und an die Armeeleitung, 
+                    welche sie jedoch ablehnten. Schließlich wurde sie als Kampfpilotin eingesetzt, doch ihr Ziel einer 
+                    Luftambulanz verlor sie nie aus den Augen. <br>
+                    Nach dem Ersten Weltkrieg hielt sie Hunderte an Vorträgen über ihre Idee, bis sie diese 1929 
+                    sogar vor dem ersten internationalen Kongress über medizinische Aviatik vortrug. Darüber hinaus 
+                    gründetet sie eigenständig die „Les Amies de l‘Aviation Sanitaire“ (dt. "Freundinnen der 
+                    Luftsanität"), mit der sie Krankenschwestern, Ärzte und Piloten für Rettungseinsätze aus der Luft 
+                    ausbildete. <br>
+                    Kurz vor dem Ausbruch des zweiten Weltkrieges wurde es ihr von den französischen Behörden 
+                    1934 endlich erlaubt, ihre Flugambulanz in Marokko einzurichten.
+                </div>
+
+                <div class="picture-container">
+                    <div class="square"><img class="article-picture" src="/assets/marvingt/marvingtSoldier-1.jpeg"></div>
+                    <div class="square"><img class="article-picture" src="/assets/marvingt/marvingtNurse-2.jpg"></div>
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(5)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="articles" id="article-container-6">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(6)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Verdienste</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    In ihrem ereignisreichen Leben erhielt sie zahlreiche Auszeichnungen und Pokale. Allein in 
+                    Chamonix gewann sie zwischen 1908 und 1910 mehr als 20 Preise in unterschiedlichen 
+                    Wintersportarten. Doch einer der größten Auszeichnungen bekam sie im März 1910 von der der 
+                    französischen „Académie des Sports“ verliehen. Diese übergab ihr als erster und bisher einziger 
+                    Mensch eine Goldmedaille in allen Sportarten. <br>
+                    Ihr Projekt zur Luftambulanz wurde ein Erfolg und wurde schließlich mit der marokkanischen 
+                    Friedensmedaille ausgezeichnet. <br>
+                    Eine weitere große Ehre wird ihr zu Teil als sie 1934 in die französische Ehrenlegion aufgenommen 
+                    und mit dem Ritterkreuz bepreist wurde. 1949 wurde ihr darüber hinaus das Offizierskreuz der 
+                    Ehrenlegion verliehen.
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(6)" class="button back">
+                    <a>go back</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <main>
+
+        <div class="chapter-container" id="chapter" onclick=startChapter()>
+            <h1 class="chapter-title"> click around to discover </h1>
+            <div id="pointer"></div>
+            <div class="dark"></div>
+        </div>
+
+        <div class="indicator" onclick="func(1)" id="ind-1">
+            <a class="text ind-number" onclick="func(1)">I</a>
+        </div>
+
+        <div class="indicator" onclick="func(2)" id="ind-2">
+            <a class="text ind-number" onclick="func(2)">II</a>
+        </div>
+
+        <div class="indicator" onclick="func(3)" id="ind-3">
+            <a class="text ind-number" onclick="func(3)">III</a>
+        </div>
+
+        <div class="indicator" onclick="getGallery(4)" id="ind-4">
+            <a class="text ind-number" onclick="getGallery()">IV</a>
+        </div>
+
+        <div class="indicator" onclick="func(5)" id="ind-5">
+            <a class="text ind-number" onclick="func(5)">V</a>
+        </div>
+
+        <div class="indicator" onclick="func(6)" id="ind-6">
+            <a class="text ind-number" onclick="func(6)">VI</a>
+        </div>
+
+        <div id="particles-leyen"></div>
+
+        <div class="room-container"><img class="asset" src="/assets/marvingt/room.jpg"></div>
+
+
+    </main>
+
+
+    <script src="/libs/howler.js-master/dist/howler.js"></script>
+    <script src="/libs/particles.js-master/particles.js"></script>
+    <script src="/libs/anime-master/lib/anime.min.js"></script>
+    <script src="/libs/splide-4.1.3/dist/js/splide.min.js"></script>
+
+    <script src="/javascript/script.js" defer></script>
+
+    <script>
+        function on() {
+            document.getElementById("pointer").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("pointer").style.display = "none";
+        }
+
+        particlesJS.load('particles-leyen', 'json/particles-leyen.json');
+    </script>
+
+    <script>
+        new Splide('.splide', {
+            height: '65vh',
+            width: '50vw',
+            type: 'loop',
+            rewind: 'true',
+            heightRatio: 0.5,
+            arrowPath: 'M40,19.5h0c-.12-.04-12.03-3.34-13.11-13.05l-.99,.11c.82,7.41,7.45,11.31,11.23,12.94H0v1H37.12c-3.78,1.64-10.4,5.53-11.23,12.94l.99,.11c1.08-9.71,12.99-13.02,13.11-13.05h0v-1Z',
+        }).mount();
+    </script>
+    
+</body>
+
+</html>
