@@ -478,11 +478,19 @@ h3 {
 @media (max-width: 1400px) {
 
     /* Fixed version */
+<<<<<<< HEAD
     /* .room-container {
         position: relative;
         z-index: 100;
         width: auto;
         height: 88vh;
+=======
+    .room-container {
+        position: relative;
+        z-index: 100;
+        width: auto;
+        height: 90vh;
+>>>>>>> 213d57cdafc06838a9baf51baaba78396d935d99
         
     }
     
@@ -491,9 +499,15 @@ h3 {
         height: 102%;
         object-fit: cover;
         transform: translateX(-10%);
+<<<<<<< HEAD
     } */
 
     /* 100% version */
+=======
+    }
+
+    /* Scroll version */
+>>>>>>> 213d57cdafc06838a9baf51baaba78396d935d99
     /* .room-container {
         position: relative;
         z-index: 100;
@@ -507,6 +521,7 @@ h3 {
         object-fit: cover;
     } */
 
+<<<<<<< HEAD
 /* Scroll Version */
 .room-container {
     position: relative;
@@ -553,6 +568,70 @@ h3 {
 
 
 
+=======
+    
+}
+
+
+@media (min-width: 1100px) and (max-width: 1350px) {
+
+    /* Fixed version */
+    /* .room-container {
+        position: relative;
+        z-index: 100;
+        width: auto;
+        height: 90vh;
+        
+    }
+    
+    .room-container img {
+        width: 112%;
+        height: 102%;
+        object-fit: cover;
+        transform: translateX(-10%);
+    } */
+
+    /* Scroll version */
+    .room-container {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        height: 90vh;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .room-container img {
+        width: 120%;
+        height: 90vh;
+        object-fit: cover;
+    }
+
+    /* Articles */
+
+    .text-container {
+        width: 70vw;
+        margin-top: 15vh;
+        padding-bottom: 10vh;
+    }
+
+    .line {
+        margin-bottom: 4rem;
+    }
+
+    .article-text {
+        width: 50vw;
+    }
+
+    .picture-container {
+        width: 45vw;
+    }
+
+    .splide__slide img {
+        width: 75%;
+    }
+}
+>>>>>>> 213d57cdafc06838a9baf51baaba78396d935d99
 
 /* Mobile */
 @media (max-width: 1050px) {
