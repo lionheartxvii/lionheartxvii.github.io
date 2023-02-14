@@ -493,8 +493,24 @@ h3 {
         transform: translateX(-10%);
     } */
 
+        /* Fixed version */
+        .room-container {
+            position: relative;
+            z-index: 100;
+            width: auto;
+            height: 85vh;
+            
+        }
+        
+        .room-container img {
+            width: 112%;
+            height: 102%;
+            object-fit: cover;
+            transform: translateX(-8%);
+        }
+
     /* 100% version */
-    .room-container {
+    /* .room-container {
         position: relative;
         z-index: 100;
         width: 100vw;
@@ -505,7 +521,7 @@ h3 {
         width: 100vw;
         height: auto;
         object-fit: cover;
-    }
+    } */
 
     /* Scroll Version */
     /* .room-container {
@@ -545,9 +561,17 @@ h3 {
     }
 
     .splide__slide img {
-        width: 75%;
+        width: 65%;
+        height: 75%;
     }
+    
+    .splide__pagination {
+        bottom: -4em;
+      }
 
+      .click-indicator{
+        bottom: -20%;
+      }
 
 }
 
