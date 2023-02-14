@@ -72,12 +72,14 @@ main {
 /* RESPONSIVE */
 
 /* Tablett */
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
 
     /* Main Div */
+
+
     .content {
         width: 80vw;
-        padding-bottom: 5%;
+        padding-bottom: 15%;
     }
 
     /* Smaller Divs */
