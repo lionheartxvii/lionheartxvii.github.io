@@ -70,7 +70,7 @@ main {
 /* RESPONSIVE */
 
 /* Tablett */
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
 
     /* Main Div */
     .content {
@@ -106,7 +106,7 @@ main {
 }
 
 /* Mobile */
-@media (max-width: 1090px) {
+@media (max-width: 1050px) {
 
     /* Main Div */
     .content {

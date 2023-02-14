@@ -461,7 +461,7 @@ header {
 
 
 /* Mobile */
-@media (max-width: 1050px) {
+@media (max-width: 1080px) {
 
     h1 {
         font-size: 3.2rem;

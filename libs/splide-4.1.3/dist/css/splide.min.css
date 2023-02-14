@@ -228,7 +228,7 @@
 }
 
 /* Tablett */
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
 
 
     .splide__arrow svg {
@@ -237,7 +237,7 @@
       }
 
     .splide__pagination {
-        bottom: -1.5em;
+        bottom: 0.5em;
     }
 
     .splide__pagination__page {
@@ -247,12 +247,29 @@
     }
 
     .splide__arrow--prev {
-        left: -3em;
+        left: -6em;
       }
 
       .splide__arrow--next {
-        right: -3em;
+        right: -6em;
       }
+
+}
+
+/* Mobile  / Smaller Ipad*/
+@media (max-width: 1080px) {
+
+    .splide__arrow--prev {
+        left: -2em;
+      }
+
+      .splide__arrow--next {
+        right: -2em;
+      }
+
+      .splide__pagination {
+        bottom: -0.5em;
+    }
 
 }
 
