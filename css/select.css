@@ -20,6 +20,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 2%;
 
     height: 100vh;
     width: 80vw;
@@ -113,7 +114,9 @@ main {
 /* Mobile */
 @media (max-width: 1050px) {
 
-
+    .hidden-text {
+        display: none;
+    }
 
     /* Smaller Divs */
     .content-text {
@@ -138,8 +141,12 @@ main {
     }
 
     .portrait {
-        height: 85%;
+        height: 90%;
       }
+
+      .hidden {
+        display: none;
+    }
 
 }
 

@@ -259,6 +259,9 @@
 /* Mobile  / Smaller Ipad*/
 @media (max-width: 1080px) {
 
+
+
+
     .splide__arrow--prev {
         left: -2em;
       }
@@ -267,8 +270,14 @@
         right: -2em;
       }
 
+      .splide__pagination__page {
+        height: 13px;
+        width: 13px;
+        margin: 13px;
+    }
+
       .splide__pagination {
-        bottom: -0.5em;
+        bottom: -1.7em;
     }
 
 }

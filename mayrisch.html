@@ -56,7 +56,7 @@
         }
 
         /* Tablett */
-        @media (min-width: 1100px) and (max-width: 1350px) {
+        @media (max-width: 1400px) {
             #ind-1 {
                 top: 30%;
                 left: 60.5%;
@@ -88,7 +88,7 @@
             }
         }
 
-        @media (max-width: 1050px) {
+        /* @media (max-width: 1050px) {
             #ind-1 {
                 top: 18%;
                 left: 50.5%;
@@ -118,39 +118,47 @@
                 top: 56%;
                 left: 46%;
             }
+        } */
+
+        @media screen and (orientation: portrait) {
+            #ind-1 {
+            top: 30%;
+            left: 50.5%;
+            top: 235px;
+left: 783px;
         }
 
-        /* @media screen and (orientation: portrait) {
-            #ind-1 {
-                top: 28%;
-                left: 197.5%;
-            }
+        #ind-2 {
+            /* top: 69.5%;
+            left: 89%; */
+            top: 545px;
+            left: 1318px;
+        }
 
-            #ind-2 {
-                top: 60%;
-                left: 178.5%;
-            }
+        #ind-3 {
+            top: 545px;
+            left: 1018px;
+            top: 510px;
+            left: 929px;
+        }
 
-            #ind-3 {
-                top: 62%;
-                left: 252%;
-            }
+        #ind-4 {
+            top: 23.5%;
+            left: 91.5%;
+            top: 204px;
+            left: 1357px;
+        }
 
-            #ind-4 {
-                top: 25%;
-                left: 350.5%;
-            }
+        #ind-5 {
+            top: 524px;
+            left: 275px;
+        }
 
-            #ind-5 {
-                top: 63%;
-                left: 78%;
-            }
-
-            #ind-6 {
-                top: 65%;
-                left: 341%;
-            }
-        } */
+        #ind-6 {
+            top: 501px;
+            left: 673px;
+        }
+        }
     </style>
 </head>
 
@@ -174,7 +182,7 @@
         </button>
 
         <button class="hamburger">
-            <div class="bar"></div>
+            <div class="ham-bar"></div>
         </button>
 
     </header>
@@ -471,17 +479,19 @@
 
     <main>
 
-        <div class="chapter-container" id="chapter" onclick=startChapter()>
+        <!-- <div class="chapter-container" id="chapter" onclick=startChapter()>
             <h1 class="chapter-title"> click around to discover </h1>
             <div id="pointer"></div>
             <div class="dark"></div>
-        </div>
+        </div> -->
 
 
 
         <div id="particles-leyen"></div>
 
         <div class="room-container">
+
+            <div class="indicator-container">
             <div class="indicator" onclick="func(1)" id="ind-1">
                 <a class="text ind-number" onclick="func(1)">I</a>
             </div>
@@ -505,9 +515,9 @@
             <div class="indicator" onclick="func(6)" id="ind-6">
                 <a class="text ind-number" onclick="func(6)">VI</a>
             </div>
+        </div>
 
-
-            <img class="asset" src="/assets/mayrisch/room.jpg">
+            <img class="asset"  src="/assets/mayrisch/room.jpg">
             
         </div>
         <div class="bg-color"></div>
