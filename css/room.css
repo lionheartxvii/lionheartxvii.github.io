@@ -700,7 +700,7 @@ h3 {
     .text-container {
         width: 85vw;
         margin-top: 15vh;
-        padding-bottom: 15vh;
+        padding-bottom: 20vh;
     }
 
     .headline {
@@ -738,19 +738,32 @@ h3 {
 
     .splide__slide img {
         width: 75%;
-        min-height: 84%;
+        height: 70%;
     }
 
     .splide {
         padding-top: 10%;
+        min-width: 100%;
     }
+
+    #picture-gallery {
+        width: 80vw;
+        padding-bottom: 10%;
+      }
 
     .splide__pagination {
         display: none;
     }
 
+    .splide__slide {
+        justify-content: center;
+      }
+
+
     .click-indicator {
-        bottom: -20%;
+        width: 100%;
+        text-align: center;
+        bottom: -10%;
     }
 
     /* Indikatoren */
