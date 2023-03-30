@@ -1061,7 +1061,7 @@ h3 {
     } */
     
     h2 {
-        font-size: 4vh;
+        font-size: 3vh;
         max-width: 78%;
       }
 
@@ -1072,6 +1072,28 @@ h3 {
 
         display: inline;
     }
+
+    .puzzle-piece {
+        width: 35vw;
+      }
+
+      .go-back {
+        font-size: 0.92rem !important;
+      }
+
+      .auswahl img {
+        height: 10vh;
+        padding: 0 3vw;
+      }
+
+      .text {
+        font-size: 1rem;
+        line-height: 1.8rem;
+      }
+
+      .headline {
+        font-size: 2.5rem;
+      }
 }
 
 @media screen and (max-width: 280px) and (orientation: portrait){

@@ -182,7 +182,7 @@ h2 {
     padding-bottom: 2rem;
 }
 
-h3{
+h3 {
     text-align: center;
     font-family: 'Playfair Display', serif;
     /* font-size: 2vh; */
@@ -192,7 +192,7 @@ h3{
     margin: 0;
 }
 
-h4{
+h4 {
     text-align: center;
     font-family: 'Nunito Sans', serif;
     color: #4F4F4F;
@@ -808,7 +808,36 @@ header {
 
 }
 
-@media screen and (max-width: 500px) and (orientation: portrait){
+/* IPAD Portrait */
+@media (min-width: 600px) and (orientation: portrait) {
+
+    .text {
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    .button a {
+        font-size: 1rem;
+    }
+
+    /* info box */
+    #infoBox {
+        height: 25%;
+        width: 24%;
+        bottom: 8%;
+        right: 25px;
+    }
+
+    /* Info Text */
+    .infoText {
+        font-size: 1rem;
+        line-height: 1.7rem;
+        padding: 25px 30px;
+    }
+}
+
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
     .hidden-text {
         display: none;
     }
@@ -854,7 +883,7 @@ header {
 
     h4 {
         font-size: 30px !important;
-       
+
     }
 
     .line {
