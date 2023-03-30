@@ -54,6 +54,10 @@ main {
     height: 85%;
 }
 
+.marvingt-portrait{
+    height: 80%;
+}
+
 .logo {
     height: 25%;
     padding-bottom: 1rem;
@@ -87,6 +91,7 @@ main {
     .content-text {
         height: 80vh;
         width: 40vw;
+        padding-left: 3rem;
     }
 
     .content-grafik {
@@ -96,7 +101,11 @@ main {
 
     /* Items in Divs */
     .portrait {
-        height: 75%;
+        height: 71%;
+    }
+
+    .marvingt-portrait{
+        height: 67%;
     }
 
     .hidden {
@@ -109,6 +118,12 @@ main {
         height: 1px;
         margin-bottom: 2rem;
     }
+
+    .name{
+        max-width: 75%;
+    }
+
+
 }
 
 @media (max-width: 1550px) {
@@ -122,9 +137,9 @@ main {
 /* Mobile */
 @media (max-width: 1050px) {
 
-    /* .hidden-text {
+    .hidden-text {
         display: none;
-    } */
+    }
 
     /* Smaller Divs */
     .content-text {
