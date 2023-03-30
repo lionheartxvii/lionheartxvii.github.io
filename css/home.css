@@ -18,6 +18,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 2%;
 
     height: 100vh;
     width: 70vw;
@@ -49,6 +50,7 @@ main {
 /* Items in Divs */
 .map {
     height: 80%;
+    transition: 0.5s;
 }
 
 .logo {
@@ -67,14 +69,35 @@ main {
     max-width: 85%;
 }
 
-/* RESPONSIVE */
+footer {
+    position: absolute;
+    bottom: 3%;
+    min-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 3rem;
+    padding-left: 6rem;
+}
 
+#particles-konfetti{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+
+    z-index: 200;
+}
+
+
+/* RESPONSIVE */
 /* Tablett */
 @media (max-width: 1400px) {
 
     /* Main Div */
     .content {
         width: 80vw;
+        padding-bottom: 5%;
     }
 
     /* Smaller Divs */
@@ -90,7 +113,7 @@ main {
 
     /* Items in Divs */
     .map {
-        height: 80%;
+        height: 76%;
     }
 
     .logo {
@@ -105,12 +128,28 @@ main {
     }
 }
 
+@media (max-width: 1550px) {
+
+    .text {
+        max-width: 100%;
+    }
+
+    .line {
+        width: 300px;
+        height: 1px;
+        background-color: var(--secondary-fg-color);
+        margin-bottom: 2rem;
+    }
+
+}
+
 /* Mobile */
 @media (max-width: 1050px) {
 
     /* Main Div */
     .content {
         width: 85vw;
+        padding-bottom: 0%;
     }
 
     /* Smaller Divs */
@@ -167,7 +206,7 @@ main {
     }
 
     .content-grafik {
-        height: 40vh;
+        height: 38vh;
         width: 80vw;
         
     }
@@ -197,7 +236,13 @@ main {
         position: absolute;
         bottom: -130%;
     }
+
+    footer{
+        display: none;
+    }
 }
+
+
 
 /* 4K */
 @media screen and (min-width:3000px) {}

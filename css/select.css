@@ -20,7 +20,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 2%;
+    padding-bottom: 6%;
 
     height: 100vh;
     width: 80vw;
@@ -111,12 +111,20 @@ main {
     }
 }
 
+@media (max-width: 1550px) {
+
+    .text {
+        max-width: 100%;
+    }
+
+}
+
 /* Mobile */
 @media (max-width: 1050px) {
 
-    .hidden-text {
+    /* .hidden-text {
         display: none;
-    }
+    } */
 
     /* Smaller Divs */
     .content-text {

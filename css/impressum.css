@@ -1,11 +1,11 @@
 /* MAIN */
-main{
+main {
     position: absolute;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
-    z-index: 600;
+    z-index: 300;
     background-color: var(--main-bg-color);
     overflow: scroll;
     display: flex;
@@ -15,7 +15,7 @@ main{
 }
 
 
-.content{
+.content {
     position: absolute;
     width: 55vw;
     height: auto;
@@ -31,17 +31,16 @@ main{
 
 
 .text-container {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 45vw;
+    width: 40vw;
     margin-top: 10vh;
-  }
+}
 
-p{
-    text-align: center;
+p {
+    text-align: left;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
     font-size: 0.95rem;
@@ -50,13 +49,16 @@ p{
     /* max-width: 35.8%; */
     pointer-events: none;
 
-    hyphens: auto; 
-	
+    hyphens: auto;
+
 }
 
+.headline{
+    padding-bottom: 1rem;
+    max-width: 100%;
+}
 
-
-.line{
+.line {
     width: 300px;
     height: 1px;
     background-color: var(--secondary-fg-color);
@@ -65,7 +67,7 @@ p{
 
 
 
-h2{
+h2 {
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-weight: 500;
@@ -90,7 +92,7 @@ h3 {
     font-size: 25px;
     font-weight: 200;
     color: #4F4F4F !important;
-    margin-top: 5rem;
+    margin-top: 2rem;
     /* text-transform: uppercase; */
     letter-spacing: 2px;
 }
@@ -104,13 +106,20 @@ h4 {
     letter-spacing: 2px;
 }
 
-a {
+/* a {
     font-size: 15px;
     font-weight: 700;
-    color: var(--primary-fg-color) !important;
+    color: var(--main-fg-color) !important;
+    text-decoration: none;
+} */
+
+a{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--main-fg-color) !important;
     text-decoration: none;
 }
-
 
 .content li {
     text-align: center;
@@ -123,15 +132,15 @@ a {
     pointer-events: none;
 }
 
-footer{
-  max-width: 100vw;
-  
-  position: relative;
-  bottom: 0;
-  background-color: #15142b;
+footer {
+    max-width: 100vw;
+
+    position: relative;
+    bottom: 0;
+    background-color: #15142b;
 }
 
-.footer-content{
+.footer-content {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -140,7 +149,7 @@ footer{
 }
 
 .footer-content a,
-.back{
+.back {
     padding-right: 4rem;
     text-transform: uppercase;
     font-weight: 600;
@@ -152,7 +161,7 @@ footer{
 }
 
 footer a:hover,
-.back:hover{
+.back:hover {
     color: var(--primary-fg-color) !important;
 }
 
@@ -163,8 +172,8 @@ footer a:hover,
     padding: 5px;
     top: 20px;
     right: 20px;
-    
-    z-index: 500;
+
+    z-index: 400;
     opacity: 0.4;
     transition: 0.5s;
 }
@@ -182,12 +191,126 @@ footer a:hover,
     height: 33px;
     width: 1px;
     background-color: #333;
-    z-index: 500;
+    z-index: 400;
 }
 
-  .closebtn:before {
+.closebtn:before {
     transform: rotate(45deg);
-  }
-  .closebtn:after {
+}
+
+.closebtn:after {
     transform: rotate(-45deg);
-  }
+}
+
+/* Mobile */
+@media (max-width: 1050px) {
+    .text-container {
+        width: 95vw;
+    }
+
+    .line {
+        margin-bottom: 1.5rem;
+        width: 20vw;
+    }
+
+    p {
+        width: 50vw;
+        font-size: 0.85rem;
+line-height: 1.3rem;
+
+    }
+
+    .text {
+        font-size: 0.85rem;
+        line-height: 1.4rem;
+    }
+
+    .content {
+        width: 70vw;
+        margin-top: 15vh;
+        padding-bottom: 14vh;
+    }
+
+    .headline{
+        font-size: 2em;
+    }
+}
+
+
+/* Portrait */
+@media screen and (orientation: portrait) {
+
+    .text-container {
+        width: 95vw;
+    }
+
+    .line {
+        margin-bottom: 2.5rem;
+        width: 37vw;
+    }
+
+    p {
+        font-size: 0.85rem;
+        line-height: 1.4rem;
+        width: 65vw;
+    }
+
+    .text {
+        font-size: 0.85rem;
+        line-height: 1.4rem;
+    }
+
+    .content {
+        width: 85vw;
+        margin-top: 15vh;
+        padding-bottom: 20vh;
+    }
+
+    .headline {
+        font-size: 2rem;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+/* 4K */
+@media screen and (min-width:3000px) {
+
+
+    .line {
+        width: 480px;
+        height: 3px;
+        margin-bottom: 4rem;
+      }
+
+    .text {
+        font-size: 1.8rem;
+        line-height: 3.3rem;
+    }
+
+    a {
+        font-size: 30px;
+      }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 3.3rem;
+        width: 45vw;
+    }
+
+    .line {
+        margin-bottom: 2.5rem;
+        width: 22vw;
+    }
+
+
+
+}
