@@ -141,10 +141,6 @@ footer {
         margin-bottom: 2rem;
     }
 
-
-    .hidden-text {
-        display: none;
-    }
 }
 
 /* Mobile */
@@ -186,6 +182,10 @@ footer {
 
     .text {
         max-width: 95%;
+    }
+
+    .hidden-text {
+        display: none;
     }
 }
 
