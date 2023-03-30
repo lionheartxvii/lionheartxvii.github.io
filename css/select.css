@@ -235,4 +235,12 @@ main {
       .hidden-text{
         display: inline;
       }
+
+      .portrait {
+        height: 61%;
+      }
+
+      .splide__pagination {
+        bottom: -2.7em;
+    }
 }
