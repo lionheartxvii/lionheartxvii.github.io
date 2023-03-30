@@ -549,7 +549,7 @@ h3 {
 
 /* go back button */
 .back a {
-    padding: 12px 30px;
+    padding: 9px 30px;
 }
 
 .back {
@@ -949,9 +949,11 @@ h3 {
 
 
     .click-indicator {
-        width: 100%;
+        /* width: 100%;
         text-align: center;
-        bottom: -10%;
+        bottom: -10%; */
+
+        display: none;
     }
 
     /* Indikatoren */
@@ -989,6 +991,15 @@ h3 {
         padding-bottom: 4rem;
     }
 
+    h2 {
+        font-size: 4vh;
+      }
+
+      .auswahl {
+        scale: 0.8;
+        justify-content: space-around;
+      }
+
     .next {
         width: 100vw;
     }
@@ -1010,6 +1021,11 @@ h3 {
         padding: 12px 10px;
     }
 
+    .auswahl img {
+        height: 9vh;
+        padding: 0 8vw;
+      }
+
     .puzzle-btn{
         top: 28px;
         right: -10px;
@@ -1021,7 +1037,7 @@ h3 {
 
 
 /* IPAD Portrait */
-@media (max-width: 1100px) and (orientation: portrait) {
+@media (min-width: 600px) and (orientation: portrait) {
 
     /* Puzzle Piece */
 
@@ -1049,7 +1065,13 @@ h3 {
         max-width: 78%;
       }
 
+      .click-indicator {
+        width: 100%;
+        text-align: center;
+        bottom: -10%;
 
+        display: inline;
+    }
 }
 
 @media screen and (max-width: 280px) and (orientation: portrait){
@@ -1061,7 +1083,7 @@ h3 {
 @media screen and (max-width: 550px) and (orientation: portrait){
     .headline {
         font-size: 1.8rem;
-        max-width: 75%;
+        max-width: 88%;
     }
 }
 
@@ -1250,6 +1272,8 @@ h3 {
     .auswahl a {
         padding: 12px 10px;
     }
+
+
 
     .puzzle-btn{
         top: 28px;

@@ -250,7 +250,7 @@ footer {
 @media (min-width: 600px) and (orientation: portrait) {
 
     .content-text {
-        width: 71vw;
+        width: 55vw;
       }
 
       .hidden-text{
