@@ -253,6 +253,21 @@ footer {
         width: 71vw;
       }
 
+      .hidden-text{
+        display: inline;
+      }
+
+      .content {
+        padding-bottom: 20% !important;
+      }
+
+      .map {
+        height: 100%;
+      }
+
+      .content-grafik {
+        height: 40vh;
+      }
 }
 
 /* 4K */
