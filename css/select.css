@@ -191,12 +191,12 @@ main {
     }
 
     .portrait {
-        height: 43%;
+        height: 45%;
     }
 
-    .marvingt-portrait{
+    /* .marvingt-portrait{
         height: 42%;
-    }
+    } */
 
     .line {
         width: 160px;

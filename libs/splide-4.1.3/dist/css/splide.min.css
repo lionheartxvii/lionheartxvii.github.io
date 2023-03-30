@@ -263,11 +263,11 @@
 
 
     .splide__arrow--prev {
-        left: -4em;
+        left: -3.5em;
       }
 
       .splide__arrow--next {
-        right: -4em;
+        right: -3.5em;
       }
 
       .splide__pagination__page {
