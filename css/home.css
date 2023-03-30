@@ -200,7 +200,7 @@ footer {
 
     /* Smaller Divs */
     .content-text {
-        height: 25vh;
+        height: 27vh;
         width: 85vw;
         padding-top: 20%;
     }
@@ -208,7 +208,7 @@ footer {
     .content-grafik {
         height: 38vh;
         width: 80vw;
-        
+        padding-top: 1rem;
     }
 
     /* Items in Divs */
@@ -225,7 +225,7 @@ footer {
     .line {
         width: 160px;
         height: 1px;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .text {
