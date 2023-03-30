@@ -598,7 +598,7 @@ header {
     .chevron {
         position: relative;
         display: block;
-        left: 12px;
+        left: 3%;
         cursor: pointer;
 
         font-family: 'Nunito Sans', sans-serif;
@@ -621,7 +621,7 @@ header {
         display: block;
         width: 35px;
         cursor: pointer;
-        right: 12px;
+        right: 6%;
 
         appearance: none;
         background: none;
