@@ -229,7 +229,7 @@ main {
 @media (min-width: 600px) and (orientation: portrait) {
 
     .content-text {
-        width: 61vw;
+        width: 60vw;
       }
 
       .hidden-text{
@@ -243,4 +243,8 @@ main {
       .splide__pagination {
         bottom: -2.7em;
     }
+
+    .content {
+        padding-bottom: 5% !important;
+      }
 }
