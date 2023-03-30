@@ -190,7 +190,7 @@ function initArticle(key){
 }
 
 async function setNextBlink() {
-  console.log(listOfIndicators);
+  // console.log(listOfIndicators);
   if (currentNext !== "") {
     indicatorAnimationBlink.duration = 100;
     indicatorAnimation.autoplay = false;
@@ -219,11 +219,11 @@ async function setNextBlink() {
   } else if ( localStorage.getItem(uriKey + "Puzzle") !== "true"){
     setPuzzleToStorage();
   }
-  console.log(listOfIndicators);
+  // console.log(listOfIndicators);
 }
 
 function func(id) {
-  console.log(localStorage.getItem(uriKey + id.toString()));
+  // console.log(localStorage.getItem(uriKey + id.toString()));
   if (localStorage.getItem(uriKey + id.toString()) !== "true"){
     document.getElementById("ind-" + id.toString()).style.borderColor = "#ebdc89";
     document.getElementById("ind-" + id.toString()).getElementsByClassName("text")[0].style.color = "#ebdc89";
