@@ -117,7 +117,7 @@ footer {
     }
 
     .logo {
-        height: 25%;
+        height: 20%;
         padding-bottom: 1rem;
     }
 
@@ -141,6 +141,10 @@ footer {
         margin-bottom: 2rem;
     }
 
+
+    .hidden-text {
+        display: none;
+    }
 }
 
 /* Mobile */
@@ -242,7 +246,14 @@ footer {
     }
 }
 
+/* IPAD Portrait */
+@media (min-width: 600px) and (orientation: portrait) {
 
+    .content-text {
+        width: 71vw;
+      }
+
+}
 
 /* 4K */
 @media screen and (min-width:3000px) {}
