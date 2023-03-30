@@ -187,15 +187,16 @@ main {
         height: 38vh;
         width: 80vw;
         justify-content: center;
+        padding-left: 0rem;
     }
 
     .portrait {
-        height: 45%;
+        height: 43%;
     }
 
-    /* .marvingt-portrait{
-        height: 44%;
-    } */
+    .marvingt-portrait{
+        height: 42%;
+    }
 
     .line {
         width: 160px;
