@@ -224,3 +224,15 @@ main {
       }
 
 }
+
+/* IPAD Portrait */
+@media (min-width: 600px) and (orientation: portrait) {
+
+    .content-text {
+        width: 61vw;
+      }
+
+      .hidden-text{
+        display: inline;
+      }
+}
