@@ -220,8 +220,12 @@ main {
     }
 
     .content {
-        padding-bottom: 20% !important;
+        padding-bottom: 25% !important;
       }
+
+      .splide__pagination {
+        bottom: -2.5em;
+    }
 
 }
 
