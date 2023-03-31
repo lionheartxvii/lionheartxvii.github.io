@@ -217,6 +217,7 @@
 .splide__pagination__page {
     background: none;
     border: 1px solid var(--main-fg-color);
+   
     display: inline-block;
     height: 17px;
     width: 17px;
@@ -310,8 +311,10 @@
 
 .splide__pagination__page.is-active {
     background: var(--main-fg-color);
+    /* outline: 4px solid #e5b743; */
     z-index: 1
 }
+
 
 .splide__pagination__page:hover {
     cursor: pointer;

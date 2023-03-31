@@ -1,11 +1,11 @@
 // Locale storage
 
 const listOfWomen = [
-  "fassbinder",
-  "leyen", 
-  "marvingt", 
+  "leyen",
+  "waha",
   "mayrisch",
-  "waha"
+  "marvingt", 
+  "fassbinder"
 ];
 
 function checkLocaleStorage(){
@@ -125,6 +125,9 @@ function getUriKey(){
   if(uriPart === "index"){
     checkPuzzle();
   }
+  if(uriPart === "select"){
+    checkSelect();
+  }
   let match = listOfWomen.filter(element => element === uriPart);
   if (match.length == 1){
     return match[0];
@@ -152,9 +155,10 @@ function initIndicators(key){
   return listOfIndicators;
 }
 
-function setPuzzleToStorage(){
+async function setPuzzleToStorage(){
   let key = uriKey + "Puzzle";
   localStorage.setItem(key, true);
+  await Sleep(1000);
   document.getElementsByClassName("puzzle-piece")[0].style.cssText = "z-index: 300; opacity: 1";
 }
 
@@ -172,6 +176,24 @@ function checkPuzzle(){
   if (collectedPuzzles.length === listOfWomen.length){
     document.getElementById('particles-konfetti').style.opacity = 1;
   }
+}
+
+function checkSelect(){
+  console.log(document.getElementsByClassName("splide__pagination"));
+  let key;
+
+  for (var i = 0; i < listOfWomen.length; i++){
+    key = listOfWomen[i] + "Puzzle";
+    if(localStorage.getItem(key)){
+      document.getElementsByClassName("splide__pagination--ltr")[0].childNodes[i].getElementsByClassName("splide__pagination__page")[0].style.cssText = " outline: solid 12px #d4bc45; outline-offset: -20px;";
+    }
+  }
+  listOfWomen.forEach(element => {
+    key = element + "Puzzle";
+    if(localStorage.getItem(key)){
+      setPuzzleToPicture(key);
+    }
+  })
 }
 
 function setPuzzleToPicture(key){
@@ -231,7 +253,7 @@ function func(id) {
     listOfIndicators.splice(listOfIndicators.indexOf("ind-" + id.toString()), 1);
     setNextBlink();
   }
-  document.getElementById("article-container-" + id.toString()).style.height = "100vh"; // Texte einblenden 
+  document.getElementById("article-container-" + id.toString()).style.height = "100vh"; // Artikel einblenden 
 }
 
 // Texte ausblenden
@@ -464,7 +486,7 @@ function getIndicatorPos(key){
     { x: 0.13, y: 0.53 },
     { x: 0.73, y: 0.58 },
     { x: 0.39, y: 0.6 },
-    { x: 0.49, y: 0.89 },
+    { x: 0.50, y: 0.84 },
     { x: 0.33, y: 0.49 },
   ];
   
