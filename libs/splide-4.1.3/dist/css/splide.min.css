@@ -310,8 +310,8 @@
 }
 
 .splide__pagination__page.is-active {
-    background: var(--main-fg-color);
-    /* outline: 4px solid #e5b743; */
+    background: var(--main-fg-color) !important;
+    /* background: #e2c272!important;  */
     z-index: 1
 }
 

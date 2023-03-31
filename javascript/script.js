@@ -125,11 +125,9 @@ function getUriKey(){
   if(uriPart === "index"){
     checkPuzzle();
   }
-  if(uriPart === "select"){
-    checkSelect();
-  }
   let match = listOfWomen.filter(element => element === uriPart);
   if (match.length == 1){
+    initSoundElements();
     return match[0];
   }
 }
@@ -179,21 +177,14 @@ function checkPuzzle(){
 }
 
 function checkSelect(){
-  console.log(document.getElementsByClassName("splide__pagination"));
   let key;
 
   for (var i = 0; i < listOfWomen.length; i++){
     key = listOfWomen[i] + "Puzzle";
     if(localStorage.getItem(key)){
-      document.getElementsByClassName("splide__pagination--ltr")[0].childNodes[i].getElementsByClassName("splide__pagination__page")[0].style.cssText = " outline: solid 12px #d4bc45; outline-offset: -20px;";
+      document.getElementsByClassName("splide__pagination--ltr")[0].childNodes[i].childNodes[0].style.cssText = "background: #ec9582 ";
     }
   }
-  listOfWomen.forEach(element => {
-    key = element + "Puzzle";
-    if(localStorage.getItem(key)){
-      setPuzzleToPicture(key);
-    }
-  })
 }
 
 function setPuzzleToPicture(key){
@@ -352,16 +343,31 @@ var indicatorAnimation = anime({
 // Sound
 
 //Animation für den MuteButton
-var muteanimation = anime({
-  targets: '.bar',
-  height: '5px',
-  easing: 'easeInOutQuad',
-  autoplay: false,
-  duration: 600,
-  easing: 'easeInOutQuint',
-});
+function initSoundElements(){
+  var muteanimation = anime({
+    targets: '.bar',
+    height: '5px',
+    easing: 'easeInOutQuad',
+    autoplay: false,
+    duration: 600,
+    easing: 'easeInOutQuint',
+  });
+  
+  document.querySelector('.sound-btn').onclick = muteLoop;
 
-document.querySelector('.sound-btn').onclick = muteLoop;
+  var sound = new Howl({
+    src: ['/assets/sound/book-of-souls.mp3', 'book-of-souls.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.3,
+  });
+  var id1 = sound.play();
+  sound.fade(0, 0.3, 3000, id1);
+  
+  
+  // Infobox
+  var infoOn = false;
+}
 
 // MuteAniamtion wird nach Abschluss reverst  
 function muteLoop() {
@@ -399,18 +405,6 @@ function checkMute() {
   }
 }
 
-var sound = new Howl({
-  src: ['/assets/sound/book-of-souls.mp3', 'book-of-souls.mp3'],
-  autoplay: true,
-  loop: true,
-  volume: 0.3,
-});
-var id1 = sound.play();
-sound.fade(0, 0.3, 3000, id1);
-
-
-// Infobox
-var infoOn = false;
 //Information werden eingeblendet/ausgeblendet (Help-Button)
 function showInfo() {
   var infoBox = document.getElementById("infoBox");
@@ -437,7 +431,7 @@ function hideInfo(infoBox) {
 
 const xMax = 6;
 var shakeanimation = anime({
-  targets: '.map',
+  targets: '.puzzle-svg',
   easing: 'easeInOutSine',
   duration: 600,
   loop: true,
