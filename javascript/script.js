@@ -341,33 +341,32 @@ var indicatorAnimation = anime({
 
 
 // Sound
+var sound;
 
 //Animation für den MuteButton
-function initSoundElements(){
-  var muteanimation = anime({
-    targets: '.bar',
-    height: '5px',
-    easing: 'easeInOutQuad',
-    autoplay: false,
-    duration: 600,
-    easing: 'easeInOutQuint',
-  });
-  
-  document.querySelector('.sound-btn').onclick = muteLoop;
+function initSoundElements(){  
+  document.querySelector('.sound-btn').onclick = muteLoop; 
 
-  var sound = new Howl({
+  sound = new Howl({
     src: ['/assets/sound/book-of-souls.mp3', 'book-of-souls.mp3'],
     autoplay: true,
     loop: true,
     volume: 0.3,
   });
-  var id1 = sound.play();
-  sound.fade(0, 0.3, 3000, id1);
-  
-  
-  // Infobox
-  var infoOn = false;
+
+  // sound.fade(0, 0.3, 3000, sound.play());
+
 }
+
+var muteanimation = anime({
+  targets: '.bar',
+  height: '5px',
+  easing: 'easeInOutQuad',
+  autoplay: false,
+  duration: 600,
+  easing: 'easeInOutQuint',
+});
+
 
 // MuteAniamtion wird nach Abschluss reverst  
 function muteLoop() {
@@ -404,6 +403,9 @@ function checkMute() {
     muteSound.muteButton();
   }
 }
+  
+// Infobox
+var infoOn = false;
 
 //Information werden eingeblendet/ausgeblendet (Help-Button)
 function showInfo() {
