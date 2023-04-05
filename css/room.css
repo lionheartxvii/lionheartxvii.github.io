@@ -738,7 +738,11 @@ h3 {
     .text-container {
         width: 70vw;
         margin-top: 15vh;
+<<<<<<< Updated upstream
         padding-bottom: 30vh;
+=======
+        padding-bottom: 35vh;
+>>>>>>> Stashed changes
     }
 
     .line {

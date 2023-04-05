@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
+    maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Her History</title>
+
+    <link rel="stylesheet" href="/libs/splide-4.1.3/dist/css/splide.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/room.css">
+
+    <style>
+        .bg-color {
+            background-color: #dcb480;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navigation hidden">
+            <a href="index.html" class="menu-item">accueil</a>
+            <a href="select.html" class="menu-item">vue d'ensemble</a>
+            <a href="sources.html" class="menu-item">sources</a>
+            <a href="impressum.html" class="menu-item">mentions légales</a>
+        </div>
+
+        <div class="languages hidden">
+            <a href="../de/mayrisch.html" class="menu-item narrow">ALL</a>
+            <a href="../eng/mayrisch.html" class="menu-item narrow">ANG</a>
+            <a href="mayrisch.html" class="menu-item narrow">FR</a>
+        </div>
+
+        <button class="chevron">
+            <div class="lang">FR &#x25BC</div>
+        </button>
+
+        <button class="hamburger">
+            <div class="ham-bar"></div>
+        </button>
+
+    </header>
+
+    <div class="mobile-nav">
+        <div class="hamburger-content">
+            <a href="index.html" class="menu-item">accueil</a>
+            <a href="select.html" class="menu-item">vue d'ensemble</a>
+            <a href="sources.html" class="menu-item">sources</a>
+            <a href="impressum.html" class="menu-item">mentions légales</a>
+        </div>
+    </div>
+
+    <div class="mobile-languages">
+        <div class="chevron-content">
+            <a href="mayrisch.html" class="menu-item">français</a>
+            <a href="../de/mayrisch.html" class="menu-item bold">allemand</a>
+            <a href="../eng/mayrisch.html" class="menu-item">anglais</a>
+        </div>
+    </div>
+
+    <tw-link onclick='showInfo()'>
+        <div class="info-btn">
+            <h2 class="question-mark">?</h2>
+        </div>
+    </tw-link>
+    <div Id="infoBox" class="infoText">
+        <p> En cliquant sur les indicateurs, tu peux obtenir plus d'informations sur les personnalités. Il n'est
+            pas obligatoire de lire les articles dans l'ordre chronologique.
+            <br>
+            Bonne découverte!
+        </p>
+    </div>
+
+    <tw-link onclick='muteSound.muteButton()'>
+        <div class="sound-btn">
+
+            <div class="bar-container">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+
+        </div>
+    </tw-link>
+
+
+    <div class="all-articles">
+        <div class="articles" id="article-container-1">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(1)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">De bonne famille</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Aline Mayrisch de Saint-Hubert est née le 22 août 1874 à Hollerich, Luxembourg, fille de Marie Élisabeth Julie Mongenast et du marchand de bois en gros Xavier de Saint-Hubert.<br>
+                    Après avoir fréquenté l'école supérieure de filles "Sainte Sophie" à Luxembourg, elle se rendit à Bonn pour deux ans afin de se préparer au mariage et au style de vie d'une dame de la bourgeoisie aisée au pensionnat "Sartorius". Bien qu'elle soit considérée comme douée, intelligente et curieuse, et surtout intéressée par l'art, la littérature et les sciences, elle n'a pas été autorisée à fréquenter l'école secondaire, l'accès à l'enseignement supérieur étant interdit aux femmes.<br>
+                    Finalement, à l'âge de vingt ans, elle a épousé l'ingénieur métallurgiste Émile Mayrisch, qui est devenu par la suite directeur général du géant de l'acier Arbed. Avec son mari, elle s'installa à Dudelange, dans le sud du Luxembourg, et ils eurent un fils en 1899, qui mourut en bas âge. Deux ans plus tard, leur fille Andrée Mayrisch voit le jour.<br>
+                    En 1920, la famille déménagea à Colpach et fit transformer son château de Dudelange en foyer d'enfants. Aline Mayrisch s’installe finalement en 1939 dans le sud de la France, dans la commune de Cabris, où elle décède en 1947, à l'âge de 72 ans. 
+                </div>
+
+                <div class="picture-container">
+                    <div class="square"><img class="article-picture" src="/assets/mayrisch/youngAline-1.jpg"></div>
+                    <div class="square"><img class="article-picture" src="/assets/mayrisch/youngAline-2.jpg"></div>
+                </div>
+
+                <div class="text article-text">
+                    <br> <br>
+                    Image 1 : Aline Mayrisch jeune © J. Ganz, Bruxelles, 1893, via Le Dictionnaire des auteurs luxembourgeois, Tous droits réservés<br>
+                    Image 2 : Aline Mayrisch adulte © Atelier Hützel, Munich, 1911, via Le Dictionnaire des auteurs
+                    luxembourgeois, Tous droits réservés
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(1)" class="button back">
+                    <a>retour</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="articles" id="article-container-2">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(2)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Engagement pour de meilleures chances de formation</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Aline Mayrisch s'est beaucoup engagée dans le domaine social et a fondé de nombreuses organisations à différentes fins.<br>
+                    Sa première organisation, Aline Mayrisch l'a fondée en 1906 avec d'autres femmes bourgeoises, en créant l'Association pour les Intérêts de la Femme, qui se concentrait sur l'aide aux femmes dans le besoin et sur la promotion de l'éducation des filles. En outre, elle était responsable d'un service de placement et de protection juridique pour les femmes et organisait de nombreux cours de formation continue. Au Luxembourg, il s'agissait de l'un des premiers pas du mouvement féministe organisé.<br>
+                    Afin de faire progresser l'égalité de l'enseignement au Luxembourg, Aline Mayrisch fonda en 1909 une autre organisation qui se concentrait sur la création d'un lycée public pour jeunes filles. La même année, l'État donna son accord à cette création, mais à condition que soit démontré dans les trois ans qu'une école secondaire pour filles était effectivement nécessaire. C'est ainsi que fut fondé le "Lycée des Jeunes Filles" à Luxembourg-Ville, qui fut fréquenté par de nombreuses jeunes filles de la bourgeoisie.<br>
+                    Le projet s'est imposé malgré les protestations en 1911, lorsque le financement public des écoles de filles a été voté sans opposition. Cela permit de mettre fin à la pénurie d'éducation et d'autoriser les femmes à faire des études supérieures, ce qui leur permettait d'obtenir une éducation de même rang que les hommes.
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(2)" class="button back">
+                    <a>retour</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="articles" id="article-container-3">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(3)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Amélioration du système de santé</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Les soins de santé et les organisations caritatives faisaient également partie des intérêts d'Aline Mayrisch, ce qui l'a amenée à s'engager dans la "Ligue luxembourgeoise contre la tuberculose" et à promouvoir la formation d'assistantes sociales. En outre, elle a soutenu la création de la première crèche à Esch-sur-Alzette, ce qui a contribué à améliorer le quotidien des femmes.<br>
+                    Lorsque la Première Guerre mondiale a éclaté, elle a créé un hôpital de guerre à Dudelange, dans lequel elle a aidé à soigner les blessés des deux camps. Après la guerre, elle rejoignit la Croix-Rouge et s'engagea de plus en plus pour l'organisation après le décès accidentel de son mari, jusqu'à ce qu'elle soit élue présidente de la Croix-Rouge luxembourgeoise en 1933. Au-delà de ces réalisations, elle a encouragé la création d'une maternité moderne et d'institutions de prévention pour les bébés et les jeunes enfants au Luxembourg.<br>
+                    Pour ses efforts dans le domaine de la santé, elle a reçu la Croix d'honneur, l'une des plus hautes distinctions au Luxembourg, décernée par la Grande-Duchesse Charlotte.<br>
+                    À son décès en 1947, Aline Mayrisch a légué son château de Colpach et une grande partie de sa fortune à la Croix-Rouge luxembourgeoise, qui l'a finalement transformé en centre de repos et de convalescence.
+                    <br>
+                    <br>
+                    Image: Château de Kolpach, dans lequel s'est tenu le "Cercle de Colpach
+                    <a href="https://commons.wikimedia.org/wiki/File:Schloss_Kolpach_01.jpg">MMFE</a>, via Wikimedia
+                    Commons,
+                    <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>.
+                </div>
+
+                <div class="picture-container">
+                    <div class="rectangle"><img class="article-picture" src="/assets/mayrisch/Schloss-Kolpach.jpg">
+                    </div>
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(3)" class="button back">
+                    <a>retour</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="gallery-wrapper">
+
+            <div class="pictures" id="picture-gallery">
+
+                <section class="splide" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+
+                            <li class="splide__slide"><img class="portrait" src="/assets/mayrisch/gallery-4.jpg">
+                                <p class="center text">Jeune Aline Mayrisch<br>
+                                    J. Dupont, Bruxelles, via Le Dictionnaire des auteurs luxembourgeois, Tous droits réservés
+                                </p>
+                            </li>
+                            <li class="splide__slide"><img class="portrait" src="/assets/mayrisch/gallery-1.jpg">
+                                <p class="center text">Aline Mayrisch-de Saint-Hubert<br>
+                                    Hofatelier Elvira, Munich, via Le Dictionnaire des auteurs
+                                    luxembourgeois, Tous droits réservés
+                                </p>
+                            </li>
+                            <li class="splide__slide"><img class="portrait" src="/assets/mayrisch/gallery-3.jpg">
+                                <p class="center text">Aline Mayrisch-de Saint-Hubert<br>
+                                    W. Kuepfer, St. Moritz, via Dictionnaire des auteurs luxembourgeois, Tous droits réservés
+                                </p>
+                            </li>
+                            <li class="splide__slide"><img class="portrait" src="/assets/mayrisch/gallery-2.jpg">
+                                <p class="center text">Photographie d'Aline Mayrisch au Japon, début des années 1930.<br>
+                                    © Centre national de littérature, Luxembourg,
+                                    <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de">CC BY-NC 4.0</a>
+                                </p>
+
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
+
+                <div class="click-indicator">
+                    <p>cliquez autour pour fermer</p>
+                </div>
+
+                <div class="dimmer" onclick="closeGallery()">
+                    <div href="javascript:void(0)" type="button" class="closebtn right gallery-btn"
+                        onclick="closeGallery()">
+                        <div class="btn-line"></div>
+                        <div class="btn-line-2"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="articles" id="article-container-5">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(5)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">„Cercle de Colpach“</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Aline Mayrisch s'intéressait beaucoup à l'art et à la littérature et s'en servait pour faire le lien entre les cultures allemande et française. Comme elle et son mari avaient à cœur de réconcilier les deux pays, ils invitèrent de nombreuses personnalités dans leur château de Colpach et fondèrent ainsi en 1917 le "Comité franco-allemand". Ce cercle littéraire devait permettre de tisser des liens entre des personnalités de différentes nations afin de construire une compréhension mutuelle.<br>
+                    C'est surtout pendant l'entre-deux-guerres que les rencontres se sont multipliées et que des intellectuels issus de la politique, de l'économie, de l'art et de la littérature se sont réunis dans le château. Ils échangeaient donc leurs différents points de vue et idées lors de rencontres à la bibliothèque, dans le parc ou autour d'un repas. De nombreuses amitiés se sont nouées dans ce cercle, ce qui reflétait la vision d'Aline Mayrisch d'une Europe pacifiste et unie.<br>
+                    Après la mort accidentelle de son mari, elle commença à se retirer et passa davantage les années 1930 à se consacrer à la littérature et au mysticisme religieux.
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(5)" class="button back">
+                    <a>retour</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="articles" id="article-container-6">
+            <div class="text-container">
+                <div href="javascript:void(0)" class="closebtn" onclick="closeArticle(6)">
+                    <div class="btn-line"></div>
+                    <div class="btn-line-2"></div>
+                </div>
+                <h1 class="headline">Intérêt pour la littérature</h1>
+                <div class="line"></div>
+                <div class="text article-text">
+                    Très tôt, Aline Mayrisch s'est intéressée à des sujets culturels et politiques, ce qui l'a amenée en 1898 à écrire des articles sur des artistes allemands, mais aussi des critiques de livres dans la revue belge "L'Art moderne". Parmi ses critiques les plus connues figure son article sur l'œuvre "L'Immoraliste", écrite par son ami André Gides.<br>
+                    En outre, elle a entretenu des amitiés avec de nombreux écrivains importants de France, du Luxembourg, de Belgique et d'Allemagne et a entretenu une correspondance avec nombre d'entre eux. Alors qu'elle s'engageait avec Edmond Picard et Emile Verhaeren pour un art sans compromis, elle soutint financièrement Thomas Mann dans les années 30, qui publiait depuis son exil sa revue "Maß und Wert".<br>
+                    Lors de son voyage au Japon en 1934, elle chercha une signification religieuse et s'intéressa de plus en plus au bouddhisme. C'est pourquoi, plus tard dans sa vie, Mayrisch se tourna davantage vers la mystique religieuse et traduisit, avec Marie Delcourt et Bernhard Groethuysen, différents textes, dont les sermons du mystique médiéval Maître Eckhart.
+                </div>
+
+                <div class="picture-container">
+                    <div class="square"><img class="article-picture" src="/assets/mayrisch/japanTravel-1.jpg"></div>
+                    <div class="square"><img class="article-picture" src="/assets/mayrisch/japanTravel-2.jpg"></div>
+                </div>
+
+                <div class="picture-container padding">
+                    <div class="rectangle"><img class="article-picture" src="/assets/mayrisch/japanTravel-3.jpg"></div>
+                </div>
+
+                <div class="text article-text">
+                    <br> <br>
+                    Les images présentées ici sont des photographies et des cartes postales qu'Aline Mayrisch a
+                    rapportées de son voyage au Japon. Elles montrent comment elle a apprécié la culture et
+                    comment le pays oscille entre modernité et tradition.<br>
+                    © Centre national de littérature, Luxembourg,
+                    <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de">CC BY-NC 4.0</a>
+                </div>
+
+                <div type="button" href="javascript:void(0)" onclick="closeArticle(6)" class="button back">
+                    <a>retour</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <main>
+
+        <div class="puzzleScreen" id="puzzleScreen">
+
+            <div class="dimmer hide"></div>
+            <div href="javascript:void(0)" type="button" class="closebtn right hide puzzle-btn"
+                onclick="closePuzzleScreen()">
+                <div class="btn-line"></div>
+                <div class="btn-line-2"></div>
+            </div>
+
+            <div class="ps-content">
+                <h2 class="next hide">Tu as trouvé toutes les informations!</h2>
+
+                <div class="puzzle-piece smol" onclick="openPuzzleScreen()">
+
+                    <div class="dark2"></div>
+
+                    <svg id="Ebene_1" class="puzzle-svg" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 90.26 134.87">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: none;
+                                    stroke: #626262;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 1.2px;
+                                }
+
+                                .fill {
+                                    fill: #d96b51;
+
+                                    stroke: #fff;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 1.2px;
+                                }
+                            </style>
+                        </defs>
+                        <path id="fassbinderPuzzle" class="cls-1 fill"
+                            d="m66.46,129l.32-1.24c.73-2.85,1.48-5.79,3.06-8.5.29-.5.66-.85,1.06-1.14l-2.9-1.42.68-3.31c.03-.17.05-.31.07-.43.09-.71.37-2.87,2.59-3.95,3.98-1.92,5.4-4.5,5.43-9.87.03-4.67,4.13-8.53,7.96-11.79,1.54-1.3,1.99-2.51,1.94-5.16-.01-.44-.03-.89-.06-1.34-.13-2.44-.32-6.1,1.93-9.21-1.09-.35-2.24-.66-3.42-.99-.93-.26-1.89-.53-2.85-.82-.64-.13-1.25-.31-1.77-.57-1.38-.48-2.61-1.13-3.68-1.71-.63-.34-1.25-.68-1.9-.96-1.19-.52-2.41-.96-3.62-1.41-.76-.28-1.52-.56-2.28-.86-.09-.03-.21-.07-.32-.1-1.04-.33-3.49-1.09-4.23-3.69-.38-1.36-1.68-2.67-3.18-4.19-2.55-2.58-5.94-6.01-5.84-11.5-6.22-2.84-7.88-8.56-9.12-12.83-.43-1.48-.83-2.88-1.37-4.06-3.13-6.95-1.33-13.39.26-19.06.2-.72.41-1.45.6-2.17l.13-.46c.02-.08.05-.17.07-.25-.07-.24-.1-.47-.16-.7-1.07-1.1-2.87-1.75-5.51-2.23-1.5-.27-2.98-1.38-4.39-1.24-1.41.14-2.97,1.11-4.01,2.17-1.62,1.66-2.48,4.56-4.34,5.39-3.99,1.77-4.83,5.12-6.28,8.53-2.45,5.78-5.36,11.36-8.12,17-.18.37-.73.55-1.07.87-2.84,2.69-5.61,5.47-8.53,8.07-2.56,2.26-2.71,4.08.1,6.36,2.45,1.99,3.61,4.35,1.28,7.65-2.04,2.88-1.8,6.01,1.09,8.78,1.22,1.17,2.04,3.08,2.38,4.79.71,3.64.02,7.88,1.66,10.93,2.66,4.97,6.73,9.18,11.58,15.5-.9.48-2.84.94-3.81,2.17-1.87,2.37-3.3,5.11-4.69,7.81-.78,1.53-.85,3.44-1.73,4.9-1.08,1.8-2.66,3.3-4,4.9q9.51,9.79,15.58,8.8c1.57,2.12,2.6,4.78,4.51,5.84,4.81,2.67,14.59-.27,18.79-4.29,1.86-1.78,5.12-3.46,7.43-3.11,3.55.54,6.8,2.92,10.23,4.41.74.32,1.58.77,2.39,1.11-.06-.46-.06-.92.07-1.4Z" />
+                    </svg>
+                </div>
+
+
+                <div class="line2 hide"></div>
+                <div class="text go-back hide">
+                    <p class="text light center">consulte la carte ou reviens à la vue d'ensemble</p>
+                </div>
+                <div class="auswahl hide">
+                    <a href="index.html"><img class="frame" src="/assets/rest/btn-map.png"></a>
+                    <a href="select.html"><img class="frame" src="/assets/rest/btn-person.png"></a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="chapter-container" id="chapter" onclick=startChapter()>
+            <h1 class="chapter-title"><a class="hidden-text">Faites défile et<br> </a>cliquez pour découvrir</h1>
+            <div id="pointer"></div>
+            <div class="dark"></div>
+        </div>
+
+
+
+        <div id="particles-leyen"></div>
+
+        <div class="room-container">
+
+            <img class="asset" id="backgroundImage" src="/assets/mayrisch/room.jpg">
+
+            <div class="indicator" onclick="func(1)" id="ind-1">
+                <a class="text ind-number" onclick="func(1)">I</a>
+            </div>
+
+            <div class="indicator" onclick="func(2)" id="ind-2">
+                <a class="text ind-number" onclick="func(2)">II</a>
+            </div>
+
+            <div class="indicator" onclick="func(3)" id="ind-3">
+                <a class="text ind-number" onclick="func(3)">III</a>
+            </div>
+
+            <div class="indicator" onclick="getGallery(4); func(4)" id="ind-4">
+                <a class="text ind-number" onclick="getGallery(); func(4)">IV</a>
+            </div>
+
+            <div class="indicator" onclick="func(5)" id="ind-5">
+                <a class="text ind-number" onclick="func(5)">V</a>
+            </div>
+
+            <div class="indicator" onclick="func(6)" id="ind-6">
+                <a class="text ind-number" onclick="func(6)">VI</a>
+            </div>
+
+        </div>
+
+        <div class="bg-color"></div>
+
+    </main>
+
+
+    <script src="/libs/howler.js-master/dist/howler.js"></script>
+    <script src="/libs/particles.js-master/particles.js"></script>
+    <script src="/libs/anime-master/lib/anime.min.js"></script>
+    <script src="/libs/splide-4.1.3/dist/js/splide.min.js"></script>
+
+    <script src="/javascript/script.js" defer></script>
+
+
+    <script>
+        function on() {
+            document.getElementById("pointer").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("pointer").style.display = "none";
+        }
+
+        particlesJS.load('particles-leyen', '../json/particles-leyen.json');
+    </script>
+
+    <script>
+        new Splide('.splide', {
+            height: '65vh',
+            width: '50vw',
+            type: 'loop',
+            rewind: 'true',
+            heightRatio: 0.5,
+            arrowPath: 'M40,19.5h0c-.12-.04-12.03-3.34-13.11-13.05l-.99,.11c.82,7.41,7.45,11.31,11.23,12.94H0v1H37.12c-3.78,1.64-10.4,5.53-11.23,12.94l.99,.11c1.08-9.71,12.99-13.02,13.11-13.05h0v-1Z',
+        }).mount();
+    </script>
+
+</body>
+
+</html>
