@@ -281,7 +281,7 @@
 }
 
 .center a {
-
+    text-decoration-line: underline;
     color: var(--tertiary-fg-color);
     font-weight: 600;
     pointer-events: visible;

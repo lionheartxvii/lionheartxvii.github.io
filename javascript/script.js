@@ -348,13 +348,10 @@ function initSoundElements(){
   document.querySelector('.sound-btn').onclick = muteLoop; 
 
   sound = new Howl({
-    src: ['/assets/sound/book-of-souls.mp3', 'book-of-souls.mp3'],
-    autoplay: true,
+    src: ['/assets/sound/soundtrack_herhistory.mp3', 'soundtrack_herhistory.mp3'],
     loop: true,
-    volume: 0.3,
+    volume: 0.4,
   });
-
-  // sound.fade(0, 0.3, 3000, sound.play());
 
 }
 
