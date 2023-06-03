@@ -267,7 +267,6 @@ function closeGallery(id) {
 // Puzzle einblenden
 function openPuzzleScreen(id) {
   shakeanimation.pause(); 
-  // document.getElementsByClassName("puzzle-piece")[0].style.cssText = "cursor: none";
   var listHiddenElements = document.getElementsByClassName("hide");
   for (var i = 0; i < listHiddenElements.length; i++){
     listHiddenElements[i].style.cssText = "z-index: 300 ; opacity: 1";
@@ -536,34 +535,8 @@ function calcucatePositions(){
 
 window.addEventListener('resize', () => {
   calcucatePositions();
-  // calculateCropping();
 });
 
 window.onload = (() => {
   calcucatePositions();
-  // calculateCropping();
 });
-
-// function calculateCropping() {
-//   var container = document.getElementsByClassName("room-container")[0];
-//   var img = document.getElementById("backgroundImage");
-
-//   const containerWidth = container.offsetWidth;
-//   const containerHeight = container.offsetHeight;
-//   const containerAspectRatio = containerWidth / containerHeight;
-//   const imgAspectRatio = img.width / img.height;
-
-//   let croppedWidth = 0;
-//   let croppedHeight = 0;
-
-//   if (containerAspectRatio > imgAspectRatio) {
-//       const scaledHeight = containerWidth / imgAspectRatio;
-//       croppedHeight = containerHeight - scaledHeight;
-//   } else {
-//       const scaledWidth = containerHeight * imgAspectRatio;
-//       croppedWidth = containerWidth - scaledWidth;
-//   }
-
-//   console.log(`Cropped width: ${croppedWidth}px`);
-//   console.log(`Cropped height: ${croppedHeight}px`);
-// }

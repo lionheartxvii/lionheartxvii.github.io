@@ -81,7 +81,6 @@ main {
 
     /* Main Div */
 
-
     .content {
         width: 80vw;
         padding-bottom: 10%;
@@ -193,10 +192,6 @@ main {
     .portrait {
         height: 45%;
     }
-
-    /* .marvingt-portrait{
-        height: 42%;
-    } */
 
     .line {
         width: 160px;
