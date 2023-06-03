@@ -53,7 +53,8 @@ p {
     pointer-events: none;
 
     hyphens: auto;
-  
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .headline{
