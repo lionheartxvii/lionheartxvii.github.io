@@ -494,7 +494,7 @@ function getIndicatorPos(key){
   var IndicatorsWaha = [
     { x: 0.20, y: 0.30 },
     { x: 0.84, y: 0.64 },
-    { x: 0.1, y: 0.85 },
+    { x: 0.1, y: 0.8 },
     { x: 0.84, y: 0.26 },
     { x: 0.57, y: 0.61 },
     { x: 0.38, y: 0.72 },
