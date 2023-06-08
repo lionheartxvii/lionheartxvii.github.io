@@ -426,7 +426,6 @@ function hideInfo(infoBox) {
 // End Screen
 // Click Indicator
 
-
 const xMax = 6;
 var shakeanimation = anime({
   targets: '.puzzle-svg',
