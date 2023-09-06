@@ -1,0 +1,623 @@
+/* colors */
+:root {
+  --primary-bg-color: #F5ECDF;
+  --secondary-bg-color: #ffffff;
+
+  --main-fg-color: #242427;
+}
+
+/* fonts */
+
+.nav-box-link {
+  text-decoration: none;
+  color: var(--main-fg-color);
+  position: relative;
+}
+
+a.nav-box-link{
+  font-size: 16px;
+  pointer-events: visible;
+  cursor: pointer;
+}
+
+a.bold{
+  font-family: "textfont-medium";
+}
+
+/* linie müsste durch klicken wechseln, valerij fragen q.q */
+.nav-box-link.active::before {
+  content: "";
+  position: absolute;
+  bottom: 0px; /* Abstand zum Navigationselement */
+  left: 0;
+  width: 100%;
+  height: 1px; /* Dicke der Linie */
+  background-color: var(--main-fg-color); 
+}
+
+/* a.nav-link.bold{
+  font-family: "textfont-medium";
+} */
+
+/* .beispiel-section h2{
+  width: auto !important;
+} */
+
+/* Ausnahmen */
+.hero-banner {
+  height: 85vh !important;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  position: absolute !important;
+}
+
+.fs-14{
+  font-size: 16px !important;
+}
+
+/* Ausnahmen */
+.single-section{
+  height: 100vh;
+}
+
+.arrow-right{
+  position: absolute;
+  height: 8%;
+  cursor: pointer;
+  padding-top: 1.4rem;
+}
+
+.quellen-header h2{
+  font-size: 36px;
+  margin: 0;
+  padding-bottom: 0rem !important;
+}
+
+h2{
+  width: 20vw;
+}
+
+.no-padding{
+  padding-bottom: 0 !important;
+}
+
+/* save for later */
+/* .article-content p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  } */
+
+/* Nav-Box */
+
+.nav-box-container {
+  width: 80%;
+  max-width: 400px;
+  z-index: 200;
+}
+
+.nav-box {
+  background-color: var(--primary-bg-color);
+  border: 1px solid var(--main-fg-color);
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.vertical-buffer {
+  padding-top: 2.5rem;
+}
+
+/* Quellen */
+
+.quellen{
+  height: 80px;
+  border-top: 1px solid var(--main-fg-color);
+  overflow: hidden;
+  transition: height 0.3s;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.quellen-container{
+  width: 65vw;
+}
+
+.quellen-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 10px; */
+  cursor: pointer;
+  height: 80px;
+
+}
+
+
+
+.quellen-arrow {
+  /* width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  border-color: var(--main-fg-color) transparent transparent; */
+  transition: transform 0.5s;
+  margin-left: auto;
+}
+
+.quellen-content {
+  width: 65vw;
+  padding-bottom: 10px;
+}
+
+.expanded {
+  height: auto;
+}
+
+.quellen-arrow.up {
+  transform: rotate(180deg);
+}
+
+.reference {
+  font-size: 0.8em;
+  vertical-align: super; 
+  line-height: normal;
+}
+
+/* Content */
+
+.all-articles{
+  position: relative;
+  width: 100%;
+}
+
+
+.article-container{
+  position: absolute;
+  width: 0%;
+  top: 0;
+  right: 0;
+  height: auto;
+
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  /* padding-top: 20rem; */
+
+  z-index: 0;
+  background-color: var(--primary-bg-color);
+  overflow: visible;
+  border-left: 1px solid var(--main-fg-color);
+}
+
+#article-container-0 {
+  display: flex;
+}
+
+.article{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto !important;
+flex-direction: row;
+max-width: 65%;
+}
+
+#article-container-0{
+  width: 100%;
+  position: relative;
+}
+
+.absatz {
+  height: 60vh;
+}
+
+.text,
+.article-headline {
+  padding-top: 15rem;
+}
+
+.nav-box-link{
+  align-self: center;
+}
+
+.beispiel-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+/* Circle */
+.circle-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+.circle-icon-container{
+  width: 65vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid var(--main-fg-color);
+  margin: calc(100px / 2 + 0px);
+
+  z-index: 150;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+}
+
+.circle-element img {
+  width: 50px;
+  height: 50px;
+padding-bottom: 0.5rem;
+  /* max-width: 100%;
+  height: auto; */
+}
+
+.circle-element span {
+  font-size: 10px;
+  text-align: center;
+}
+
+.circle .circle-element {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 100px;
+  height: 100px;
+  margin: calc( -100px / 2 );
+}
+
+/* .circle-element{
+  position: relative;
+} */
+
+
+.hidden-box {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  padding: 10px;
+  width: 230px;
+  text-align: center;
+}
+
+.hidden-box h3{
+  text-align: center;
+}
+
+/* Anordnung der Elemente um den Kreis */
+
+/* .circle-element:nth-child(1) { transform: translate(180%, 200%) rotate(0deg)   translate(0, -220px) rotate(0deg); }
+.circle-element:nth-child(2) { transform: translate(180%, 200%) rotate(40deg)  translate(0, -220px) rotate(-40deg); }
+.circle-element:nth-child(3) { transform: translate(180%, 200%) rotate(80deg)  translate(0, -220px) rotate(-80deg); }
+.circle-element:nth-child(4) { transform: translate(180%, 200%) rotate(120deg) translate(0, -220px) rotate(-120deg); }
+.circle-element:nth-child(5) { transform: translate(180%, 200%) rotate(160deg) translate(0, -220px) rotate(-160deg); }
+.circle-element:nth-child(6) { transform: translate(180%, 200%) rotate(200deg) translate(0, -220px) rotate(-200deg); }
+.circle-element:nth-child(7) { transform: translate(180%, 200%) rotate(240deg) translate(0, -220px) rotate(-240deg); }
+.circle-element:nth-child(8) { transform: translate(180%, 200%) rotate(280deg) translate(0, -220px) rotate(-280deg); }
+.circle-element:nth-child(9) { transform: translate(180%, 200%) rotate(320deg) translate(0, -220px) rotate(-320deg); } */
+
+/* Values Beispiel */
+
+.beispiel-values{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80vh;
+  width: 65%;
+}
+
+.left-side {
+  border-right: 1px solid var(--main-fg-color);
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.box-values{
+  width: 15vw;
+  border: 1px solid var(--main-fg-color);
+  padding: 80px 20px;
+  border-radius: 2px;
+}
+
+.small-box {
+  width: calc(40vw / 4 - 10px); /* Berücksichtigt den Rand */
+  height: 70px;
+  border: 1px solid var(--main-fg-color);
+  padding: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* Zur Behandlung der letzten Elemente in einer Reihe */
+.small-box:nth-child(4n) {
+  margin-right: 0;
+}
+
+.small-box:hover{
+  background-color: rgba(36, 36, 39, 0.1);
+}
+
+.small-box.clicked {
+  background-color: rgba(36, 36, 39, 0.2);
+}
+
+.small-box.max-selected {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+/* Paradox of Choice - Beispiel */
+
+.beispiel-paradox,
+.beispiel-hats,
+.beispiel-10,
+.beispiel-pc{
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 65%;
+
+}
+
+.beispiel-paradox{
+  height: 70vh;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.box-aufgabenstellung{
+  width: 40vw;
+  border: 1px solid var(--main-fg-color);
+  padding: 20px 80px;
+  border-radius: 2px;
+  margin-bottom: 4rem;
+}
+
+.paradox{
+  width: calc(55vw / 5 - 10px) !important;
+  height: 40px !important;
+  margin-right: 30px !important;
+  margin-bottom: 0px !important;
+}
+
+.paradox:nth-child(3n) {
+  margin-right: 40px !important;
+}
+.paradox:nth-child(5n) {
+  margin-right: 0 !important;
+}
+
+
+/* Six Hat Method */
+
+
+/* .container {
+  text-align: center;
+  position: relative;
+} */
+
+.speech-bubble {
+  border: 1px solid var(--main-fg-color);
+  border-radius: 100px;
+  padding: 20px;
+  width: 38vw;
+  height: 3vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bubble-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-direction: column;
+  width: 5vh;
+}
+
+.bubble{
+  border: 1px solid var(--main-fg-color);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: cenfter;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.hat-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.hat-box{
+  text-align: center;
+  margin: 0 20px;
+}
+
+
+.hat-box img {
+  width: 60px;
+  height: 60px;
+  padding-bottom: 0.5rem;
+  /* max-width: 100%;
+  height: auto; */
+}
+
+.hat-box p{
+  text-align: center;
+  width: 100px;
+}
+
+.beispiel-hats{
+  height: 55vh;
+}
+
+
+/* Beispiel 10 / 10 / 10 */
+
+.beispiel-10-tabelle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.beispiel-10-row{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid var(--main-fg-color);
+  padding: 22px 0;
+}
+
+.beispiel-10-row:last-child {
+  border-bottom: none;
+}
+
+.beispiel-10-row img {
+  width: 90px;
+  height: 90px;
+}
+
+.beispiel-10-headline{
+  padding: 0 5vw;
+}
+
+.beispiel-10{
+  height: 55vh;
+}
+
+/* ICE Beispiel */
+
+table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+}
+table th, table td {
+  border: 1px solid var(--main-fg-color);
+  padding: 10px;
+}
+table th:first-child, table td:first-child {
+  border-left: none;
+}
+table th:last-child, table td:last-child, 
+table th:nth-child(2), table th:nth-child(3)   {
+  border-right: none;
+}
+
+table th:nth-child(3), table th:nth-child(4)  {
+  border-left: none;
+}
+
+table th {
+  border-top: none;
+}
+
+table td {
+  height: 10vh;
+}
+
+/* Ausschlussverfahren Beispiel - im html code selbst stehen ebenfalls einige styles */
+.box-counter{
+  width: fit-content !important;
+  align-self: flex-end;
+}
+
+/* Pro Contra Beispiel */
+
+
+.table-pc, th, td {
+  /* border-bottom: 1px solid var(--main-fg-color); */
+  text-align: center;
+}
+
+th, td {
+  padding: 10px;
+}
+
+.table-pc td {
+  height: 35px;
+}
+
+.idea-pc{
+  width: 80%;
+}
+

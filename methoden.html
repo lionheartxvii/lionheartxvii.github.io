@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
+    maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Master Worktitel</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/content-pages.css">
+
+    <style>
+        :root {
+            /* --gradient-color-1: #4B68B9;
+            --gradient-color-2: #5EA4F0;
+            --gradient-color-3: #FD7E60;
+            --gradient-color-4: #f0b9a0; */
+
+            --gradient-color-1: #edb4ee;
+            --gradient-color-2: #80d6d7;
+            --gradient-color-3: #7e8ff0;
+            --gradient-color-4: #ab86fb;
+
+        }
+
+        .nav-box-container {
+            max-width: 800px !important;
+        }
+
+        #gradient-canvas-reasons {
+            --gradient-color-1: #b298fa;
+            --gradient-color-2: #f87db0;
+            --gradient-color-3: #fcebc2;
+            --gradient-color-4: #e780eb;
+
+
+            height: 85vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+        }
+
+        .radial-gradient-container div:nth-child(1) {
+            height: 84%;
+            width: 80%;
+            background-color: var(--gradient-color-4);
+            left: -29%;
+            top: 21%;
+        }
+
+        .radial-gradient-container div:nth-child(2) {
+            height: 75%;
+            width: 63%;
+            background-color: var(--gradient-color-2);
+            left: 43%;
+            top: 32%;
+            animation-delay: 8s;
+        }
+
+        .radial-gradient-container div:nth-child(3) {
+            height: 54%;
+            width: 77%;
+            background-color: var(--gradient-color-3);
+            left: 41%;
+            top: -1%;
+            animation-delay: 0.3s;
+        }
+
+        .radial-gradient-container div:nth-child(4) {
+            height: 88%;
+            width: 59%;
+            background-color: var(--gradient-color-1);
+            left: -10%;
+            top: -18%;
+            animation-delay: 1.2s;
+            opacity: 0.8;
+        }
+
+        /* Boxes Ausnahmen */
+        .small-box {
+            cursor: default;
+        }
+
+        .small-box:hover {
+            background-color: rgba(36, 36, 39, 0.0);
+        }
+
+        .small-box.clicked {
+            background-color: rgba(36, 36, 39, 0.0);
+        }
+
+
+        .fruity {
+            cursor: pointer;
+            outline: 2px solid #7889e8;
+            animation: pulse 2s alternate;
+        }
+
+        .fruity:hover {
+            background-color: rgba(36, 36, 39, 0.1);
+        }
+
+        .fruity.clicked {
+            background-color: rgba(36, 36, 39, 0.2);
+        }
+
+
+
+        .fruity:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        .fruity:nth-child(3) {
+            animation-delay: 4s;
+        }
+
+        .fruity:nth-child(4) {
+            animation-delay: 6s;
+        }
+
+        .fruity:nth-child(5) {
+            animation-delay: 8s;
+        }
+
+        @keyframes pulse {
+            0% {
+                outline-color: #7889e8;
+            }
+
+            100% {
+                outline-color: #e74c3c;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="ursprung.html" class="nav-link">Ursprung</a></li>
+            <li><a href="gruende.html" class="nav-link">Gründe</a></li>
+            <li class="title"><a href="index.html">Title</a></li>
+            <li><a href="methoden.html" class="nav-link active">5 Methoden</a></li>
+            <li><a href="tipps.html" class="nav-link">Tipps</a></li>
+        </ul>
+    </nav>
+
+    <!-- <nav class="scroll-nav">
+        <ul>
+        </ul>
+    </nav> -->
+
+    <div class="up-button">
+        <img src="assets/arrow-smol-up.png" alt="Icon">
+    </div>
+
+    <section class="hero-banner scroll-section" id="section1">
+        <canvas id="gradient-canvas-reasons" data-transition-in> </canvas>
+        <div class="hero-content">
+            <h1>5 methods that might help to make better decisions</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+        </div>
+        <div><img onclick="scrollToSection('section2')" class="arrow" src="/assets/arrow-down.png"></div>
+    </section>
+
+    <section class="content" id="section2">
+
+        <div class="nav-box-container sticky">
+
+            <div class="vertical-buffer"></div>
+            <nav class="nav-box">
+                <a class="nav-box-link fs-14 active" onclick="func(0); scrollToSection('section2')">6 Hüte Methode</a>
+                <a class="nav-box-link fs-14" onclick="func(1); scrollToSection('section2')">10 / 10 / 10</a>
+                <a class="nav-box-link fs-14" onclick="func(2); scrollToSection('section2')">Pro- Kontra-Liste</a>
+                <a class="nav-box-link fs-14" onclick="func(3); scrollToSection('section2')">ICE-Scoring-Model</a>
+                <a class="nav-box-link fs-14" onclick="func(4); scrollToSection('section2')">Ausschlussverfahren</a>
+            </nav>
+        </div>
+
+        <div class="all-articles">
+            <!-- 6 hats -->
+            <div class="article-container" id="article-container-0">
+                <div class="article">
+                    <div class="inner-content sticky article-headline">
+                        <h2>Wie kann die 6 thinking hats methode eingesetzt werden?</h2>
+                    </div>
+
+                    <div class="buffer"></div>
+
+                    <div class="inner-content text">
+                        <p class="absatz">Der Six Thinking Hats Ansatz wurde von dem maltesischen Arzt, Psychologen und
+                            Philosophen, Edward de Bono, entwickelt. Ursprünglich nutzte er diese Methode, zur Beratung
+                            von Regierungsbehörden, jedoch wollte er, dass sie ebenso als praktisches Werkzeug für die
+                            alltägliche Problemlösung dient.<a id="reference1" class="reference" href="#quelle1">1</a>
+                            <br><br>
+                            Denn diese Technik ermöglicht es, ein Problem aus sechs verschiedenen Blickwinkeln zu
+                            betrachten, um Lösungen abseits von instinktiven Perspektiven zu erkunden.<a id="reference1"
+                                class="reference" href="#quelle1">1</a> Die sechs Hüte
+                            haben jeweils eine Farbe, welche ihnen ihren jeweiligen Namen verleiht: Weiß, Rot, Schwarz,
+                            Gelb, Grün und Blau.
+                        </p>
+
+                        <p class="absatz">
+                            - Der Weiße Hut steht für neutrale und objektive Informationen. Hier geht es um das Sammeln
+                            von Fakten und Informationen sowie das Erkennen von Wissenslücken. <br>
+                            - Der Rote Hut repräsentiert die emotionale Sichtweise, in der Gefühle ausgedrückt werden
+                            können, ohne sie logisch rechtfertigen zu müssen. <br>
+                            - Der Schwarze Hut ist vorsichtig und kritisch. Er weist auf Schwächen in einer Idee hin und
+                            erklärt, warum Bedenken bestehen. <br>
+                            - Der Gelbe Hut steht für Optimismus und positive Gedanken. Hier werden die Vorteile und der
+                            Mehrwert von Ideen hervorgehoben. <br>
+                            - Der Grüne Hut repräsentiert kreatives Denken und das Erkunden vieler verschiedener Ideen
+                            und Lösungsansätze. <br>
+                            - Der Blaue Hut ist für die Kontrolle und Organisation des Denkprozesses zuständig,
+                            einschließlich der Verwendung der anderen Hüte. Zusätzlich werden hierbei Zusammenfassungen
+                            und Lösungsansätze festgelegt.
+                            <a id="reference1" class="reference" href="#quelle1">1</a>
+                            <a id="reference2" class="reference" href="#quelle2">2</a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="beispiel-section ">
+
+                    <div class="beispiel-hats inner-content center">
+                        <h2>Die Fragen der Huete</h2>
+                        <div class="speech-bubble">
+                            <div class="hidden-box" id="hiddenBox1">
+                                <p> Das Bedürfnis nach materieller Grundversorgung wie Nahrung, Kleidung und Schutz</p>
+                            </div>
+
+                            <div class="hidden-box" id="hiddenBox2">
+                                <p>Das Bedürfnis nach Sicherheit und Geborgenheit</p>
+                            </div>
+
+                            <div class="hidden-box" id="hiddenBox3">
+                                <p> Das Bedürfnis nach sozialen Beziehungen und Zugehörigkeit</p>
+                            </div>
+
+                            <div class="hidden-box" id="hiddenBox4">
+                                <p>Das Bedürfnis nach Wissen, Bildung und Verständnis der Welt</p>
+                            </div>
+
+                            <div class="hidden-box" id="hiddenBox5">
+                                <p>Das Bedürfnis nach Mitbestimmung, Selbstbestimmung und Einflussnahme</p>
+                            </div>
+
+                            <div class="hidden-box" id="hiddenBox6">
+                                <p>Das Bedürfnis nach Erholung, Spaß und kulturellen Aktivitäten</p>
+                            </div>
+                        </div>
+                        <div class="bubble-container">
+                            <div class="bubble"></div>
+                            <div class="bubble"></div>
+                            <div class="bubble"></div>
+                        </div>
+                        <div class="hat-container">
+                            <div class="hat-box circle-element" onmouseenter="showBox(1)" onmouseleave="hideBox()"
+                                onclick="pinBox(1)">
+                                <img src="assets/icons/white-hat.png" alt="Image 1">
+                                <p class="fs-14">Weißer Hut</p>
+                            </div>
+                            <div class="hat-box circle-element" onmouseenter="showBox(2)" onmouseleave="hideBox()"
+                                onclick="pinBox(2)">
+                                <img src="assets/icons/red-hat.png" alt="Image 2">
+                                <p class="fs-14">Roter Hut</p>
+                            </div>
+                            <div class="hat-box circle-element" onmouseenter="showBox(3)" onmouseleave="hideBox()"
+                                onclick="pinBox(3)">
+                                <img src="assets/icons/black-hat.png" alt="Image 3">
+                                <p class="fs-14">Schwarzer Hut</p>
+                            </div>
+                            <div class="hat-box circle-element" onmouseenter="showBox(4)" onmouseleave="hideBox()"
+                                onclick="pinBox(4)">
+                                <img src="assets/icons/yellow-hat.png" alt="Image 4">
+                                <p class="fs-14">Gelber Hut</p>
+                            </div>
+                            <div class="hat-box circle-element" onmouseenter="showBox(5)" onmouseleave="hideBox()"
+                                onclick="pinBox(5)">
+                                <img src="assets/icons/green-hat.png" alt="Image 5">
+                                <p class="fs-14">Grüner Hut</p>
+                            </div>
+                            <div class="hat-box circle-element" onmouseenter="showBox(6)" onmouseleave="hideBox()"
+                                onclick="pinBox(6)">
+                                <img src="assets/icons/blue-hat.png" alt="Image 6">
+                                <p class="fs-14">Blauer Hut</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radial-gradient-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                </div>
+
+                <div class="single-content-container">
+
+                    <div class="inner-single-content-container">
+                        <div class="inner-content">
+                            <h2>Die Vorteile der 6 thinking hats Methode</h2>
+                        </div>
+
+                        <div class="buffer"></div>
+
+                        <div class="inner-content">
+                            <p>Die Hüte können in beliebiger Reihenfolge verwendet werden und auch mehrfach zum
+                                Einsatz
+                                kommen. Das Ziel ist es, das Denken zu vereinfachen, indem man sich auf eine Sache
+                                nach
+                                der anderen konzentriert und somit Emotionen, Logik, Informationen, Hoffnung und
+                                Kreativität getrennt voneinander betrachtet.<a id="reference2" class="reference"
+                                    href="#quelle2">2</a> <br>
+                                Ebenfalls ergeben sich durch die Anwendung dieser Hüte mehrere Vorteile: Eine
+                                strukturiertere Denkweise, bei der jede Perspektive berücksichtigt wird, sowie eine
+                                Steigerung der Kreativität, da man von gewohnten Denkmustern abweicht.<a id="reference1"
+                                    class="reference" href="#quelle1">1</a> <br>
+                                Zusammenfassend bietet der Six Thinking Hats Ansatz eine effiziente Methode, um
+                                komplexe
+                                Probleme zu analysieren, verschiedene Blickwinkel zu betrachten und fundierte
+                                Entscheidungen zu treffen. Es ermöglicht eine klare Strukturierung des Denkprozesses
+                                und
+                                fördert die Kreativität, indem es uns aus festgefahrenen Mustern herausholt.
+
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- 10 / 10 / 10 -->
+            <div class="article-container" id="article-container-1">
+                <div class="article">
+                    <div class="inner-content sticky article-headline">
+                        <h2>Wie funktioniert die 10/10/10 Methode?</h2>
+                    </div>
+
+                    <div class="buffer"></div>
+
+                    <div class="inner-content text">
+                        <p class="absatz">
+                            Die 10/10/10-Methode ist eine Entscheidungsstrategie, die von Suzy Welch entwickelt wurde.
+                            Bei dieser Methode wird empfohlen, sich bei einer bevorstehenden Entscheidung zu fragen,
+                            welche Konsequenzen sie in den nächsten zehn Minuten, den nächsten zehn Monaten und den
+                            nächsten zehn Jahren haben wird.<a id="reference3" class="reference" href="#quelle3">3</a>
+                            <br>
+                            Je nach Umfang und Kontext der Entscheidung können verschiedene Zeiträume angewandt werden
+                            (z.B. zehn Minuten, zehn Wochen, zehn Monate). Denn kurzfristige Entscheidungen haben oft
+                            geringere Auswirkungen und sofortige Konsequenzen, während langfristige Entscheidungen mit
+                            größeren Risiken und verzögerten Folgen einhergehen.
+                            <a id="reference4" class="reference" href="#quelle4">4</a> <br> <br>
+                            Durch diese Methode kann erkannt werden, dass die Auswirkungen mancher Entscheidungen nicht
+                            so gravierend sind, wie zunächst befürchtet wird. Zudem unterstützt sie dabei, impulsive
+                            Entscheidungen zu vermeiden, indem sie uns dabei hilft, über die Konsequenzen unserer
+                            Handlungen nachzudenken.<a id="reference3" class="reference" href="#quelle3">3</a>
+
+                        </p>
+                        <p class="absatz">
+                            Die 10/10/10-Regel ermöglicht es uns, langfristig zu denken und unsere Ziele zu
+                            berücksichtigen. Dinge, die uns jetzt wichtig erscheinen, führen möglicherweise nicht zu den
+                            Zielen, die wir uns für die Zukunft gesetzt haben. Eine Entscheidung, die uns jetzt leicht
+                            fällt, könnte negative Auswirkungen auf die Zukunft haben, während eine Entscheidung, die
+                            uns mühselig erscheint positive Ergebnisse hervorbringen kann. <a id="reference4"
+                                class="reference" href="#quelle4">4</a> <br>
+                            Diese Regel hilft uns auch, uns von unseren unmittelbaren Emotionen oder Impulsen bei einer
+                            Entscheidung zu distanzieren. Sie zwingt uns, die langfristigen Konsequenzen zu
+                            berücksichtigen und eine fundierte Wahl zu treffen. Bei dem Anwenden dieser Methode sollte
+                            sichergestellt werden, dass wir mit den Ergebnissen jeder betrachteten Zeitspanne zufrieden
+                            sind, bevor
+                            eine Entscheidung getroffen wird. Es ist jedoch zu beachten, dass eine „gute“ oder
+                            „schlechte“ Entscheidung je nach dem Zeitpunkt, zu dem man sie betrachtet, unterschiedlich
+                            aussehen kann. <a id="reference4" class="reference" href="#quelle4">4</a>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="beispiel-section">
+
+                    <div class="beispiel-10 inner-content">
+                        <div class="center">
+                            <h2>Anwendung der Methode</h2>
+                            <div class="box-aufgabenstellung">
+                                <p>Versuche dich in eine Situation hineinzuversetzen,
+                                    in welcher du dir nicht über die Konsequenzen in der Zukunft sicher bist,
+                                    wie würdest du dich in folgenden Zeitspannen fühlen?
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="beispiel-10-tabelle">
+                            <div class="beispiel-10-row">
+                                <h3 class="beispiel-10-headline">10 Minuten</h3>
+                                <h3 class="beispiel-10-headline">10 Tage</h3>
+                                <h3 class="beispiel-10-headline">10 Wochen</h3>
+                            </div>
+                            <div class="beispiel-10-row">
+                                <img src="assets/icons/positive-smiley.png" alt="Bild 1">
+                                <img src="assets/icons/positive-smiley.png" alt="Bild 2">
+                                <img src="assets/icons/positive-smiley.png" alt="Bild 3">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="radial-gradient-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- Pro & Contra -->
+            <div class="article-container" id="article-container-2">
+
+                <div class="article">
+                    <div class="inner-content sticky article-headline">
+                        <h2>Wie laesst sich eine Pro- & Kontra-Liste besser anwenden?</h2>
+                    </div>
+
+                    <div class="buffer"></div>
+
+                    <div class="inner-content text">
+                        <p class="absatz">Die Pro- und Kontra-Liste ist eine einfache Methode, um Entscheidungen zu
+                            treffen. Doch es kann vorkommen, dass die Menge an Pros und Kontras unübersichtlich wird,
+                            oder dass die Liste unausgewogen wirkt. Denn ein einziger Kontra-Punkt kann manchmal stärker
+                            wiegen als viele Pro-Argumente. Dies hängt damit zusammen, dass eine normale Pro- und
+                            Kontra-Liste nicht das tatsächliche Gewicht jedes Arguments berücksichtigt, da alle Punkte
+                            gleich viel Platz
+                            einnehmen.<a id="reference5" class="reference" href="#quelle5">5</a> <br>
+                            Das lässt sich vermeiden, indem du die Pro- und Kontra-Argumente einer Entscheidung abwägst
+                            - eine einfache, aber effektive Strategie, die es dir ermöglicht, die Situation aus
+                            verschiedenen Blickwinkeln zu betrachten, um im Endeffekt die Optionen besser abwägen zu
+                            können.
+                        </p>
+
+                        <p class="absatz">
+                            Hierfür wird zunächst eine normale Pro- und Kontra-Liste angelegt, in welcher alle möglichen
+                            positiven Folgen der Entscheidung in der Pro-Spalte und alle negativen Auswirkungen in der
+                            Kontra-Spalte aufgeschrieben werden.<a id="reference6" class="reference"
+                                href="#quelle6">6</a>
+                            Es kann hilfreich sein, diese Liste auf ein Blatt
+                            Papier zu schreiben, um die Überlegungen visuell vor Augen zu haben und sich besser auf den
+                            Entscheidungsprozess zu konzentrieren.<a id="reference5" class="reference"
+                                href="#quelle5">5</a> <br>
+                            Bewerte nun die Punkte, die du aufgeschrieben hast, mit positiven oder negativen Werten. Zum
+                            Beispiel könnte eine Bewertung von +5 stark befürwortend sein, während -5 sehr ungünstig
+                            ist. Addiere abschließend die Punktzahlen in jeder Spalte und ziehe die
+                            Gesamt-Kontra-Punktzahl von
+                            der Gesamt-Pro-Punktzahl ab. Ein positives Gesamtergebnis zeigt, dass die Entscheidung
+                            umgesetzt werden kann, während ein negatives darauf hindeutet, dass sie verworfen werden
+                            sollte.<a id="reference6" class="reference" href="#quelle6">6</a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="beispiel-section">
+
+                    <div class="beispiel-pc inner-content">
+                        <div class="center">
+                            <h2>Anwendung der Methode</h2>
+                            <div class="box-aufgabenstellung">
+                                <p>In folgender Tabelle kannst du deine Pro- und Kontra Punkte eintragen und bewerten.
+                                    Zuletzt wird die Gesamtzahl von Pro und Kontra substrahiert.
+                                    <a class="bold">Bewerte deine Ideen von einer Scala von -5 bis 5.</a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <table class="table-pc">
+                            <tr>
+                                <th></th>
+                                <th class="table-h3 idea-pc">Ideen</th>
+                                <th class="table-h3">Score</th>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="4" class="table-h3">Pro</td>
+                                <td  contenteditable="true" class="idea-pc">
+                                    <p class="table-text placeholder">Idee 1</p>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                            </tr>
+
+                            <tr>
+                                <td  contenteditable="true" class="idea-pc">
+                                    <p class="table-text placeholder">Idee 2</p>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                            </tr>
+
+                            <tr>
+                                <td  contenteditable="true" class="idea-pc">
+                                    <p class="table-text placeholder">Idee 3</p>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                            </tr>
+
+                            <tr>
+                                <td  contenteditable="true" class="idea-pc">
+                                    <p class="table-text placeholder">Idee 4</p>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="4" class="table-h3">Contra</td>
+                                <td  contenteditable="true" class="idea-pc">
+                                    <p class="table-text placeholder">Idee 1</p>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                            </tr>
+
+                            <tr>
+                                <td  contenteditable="true" class="idea-pc">
+                                    <p class="table-text placeholder">Idee 2</p>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                            </tr>
+
+                            <tr>
+                                <td  contenteditable="true" class="idea-pc">
+                                    <p class="table-text placeholder">Idee 3</p>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                            </tr>
+
+                            <tr>
+                                <td  contenteditable="true" class="idea-pc">
+                                    <p class="table-text placeholder">Idee 4</p>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                            </tr>
+
+                            <tr>
+                                <td class="table-h3">Gesamt</td>
+                                <td class="idea-pc">
+                                    <p class="table-text placeholder"></p>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="radial-gradient-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                </div>
+
+                <div class="single-content-container">
+                    <div class="inner-single-content-container">
+
+                        <div class="inner-content">
+                            <h2>Reflektion der Ergebnisse</h2>
+                        </div>
+
+                        <div class="buffer"></div>
+
+                        <div class="inner-content">
+                            <p>Das Abwägen von Pro und Kontra kann dabei helfen den Entscheidungsprozess zu
+                                beschleunigen, das Verständnis über die Situation zu verbessern und eine
+                                Entscheidungsblockade zu vermeiden.<a id="reference6" class="reference"
+                                    href="#quelle6">6</a><br><br>
+                                Wenn du jedoch das Gefühl hast, dass die Lösung nicht angemessen ist, nimm dir Zeit, um
+                                mögliche übersehene Faktoren zu identifizieren. Beachte auch, dass sich einige Punkte
+                                der Liste im Laufe der Zeit ändern können, während andere eher statisch bleiben. Denn
+                                ein Kontra-Argument muss nicht immer ein Kontra-Argument bleiben und dasselbe gilt für
+                                Pro-Argumente.<a id="reference7" class="reference" href="#quelle7">7</a>
+
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- ICE -->
+            <div class="article-container" id="article-container-3">
+                <div class="article">
+                    <div class="inner-content sticky article-headline">
+                        <h2>Worum handelt es sich bei dem ICE-Scoring-Modell?</h2>
+                    </div>
+
+                    <div class="buffer"></div>
+
+                    <div class="inner-content text">
+                        <p class="absatz">
+                            Das ICE-Scoring-Modell ist ein Priorisierungsverfahren, das in der Geschäftsstrategie und im
+                            Projektmanagement verwendet wird. Sie hilft dabei, Ideen, Features oder Auswahlmöglichkeiten
+                            zu bewerten und ihre Priorität festzulegen. Der Begriff „ICE“ steht für die drei Kriterien,
+                            nach denen die Optionen bewertet werden:<a id="reference8" class="reference"
+                                href="#quelle8">8</a> <br><br>
+                            - Impact (Auswirkung): Wie stark wird sich die Option auf das Hauptziel auswirken? Ein
+                            niedriges Impact-Rating bedeutet, dass die Option zwar einen gewissen Wert haben kann, aber
+                            nicht wesentlich oder signifikant<a id="reference8" class="reference" href="#quelle8">8</a>
+                            <a id="reference9" class="reference" href="#quelle9">9</a> <br>
+                            - Zuversicht (Confidence): Wie sicher sind wir bezüglich des Impacts und der Umsetzbarkeit
+                            der Idee? Wie sicher ist es, dass die Option erfolgreich sein wird? Durch diesen Wert wird
+                            die Option realistisch beurteilt, da wir uns oft in den beiden anderen Werten
+                            überschätzen.<a id="reference9" class="reference" href="#quelle9">9</a> <br>
+                            - Ease (Leichtigkeit): Wie einfach ist es die Option umzusetzen? Leichtigkeit bezeichnet den
+                            geschätzten Aufwand und die Ressourcen, die benötigt werden, um die Idee umzusetzen. Einen
+                            höherer Wert bedeutet, dass die Funktion leicht umzusetzen ist und wenig Aufwand erfordert.
+                            <a id="reference8" class="reference" href="#quelle8">8</a>
+                        </p>
+                        <p class="absatz">
+                            Um den ICE-Score zu berechnen, weist man jeder Option oder Idee eine Bewertung für Impact,
+                            Zuversicht und Leichtigkeit auf einer Skala von 0 bis 10 zu. Anschließend multipliziert man
+                            die Werte mit der Formel: <br> <a class="bold">ICE Score = (Impact * Confidence * Ease)</a>.
+                            <br>
+                            Je höher der ICE-Score, desto höher die Priorität für der Option. Dieser Ansatz wird nun auf
+                            die vorhandenen Möglichkeiten angewendet, und die Idee mit dem höchsten Score sollte höchste
+                            Priorität erhalten.<a id="reference8" class="reference" href="#quelle8">8</a>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="beispiel-section">
+
+                    <div class="beispiel-10 inner-content">
+                        <div class="center">
+                            <h2>Anwendung der Methode</h2>
+                            <div class="box-aufgabenstellung">
+                                <p>Wenn du einige deiner Ideen vergleichen willst,
+                                    kannst du sie in folgende Tabelle eintragen und ausrechnen lassen.
+                                    <a class="bold">Bewerte deine Ideen von einer Scala von 1-10.</a>
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <table>
+                            <tr>
+                                <th class="table-h3">Ideen</th>
+                                <th class="table-h3">Impact</th>
+                                <th class="table-h3">Confidence</th>
+                                <th class="table-h3">Ease</th>
+                                <th class="table-h3">ICE Score</th>
+                            </tr>
+                            <!-- <tr>
+                                <td class="table-text placeholder" contenteditable="true" >
+                                    <input type="text" id="uname" name="name" placeholder="Lower case, all one word" /></td>
+                                <td class="table-text placeholder" contenteditable="true">wie groß ist die Auswirkung?</td>
+                                <td class="table-text placeholder" contenteditable="true">wie sicher fühlst du dich?</td>
+                                <td class="table-text placeholder" contenteditable="true">wie leicht ist die Umsetzung?</td>
+                                <td class="table-text" contenteditable="true"></td>
+                            </tr> -->
+
+                            <tr>
+                                <td  contenteditable="true">
+                                    <p class="table-text placeholder">notiere hier deine erste Idee</p>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
+                                        placeholder="wie groß ist die Auswirkung?" /></td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
+                                        placeholder="wie sicher fühlst du dich?" /></td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
+                                        placeholder="wie leicht ist die Umsetzung?" /></td>
+
+                                <td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td  contenteditable="true">
+                                    <p class="table-text placeholder">notiere hier deine zweite Idee</p>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
+                                        placeholder="wie groß ist die Auswirkung?" /></td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
+                                        placeholder="wie sicher fühlst du dich?" /></td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
+                                        placeholder="wie leicht ist die Umsetzung?" /></td>
+
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td  contenteditable="true">
+                                    <p class="table-text placeholder">notiere hier deine dritte Idee</p>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
+                                        placeholder="wie groß ist die Auswirkung?" /></td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
+                                        placeholder="wie sicher fühlst du dich?" /></td>
+                                <td>
+                                    <input type="number" id="uname" name="num" min="1" max="10"
+                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
+                                        placeholder="wie leicht ist die Umsetzung?" /></td>
+
+                                <td>
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+                    </div>
+
+                    <div class="radial-gradient-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                </div>
+
+                <div class="single-content-container">
+                    <div class="inner-single-content-container">
+
+                        <div class="inner-content">
+                            <h2>Reflektion der Ergebnisse</h2>
+                        </div>
+
+                        <div class="buffer"></div>
+
+                        <div class="inner-content">
+                            <p>Wenn man unter Zeit- und Ressourcendruck steht, kann ICE dabei helfen, sich auf das
+                                Wesentliche zu konzentrieren. Es kann auch dabei helfen neue Optionen aufzudecken oder
+                                Kompromisse zu erkennen. <br>
+                                Jedoch ist die Analyse nur so gut wie die Optionen, die miteinander verglichen werden
+                                und wie gut diese bewertet werden. Daher kann die Methode auch in Verbindung mit
+                                weiteren Methoden verwendet werden, die bei dem Entscheidungsprozess helfen sollen, um
+                                die Ergebnisse zu bestätigen. Es ist für keine lebensbedrohenden Situationen ausgelegt,
+                                doch für alltägliche Situationen in denen man entscheiden muss wie man sich Zeit und
+                                Ressourcen aufteilt, kann sie von Nutzen sein.<a id="reference10" class="reference"
+                                    href="#quelle10">10</a>
+
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- Ausschlussverfahren -->
+            <div class="article-container" id="article-container-4">
+                <div class="article">
+                    <div class="inner-content sticky article-headline">
+                        <h2>Das Ausschluss- verfahren erklaert</h2>
+                    </div>
+
+                    <div class="buffer"></div>
+
+                    <div class="inner-content text">
+                        <p class="absatz">
+                            Wenn die Anzahl der Entscheidungen, mit denen wir konfrontiert sind, zunimmt, wird die
+                            Freiheit der Wahl letztendlich zur Qual. Routineentscheidungen beanspruchen oft so viel Zeit
+                            und
+                            Aufmerksamkeit, dass sie unsere mentale Energie verbrauchen.
+                            Hierfür kann es hilfreich sein, zu erkennen, wie Beschränkungen uns tatsächlich nützen und
+                            nicht benachteiligen können. <br>
+                            Durch eine Beschränkung oder Regel (z.B. immer nur einmal die Snooze-Taste zu drücken),
+                            vermeiden wir es, immer wieder bewusste Entscheidungen treffen zu müssen und
+                            sparen Zeit und mentale Energie.<a id="reference11" class="reference"
+                                href="#quelle11">11</a> <br><br>
+                            Um zu vermeiden, dass dieselben Entscheidungen immer wieder verhandeln werden müssen,
+                            kann eine Grenze als Entscheidung betrachtet werden, die dich nicht einschränkt, sondern
+                            Entscheidungen automatisch für dich trifft. Diese Regeln helfen dabei, Auswahlmöglichkeiten
+                            zu begrenzen und können sogar dazu beitragen, eine Entscheidung durch ein
+                            Ausschlussverfahren
+                            zu treffen.<a id="reference12" class="reference" href="#quelle12">12</a>
+                        </p>
+                        <p class="absatz">
+                            Hierbei wird die Auswahl der Möglichkeiten soweit reduziert bis nur noch wenige oder nur
+                            noch
+                            eine Option zur Verfügung stehen. Um dies zu erreichen, werden nacheinander die Optionen
+                            anhand von Ausschlusskriterien reduziert. Die Optionen, welche nicht zu diesen Kriterien
+                            passen,
+                            werden schlussendlich eliminiert und die übrigen Optionen werden erneut abgewogen.<a
+                                id="reference13" class="reference" href="#quelle13">13</a>
+                            Bei einem Autokauf kann z.B. erst die Marke, dann das Modell und der Preis
+                            als Kriterium gelten, um die verfügbaren Möglichkeiten zu reduzieren.
+                            Dadurch wird die Auswahl allmählich reduziert, um einen klaren Überblick über die möglichen
+                            Optionen oder sogar ein endgültiges Ergebnis zu erhalten.
+                            <br><br>
+                            Durch dieses Vorgehen kann sichergestellt werden, dass die getroffenen Entscheidungen in
+                            deine
+                            momentane Lebenslage passen, sondern auch Entscheidungsmüdigkeit verhindert werden. Denn
+                            die Fähigkeit, Entscheidungen zu treffen, ist begrenzt und verbraucht tagtäglich viel
+                            Energie. Vor
+                            allem durch das Anwenden der Regeln und Begrenzungen bei kleinen alltäglichen
+                            Entscheidungen, kann diese mentale Energie für größere Entscheidungen gespart werden.<a
+                                id="reference12" class="reference" href="#quelle12">12</a>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="beispiel-section">
+
+                    <div class="beispiel-paradox inner-content">
+                        <div class="center">
+                            <h2 class="no-padding">Eiscreme-Paradox</h2>
+                            <p class="box-counter">1/2</p>
+                            <div class="box-aufgabenstellung">
+                                <p>Wir versetzen uns erneut in die Situation vor den Eisladen,
+                                    doch versuchen wir nun die Auswahl mit dem Ausschlussverfahren zu verringern.
+                                    <a class="bold">Im ersten Schritt entscheidest du dich daher, bloß fruchtige
+                                        Eissorten auszuwählen.</a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
+                                <p>Kirsche</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Schokolade</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Vanille</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Matcha</p>
+                            </div>
+                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
+                                <p>Mango</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Dunkle Schokolade</p>
+                            </div>
+                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
+                                <p>Himbeere</p>
+                            </div>
+                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
+                                <p>Erdbeere</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Haselnuss</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Cookies & Cream</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Pistazie</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Walnuss</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Stracciatella</p>
+                            </div>
+                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
+                                <p>Banane</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Schlumpfeis</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Waldmeister</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Mint-Schokolade</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Nougat</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Erdnussbutter</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Tiramisu</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Joghurt</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Salted Karamell</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Nutella</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Snickers</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Chai</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radial-gradient-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="content-container" id="section3">
+
+            <div class="inner-content">
+                <h2>Weitere Tipps und Tricks</h2>
+                <p>Noch nicht genug gelernt? Wenn du mehr erfahren willst, lerne hier wie man Entscheidungsmüdigkeit
+                    vermeiden kann, was der Begriff "Satisficing" bedeutet und wie die 40/70-Regel dazu beitragen kann,
+                    schneller und bessere Entscheidungen zu treffen.
+                </p>
+
+                <div type="button" onclick="location.href='problems.html'" class="primary-button">
+                    <a href="origins.html">erfahre mehr</a>
+                </div>
+
+            </div>
+
+            <div class="buffer"></div>
+
+            <div class="illustration">
+                <img class="illustration" src="/assets/cat3.jpg">
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="quellen">
+
+        <div class="quellen-container">
+
+            <div class="quellen-header">
+                <h2>Quellenangaben</h2>
+                <img class="quellen-arrow" src="assets/arrow-head.png" alt="Icon">
+            </div>
+
+            <div class="quellen-content">
+                <p>6 Hüte Methode</p>
+                <div id="quelle1">
+                    <p><a href="#reference1" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 1:
+                        </a>Informationen aus Quelle 1.</p>
+                </div>
+                <div id="quelle2">
+                    <p><a href="#reference2" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 2:
+                        </a>Informationen aus Quelle 2.</p>
+                </div>
+
+                <br><br>
+
+                <p>10 / 10 / 10</p>
+                <div id="quelle3">
+                    <p><a href="#reference3" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 3:
+                        </a>Informationen aus Quelle 3.</p>
+                </div>
+                <div id="quelle4">
+                    <p><a href="#reference4" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 4:
+                        </a>Informationen aus Quelle 4.</p>
+                </div>
+
+                <br><br>
+
+                <p>Pro- & Kontra-Liste</p>
+                <div id="quelle5">
+                    <p><a href="#reference5" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 5:
+                        </a>Informationen aus Quelle 5.</p>
+                </div>
+                <div id="quelle6">
+                    <p><a href="#reference6" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 6:
+                        </a>Informationen aus Quelle 6.</p>
+                </div>
+                <div id="quelle7">
+                    <p><a href="#reference7" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 7:
+                        </a>Informationen aus Quelle 7.</p>
+                </div>
+
+                <br><br>
+
+                <p>ICE-Scoring-Modell</p>
+                <div id="quelle8">
+                    <p><a href="#reference8" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 8:
+                        </a>Informationen aus Quelle 8.</p>
+                </div>
+                <div id="quelle9">
+                    <p><a href="#reference9" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 9:
+                        </a>Informationen aus Quelle 9.</p>
+                </div>
+                <div id="quelle10">
+                    <p><a href="#reference10" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 10:
+                        </a>Informationen aus Quelle 10.</p>
+                </div>
+
+                <br><br>
+
+                <p>Ausschlussverfahren</p>
+                <div id="quelle11">
+                    <p><a href="#reference11" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 11:
+                        </a>Informationen aus Quelle 11.</p>
+                </div>
+                <div id="quelle12">
+                    <p><a href="#reference12" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 12:
+                        </a>Informationen aus Quelle 12.</p>
+                </div>
+                <div id="quelle13">
+                    <p><a href="#reference13" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 13:
+                        </a>Informationen aus Quelle 13.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="index.html" class="title">Title</a>
+            <nav class="footer-nav">
+                <a href="#">About</a>
+                <a href="#">Impressum</a>
+                <a href="#">Kontakt</a>
+                <!-- Weitere Navigationselemente hier -->
+            </nav>
+            <p class="footer-copyright">©2023 - Form | All rights reserved</p>
+        </div>
+    </footer>
+
+
+    <script src="/javascript/Gradient.js"></script>
+    <script src="/javascript/script.js"></script>
+
+    <script>
+        const gradient5 = new Gradient()
+        gradient5.initGradient('#gradient-canvas-reasons');
+
+        maxSelectedBoxes = 5;
+    </script>
+
+</body>
+
+
+</html>

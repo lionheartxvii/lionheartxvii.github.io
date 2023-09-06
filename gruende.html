@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
+    maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Master Worktitel</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/content-pages.css">
+
+    <style>
+        :root {
+            --gradient-color-1: #7EC892;
+            --gradient-color-2: #A0E1C0;
+            --gradient-color-3: #FB844D;
+            --gradient-color-4: #fccc8d;
+        }
+
+        .nav-box-container {
+            max-width: 800px !important;
+        }
+
+        #gradient-canvas-reasons {
+            --gradient-color-1: #7EC892;
+            --gradient-color-2: #A0E1C0;
+            --gradient-color-3: #FB844D;
+            --gradient-color-4: #fccc8d;
+
+            height: 85vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+        }
+
+        .radial-gradient-container div:nth-child(1) {
+            height: 84%;
+            width: 80%;
+            background-color: var(--gradient-color-4);
+            left: -29%;
+            top: 21%;
+        }
+
+        .radial-gradient-container div:nth-child(2) {
+            height: 75%;
+            width: 63%;
+            background-color: var(--gradient-color-2);
+            left: 43%;
+            top: 32%;
+            animation-delay: 8s;
+        }
+
+        .radial-gradient-container div:nth-child(3) {
+            height: 54%;
+            width: 77%;
+            background-color: var(--gradient-color-3);
+            left: 41%;
+            top: -1%;
+            animation-delay: 0.3s;
+        }
+
+        .radial-gradient-container div:nth-child(4) {
+            height: 88%;
+            width: 59%;
+            background-color: var(--gradient-color-1);
+            left: -10%;
+            top: -18%;
+            animation-delay: 1.2s;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="ursprung.html" class="nav-link">Ursprung</a></li>
+            <li><a href="gruende.html" class="nav-link active">Gründe</a></li>
+            <li class="title"><a href="index.html">Title</a></li>
+            <li><a href="methoden.html" class="nav-link">5 Methoden</a></li>
+            <li><a href="tipps.html" class="nav-link">Tipps</a></li>
+        </ul>
+    </nav>
+
+    <!-- <nav class="scroll-nav">
+        <ul>
+        </ul>
+    </nav> -->
+
+    <div class="up-button">
+        <img src="assets/arrow-smol-up.png" alt="Icon">
+    </div>
+
+    <section class="hero-banner scroll-section" id="section1">
+        <canvas id="gradient-canvas-reasons" data-transition-in> </canvas>
+        <div class="hero-content">
+            <h1>Gruende wieso es schwierig sein kann Entscheidung zu treffen</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+        </div>
+        <div><img onclick="scrollToSection('section2')" class="arrow" src="/assets/arrow-down.png"></div>
+    </section>
+
+    <section class="content" id="section2">
+
+        <div class="nav-box-container sticky">
+
+            <div class="vertical-buffer"></div>
+            <nav class="nav-box">
+                <a class="nav-box-link fs-14 active"
+                    onclick="func(0); scrollToSection('section2')">Entscheidungsmüdigkeit</a>
+                <a class="nav-box-link fs-14" onclick="func(1); scrollToSection('section2')">Auswahlparadox</a>
+                <a class="nav-box-link fs-14" onclick="func(2); scrollToSection('section2')">Kognitive Verzerrungen</a>
+                <a class="nav-box-link fs-14" onclick="func(3); scrollToSection('section2')">Plannungs Paralyse</a>
+            </nav>
+        </div>
+
+        <div class="all-articles">
+            <div class="article-container" id="article-container-0">
+                <div class="article">
+                    <div class="inner-content sticky article-headline">
+                        <h2>Wie entsteht Entscheidungs- muedigkeit?</h2>
+                    </div>
+
+                    <div class="buffer"></div>
+
+                    <div class="inner-content text">
+                        <p class="absatz">Im Laufe eines Tages treffen wir viele Entscheidungen.
+                            Jedoch kann eine große Anzahl an Entscheidungen negative Auswirkungen
+                            auf die Kontrolle unseres Verhaltens und die Qualität
+                            nachfolgender Entscheidungen haben. Dieses Phänomen wird als Entscheidungsmüdigkeit
+                            bezeichnet und tritt ein wenn unsere mentale Kapazität durch wiederholte
+                            Entscheidungsprozesse aufgebraucht wurde. <a id="reference1" class="reference"
+                                href="#quelle1">1</a>
+                            <br><br>
+                            Dies führt auf die Theorie der Ego-Depletion zurück, welche erklärt, dass wenn Personen
+                            verantwortungsvollen Entscheidungen nachgehen, anstatt ihren grundlegenden Impulsen
+                            nachzugeben mentale Ressourcen verbrauchen. Auf ein Stück Kuchen zu verzichten ist demnach
+                            schwieriger als es anzunehmen, da es mehr Energie verbraucht die langfristigen Vorteile zu
+                            berücksichtigen als die jetzigen Bedürfnisse zu befriedigen.
+
+                        </p>
+                        <p class="absatz">
+                            Demnach wird die geistige Energie immer weiter erschöpft wenn Entscheidungen oder Aufgaben
+                            ausgeführt werden, die Selbstkontrolle erfordern. Dazu kommt, dass komplexere Entscheidungen
+                            mehr kosten als einfachere. Je weiter diese Energie aufgebraucht wird, desto weniger sind
+                            wir in der Lage unsere Grundbedürfnisse abzulehnen, worunter im Endeffekt unsere
+                            Entscheidungen
+                            leiden. <a id="reference2" class="reference" href="#quelle2">2</a> Daher kann der Prozess
+                            der Ego-Depletion zur Entscheidungsmüdigkeit
+                            führen. <a id="reference3" class="reference" href="#quelle3">3</a> <br>
+                            Entscheidungsmüdigkeit bezeichnet den Zustand, in dem die Qualität und Effizienz von
+                            Entscheidungen abnimmt, je mehr Entscheidungen im Laufe des Tages getroffen werden. Dieser
+                            Zustand kann dazu führen, dass unüberlegte Entscheidungen getroffen werden,
+                            da der Analyseprozess übersprungen wird. Es kann auch dazu führen, dass die Entscheidung
+                            verschoben oder gar nicht getroffen wird. <a id="reference4" class="reference"
+                                href="#quelle4">4</a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="beispiel-section">
+
+
+                    <div class="radial-gradient-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="article-container" id="article-container-1">
+                <div class="article">
+                    <div class="inner-content sticky article-headline">
+                        <h2>Worum handelt es sich bei dem Paradox der Wahl?</h2>
+                    </div>
+
+                    <div class="buffer"></div>
+
+                    <div class="inner-content text">
+                        <p class="absatz">„Je mehr umso besser!“ <br><br>
+                            In der heutigen Gesellschaft wird oft angenommen, dass mehr
+                            Auswahlmöglichkeiten besser sind und dass das Verlangen nach Optionen unendlich ist. Es gibt
+                            sicherlich Situationen, in denen eine breite Palette von Optionen positive Effekte haben
+                            kann, wie
+                            z.B. bei einem Restaurantbesuch wenn man ein spezifisches Gericht erwartet, oder bei einem
+                            Einkauf mit schwierig zu findenden Zutaten. Doch gleichzeitig gibt es das Phänomen der
+                            „Überwahl“, das auftritt, wenn es zu viele ähnliche und gleichwertige Optionen gibt.<a
+                                id="reference5" class="reference" href="#quelle5">5</a> <br><br>
+                            Mit einer steigenden Anzahl von Auswahlmöglichkeiten steigt auch der Aufwand, eine gute
+                            Entscheidung zu treffen, was zu einer Belastung werden kann. Die Entscheidungsfindung wird
+                            komplexer und kann zu Überforderung führen. Eine Zunahme der Auswahlmöglichkeiten kann
+                            dazu führen, dass die Motivation eine Entscheidung zu treffen abnimmt oder sogar komplett
+                            abgebrochen wird, da es durch die Angst, die falsche Wahl zu treffen, zu Unsicherheit und
+                            Zögern
+                            kommt. Auch kann es zu Unzufriedenheit mit der schließlich gewählten Option kommen, da
+                            immer wieder hinterfragt wird, ob die anderen Optionen besser gewesen wären.<a
+                                id="reference6" class="reference" href="#quelle6">6</a>
+                        </p>
+                        <p class="absatz">
+                            Es ist nicht immer schlecht eine größere Auswahl an Optionen zu haben, daher müssen zuerst
+                            einige Bedingungen erfüllt werden, damit es zu dem Auswahlparadox kommt. <br>
+                            Eine Voraussetzung dafür ist, dass die Personen mit den Auswahlmöglichkeiten keine klare
+                            Präferenz für einen bestimmten Artikeltyp oder eine Kategorie aufweist. Wenn es bereits
+                            vorher
+                            klare Präferenzen gibt, kann die Entscheidungsfindung leichter fallen.
+                            Darüber hinaus kann es zu einem Auswahlparadox kommen, wenn es keinen klaren Favoriten in
+                            der Auswahl hervorsticht und alle Optionen als gleichgesehen angesehen werden.<a
+                                id="reference7" class="reference" href="#quelle7">7</a> Wenn ein Artikel, z.B. durch
+                            einen Rabatt, aus der Menge
+                            hervorsticht, kann unsere Wahl erleichtert werden. <br>
+                            Ebenfalls kann es zu einer höheren Zufriedenheit bei einer großen Auswahl kommen, wenn die
+                            Person eine bestimmte Expertise in dem Thema hat, wodurch sie die Optionen besser abschätzen
+                            kann und nicht von der Vielfalt überwältigt wird.<a id="reference7" class="reference"
+                                href="#quelle7">7</a>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="beispiel-section">
+
+                    <div class="beispiel-paradox inner-content">
+                        <div class="center">
+                            <h2>Eiscreme-Paradox</h2>
+                            <div class="box-aufgabenstellung">
+                                <p>Stelle dir vor, du stehst vor einem neuen Eisgeschäft, und vor dir erstreckt
+                                    sich eine große Auswahl an Eissorten. Doch leider trägst du bloß genügend Geld mit dir, um dir zwei Sorten zu kaufen.
+                                    Nun liegt es an dir, dich für zwei der Sorten zu entscheiden.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Kirsche</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Schokolade</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Vanille</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Kokosnuss</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Mango</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Zitrone</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Himbeere</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Erdbeere</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Haselnuss</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Cookies & Cream</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Pistazie</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Walnuss</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Stracciatella</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Banane </p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Schlumpfeis</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Waldmeister</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Mint-Schokolade</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Yogurette</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Erdnussbutter</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Tiramisu</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Joghurt</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Salted Karamell</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Nutella</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Snickers</p>
+                            </div>
+                            <div class="small-box paradox" onclick="toggleClick(this)">
+                                <p>Chai</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radial-gradient-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="article-container" id="article-container-2">
+
+                <div class="article">
+                    <div class="inner-content sticky article-headline">
+                        <h2>Worum handelt es sich bei kognitive Verzerrungen?</h2>
+                    </div>
+
+                    <div class="buffer"></div>
+
+                    <div class="inner-content text">
+                        <p class="absatz">Kognitive Verzerrungen sind Denkfehler oder systematische Abweichungen in
+                            unserem
+                            Denkprozess. Sie entstehen aufgrund unserer begrenzten Fähigkeit, Informationen objektiv zu
+                            verarbeiten und werden durch persönliche Erfahrungen, Erwartungen, Emotionen und
+                            unbewusste Denkmuster beeinflusst.<a id="reference8" class="reference" href="#quelle8">8</a>
+                            <a id="reference9" class="reference" href="#quelle9">9</a> <br><br>
+                            Diese Verzerrungen können dazu führen, dass wir unlogische oder irrationale Entscheidungen
+                            treffen, bestimmte Informationen ignorieren oder falsch interpretieren. Es sind Schwächen im
+                            Denken, bei denen wir Schlussfolgerungen ziehen, ohne ausreichende Beweise zu haben. Man
+                            könnte sie als mentale Abkürzungen betrachten, die auf den ersten Blick sinnvoll erscheinen,
+                            aber
+                            im Nachhinein bei genauerer Betrachtung zusammenbrechen. Es gibt zahlreiche Verzerrungen,
+                            die Verhaltensweisen beeinflussen, wie Entscheidungsfindung, Urteilsvermögen und soziale
+                            Interaktionen.<a id="reference8" class="reference" href="#quelle8">8</a>
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+                <div class="article">
+                    <div class="inner-content sticky article-headline">
+                        <h2>Verlustaversion und die versunkenen Kosten</h2>
+                    </div>
+
+                    <div class="buffer"></div>
+
+                    <div class="inner-content text">
+                        <p class="absatz">
+                            Loss Aversion beschreibt unsere starke Tendenz, Verluste zu vermeiden, anstatt
+                            Gewinne zu erzielen. Dabei empfinden wir den Schmerz, etwas zu verlieren, als doppelt so
+                            stark
+                            wie die Freude, etwas zu gewinnen. Wenn uns eine 50:50-Chance gegeben wird, entweder 100 €
+                            zu gewinnen oder 100 € zu verlieren, entscheiden sich die meisten von uns gegen das
+                            Spiel, weil der erwartete Wert als negativ wahrgenommen wird.<a id="reference10"
+                                class="reference" href="#quelle10">10</a> <br><br>
+                            Diese Verlustaversion kann ebenfalls zu dem Sunk-Costs-Phänomen führen. Diese
+                            beschreibt unsere Tendenz, an einer Entscheidung festzuhalten, wenn wir bereits Zeit, Mühe
+                            oder
+                            Geld investiert haben, unabhängig davon, ob die aktuellen Kosten die Vorteile überwiegen.
+                            Denn würden wir uns dazu entscheiden die Aktivität abzubrechen, gingen unsere vorherigen
+                            Investitionen verloren.<a id="reference11" class="reference" href="#quelle11">11</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="article">
+                    <div class="inner-content sticky article-headline">
+                        <h2>der Confirmation bias</h2>
+                    </div>
+
+                    <div class="buffer"></div>
+
+                    <div class="inner-content text">
+                        <p class="absatz">
+                            Der „Confirmation Bias“ beschreibt die Neigung, Informationen so zu interpretieren oder zu
+                            suchen, dass sie unsere bestehenden Überzeugungen bestätigen. <a id="reference12"
+                                class="reference" href="#quelle12">12</a>
+                            Nachdem wir eine
+                            Meinung oder Entscheidung gebildet haben, neigen wir dazu, nur die positiven Aspekte zu
+                            sehen
+                            und Fakten so auszulegen, dass sie unsere Entscheidung unterstützen. Dies birgt das Risiko
+                            fehlerhafte Entscheidungen zu treffen, da wir Argumente, die unserer Meinung widersprechen
+                            könnten, ignorieren oder verdrehen.<a id="reference13" class="reference"
+                                href="#quelle13">13</a> <br>
+                            Dies kann zu schlechten Entscheidungen führen, da es die Realität verfälscht, von der wir
+                            unsere
+                            Beweise ziehen.<a id="reference14" class="reference" href="#quelle14">14</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="article">
+                    <div class="inner-content sticky article-headline">
+                        <h2>der Bandwagon effect</h2>
+                    </div>
+
+                    <div class="buffer"></div>
+
+                    <div class="inner-content text">
+                        <p class="absatz">
+                            Der Bandwagon-Effekt bezieht sich darauf, dass wir bestimmte Verhaltensweisen oder
+                            Überzeugungen übernehmen, weil viele andere Menschen dasselbe tun. Dabei überspringen wir
+                            den komplizierten Prozess der eigenen Bewertung und verlassen uns darauf, dass andere dies
+                            für
+                            uns tun. Wir tun dies, um nicht negativ aufzufallen und ausgeschlossen zu werden, oder um
+                            auf
+                            der „sicheren Seite“ zu sein. <br>
+                            Dies kann jedoch dazu führen, dass kritisches Denken verloren geht
+                            und wir Entscheidungen treffen, die nicht im unseren eigenen Interessen sind. Es ist
+                            wichtig, Ideen
+                            und Verhaltensweisen auf ihre Merkmale und Auswirkungen für uns zu prüfen und dann
+                            Entscheidungen zu treffen. Der Bandwagon-Effekt kann uns davon abhalten, unabhängige
+                            Entscheidungen zu treffen, indem er uns glauben lässt, dass die populäre Entscheidung die
+                            richtige ist.<a id="reference15" class="reference" href="#quelle15">15</a>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="article-container" id="article-container-3">
+                <div class="article">
+                    <div class="inner-content sticky article-headline">
+                        <h2>Worum handelt es sich bei der Planungsanalyse?</h2>
+                    </div>
+
+                    <div class="buffer"></div>
+
+                    <div class="inner-content text">
+                        <p class="absatz">
+                            Analysis Paralysis beschreibt die Tendenz, Entscheidungen aufzuschieben oder sich zu sehr in
+                            einer Planungsphase zu vertiefen, weil man glaubt, durch das Sammeln neuer Informationen ein
+                            besseres Ergebnis zu erzielen. Dadurch entsteht das Gefühl, dass es weitere Informationen
+                            gibt,
+                            welche benötigt werden, um voranzukommen. Doch dieser Ansatz hat seine Grenzen, da mit der
+                            Zeit der Nutzen der zusätzlichen Informationen und Analysen abnimmt.<a id="reference16"
+                                class="reference" href="#quelle16">16</a>
+                            Es ist wichtig, ein Gleichgewicht zu finden und nicht zwischen zwei Extremen zu schwanken:
+                            Entscheidungen ohne gründliche Studien und Reflexion („Extinction by Instinct“) oder die
+                            übermäßige Verwendung von Zahlen, Analysen und Berichten ohne klares Ziel („Paralysis by
+                            Analysis“).<a id="reference17" class="reference" href="#quelle17">17</a> <br><br>
+                            Es kann schnell zu einer Analysis Paralysis / Entscheidungslähmung kommen, wenn es zu viele
+                            Informationen gibt und man sich in einem Übermaß von Informationen verliert. Darüber hinaus
+                            kann ein Auslöser sein, dass versucht wird sich vor der eigentlichen Umsetzung der Aufgabe
+                            oder
+                            des Projekts zu scheuen. Dazu kommt das Perfektionismus und der Versuch, die Analysephase
+                            komplett abzuschließen, zu einer Entscheidungslähmung führen können. Fehlende Zeitvorgaben
+                            für die Analyse können die Situation weiter verschlimmern, da kein klarer Rahmen für die
+                            Entscheidungsfindung vorgegeben ist.
+                            <a id="reference16" class="reference" href="#quelle16">16</a>
+                        </p>
+                        <p class="absatz">
+                            Die Ursachen für Analysis Paralysis können vielfältig sein: Zum Beispiel könnte man mit
+                            einer
+                            Lösung für ein Problem starten, nur um später herauszufinden, dass diese nicht funktioniert.
+                            Dann
+                            beginnt man verzweifelt nach weiteren Beweisen zu suchen, um die ursprüngliche Theorie zu
+                            stützen oder eine neue zu entwickeln. Manchmal sucht man auch nach zusätzlichen Beweisen, um
+                            eine Empfehlung zu unterstützen, von der man glaubt, dass sie nicht gut aufgenommen wird.
+                            Ein
+                            Mangel an Selbstvertrauen in die eigene Arbeit oder Angst und Unentschlossenheit können
+                            ebenfalls zu Analysis Paralysis führen.<a id="reference16" class="reference"
+                                href="#quelle16">16</a> <br>
+                            Dieses Phänomen ist vergleichbar mit der „Planungsparalyse“, bei der die Planung einen
+                            höheren
+                            Stellenwert einnimmt als das eigentliche Handeln.
+                            Planen und Analysieren sind Komfortzonen, da diese leicht auszuführen sind und kein aktives
+                            Handeln benötigen, welche Risiken mit sich führen könnten. Es ist einfacher, in der
+                            Komfortzone der Planung zu bleiben, weil es technisch gesehen zu der Erfüllung der Aufgabe
+                            beiträgt. Dadurch entsteht das Gefühl produktiv zu sein, obwohl ab einem bestimmten Punkt
+                            die
+                            Entscheidung nur noch heraus gezögert wird.
+                            <a id="reference18" class="reference" href="#quelle18">18</a>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="beispiel-section">
+
+                    <div class="radial-gradient-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- <div class="content-container" id="section3">
+
+            <div class="inner-content">
+                <h2>Learn more about 5 methods that might be helpful to you</h2>
+                <p>Schon mal von der 6 Hut Methode gehört? Oder der 10 / 10 / 10 Methode? Es gibt viele unterschiedliche
+                    Techniken, die verwendet werden können, um den Entscheidungsprozess zu erleichtern. Finde hier mehr
+                    über fünf Methoden heraus, die dich dabei unterstützen könnten.
+                </p>
+
+                <div type="button" onclick="location.href='problems.html'" class="primary-button">
+                    <a href="origins.html">erfahre mehr</a>
+                </div>
+
+            </div>
+
+            <div class="buffer"></div>
+
+            <div class="inner-content illustration">
+                <img class="illustration" src="/assets/cat4.jpg">
+            </div>
+
+        </div> -->
+    </section>
+
+
+
+    <section class="quellen inner-content">
+
+        <div class="quellen-container">
+
+            <div class="quellen-header">
+                <h2>Quellenangaben</h2>
+                <img class="quellen-arrow" src="assets/arrow-head.png" alt="Icon">
+            </div>
+
+            <div class="quellen-content">
+                <p>Entscheidungsmüdigkeit</p>
+                <div id="quelle1">
+                    <p><a href="#reference1" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 1:
+                        </a>Informationen aus Quelle 1.</p>
+                </div>
+                <div id="quelle2">
+                    <p><a href="#reference2" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 2:
+                        </a>Informationen aus Quelle 2.</p>
+                </div>
+                <div id="quelle3">
+                    <p><a href="#reference3" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 3:
+                        </a>Informationen aus Quelle 3.</p>
+                </div>
+                <div id="quelle4">
+                    <p><a href="#reference4" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 4:
+                        </a>Informationen aus Quelle 4.</p>
+                </div>
+
+                <br><br>
+
+                <p>Paradox der Wahl</p>
+                <div id="quelle5">
+                    <p><a href="#reference5" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 5:
+                        </a>Informationen aus Quelle 5.</p>
+                </div>
+                <div id="quelle6">
+                    <p><a href="#reference6" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 6:
+                        </a>Informationen aus Quelle 6.</p>
+                </div>
+                <div id="quelle7">
+                    <p><a href="#reference7" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 7:
+                        </a>Informationen aus Quelle 7.</p>
+                </div>
+
+                <br><br>
+
+                <p>Kognitive Verzerrungen</p>
+                <div id="quelle8">
+                    <p><a href="#reference8" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 8:
+                        </a>Informationen aus Quelle 8.</p>
+                </div>
+                <div id="quelle9">
+                    <p><a href="#reference9" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 9:
+                        </a>Informationen aus Quelle 9.</p>
+                </div>
+                <div id="quelle10">
+                    <p><a href="#reference10" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 10:
+                        </a>Informationen aus Quelle 10.</p>
+                </div>
+                <div id="quelle11">
+                    <p><a href="#reference11" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 11:
+                        </a>Informationen aus Quelle 11.</p>
+                </div>
+                <div id="quelle12">
+                    <p><a href="#reference12" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 12:
+                        </a>Informationen aus Quelle 12.</p>
+                </div>
+                <div id="quelle13">
+                    <p><a href="#reference13" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 13:
+                        </a>Informationen aus Quelle 13.</p>
+                </div>
+                <div id="quelle14">
+                    <p><a href="#reference14" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 14:
+                        </a>Informationen aus Quelle 14.</p>
+                </div>
+                <div id="quelle15">
+                    <p><a href="#reference15" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 15:
+                        </a>Informationen aus Quelle 15.</p>
+                </div>
+
+                <br><br>
+
+                <p>Plannungs Paralyse</p>
+                <div id="quelle16">
+                    <p><a href="#reference16" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 16:
+                        </a>Informationen aus Quelle 16.</p>
+                </div>
+                <div id="quelle17">
+                    <p><a href="#reference17" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 17:
+                        </a>Informationen aus Quelle 17.</p>
+                </div>
+                <div id="quelle18">
+                    <p><a href="#reference18" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 18:
+                        </a>Informationen aus Quelle 18.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="index.html" class="title">Title</a>
+            <nav class="footer-nav">
+                <a href="#">About</a>
+                <a href="#">Impressum</a>
+                <a href="#">Kontakt</a>
+                <!-- Weitere Navigationselemente hier -->
+            </nav>
+            <p class="footer-copyright">©2023 - Form | All rights reserved</p>
+        </div>
+    </footer>
+
+
+    <script src="/javascript/Gradient.js"></script>
+    <script src="/javascript/script.js"></script>
+
+    <script>
+        const gradient5 = new Gradient()
+        gradient5.initGradient('#gradient-canvas-reasons');
+
+        maxSelectedBoxes = 2;
+    </script>
+
+</body>
+
+
+</html>

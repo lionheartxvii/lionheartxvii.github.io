@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
+    maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Master Worktitel</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        :root {
+            --gradient-color-1: #FFC876; 
+            --gradient-color-2: #cc3c23; 
+            --gradient-color-3: #D9659A;  
+            --gradient-color-4: #96adf3;
+        }
+
+        #gradient-canvas {
+            --gradient-color-1: #FFC876; 
+            --gradient-color-2: #cc3c23; 
+            --gradient-color-3: #D9659A;  
+            --gradient-color-4: #96adf3;
+
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+
+            top: 0;
+        }
+
+        #gradient-canvas2 {
+            --gradient-color-1: #FFC876; 
+            --gradient-color-2: #cc3c23; 
+            --gradient-color-3: #D9659A;  
+            --gradient-color-4: #96adf3;
+            height: 50vh;
+            width: 100%;
+            position: absolute;
+        }
+
+        .radial-gradient-container div:nth-child(1) {
+            height: 84%;
+            width: 80%;
+            background-color: var(--gradient-color-4);
+            left: -29%;
+            top: 21%;
+        }
+
+        .radial-gradient-container div:nth-child(2) {
+            height: 75%;
+            width: 63%;
+            background-color: var(--gradient-color-2);
+            left: 43%;
+            top: 32%;
+            animation-delay: 8s;
+        }
+
+        .radial-gradient-container div:nth-child(3) {
+            height: 54%;
+            width: 77%;
+            background-color: var(--gradient-color-3);
+            left: 41%;
+            top: -1%;
+            animation-delay: 0.3s;
+        }
+
+        .radial-gradient-container div:nth-child(4) {
+            height: 88%;
+            width: 59%;
+            background-color: var(--gradient-color-1);
+            left: -10%;
+            top: -18%;
+            animation-delay: 1.2s;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="ursprung.html" class="nav-link">Ursprung</a></li>
+            <li><a href="gruende.html" class="nav-link">Gründe</a></li>
+            <li class="title"><a href="index.html">Title</a></li>
+            <li><a href="methoden.html" class="nav-link">5 Methoden</a></li>
+            <li><a href="tipps.html" class="nav-link">Tipps</a></li>
+        </ul>
+    </nav>
+
+    <nav class="scroll-nav">
+        <ul>
+        </ul>
+    </nav>
+
+    <div class="up-button">
+        <img src="assets/arrow-smol-up.png" alt="Icon">
+    </div>
+
+    <section class="hero-banner scroll-section" id="section1">
+        <canvas id="gradient-canvas" data-transition-in> </canvas>
+        <div class="hero-content">
+            <h1>making decisions can be hard and here is why</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+        </div>
+        <div><img onclick="scrollToSection('section2')" class="arrow" src="/assets/arrow-down.png"></div>
+    </section>
+
+    <div class="content">
+        <section class="content-container scroll-section" id="section2">
+
+            <div class="inner-content left illustration">
+                <img class="illustration" src="/assets/illu2.png">
+            </div>
+
+            <div class="buffer"></div>
+
+            <div class="inner-content right">
+
+                <h2>Auf welcher Basis treffen wir Entscheidungen?</h2>
+                <p>Hast du dich schon einmal darüber gewundert, wieso wir
+                    Entscheidungen oft aus unserem Bauchgefühl heraus treffen?
+                    Im folgenden wird näher darauf eingegangen, wie unsere Bedürfnisse,
+                    Werte und Motivationen zusammenhängen und wie diese sich auf unsere Entscheidungen auswirken.
+                </p>
+
+                <div type="button" onclick="location.href='origins.html'" class="primary-button">
+                    <a href="origins.html">erfahre mehr</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="content-container scroll-section" id="section3">
+
+            <div class="inner-content">
+                <h2>Gruende, wieso es schwierig sein kann Entscheidungen zu treffen</h2>
+                <p>In bestimmten Momenten kann es schwerer sein Entscheidungen zu treffen,
+                    was durch unterschiedliche Faktoren erschwert werden kann. Erfahre hier
+                    mehr wie Entscheidungsmüdigkeit, das Paradox der Wahl oder kognitive
+                    Verzerrungen unseren Entscheidungsprozess beeinflussen.
+                </p>
+
+                <div type="button" onclick="location.href='problems.html'" class="primary-button">
+                    <a href="origins.html">erfahre mehr</a>
+                </div>
+
+            </div>
+
+            <div class="buffer"></div>
+
+            <div class="inner-content illustration">
+                <img class="illustration" src="/assets/cat4.jpg">
+            </div>
+
+        </section>
+
+        <section class="content-container column scroll-section" id="section4">
+
+            <div class="center inner-content">
+                <h2 class="center">5 methods to help</h2>
+                <p>Lerne mehr über fünf leicht anwendbare Methoden, die den
+                    Entscheidungsprozess unterstützen. Durch Anwendung der Beispiele werden die Methoden vertieft.</p>
+            </div>
+            <div class="box-container inner-content">
+                <div class="box">
+                    <div class="box-content">
+                        <h4>6 hats method</h4>
+                        <p>Schlüpfe durch das Tragen von metaphorischen Hüten in verschiedene Perspektiven, um Probleme
+                            zu lösen.</p>
+                    </div>
+                    <a href="#">Weiter</a>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <h4>10 / 10 / 10</h4>
+                        <p>Versetze dich durch diese Methode in die nahe und ferne Zukunft, um bessere Ergebnisse zu
+                            erzielen.</p>
+                    </div>
+                    <a class="next-btn" href="#">Weiter</a>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <h4>beyond pros & cons</h4>
+                        <p>Erfahre wie du Pro und Contra Listen effektiver einsetzen kannst, um Entscheidungen besser zu
+                            priorisieren.</p>
+                    </div>
+                    <a href="#">Weiter</a>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <h4>Process of elimination</h4>
+                        <p>Reduziere nach und nach deine Entscheidungen, bis nur noch die beste Wahl übrig bleibt.</p>
+                    </div>
+                    <a class="next-btn" href="#">Weiter</a>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <h4>ice</h4>
+                        <p>Bewerte mit dieser Methode deine Ideen mit 3 Kriterien, mit denen du die effektivste Lösung
+                            finden kannst.</p>
+                    </div>
+                    <a class="next-btn" href="#">Weiter</a>
+                </div>
+            </div>
+
+            <div class="radial-gradient-container">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+
+        <section class="content-container scroll-section" id="section5">
+
+            <div class="inner-content left illustration">
+                <img class="illustration" src="/assets/cat1.jpg">
+            </div>
+
+            <div class="buffer"></div>
+
+            <div class="inner-content right">
+
+                <h2>More tips and tricks</h2>
+                <p>Noch nicht genug gelernt? Wenn du mehr erfahren willst,
+                    lerne hier wie man Entscheidungsmüdigkeit vermeiden kann,
+                    was der Begriff "Satisficing" bedeutet und wie die 40/70-Regel
+                    dazu beitragen kann, schneller und bessere Entscheidungen zu treffen.
+                </p>
+
+                <div type="button" onclick="location.href='origins.html'" class="primary-button">
+                    <a href="origins.html">erfahre mehr</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="content-container scroll-section center" id="section6">
+
+
+            <div class="center test-section">
+                <h2 class="center">do you want to try the test again? </h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna aliquyam erat, sed diam voluptua. labore et dolore
+                    magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet,
+                    consetetur sadipscing elit.</p>
+
+                <div type="button" onclick="location.href='origins.html'" class="primary-button">
+                    <a href="origins.html">erfahre mehr</a>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="message-container scroll-section" id="section7">
+            <canvas id="gradient-canvas2" data-transition-in> </canvas>
+            <div class="line line-top"></div>
+            <h1 class="message">decisions decisions all of them wrong</h1>
+            <div class="line line-bottom"></div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="footer-content">
+                <a href="index.html" class="title">Title</a>
+                <nav class="footer-nav">
+                    <a href="#">About</a>
+                    <a href="#">Impressum</a>
+                    <a href="#">Kontakt</a>
+                    <!-- Weitere Navigationselemente hier -->
+                </nav>
+                <p class="footer-copyright">©2023 - Form | All rights reserved</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="/javascript/Gradient.js"></script>
+
+    <script>
+        const gradient1 = new Gradient()
+        const gradient2 = new Gradient()
+        gradient1.initGradient('#gradient-canvas');
+        gradient2.initGradient('#gradient-canvas2');
+
+        // Automatisch Kreise für Abschnitte erstellen
+        const sections = document.querySelectorAll('.scroll-section');
+        const navList = document.querySelector('.scroll-nav ul');
+
+        sections.forEach((section, index) => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = `#section${index + 1}`;
+            listItem.appendChild(link);
+            navList.appendChild(listItem);
+        });
+    </script>
+
+
+
+    <script src="/javascript/script.js"></script>
+
+</body>
+
+
+</html>
