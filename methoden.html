@@ -500,8 +500,8 @@
                                     <p class="table-text placeholder">Idee 1</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateSummary(this)"/></td>
                             </tr>
 
                             <tr>
@@ -509,8 +509,8 @@
                                     <p class="table-text placeholder">Idee 2</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateSummary(this)"/></td>
                             </tr>
 
                             <tr>
@@ -518,8 +518,8 @@
                                     <p class="table-text placeholder">Idee 3</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateSummary(this)"/></td>
                             </tr>
 
                             <tr>
@@ -527,8 +527,8 @@
                                     <p class="table-text placeholder">Idee 4</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateSummary(this)"/></td>
                             </tr>
 
                             <tr>
@@ -537,8 +537,8 @@
                                     <p class="table-text placeholder">Idee 1</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateSummary(this)"/></td>
                             </tr>
 
                             <tr>
@@ -546,8 +546,8 @@
                                     <p class="table-text placeholder">Idee 2</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateSummary(this)"/></td>
                             </tr>
 
                             <tr>
@@ -555,8 +555,8 @@
                                     <p class="table-text placeholder">Idee 3</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateSummary(this)"/></td>
                             </tr>
 
                             <tr>
@@ -564,8 +564,8 @@
                                     <p class="table-text placeholder">Idee 4</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateSummary(this)"/></td>
                             </tr>
 
                             <tr>
@@ -574,8 +574,8 @@
                                     <p class="table-text placeholder"></p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <p class="table-text placeholder" id="summary"></p>
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -1100,6 +1100,28 @@
         gradient5.initGradient('#gradient-canvas-reasons');
 
         maxSelectedBoxes = 5;
+
+        
+        function updateSummary(newValue) {
+            console.log(newValue.value);
+            if(Number(newValue.value) > Number(newValue.max)) {
+                newValue.value = newValue.max;
+            }
+            if(Number(newValue.value) < Number(newValue.min)) {
+                newValue.value = newValue.min;
+            }
+            const proScores = document.querySelectorAll('input[name="pro_score"]');
+            let totalScore = 0;
+
+            proScores.forEach(scoreInput => {
+                const score = parseFloat(scoreInput.value);
+                if (!isNaN(score)) {
+                    totalScore += score;
+                }
+            });
+
+            document.getElementById('summary').textContent = totalScore;
+        }
     </script>
 
 </body>
