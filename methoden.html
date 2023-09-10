@@ -501,7 +501,7 @@
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateSummary(this)"/></td>
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -510,7 +510,7 @@
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateSummary(this)"/></td>
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -519,7 +519,7 @@
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateSummary(this)"/></td>
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -528,7 +528,7 @@
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateSummary(this)"/></td>
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -538,7 +538,7 @@
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateSummary(this)"/></td>
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -547,7 +547,7 @@
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateSummary(this)"/></td>
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -556,7 +556,7 @@
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateSummary(this)"/></td>
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -565,7 +565,7 @@
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateSummary(this)"/></td>
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -574,7 +574,7 @@
                                     <p class="table-text placeholder"></p>
                                 </td>
                                 <td>
-                                    <p class="table-text placeholder" id="summary"></p>
+                                    <p class="table-text placeholder" id="summary_pro_score"></p>
                                 </td>
                             </tr>
                         </table>
@@ -696,19 +696,20 @@
                                     <p class="table-text placeholder">notiere hier deine erste Idee</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie groß ist die Auswirkung?" /></td>
+                                    <input type="number" id="uname" name="firstIdea" min="1" max="10"
+                                        class="table-text placeholder " onblur="updateInputSummary(this, 'firstIdea')"
+                                        placeholder="wie groß ist die Auswirkung?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie sicher fühlst du dich?" /></td>
+                                    <input type="number" id="uname" name="firstIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'firstIdea')"
+                                        placeholder="wie sicher fühlst du dich?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie leicht ist die Umsetzung?" /></td>
+                                    <input type="number" id="uname" name="firstIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'firstIdea')"
+                                        placeholder="wie leicht ist die Umsetzung?" style="width: 100%;" /></td>
 
                                 <td>
+                                    <p class="table-text" id="summary_firstIdea"></p>
                                 </td>
                             </tr>
 
@@ -717,19 +718,20 @@
                                     <p class="table-text placeholder">notiere hier deine zweite Idee</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie groß ist die Auswirkung?" /></td>
+                                    <input type="number" id="uname" name="secondIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'secondIdea')"
+                                        placeholder="wie groß ist die Auswirkung?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie sicher fühlst du dich?" /></td>
+                                    <input type="number" id="uname" name="secondIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'secondIdea')"
+                                        placeholder="wie sicher fühlst du dich?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie leicht ist die Umsetzung?" /></td>
+                                    <input type="number" id="uname" name="secondIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'secondIdea')"
+                                        placeholder="wie leicht ist die Umsetzung?" style="width: 100%;" /></td>
 
                                 <td>
+                                    <p class="table-text" id="summary_secondIdea"></p>
                                 </td>
                             </tr>
                             <tr>
@@ -737,19 +739,20 @@
                                     <p class="table-text placeholder">notiere hier deine dritte Idee</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie groß ist die Auswirkung?" /></td>
+                                    <input type="number" id="uname" name="thirdIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'thirdIdea')"
+                                        placeholder="wie groß ist die Auswirkung?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie sicher fühlst du dich?" /></td>
+                                    <input type="number" id="uname" name="thirdIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'thirdIdea')"
+                                        placeholder="wie sicher fühlst du dich?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie leicht ist die Umsetzung?" /></td>
+                                    <input type="number" id="uname" name="thirdIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'thirdIdea')"
+                                        placeholder="wie leicht ist die Umsetzung?" style="width: 100%;" /></td>
 
                                 <td>
+                                    <p class="table-text" id="summary_thirdIdea"></p>
                                 </td>
                             </tr>
 
@@ -1101,29 +1104,33 @@
 
         maxSelectedBoxes = 5;
 
-        
-        function updateSummary(newValue) {
-            console.log(newValue.value);
+        function correctInputNumber(newValue) {
             if(Number(newValue.value) > Number(newValue.max)) {
                 newValue.value = newValue.max;
             }
             if(Number(newValue.value) < Number(newValue.min)) {
                 newValue.value = newValue.min;
             }
-            const proScores = document.querySelectorAll('input[name="pro_score"]');
+            return newValue;
+        }
+
+        //ICE
+        function updateInputSummary(newValue, row) {
+            newValue = correctInputNumber(newValue)
+            const iceScores = document.querySelectorAll(`input[name="${row}"]`);
             let totalScore = 0;
 
-            proScores.forEach(scoreInput => {
+            iceScores.forEach(scoreInput => {
                 const score = parseFloat(scoreInput.value);
                 if (!isNaN(score)) {
                     totalScore += score;
                 }
             });
 
-            document.getElementById('summary').textContent = totalScore;
+            document.getElementById(`summary_${row}`).textContent = totalScore;
         }
 
-        // 10/10/10 Bild ändern
+        // 10/10/10 image change
         const basePath = "assets/icons/";
         const images = ["positive-smiley.png", "neutral-smiley.png", "negative-smiley.png"];
 
