@@ -371,6 +371,30 @@ padding-bottom: 0.5rem;
   flex-direction: row;
 }
 
+.column-paradox{
+  display: flex;
+  flex-direction: column;
+}
+
+.small-box.paradox {
+  transition: transform 0.3s ease;
+  margin-bottom: 10px !important;
+}
+
+.remove-class {
+  animation: remove-animation 0.3s ease;
+}
+@keyframes remove-animation {
+  from {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  to {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+}
+
 .box-values{
   width: 15vw;
   border: 1px solid var(--main-fg-color);
@@ -432,17 +456,15 @@ padding-bottom: 0.5rem;
   height: 70vh;
 }
 
-.row{
-  display: flex;
-  flex-direction: row;
-}
-
 .box-aufgabenstellung{
   width: 40vw;
   border: 1px solid var(--main-fg-color);
   padding: 20px 80px;
   border-radius: 2px;
   margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .paradox{

@@ -94,7 +94,7 @@
         .fruity {
             cursor: pointer;
             outline: 2px solid #7889e8;
-            animation: pulse 2s alternate;
+            /* animation: pulse 2s alternate; */
         }
 
         .fruity:hover {
@@ -107,7 +107,7 @@
 
 
 
-        .fruity:nth-child(2) {
+        /* .fruity:nth-child(2) {
             animation-delay: 2s;
         }
 
@@ -121,7 +121,7 @@
 
         .fruity:nth-child(5) {
             animation-delay: 8s;
-        }
+        } */
 
         @keyframes pulse {
             0% {
@@ -868,92 +868,95 @@
 
                         </div>
 
+
                         <div class="row">
-                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
-                                <p>Kirsche</p>
+                            <div class="column-paradox">
+                                <div class="small-box paradox fruity" onclick="toggleClick(this, 'ausschluss1')">
+                                    <p>Kirsche</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Dunkle Schokolade</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Pistazie</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Waldmeister</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Joghurt</p>
+                                </div>
                             </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Schokolade</p>
+                            <div class="column-paradox">
+                                <div class="small-box paradox">
+                                    <p>Schokolade</p>
+                                </div>
+                                <div class="small-box paradox fruity" onclick="toggleClick(this, 'ausschluss1')">
+                                    <p>Himbeere</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Walnuss</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Mint-Schokolade</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Salted Karamell</p>
+                                </div>
                             </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Vanille</p>
+                            <div class="column-paradox">
+                                <div class="small-box paradox">
+                                    <p>Vanille</p>
+                                </div>
+                                <div class="small-box paradox fruity" onclick="toggleClick(this, 'ausschluss1')">
+                                    <p>Erdbeere</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Stracciatella</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Nougat</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Nutella</p>
+                                </div>
                             </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Matcha</p>
+                            <div class="column-paradox">
+                                <div class="small-box paradox">
+                                    <p>Matcha</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Haselnuss</p>
+                                </div>
+                                <div class="small-box paradox fruity" onclick="toggleClick(this, 'ausschluss1')">
+                                    <p>Banane</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Erdnussbutter</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Snickers</p>
+                                </div>
                             </div>
-                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
-                                <p>Mango</p>
+                            <div class="column-paradox">
+                                <div class="small-box paradox fruity" onclick="toggleClick(this, 'ausschluss1')">
+                                    <p>Mango</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Cookies & Cream</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Schlumpfeis</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Tiramisu</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Chai</p>
+                                </div>
                             </div>
+                        </div>    
                         </div>
-                        <div class="row">
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Dunkle Schokolade</p>
-                            </div>
-                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
-                                <p>Himbeere</p>
-                            </div>
-                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
-                                <p>Erdbeere</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Haselnuss</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Cookies & Cream</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Pistazie</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Walnuss</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Stracciatella</p>
-                            </div>
-                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
-                                <p>Banane</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Schlumpfeis</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Waldmeister</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Mint-Schokolade</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Nougat</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Erdnussbutter</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Tiramisu</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Joghurt</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Salted Karamell</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Nutella</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Snickers</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Chai</p>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="radial-gradient-container">
                         <div></div>

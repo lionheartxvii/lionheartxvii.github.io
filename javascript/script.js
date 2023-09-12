@@ -167,11 +167,11 @@ links.forEach(link => {
   let maxSelectedBoxes = 0;
   let selectedBoxes = 0;
 
-  function toggleClick(element) {
+  function toggleClick(element, verfahren) {
     if (element.classList.contains("clicked")) {
       selectedBoxes--;
     } else {
-      if (selectedBoxes < maxSelectedBoxes) {
+      if (selectedBoxes <= maxSelectedBoxes) {
         selectedBoxes++;
       } else {
         return; // Limit reached, prevent further selection
@@ -179,6 +179,10 @@ links.forEach(link => {
     }
     element.classList.toggle("clicked");
     checkMaxSelectedBoxes();
+
+    if (verfahren){
+      executeAusschluss(verfahren);
+    }
   }
 
   function checkMaxSelectedBoxes() {
@@ -201,4 +205,105 @@ links.forEach(link => {
   
     if (!charStr.match(/^[0-9]+$/))
       e.preventDefault();
+  }
+
+  function executeAusschluss(value) {
+    if (selectedBoxes === maxSelectedBoxes && value === 'ausschluss1') {
+      let allElements = document.querySelectorAll('.small-box.paradox');
+      let wholeDiv = document.querySelector('.beispiel-paradox');
+      let elementsToRemove = [];
+      let elementsToMove = [];
+
+      setHeight(wholeDiv.children[1]);
+
+      for (let i = 0; i < wholeDiv.children[1].children.length; i++) {
+        const element = wholeDiv.children[1].children[i];
+        setHeight(element);
+      }
+
+      //remove not fruity elements
+      for (var i = 0; i < allElements.length; i++) {
+        var element = allElements[i];
+        if (element.classList.contains('fruity')){
+          element.classList.remove('clicked');
+          element.classList.remove('fruity');
+          element.removeAttribute('onClick');        
+          element.classList.add('move-up-class');
+          if (element.children[0].innerHTML === "Erdbeere" || element.children[0].innerHTML === "Himbeere"){
+            element.classList.add("fruity");
+            element.addEventListener('click', function() {
+              toggleClick(this, 'ausschluss2');
+            });  
+          }
+          let height = element.offsetHeight;
+          let width = element.offsetWidth;
+          element.style.height = height;
+          element.style.width = width;
+          element.style.transform = `translateY(-${ height * (i % 5) }px)`;
+          elementsToMove.push(element);
+        }else {
+          element.classList.add('remove-class');
+          elementsToRemove.push(element);
+        }
+      }
+      // document.querySelector('.beispiel-paradox').children[1].classList.add('paradox-height-class');
+      setTimeout(function() {
+        elementsToRemove.forEach(element => {
+          element.remove();
+        });
+        elementsToMove.forEach(element => {
+          element.style.transition = 'translate 0s';
+          element.style.transform = '';
+        });
+      }, 300);
+      document.querySelector('.box-counter').innerHTML = "2/2";
+      document.querySelector('.beispiel-paradox').children[0].children[2].children[0].textContent = "Nun haben Sie Ihre Auswahl von 25 auf 5 Sorten reduziert.";
+      let boldA = document.createElement('a');
+      boldA.innerHTML = " Im zweiten Schritt verringeren Sie nun Ihre Auswahl auf Beeren.";
+      boldA.classList.add("bold");
+      document.querySelector('.beispiel-paradox').children[0].children[2].children[0].appendChild(boldA);
+      maxSelectedBoxes = 2;
+      selectedBoxes = 0
+    }
+    if (selectedBoxes === maxSelectedBoxes && value === 'ausschluss2') {
+      let allElements = document.querySelectorAll('.small-box.paradox');
+      let elementsToRemove = [];
+      let elementsToMove = [];
+
+      //remove not fruity elements
+      for (var i = 0; i < allElements.length; i++) {
+        var element = allElements[i];
+        if (element.classList.contains('fruity')){
+          element.classList.remove('clicked');
+          element.classList.remove('fruity');
+          element.removeAttribute('onClick');      
+          element.addEventListener('click', function() {
+            toggleClick(this, 'nichts');
+          });
+          element.style.transition = 'transform 0.3s';
+          element.style.transform = `translateX(55%)`;
+          elementsToMove.push(element);
+        }else {
+          element.classList.add('remove-class');
+          elementsToRemove.push(element);
+        }
+      }
+      // document.querySelector('.beispiel-paradox').children[1].classList.add('paradox-height-class');
+      setTimeout(function() {
+        elementsToRemove.forEach(element => {
+          element.remove();
+          elementsToMove.forEach(element => {
+            element.style.transition = 'translate 0s';
+            element.style.transform = '';
+          });
+        });
+      }, 300);
+      document.querySelector('.box-counter').innerHTML = "2/2";
+      document.querySelector('.beispiel-paradox').children[0].children[2].children[0].textContent = "Gratulation!";
+    }
+  }
+
+  function setHeight(element) {
+    let height = element.offsetHeight;
+    element.style.height = height + "px";
   }
