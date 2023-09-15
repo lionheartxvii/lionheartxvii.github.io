@@ -22,7 +22,7 @@
             --gradient-color-3: #7e8ff0;
             --gradient-color-4: #ab86fb;
 
-            /* --gradient-color-1: #FEDF8F; 
+        /* --gradient-color-1: #FEDF8F; 
             --gradient-color-2: #FFA152; 
             --gradient-color-3: #D56090;  
             --gradient-color-4: #FD6061; */
@@ -145,7 +145,7 @@
         .fruity {
             cursor: pointer;
             outline: 2px solid #7889e8;
-            animation: pulse 2s alternate;
+            /* animation: pulse 2s alternate; */
         }
 
         .fruity:hover {
@@ -158,7 +158,7 @@
 
 
 
-        .fruity:nth-child(2) {
+        /* .fruity:nth-child(2) {
             animation-delay: 2s;
         }
 
@@ -172,7 +172,7 @@
 
         .fruity:nth-child(5) {
             animation-delay: 8s;
-        }
+        } */
 
         @keyframes pulse {
             0% {
@@ -307,9 +307,9 @@
                             </div>
                         </div>
                         <div class="bubble-container">
-                            <div class="bubble"></div>
-                            <div class="bubble"></div>
-                            <div class="bubble"></div>
+                            <div class="bubble" style="left: -330px"></div>
+                            <div class="bubble" style="left: -320px"></div>
+                            <div class="bubble" style="left: -300px"></div>
                         </div>
                         <div class="hat-container">
                             <div class="hat-box circle-element" onmouseenter="showBox(1)" onmouseleave="hideBox()"
@@ -460,9 +460,9 @@
                                 <h3 class="beispiel-10-headline">10 Wochen</h3>
                             </div>
                             <div class="beispiel-10-row">
-                                <img src="assets/icons/positive-smiley.png" alt="Bild 1">
-                                <img src="assets/icons/positive-smiley.png" alt="Bild 2">
-                                <img src="assets/icons/positive-smiley.png" alt="Bild 3">
+                                <img class="pointer" src="assets/icons/positive-smiley.png" alt="Bild 1" onclick="changeImage(this)">
+                                <img class="pointer" src="assets/icons/positive-smiley.png" alt="Bild 2" onclick="changeImage(this)">
+                                <img class="pointer" src="assets/icons/positive-smiley.png" alt="Bild 3" onclick="changeImage(this)">
                             </div>
                         </div>
 
@@ -551,8 +551,8 @@
                                     <p class="table-text placeholder">Idee 1</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -560,8 +560,8 @@
                                     <p class="table-text placeholder">Idee 2</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -569,8 +569,8 @@
                                     <p class="table-text placeholder">Idee 3</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -578,8 +578,8 @@
                                     <p class="table-text placeholder">Idee 4</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -588,8 +588,8 @@
                                     <p class="table-text placeholder">Idee 1</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -597,8 +597,8 @@
                                     <p class="table-text placeholder">Idee 2</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -606,8 +606,8 @@
                                     <p class="table-text placeholder">Idee 3</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -615,8 +615,8 @@
                                     <p class="table-text placeholder">Idee 4</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -625,8 +625,8 @@
                                     <p class="table-text placeholder"></p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text" onkeypress="preventNonNumericalInput(event)"/></td>
+                                    <p class="table-text placeholder" id="summary_pro_score"></p>
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -747,19 +747,20 @@
                                     <p class="table-text placeholder">notiere hier deine erste Idee</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie groß ist die Auswirkung?" /></td>
+                                    <input type="number" id="uname" name="firstIdea" min="1" max="10"
+                                        class="table-text placeholder " onblur="updateInputSummary(this, 'firstIdea')"
+                                        placeholder="wie groß ist die Auswirkung?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie sicher fühlst du dich?" /></td>
+                                    <input type="number" id="uname" name="firstIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'firstIdea')"
+                                        placeholder="wie sicher fühlst du dich?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie leicht ist die Umsetzung?" /></td>
+                                    <input type="number" id="uname" name="firstIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'firstIdea')"
+                                        placeholder="wie leicht ist die Umsetzung?" style="width: 100%;" /></td>
 
                                 <td>
+                                    <p class="table-text" id="summary_firstIdea"></p>
                                 </td>
                             </tr>
 
@@ -768,19 +769,20 @@
                                     <p class="table-text placeholder">notiere hier deine zweite Idee</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie groß ist die Auswirkung?" /></td>
+                                    <input type="number" id="uname" name="secondIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'secondIdea')"
+                                        placeholder="wie groß ist die Auswirkung?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie sicher fühlst du dich?" /></td>
+                                    <input type="number" id="uname" name="secondIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'secondIdea')"
+                                        placeholder="wie sicher fühlst du dich?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie leicht ist die Umsetzung?" /></td>
+                                    <input type="number" id="uname" name="secondIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'secondIdea')"
+                                        placeholder="wie leicht ist die Umsetzung?" style="width: 100%;" /></td>
 
                                 <td>
+                                    <p class="table-text" id="summary_secondIdea"></p>
                                 </td>
                             </tr>
                             <tr>
@@ -788,19 +790,20 @@
                                     <p class="table-text placeholder">notiere hier deine dritte Idee</p>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie groß ist die Auswirkung?" /></td>
+                                    <input type="number" id="uname" name="thirdIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'thirdIdea')"
+                                        placeholder="wie groß ist die Auswirkung?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie sicher fühlst du dich?" /></td>
+                                    <input type="number" id="uname" name="thirdIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'thirdIdea')"
+                                        placeholder="wie sicher fühlst du dich?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="num" min="1" max="10"
-                                        class="table-text placeholder" onkeypress="preventNonNumericalInput(event)"
-                                        placeholder="wie leicht ist die Umsetzung?" /></td>
+                                    <input type="number" id="uname" name="thirdIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'thirdIdea')"
+                                        placeholder="wie leicht ist die Umsetzung?" style="width: 100%;" /></td>
 
                                 <td>
+                                    <p class="table-text" id="summary_thirdIdea"></p>
                                 </td>
                             </tr>
 
@@ -916,92 +919,95 @@
 
                         </div>
 
+
                         <div class="row">
-                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
-                                <p>Kirsche</p>
+                            <div class="column-paradox">
+                                <div class="small-box paradox fruity" onclick="toggleClick(this, 'ausschluss1')">
+                                    <p>Kirsche</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Dunkle Schokolade</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Pistazie</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Waldmeister</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Joghurt</p>
+                                </div>
                             </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Schokolade</p>
+                            <div class="column-paradox">
+                                <div class="small-box paradox">
+                                    <p>Schokolade</p>
+                                </div>
+                                <div class="small-box paradox fruity" onclick="toggleClick(this, 'ausschluss1')">
+                                    <p>Himbeere</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Walnuss</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Mint-Schokolade</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Salted Karamell</p>
+                                </div>
                             </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Vanille</p>
+                            <div class="column-paradox">
+                                <div class="small-box paradox">
+                                    <p>Vanille</p>
+                                </div>
+                                <div class="small-box paradox fruity" onclick="toggleClick(this, 'ausschluss1')">
+                                    <p>Erdbeere</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Stracciatella</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Nougat</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Nutella</p>
+                                </div>
                             </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Matcha</p>
+                            <div class="column-paradox">
+                                <div class="small-box paradox">
+                                    <p>Matcha</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Haselnuss</p>
+                                </div>
+                                <div class="small-box paradox fruity" onclick="toggleClick(this, 'ausschluss1')">
+                                    <p>Banane</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Erdnussbutter</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Snickers</p>
+                                </div>
                             </div>
-                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
-                                <p>Mango</p>
+                            <div class="column-paradox">
+                                <div class="small-box paradox fruity" onclick="toggleClick(this, 'ausschluss1')">
+                                    <p>Mango</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Cookies & Cream</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Schlumpfeis</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Tiramisu</p>
+                                </div>
+                                <div class="small-box paradox">
+                                    <p>Chai</p>
+                                </div>
                             </div>
+                        </div>    
                         </div>
-                        <div class="row">
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Dunkle Schokolade</p>
-                            </div>
-                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
-                                <p>Himbeere</p>
-                            </div>
-                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
-                                <p>Erdbeere</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Haselnuss</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Cookies & Cream</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Pistazie</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Walnuss</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Stracciatella</p>
-                            </div>
-                            <div class="small-box paradox fruity" onclick="toggleClick(this)">
-                                <p>Banane</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Schlumpfeis</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Waldmeister</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Mint-Schokolade</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Nougat</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Erdnussbutter</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Tiramisu</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Joghurt</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Salted Karamell</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Nutella</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Snickers</p>
-                            </div>
-                            <div class="small-box paradox" onclick="toggleClick(this)">
-                                <p>Chai</p>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="radial-gradient-container">
                         <div></div>
@@ -1151,6 +1157,55 @@
         gradient5.initGradient('#gradient-canvas-reasons');
 
         maxSelectedBoxes = 5;
+
+        function correctInputNumber(newValue) {
+            if(Number(newValue.value) > Number(newValue.max)) {
+                newValue.value = newValue.max;
+            }
+            if(Number(newValue.value) < Number(newValue.min)) {
+                newValue.value = newValue.min;
+            }
+            return newValue;
+        }
+
+        //ICE
+        function updateInputSummary(newValue, row) {
+            newValue = correctInputNumber(newValue)
+            const iceScores = document.querySelectorAll(`input[name="${row}"]`);
+            let totalScore = 0;
+
+            iceScores.forEach(scoreInput => {
+                const score = parseFloat(scoreInput.value);
+                if (!isNaN(score)) {
+                    totalScore += score;
+                }
+            });
+
+            document.getElementById(`summary_${row}`).textContent = totalScore;
+        }
+
+        // 10/10/10 image change
+        const basePath = "assets/icons/";
+        const images = ["positive-smiley.png", "neutral-smiley.png", "negative-smiley.png"];
+
+        function changeImage(img) {
+            const currentImgSrc  = img.src;
+            const currentImgName = currentImgSrc.substring(currentImgSrc.lastIndexOf("/") + 1); // Extrahiere den Bildnamen
+
+            switch (currentImgName) {
+                case "positive-smiley.png":
+                    img.src = basePath + "neutral-smiley.png";
+                    break;
+                case "neutral-smiley.png":
+                    img.src = basePath + "negative-smiley.png";
+                    break;
+                case "negative-smiley.png":
+                    img.src = basePath + "positive-smiley.png";
+                    break;
+                default:
+                    console.error("unexpected case on changeImage");
+            }
+        }
     </script>
 
 </body>
