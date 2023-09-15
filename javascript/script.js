@@ -218,7 +218,10 @@ links.forEach(link => {
 
       for (let i = 0; i < wholeDiv.children[1].children.length; i++) {
         const element = wholeDiv.children[1].children[i];
-        setHeight(element);
+        let height = element.offsetHeight;
+        let width = element.offsetWidth;
+        element.style.height = height;
+        element.style.width = width;
       }
 
       //remove not fruity elements
