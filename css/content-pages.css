@@ -322,15 +322,12 @@ padding-bottom: 0.5rem;
   transform: translate(-50%, -50%);
   align-items: center;
   padding: 10px;
+  width: 230px;
   text-align: center;
 }
 
 .hidden-box h3{
   text-align: center;
-}
-
-.needs-special-case {
-  width: 230px;
 }
 
 /* Anordnung der Elemente um den Kreis */
@@ -369,30 +366,6 @@ padding-bottom: 0.5rem;
 .row{
   display: flex;
   flex-direction: row;
-}
-
-.column-paradox{
-  display: flex;
-  flex-direction: column;
-}
-
-.small-box.paradox {
-  transition: transform 0.3s ease;
-  margin-bottom: 10px !important;
-}
-
-.remove-class {
-  animation: remove-animation 0.3s ease;
-}
-@keyframes remove-animation {
-  from {
-      opacity: 1;
-      transform: translateY(0);
-  }
-  to {
-      opacity: 0;
-      transform: translateY(50px);
-  }
 }
 
 .box-values{
@@ -456,15 +429,17 @@ padding-bottom: 0.5rem;
   height: 70vh;
 }
 
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
 .box-aufgabenstellung{
   width: 40vw;
   border: 1px solid var(--main-fg-color);
   padding: 20px 80px;
   border-radius: 2px;
   margin-bottom: 4rem;
-  display: flex;
-  justify-content: center;
-  align-content: center;
 }
 
 .paradox{
@@ -491,7 +466,6 @@ padding-bottom: 0.5rem;
 } */
 
 .speech-bubble {
-  position: relative;
   border: 1px solid var(--main-fg-color);
   border-radius: 100px;
   padding: 20px;
@@ -512,13 +486,12 @@ padding-bottom: 0.5rem;
 }
 
 .bubble{
-  position: relative;
   border: 1px solid var(--main-fg-color);
   width: 20px;
   height: 20px;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: cenfter;
   align-items: center;
   margin: 10px 0;
 }
@@ -648,3 +621,35 @@ th, td {
   width: 80%;
 }
 
+.lottie-interactive {
+  height: 100%;
+  width: 100%;
+}
+
+.lottie-card {
+  cursor: pointer;
+}
+
+.train{
+  position: relative;
+  white-space: nowrap;
+  max-height: 30vh;
+  width: auto;
+  animation: moveTrain 15s linear infinite;
+  margin-bottom: 4.9vh;
+  scale: 0.8;
+}
+
+
+@keyframes moveTrain {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.sunken-cost{
+  scale: 0.75;
+}

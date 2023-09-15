@@ -381,10 +381,10 @@ p, a, .table-text{
     width: 65%;
   }
 
-.illustration img{
+  .illustration, .illustration img{
     position: relative;
-    height: 400px;
-    width: auto;
+    height: auto;
+    width: 500px;
 }
 
 .buffer{
@@ -437,8 +437,8 @@ p, a, .table-text{
 .test-section{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: space-between;
 }
 
 /* message section */
@@ -453,7 +453,7 @@ p, a, .table-text{
   }
   .line {
     position: relative;
-    width: 95vw;
+    width: 100vw;
     height: 1px;
     background-color: var(--main-fg-color);
   }
@@ -477,6 +477,8 @@ p, a, .table-text{
       left: -100%;
     }
   }
+
+
 
   /* Footer */
 
@@ -555,10 +557,39 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+/* input[type=number] {
   -moz-appearance: textfield;
+} */
+
+svg{
+    height: auto;
+    width: 100%;
 }
 
-.pointer {
+.svg-container{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 55%;
+}
+
+rect.cls-4:hover {
+    fill: rgba(36, 36, 39, 0.1);
+    
+}
+
+rect, .cls-5{
     cursor: pointer;
+}
+
+#section6{
+    height: 75vh;
+    justify-content: flex-end;
+}
+
+#section6 img{
+    padding-top: 5vh;
 }
