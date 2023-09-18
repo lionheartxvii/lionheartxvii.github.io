@@ -322,7 +322,7 @@ padding-bottom: 0.5rem;
   transform: translate(-50%, -50%);
   align-items: center;
   padding: 10px;
-  text-align: center;
+    text-align: center;
 }
 
 .hidden-box h3{
@@ -467,7 +467,7 @@ padding-bottom: 0.5rem;
   padding: 20px 80px;
   border-radius: 2px;
   margin-bottom: 4rem;
-  display: flex;
+display: flex;
   justify-content: center;
   align-content: center;
 }
@@ -496,7 +496,7 @@ padding-bottom: 0.5rem;
 } */
 
 .speech-bubble {
-  position: relative;
+position: relative;
   border: 1px solid var(--main-fg-color);
   border-radius: 100px;
   padding: 20px;
@@ -517,7 +517,7 @@ padding-bottom: 0.5rem;
 }
 
 .bubble{
-  position: relative;
+position: relative;
   border: 1px solid var(--main-fg-color);
   width: 20px;
   height: 20px;
@@ -651,15 +651,6 @@ th, td {
 
 .idea-pc{
   width: 80%;
-}
-
-.lottie-interactive {
-  height: 100%;
-  width: 100%;
-}
-
-.lottie-card {
-  cursor: pointer;
 }
 
 .train{

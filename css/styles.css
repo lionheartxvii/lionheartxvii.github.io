@@ -384,7 +384,19 @@ p, a, .table-text{
 .illustration, .illustration img{
     position: relative;
     height: auto;
-    width: 500px;
+    width: 600px;
+}
+
+#illustration-2{
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.start-text{
+    position: relative;
+    height: auto;
+    min-width: 600px;
 }
 
 .buffer{
@@ -563,6 +575,11 @@ svg{
     height: auto;
     width: 100%;
 }
+
+.lottie-interactive {
+    height: 100%;
+    width: 100%;
+  }
 
 .svg-container{
     position: relative;
