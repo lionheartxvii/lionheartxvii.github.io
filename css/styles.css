@@ -381,7 +381,7 @@ p, a, .table-text{
     width: 65%;
   }
 
-  .illustration, .illustration img{
+.illustration, .illustration img{
     position: relative;
     height: auto;
     width: 500px;
@@ -477,8 +477,6 @@ p, a, .table-text{
       left: -100%;
     }
   }
-
-
 
   /* Footer */
 
@@ -592,4 +590,8 @@ rect, .cls-5{
 
 #section6 img{
     padding-top: 5vh;
+}
+
+.pointer {
+    cursor: pointer;
 }
