@@ -52,12 +52,18 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     scroll-behavior: smooth;
+    
 }
 
 body {
     background-color: var(--primary-bg-color);
     overflow-x: hidden;
     overflow-y: auto;
+
+        /* Safari compatibility */
+        height: 100%;
+        width: 100%;
+        transform: translate3d(0,0,0);
 }
 
 /* Exceptions */
