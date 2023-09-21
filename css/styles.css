@@ -653,8 +653,7 @@ rect,
 }
 
 #flowers {
-    width: 100%;
-    overflow: hidden;
+    width: 100vw;
 }
 
 .backnforth {
@@ -821,6 +820,8 @@ rect,
     #section6 {
         height: 70vh;
         justify-content: space-between;
+        width: 100vw !important;
+        overflow-x: hidden;
     }
 
     #section6 img {
