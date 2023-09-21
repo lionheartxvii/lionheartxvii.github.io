@@ -245,6 +245,7 @@ a,
     font-family: 'headlinefont', serif !important;
     font-size: 30px;
     text-transform: none !important;
+    text-decoration: none;
 }
 
 .nav-link {

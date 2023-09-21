@@ -781,7 +781,7 @@ td {
     position: relative !important;
   } */
 
-  .text{
+  .text {
     padding-top: 1.25rem;
   }
 
@@ -806,7 +806,8 @@ td {
     font-size: 33px;
   }
 
-  .quellen-container, .quellen-content {
+  .quellen-container,
+  .quellen-content {
     width: 90vw;
   }
 
@@ -821,49 +822,57 @@ td {
 
   /* Circle Beispiel */
 
-  .circle{
+  .circle {
     scale: 0.6;
   }
 
   /* Values Beispiel */
 
   .beispiel-values {
-    height: 100vh;
+    height: 100%;
     width: 90%;
     flex-direction: column;
     align-items: center;
   }
 
-  .left-side{
-    width: 90%;
+  .left-side {
+    min-width: 90%;
     border-right: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6vh 0;
   }
 
-  .left-side h2{
-text-align: center;
+  .left-side h2 {
+    text-align: center;
   }
 
-.box-values{
+  .box-values {
     width: 90%;
   }
 
   .row {
-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
 
   .small-box {
-    width: calc(40vw / 2 - 10px);
+    width: 40vw;
     height: 70px;
-    border: 1px solid var(--main-fg-color);
+
     padding: 5px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2px;
-    cursor: pointer;
-    flex-wrap: wrap;
+    margin-right: 0px;
+  }
+
+  #beispiel-section-values{
+    height: auto !important;
+    margin: 10vh 0;
+  }
+
+  #beispiel-section-values .radial-gradient-container {
+    height: 100vh;
   }
 }
