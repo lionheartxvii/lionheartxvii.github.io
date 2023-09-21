@@ -344,12 +344,3 @@ function dropdownMenu(){
   menu_btn.classList.toggle('is-active');
   mobile_menu.classList.toggle('is-active');
 }
-
-
-$(window).scroll(function ()
-{
-    if ($(document).scrollLeft() != 0)
-    {
-        $(document).scrollLeft(0);
-    }
-});
