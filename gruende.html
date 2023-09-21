@@ -78,7 +78,7 @@
         <ul class="nav-list">
             <li><a href="ursprung.html" class="nav-link">Ursprung</a></li>
             <li><a href="gruende.html" class="nav-link active">Gründe</a></li>
-            <li class="title"><a href="index.html">Title</a></li>
+            <li class="title"><a href="index.html">Wahl x Weise</a></li>
             <li><a href="methoden.html" class="nav-link">5 Methoden</a></li>
             <li><a href="tipps.html" class="nav-link">Tipps</a></li>
         </ul>
@@ -90,7 +90,7 @@
     </nav> -->
 
     <div class="up-button">
-        <img src="assets/arrow-smol-up.png" alt="Icon">
+        <img src="assets/arrow-up-smol.svg" alt="Icon">
     </div>
 
     <section class="hero-banner scroll-section" id="section1">
@@ -102,7 +102,7 @@
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco.
             </p>
         </div>
-        <div><img onclick="scrollToSection('section2')" class="arrow" src="/assets/arrow-down.png"></div>
+        <div><img onclick="scrollToSection('section2')" class="arrow" src="/assets/arrow-down-long.svg"></div>
     </section>
 
     <section class="content" id="section2">
@@ -166,6 +166,28 @@
 
                 <div class="beispiel-section">
 
+                    <div class="beispiel-10 inner-content">
+
+                        <div class="df-interactive">
+                            <div class="side-box" id="leftBox" onclick="updateBoxes()">
+                                <img src="/assets/icons/mond.svg" alt="Bild 1">
+                                <p>länger schlafen</p>
+                            </div>
+                            <div class="center-box">
+                                <lottie-interactive class="curio" autoplay loop path="./json/curio.json"
+                                    interaction="play-on-show"></lottie-interactive>
+                                <div class="stamina-bar-outer">
+                                    <div class="stamina-bar-inner" id="progressBar"></div>
+                                </div>
+                            </div>
+                            <div class="side-box" id="rightBox" onclick="updateBoxes()">
+                                <img src="/assets/icons/wecker.svg" alt="Bild 2">
+                                <p>früh aufstehen</p>
+                            </div>
+                        </div>
+
+
+                    </div>
 
                     <div class="radial-gradient-container">
                         <div></div>
@@ -233,7 +255,8 @@
                             <h2>Eiscreme-Paradox</h2>
                             <div class="box-aufgabenstellung">
                                 <p>Stelle dir vor, du stehst vor einem neuen Eisgeschäft, und vor dir erstreckt
-                                    sich eine große Auswahl an Eissorten. Doch leider trägst du bloß genügend Geld mit dir, um dir zwei Sorten zu kaufen.
+                                    sich eine große Auswahl an Eissorten. Doch leider trägst du bloß genügend Geld mit
+                                    dir, um dir zwei Sorten zu kaufen.
                                     Nun liegt es an dir, dich für zwei der Sorten zu entscheiden.
                                 </p>
                             </div>
@@ -397,8 +420,9 @@
 
                 <div class="beispiel-section" style="height: 65vh;">
 
-                    <div class="sunken-cost inner-content" >
-                        <lottie-interactive autoplay loop path="./json/sunken-cost.json" interaction="play-on-show"></lottie-interactive>
+                    <div class="sunken-cost inner-content">
+                        <lottie-interactive autoplay loop path="./json/sunken-cost.json" interaction="play-on-show">
+                        </lottie-interactive>
                     </div>
 
                     <div class="radial-gradient-container">
@@ -466,7 +490,8 @@
 
                 </div>
                 <div class="train">
-                    <lottie-interactive id="train-inhalt" autoplay loop path="./json/bandwagon.json" interaction="play-on-show"></lottie-interactive>
+                    <lottie-interactive id="train-inhalt" autoplay loop path="./json/bandwagon.json"
+                        interaction="play-on-show"></lottie-interactive>
                 </div>
 
             </div>
@@ -532,7 +557,8 @@
                 <div class="beispiel-section">
 
                     <div class="beispiel-paradox inner-content pointer">
-                        <lottie-interactive path="./json/analysis-paralysis.json" interaction="click"></lottie-interactive>
+                        <lottie-interactive path="./json/analysis-paralysis.json" interaction="click">
+                        </lottie-interactive>
                     </div>
 
                     <div class="radial-gradient-container">
@@ -580,7 +606,7 @@
 
             <div class="quellen-header">
                 <h2>Quellenangaben</h2>
-                <img class="quellen-arrow" src="assets/arrow-head.png" alt="Icon">
+                <img class="quellen-arrow" src="assets/arrow-head.svg" alt="Icon">
             </div>
 
             <div class="quellen-content">
@@ -677,7 +703,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <a href="index.html" class="title">Title</a>
+            <a href="index.html" class="title">Wahl x Weise</a>
             <nav class="footer-nav">
                 <a href="#">About</a>
                 <a href="#">Impressum</a>
@@ -691,10 +717,11 @@
 
     <script src="/javascript/Gradient.js"></script>
     <script src="/javascript/script.js"></script>
-    
+
     <!-- Lottie Libraries -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js">
+    </script>
 
     <script>
         const gradient5 = new Gradient()
@@ -704,9 +731,57 @@
     </script>
 
 
+    <script>
+        const images = [];
+        const leftBox = document.getElementById('leftBox');
+        const rightBox = document.getElementById('rightBox');
+        let currentIndex = 0;
 
+
+
+        fetch('json/images.json')
+            .then(response => response.json())
+            .then(data => {
+                images.push(data);
+            })
+            .catch(error => console.error('Fehler beim Laden der JSON-Datei:', error));
+
+        function updateBoxes() {
+            if (currentIndex < images[0].length) {
+                const entry = images[0][currentIndex];
+
+
+                const leftImage = leftBox.querySelector('img');
+                leftImage.src = entry.imageSrc1;
+                const leftText = leftBox.querySelector('p');
+                leftText.textContent = entry.text1;
+
+                // Bild in der rechten Box aktualisieren
+                const rightImage = rightBox.querySelector('img');
+                rightImage.src = entry.imageSrc2;
+
+                // Text in der rechten Box aktualisieren
+                const rightText = rightBox.querySelector('p');
+                rightText.textContent = entry.text2;
+
+                // Index erhöhen, um die Position im Array fortzusetzen
+                currentIndex++;
+
+                const progressBarInner = document.getElementById('progressBar');
+                let innerProgress = 100; //
+                innerProgress -= 20;
+                if (innerProgress >= 0) {
+                    progressBarInner.style.height = `${innerProgress}%`;
+                } else {
+                    progressBarInner.style.height = '0%';
+                }
+            } else {
+                // liste ist fertig
+            }
+        }
+    </script>
 
 </body>
 
 
-</html>
+</html>  

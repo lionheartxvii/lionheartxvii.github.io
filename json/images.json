@@ -1,0 +1,26 @@
+[
+    {
+        "imageSrc1": "/assets/icons/tshirt.svg",
+        "imageSrc2": "/assets/icons/hemd.svg",
+        "text1": "T-Shirt anziehen",
+        "text2": "Hemd anziehen"
+    },
+    {
+        "imageSrc1": "/assets/icons/cake.svg",
+        "imageSrc2": "/assets/icons/apfel.svg",
+        "text1": "Kuchen essen",
+        "text2": "Obst essen"
+    },
+    {
+        "imageSrc1": "/assets/icons/bar.svg",
+        "imageSrc2": "/assets/icons/karte.svg",
+        "text1": "In bar bezahlen",
+        "text2": "Mit Karte"
+    },
+    {
+        "imageSrc1": "/assets/icons/movie.svg",
+        "imageSrc2": "/assets/icons/buch.svg",
+        "text1": "Film schauen",
+        "text2": "Buch lesen"
+    }
+]

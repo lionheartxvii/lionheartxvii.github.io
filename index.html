@@ -80,15 +80,38 @@
 
 <body>
 
-    <nav class="navbar">
+    <nav class="navbar hidden">
         <ul class="nav-list">
             <li><a href="ursprung.html" class="nav-link">Ursprung</a></li>
             <li><a href="gruende.html" class="nav-link">Gründe</a></li>
-            <li class="title"><a href="index.html">Title</a></li>
+            <li class="title"><a href="index.html">Wahl x Weise</a></li>
             <li><a href="methoden.html" class="nav-link">5 Methoden</a></li>
             <li><a href="tipps.html" class="nav-link">Tipps</a></li>
         </ul>
     </nav>
+
+    <div class="mobile-header">
+        <li class="title"><a href="index.html">Wahl x Weise</a></li>
+
+        <button class="hamburger">
+            <div class="ham-bar"></div>
+        </button>
+    </div>
+
+
+
+    <div class="mobile-nav">
+        <div class="hamburger-content">
+            <a href="index.html" class="menu-item">home</a>
+            <a href="ursprung.html" class="menu-item">Ursprünge des Entscheidungsprozesses</a>
+            <a href="gruende.html" class="menu-item">Auftretende Probleme</a>
+            <a href="methoden.html" class="menu-item">5 Methoden zur Entscheidungsfindung</a>
+            <a href="tipps.html" class="menu-item">Tipps und Tricks</a>
+            <a href="tipps.html" class="menu-item">Fragerunde</a>
+        </div>
+
+        <canvas id="gradient-canvas3" data-transition-in> </canvas>
+    </div>
 
     <nav class="scroll-nav">
         <ul>
@@ -96,7 +119,7 @@
     </nav>
 
     <div class="up-button">
-        <img src="assets/arrow-smol-up.png" alt="Icon">
+        <img src="assets/arrow-up-smol.svg" alt="Icon">
     </div>
 
     <section class="hero-banner scroll-section" id="section1">
@@ -105,22 +128,22 @@
             <h1>making decisions can be hard and here is why</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                <a class="hidden-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</a>
+
             </p>
         </div>
-        <div><img onclick="scrollToSection('section2')" class="arrow" src="/assets/arrow-down.png"></div>
+        <div>
+            <img onclick="scrollToSection('section2')" class="arrow" src="/assets/arrow-down-long.svg">
+        </div>
     </section>
 
     <div class="content">
-        <section class="content-container scroll-section" id="section2">
+        <section class="content-container scroll-section reverse" id="section2">
 
-            <div class="inner-content left illustration .scroll-trigger">
-
+            <div>
                 <div class="illustration">
                     <lottie-player id="illustration-1" src="/json/illustration1.json"></lottie-player>
                 </div>
-
-
             </div>
 
             <div class="buffer"></div>
@@ -134,14 +157,14 @@
                     Werte und Motivationen zusammenhängen und wie diese sich auf unsere Entscheidungen auswirken.
                 </p>
 
-                <div type="button" onclick="location.href='origins.html'" class="primary-button">
-                    <a href="origins.html">erfahre mehr</a>
+                <div type="button" onclick="location.href='ursprung.html'" class="primary-button">
+                    <a href="ursprung.html">erfahre mehr</a>
                 </div>
             </div>
 
         </section>
 
-        <div >
+        <div id="illustration-2-container">
             <lottie-player id="illustration-2" src="/json/illustration2.json"></lottie-player>
         </div>
 
@@ -163,9 +186,12 @@
 
             <div class="buffer"></div>
 
-            <div class="inner-content illustration">
-                <img class="illustration" src="/assets/illu4.png">
+            <div>
+                <div class="illustration">
+                    <lottie-player id="illustration-3" src="/json/illustration3.json"></lottie-player>
+                </div>
             </div>
+
 
         </section>
 
@@ -176,14 +202,20 @@
                 <p>Lerne mehr über fünf leicht anwendbare Methoden, die den
                     Entscheidungsprozess unterstützen. Durch Anwendung der Beispiele werden die Methoden vertieft.</p>
             </div>
+
+            <div class="backnforth">
+                <img id="prevBtn" src="/assets/arrow-head.svg" alt="Icon">
+                <img id="nextBtn" src="/assets/arrow-head.svg" alt="Icon">
+            </div>
+
             <div class="box-container inner-content">
-                <div class="box">
+                <div class="box active">
                     <div class="box-content">
                         <h4>6 hats method</h4>
                         <p>Schlüpfe durch das Tragen von metaphorischen Hüten in verschiedene Perspektiven, um Probleme
                             zu lösen.</p>
                     </div>
-                    <a href="#">Weiter</a>
+                    <a href="methoden.html">Weiter</a>
                 </div>
                 <div class="box">
                     <div class="box-content">
@@ -228,8 +260,10 @@
 
         <section class="content-container scroll-section" id="section5">
 
-            <div class="inner-content left illustration">
-                <img src="./assets/illustrations/more-tipps.svg" alt="">
+            <div>
+                <div class="illustration">
+                    <lottie-player id="illustration-4" src="/json/illustration4.json"></lottie-player>
+                </div>
             </div>
 
             <div class="buffer"></div>
@@ -244,7 +278,7 @@
                 </p>
 
                 <div type="button" onclick="location.href='origins.html'" class="primary-button">
-                    <a href="origins.html">erfahre mehr</a>
+                    <a href="tipps.html">erfahre mehr</a>
                 </div>
             </div>
 
@@ -266,7 +300,9 @@
 
 
             </div>
-            <img class="illustration" src="/assets/flowers4.png">
+            <img id="flowers" src="/assets/illustrations/flowers2.png">
+
+
 
         </section>
 
@@ -280,7 +316,7 @@
 
         <footer class="footer">
             <div class="footer-content">
-                <a href="index.html" class="title">Title</a>
+                <a href="index.html" class="title">Wahl x Weise</a>
                 <nav class="footer-nav">
                     <a href="#">About</a>
                     <a href="#">Impressum</a>
@@ -298,8 +334,10 @@
     <script>
         const gradient1 = new Gradient()
         const gradient2 = new Gradient()
+        const gradient3 = new Gradient()
         gradient1.initGradient('#gradient-canvas');
         gradient2.initGradient('#gradient-canvas2');
+        gradient3.initGradient('#gradient-canvas3');
 
         // Automatisch Kreise für Abschnitte erstellen
         const sections = document.querySelectorAll('.scroll-section');
@@ -338,22 +376,63 @@
         })
     </script>
 
+    <script>
+        // mobile boxes
+
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const boxes = document.querySelectorAll(".box");
+        let currentIndex = 0;
+
+        function showBox(index) {
+            boxes.forEach((box, i) => {
+                if (i === index) {
+                    box.classList.add("active");
+                } else {
+                    box.classList.remove("active");
+                }
+            });
+        }
+
+        prevBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + boxes.length) % boxes.length;
+            showBox(currentIndex);
+        });
+
+        nextBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % boxes.length;
+            showBox(currentIndex);
+        });
+
+        // Initial anzeigen der ersten Box
+        showBox(currentIndex);
+
+        // Eventlistener für die Boxen hinzufügen
+        boxes.forEach((box, index) => {
+            box.addEventListener("click", () => {
+                currentIndex = index;
+                showBox(currentIndex);
+            });
+        });
+    </script>
+
     <script src="/libs/anime-master/lib/anime.min.js"></script>
     <script src="/javascript/script.js"></script>
 
     <!-- Lottie Libraries -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script> 
-    
-    <!-- Scrollmagic Libraries -->   
+    <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js">
+    </script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+
+    <!-- Scrollmagic Libraries -->
     <script src="/libs/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script src="/libs/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
 
-    
+
     <script src="/javascript/animations.js"></script>
 
-    
+
 </body>
 
 

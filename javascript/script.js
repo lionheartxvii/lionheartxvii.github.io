@@ -92,9 +92,9 @@ const header = document.querySelector('.quellen-header');
 const arrow = document.querySelector('.quellen-arrow');
 const expandableBox = document.querySelector('.quellen');
 
-header.addEventListener('click', () => {
-expandableBox.classList.toggle('expanded');
-arrow.classList.toggle('up');
+header?.addEventListener('click', () => {
+expandableBox?.classList.toggle('expanded');
+arrow?.classList.toggle('up');
 });
 
 const links = document.querySelectorAll('.text a');
@@ -135,6 +135,7 @@ function showBox(boxNumber) {
     const hiddenBox = document.getElementById(`hiddenBox${boxNumber}`);
     hiddenBox.style.display = "block";
     circleElements[boxNumber - 1 ].style.scale = 1.1;
+    circleElements[boxNumber - 1 ].style.backgroundColor = "rgba(36, 36, 39, 0.1)";
   }
 }
 
@@ -143,6 +144,7 @@ function hideBox() {
     const hiddenBox = document.getElementById(`hiddenBox${activeBox}`);
     hiddenBox.style.display = "none";
     circleElements[activeBox - 1].style.scale = 1;
+    circleElements[activeBox - 1 ].style.backgroundColor = "rgba(36, 36, 39, 0.0)";
     activeBox = 0;
   }
 }
@@ -309,4 +311,36 @@ function executeAusschluss(value) {
 function setHeight(element) {
   let height = element.offsetHeight;
   element.style.height = height + "px";
+}
+
+
+
+
+
+
+
+// Hamburger Menu
+
+const menu_btn = document.querySelector('.hamburger');
+const mobile_menu = document.querySelector('.mobile-nav');
+
+menu_btn.addEventListener('click', function () {
+  dropdownMenu();
+});
+
+
+// var animation1 = anime({
+//   targets: '.menu-item',
+//   delay: anime.stagger(80, {
+//     start: 80,
+//     easing: 'easeInSine'
+//   }),
+//   autoplay: false,
+//   translateY: 20,
+// });
+// document.querySelector('.hamburger').onclick = animation1.play;
+
+function dropdownMenu(){
+  menu_btn.classList.toggle('is-active');
+  mobile_menu.classList.toggle('is-active');
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.86 27.32">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-linejoin: bevel;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #242427;
+        stroke-width: 1.3px;
+      }
+    </style>
+  </defs>
+  <line vector-effect="non-scaling-stroke" id="Linie_7" data-name="Linie 7" class="cls-2" y1="13.82" x2="57.8" y2="13.82"/>
+  <path vector-effect="non-scaling-stroke" id="Pfad_2" data-name="Pfad 2" class="cls-1" d="m44.2,27.32c1.1-10.2,13.5-13.5,13.5-13.5,0,0-12.4-3.3-13.5-13.5"/>
+</svg>

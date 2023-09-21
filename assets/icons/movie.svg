@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #242427;
+        stroke-miterlimit: 10;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m39.39,31.85c.1.07.1.23,0,.3l-5.29,3.68-5.22,3.63c-.12.08-.29,0-.29-.15v-14.61c0-.15.17-.23.29-.15l5.22,3.63,5.29,3.68Z"/>
+    <rect vector-effect="non-scaling-stroke" class="cls-1" x="7.11" y="14.02" width="49.77" height="36.37" rx="2" ry="2"/>
+    <line vector-effect="non-scaling-stroke" class="cls-1" x1="7.11" y1="20.75" x2="56.89" y2="20.75"/>
+    <line vector-effect="non-scaling-stroke" class="cls-1" x1="7.11" y1="43.65" x2="56.89" y2="43.65"/>
+    <line vector-effect="non-scaling-stroke" class="cls-1" x1="32" y1="13.5" x2="32" y2="20.75"/>
+    <line vector-effect="non-scaling-stroke" class="cls-1" x1="23.7" y1="14.02" x2="23.7" y2="20.75"/>
+    <line vector-effect="non-scaling-stroke" class="cls-1" x1="15.41" y1="14.02" x2="15.41" y2="20.75"/>
+    <line vector-effect="non-scaling-stroke" class="cls-1" x1="48.59" y1="14.02" x2="48.59" y2="20.75"/>
+    <line vector-effect="non-scaling-stroke" class="cls-1" x1="40.3" y1="14.02" x2="40.3" y2="20.75"/>
+    <line vector-effect="non-scaling-stroke" class="cls-1" x1="32" y1="43.25" x2="32" y2="50.5"/>
+    <line vector-effect="non-scaling-stroke" class="cls-1" x1="23.7" y1="43.76" x2="23.7" y2="50.5"/>
+    <line vector-effect="non-scaling-stroke" class="cls-1" x1="15.41" y1="43.76" x2="15.41" y2="50.5"/>
+    <line vector-effect="non-scaling-stroke" class="cls-1" x1="48.59" y1="43.76" x2="48.59" y2="50.5"/>
+    <line vector-effect="non-scaling-stroke" class="cls-1" x1="40.3" y1="43.76" x2="40.3" y2="50.5"/>
+  </g>
+  <line vector-effect="non-scaling-stroke" class="cls-1" x1="39.95" y1="54.93" x2="55.88" y2="54.93"/>
+  <line vector-effect="non-scaling-stroke" class="cls-1" x1="33.14" y1="54.93" x2="37.81" y2="54.93"/>
+  <line vector-effect="non-scaling-stroke" class="cls-1" x1="7.15" y1="9.83" x2="16.15" y2="9.83"/>
+  <line vector-effect="non-scaling-stroke" class="cls-1" x1="18.28" y1="9.83" x2="20.84" y2="9.83"/>
+</svg>

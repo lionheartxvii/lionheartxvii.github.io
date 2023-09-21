@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #242427;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #242427;
+        stroke-miterlimit: 10;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <circle vector-effect="non-scaling-stroke" class="cls-1" cx="37.92" cy="28" r="1"/>
+  <circle vector-effect="non-scaling-stroke" class="cls-1" cx="37.92" cy="35.89" r="1"/>
+  <circle vector-effect="non-scaling-stroke" class="cls-1" cx="37.92" cy="44.07" r="1"/>
+  <polyline vector-effect="non-scaling-stroke" class="cls-2" points="42.15 7 33.87 17 25.99 7"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m51.07,57.22H17.07V23.74l-2.98-11.44s0-.08.05-.1l12.05-5.2h16.17l11.69,5.22s.03.03.03.06l-2.99,11.47v33.48Z"/>
+  <polyline vector-effect="non-scaling-stroke" class="cls-2" points="14.07 12 8.07 50 17.07 53"/>
+  <line vector-effect="non-scaling-stroke" class="cls-2" x1="17.07" y1="48" x2="8.84" y2="45.07"/>
+  <polyline vector-effect="non-scaling-stroke" class="cls-2" points="54.07 12 60.07 50 51.07 53"/>
+  <line vector-effect="non-scaling-stroke" class="cls-2" x1="51.07" y1="48" x2="59.29" y2="45.07"/>
+  <polyline vector-effect="non-scaling-stroke" class="cls-2" points="26.18 7 26.18 20.11 33.87 17"/>
+  <polyline vector-effect="non-scaling-stroke" class="cls-2" points="41.77 7 41.77 20.11 34.07 17 34.07 57"/>
+</svg>

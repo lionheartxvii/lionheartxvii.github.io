@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.39 53.1">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-linejoin: bevel;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #242427;
+        stroke-width: 1.3px;
+      }
+    </style>
+  </defs>
+  <g id="Gruppe_3" data-name="Gruppe 3">
+    <line vector-effect="non-scaling-stroke" id="Linie_7" data-name="Linie 7" class="cls-2" x1="13.7" y1=".3" x2="13.7" y2="52.8"/>
+    <path vector-effect="non-scaling-stroke" id="Pfad_2" data-name="Pfad 2" class="cls-1" d="m.2,39.2c10.2,1.1,13.5,13.5,13.5,13.5,0,0,3.3-12.4,13.5-13.5"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #242427;
+        stroke-miterlimit: 10;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <path vector-effect="non-scaling-stroke" class="cls-1" d="m50.07,58H16.07V23l-2.98-10.93s0-.08.05-.1l12.05-4.97h16.17l11.69,4.98s.03.03.03.05l-2.99,10.96v35Z"/>
+  <path vector-effect="non-scaling-stroke" class="cls-1" d="m41.34,7l-7.49,9.05c-.41.49-1.16.48-1.56-.02l-7.12-9.03"/>
+  <polyline vector-effect="non-scaling-stroke" class="cls-1" points="13.07 12 5.07 29 16.07 35"/>
+  <polyline vector-effect="non-scaling-stroke" class="cls-1" points="53.07 12 61.07 29 50.07 35"/>
+  <path vector-effect="non-scaling-stroke" class="cls-1" d="m37.07,25h7v4.89c0,1.17-.95,2.11-2.11,2.11h-2.78c-1.17,0-2.11-.95-2.11-2.11v-4.89h0Z"/>
+  <line vector-effect="non-scaling-stroke" class="cls-1" x1="20.07" y1="54" x2="28.9" y2="54"/>
+  <line vector-effect="non-scaling-stroke" class="cls-1" x1="31.23" y1="54" x2="35.07" y2="54"/>
+</svg>

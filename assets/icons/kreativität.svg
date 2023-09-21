@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #242427;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #242427;
+        stroke-miterlimit: 10;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g>
+    <path vector-effect="non-scaling-stroke" class="cls-2" d="m14.8,52.21c0,.97-.5,2.53-1.4,3.45-1.01,1.03-2.49,1.74-3.8,1.74"/>
+    <path vector-effect="non-scaling-stroke" class="cls-2" d="m14.8,52.21c0,.97.5,2.53,1.4,3.45,1.01,1.03,2.49,1.74,3.8,1.74"/>
+    <path vector-effect="non-scaling-stroke" class="cls-2" d="m14.8,62.59c0-.97.5-2.53,1.4-3.45,1.01-1.03,2.49-1.74,3.8-1.74"/>
+    <path vector-effect="non-scaling-stroke" class="cls-2" d="m14.8,62.59c0-.97-.5-2.53-1.4-3.45-1.01-1.03-2.49-1.74-3.8-1.74"/>
+  </g>
+  <g>
+    <path vector-effect="non-scaling-stroke" class="cls-2" d="m56.54,1.41c0,.97-.5,2.53-1.4,3.45-1.01,1.03-2.49,1.74-3.8,1.74"/>
+    <path vector-effect="non-scaling-stroke" class="cls-2" d="m56.54,1.41c0,.97.5,2.53,1.4,3.45,1.01,1.03,2.49,1.74,3.8,1.74"/>
+    <path vector-effect="non-scaling-stroke" class="cls-2" d="m56.54,11.79c0-.97.5-2.53,1.4-3.45,1.01-1.03,2.49-1.74,3.8-1.74"/>
+    <path vector-effect="non-scaling-stroke" class="cls-2" d="m56.54,11.79c0-.97-.5-2.53-1.4-3.45-1.01-1.03-2.49-1.74-3.8-1.74"/>
+  </g>
+  <g>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m10.46,11.75c-3.3,1.03-6.88,1.03-10.18,0,3.3-1.03,6.88-1.03,10.18,0h0Z"/>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m5.37,16.84c-1.03-3.3-1.03-6.88,0-10.18,1.03,3.3,1.03,6.88,0,10.18h0Z"/>
+  </g>
+  <path  vector-effect="non-scaling-stroke" class="cls-2" d="m18.75,16.42c2.69-2.42,6.78-4.05,12.35-4.55,14.39-1.28,29.87,7.54,31.55,24.55,1.18,11.95-5.4,16.23-5.95,16.83-7.85,8.39-23.67,8.42-27.16,3.06-3.64-5.6,3.42-6.56,1.12-12.43-3.38-8.63-12.48-8.53-14.99-13.46"/>
+  <circle vector-effect="non-scaling-stroke" class="cls-2" cx="41.01" cy="51.06" r="3.49"/>
+  <circle vector-effect="non-scaling-stroke" class="cls-2" cx="52.5" cy="43.35" r="4.38"/>
+  <circle vector-effect="non-scaling-stroke" class="cls-2" cx="48" cy="28.36" r="4.67"/>
+  <circle vector-effect="non-scaling-stroke" class="cls-2" cx="31.22" cy="23.55" r="5.38"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m12,17.03c.58-2.14,2.7-3.43,4.73-2.88s3.2,2.74,2.61,4.88S6.6,55.79,5.47,55.48c-1-.27,5.95-36.3,6.53-38.45Z"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m22,11.01c-.66,2.44-2.96,3.61-5.23,2.99s-3.91-3.04-3.29-5.31,5.02-7.62,7.36-6.01c.55.38-.13,1.42.07,3.21s1.73,2.8,1.1,5.12Z"/>
+</svg>

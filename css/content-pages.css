@@ -14,30 +14,26 @@
   position: relative;
 }
 
-a.nav-box-link{
+a.nav-box-link {
   font-size: 16px;
   pointer-events: visible;
   cursor: pointer;
 }
 
-a.bold{
+a.bold {
   font-family: "textfont-medium";
 }
 
-/* linie müsste durch klicken wechseln, valerij fragen q.q */
 .nav-box-link.active::before {
   content: "";
   position: absolute;
-  bottom: 0px; /* Abstand zum Navigationselement */
+  bottom: 0px;
   left: 0;
   width: 100%;
-  height: 1px; /* Dicke der Linie */
-  background-color: var(--main-fg-color); 
+  height: 1px;
+  background-color: var(--main-fg-color);
 }
 
-/* a.nav-link.bold{
-  font-family: "textfont-medium";
-} */
 
 /* .beispiel-section h2{
   width: auto !important;
@@ -58,33 +54,33 @@ a.bold{
   position: absolute !important;
 }
 
-.fs-14{
+.fs-14 {
   font-size: 16px !important;
 }
 
 /* Ausnahmen */
-.single-section{
+.single-section {
   height: 100vh;
 }
 
-.arrow-right{
+.arrow-right {
   position: absolute;
-  height: 8%;
+  height: 6%;
   cursor: pointer;
   padding-top: 1.4rem;
 }
 
-.quellen-header h2{
+.quellen-header h2 {
   font-size: 36px;
   margin: 0;
   padding-bottom: 0rem !important;
 }
 
-h2{
+h2 {
   width: 20vw;
 }
 
-.no-padding{
+.no-padding {
   padding-bottom: 0 !important;
 }
 
@@ -119,7 +115,7 @@ h2{
 
 /* Quellen */
 
-.quellen{
+.quellen {
   height: 80px;
   border-top: 1px solid var(--main-fg-color);
   overflow: hidden;
@@ -131,7 +127,7 @@ h2{
   flex-direction: row;
 }
 
-.quellen-container{
+.quellen-container {
   width: 65vw;
 }
 
@@ -148,13 +144,10 @@ h2{
 
 
 .quellen-arrow {
-  /* width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 5px 5px 0;
-  border-color: var(--main-fg-color) transparent transparent; */
+  height: 20%;
   transition: transform 0.5s;
   margin-left: auto;
+
 }
 
 .quellen-content {
@@ -172,19 +165,19 @@ h2{
 
 .reference {
   font-size: 0.8em;
-  vertical-align: super; 
+  vertical-align: super;
   line-height: normal;
 }
 
 /* Content */
 
-.all-articles{
+.all-articles {
   position: relative;
   width: 100%;
 }
 
 
-.article-container{
+.article-container {
   position: absolute;
   width: 0%;
   top: 0;
@@ -207,16 +200,16 @@ h2{
   display: flex;
 }
 
-.article{
+.article {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   height: auto !important;
-flex-direction: row;
-max-width: 65%;
+  flex-direction: row;
+  max-width: 65%;
 }
 
-#article-container-0{
+#article-container-0 {
   width: 100%;
   position: relative;
 }
@@ -230,7 +223,7 @@ max-width: 65%;
   padding-top: 15rem;
 }
 
-.nav-box-link{
+.nav-box-link {
   align-self: center;
 }
 
@@ -250,12 +243,20 @@ max-width: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   min-height: 100vh;
   width: 100%;
   margin: 0;
 }
 
-.circle-icon-container{
+.circle-section h2 {
+  z-index: 50;
+  text-align: center;
+  width: 40vw !important;
+  padding-bottom: 120px;
+}
+
+.circle-icon-container {
   width: 65vw;
   display: flex;
   justify-content: center;
@@ -286,12 +287,17 @@ max-width: 65%;
   height: 60px;
   transform-origin: center;
   transform: translate(-50%, -50%);
+
+
+  border-radius: 50%;
+  padding: 2px;
 }
+
 
 .circle-element img {
   width: 50px;
   height: 50px;
-padding-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
   /* max-width: 100%;
   height: auto; */
 }
@@ -303,10 +309,11 @@ padding-bottom: 0.5rem;
 
 .circle .circle-element {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   width: 100px;
   height: 100px;
-  margin: calc( -100px / 2 );
+  margin: calc(-100px / 2);
 }
 
 /* .circle-element{
@@ -322,10 +329,10 @@ padding-bottom: 0.5rem;
   transform: translate(-50%, -50%);
   align-items: center;
   padding: 10px;
-    text-align: center;
+  text-align: center;
 }
 
-.hidden-box h3{
+.hidden-box h3 {
   text-align: center;
 }
 
@@ -347,7 +354,7 @@ padding-bottom: 0.5rem;
 
 /* Values Beispiel */
 
-.beispiel-values{
+.beispiel-values {
   position: relative;
   display: flex;
   align-items: center;
@@ -366,12 +373,12 @@ padding-bottom: 0.5rem;
   flex-wrap: wrap;
 }
 
-.row{
+.row {
   display: flex;
   flex-direction: row;
 }
 
-.column-paradox{
+.column-paradox {
   display: flex;
   flex-direction: column;
 }
@@ -384,18 +391,20 @@ padding-bottom: 0.5rem;
 .remove-class {
   animation: remove-animation 0.3s ease;
 }
+
 @keyframes remove-animation {
   from {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
+
   to {
-      opacity: 0;
-      transform: translateY(50px);
+    opacity: 0;
+    transform: translateY(50px);
   }
 }
 
-.box-values{
+.box-values {
   width: 15vw;
   border: 1px solid var(--main-fg-color);
   padding: 80px 20px;
@@ -403,7 +412,8 @@ padding-bottom: 0.5rem;
 }
 
 .small-box {
-  width: calc(40vw / 4 - 10px); /* Berücksichtigt den Rand */
+  width: calc(40vw / 4 - 10px);
+  /* Berücksichtigt den Rand */
   height: 70px;
   border: 1px solid var(--main-fg-color);
   padding: 5px;
@@ -422,7 +432,7 @@ padding-bottom: 0.5rem;
   margin-right: 0;
 }
 
-.small-box:hover{
+.small-box:hover {
   background-color: rgba(36, 36, 39, 0.1);
 }
 
@@ -441,7 +451,7 @@ padding-bottom: 0.5rem;
 .beispiel-paradox,
 .beispiel-hats,
 .beispiel-10,
-.beispiel-pc{
+.beispiel-pc {
   position: relative;
 
   display: flex;
@@ -449,30 +459,33 @@ padding-bottom: 0.5rem;
   justify-content: space-evenly;
   flex-direction: column;
   width: 65%;
-
 }
 
-.beispiel-paradox{
+.beispiel-hats h2 {
+  padding-bottom: 0px !important;
+}
+
+.beispiel-paradox {
   height: 70vh;
 }
 
-.row{
+.row {
   display: flex;
   flex-direction: row;
 }
 
-.box-aufgabenstellung{
+.box-aufgabenstellung {
   width: 40vw;
   border: 1px solid var(--main-fg-color);
   padding: 20px 80px;
   border-radius: 2px;
   margin-bottom: 4rem;
-display: flex;
+  display: flex;
   justify-content: center;
   align-content: center;
 }
 
-.paradox{
+.paradox {
   width: calc(55vw / 5 - 10px) !important;
   height: 40px !important;
   margin-right: 30px !important;
@@ -482,6 +495,7 @@ display: flex;
 .paradox:nth-child(3n) {
   margin-right: 40px !important;
 }
+
 .paradox:nth-child(5n) {
   margin-right: 0 !important;
 }
@@ -496,28 +510,27 @@ display: flex;
 } */
 
 .speech-bubble {
-position: relative;
+  position: relative;
   border: 1px solid var(--main-fg-color);
   border-radius: 100px;
   padding: 20px;
-  width: 38vw;
-  height: 3vh;
+  width: 47vw;
+  height: 8vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.bubble-container{
+.bubble-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
   flex-direction: column;
   width: 5vh;
 }
 
-.bubble{
-position: relative;
+.bubble {
+  position: relative;
   border: 1px solid var(--main-fg-color);
   width: 20px;
   height: 20px;
@@ -528,17 +541,27 @@ position: relative;
   margin: 10px 0;
 }
 
-.hat-container{
+.hat-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
   cursor: pointer;
 }
 
-.hat-box{
+.hat-box {
   text-align: center;
-  margin: 0 20px;
+  margin: 0 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.hat-box .circle-element {
+  transform: none !important;
+  border-radius: none;
 }
 
 
@@ -550,26 +573,26 @@ position: relative;
   height: auto; */
 }
 
-.hat-box p{
+.hat-box p {
   text-align: center;
   width: 100px;
 }
 
-.beispiel-hats{
+.beispiel-hats {
   height: 55vh;
 }
 
 
 /* Beispiel 10 / 10 / 10 */
 
-.beispiel-10-tabelle{
+.beispiel-10-tabelle {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.beispiel-10-row{
+.beispiel-10-row {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -588,11 +611,11 @@ position: relative;
   height: 90px;
 }
 
-.beispiel-10-headline{
+.beispiel-10-headline {
   padding: 0 5vw;
 }
 
-.beispiel-10{
+.beispiel-10 {
   height: 55vh;
 }
 
@@ -603,19 +626,27 @@ table {
   margin: 0;
   border-collapse: collapse;
 }
-table th, table td {
+
+table th,
+table td {
   border: 1px solid var(--main-fg-color);
   padding: 10px;
 }
-table th:first-child, table td:first-child {
+
+table th:first-child,
+table td:first-child {
   border-left: none;
 }
-table th:last-child, table td:last-child, 
-table th:nth-child(2), table th:nth-child(3)   {
+
+table th:last-child,
+table td:last-child,
+table th:nth-child(2),
+table th:nth-child(3) {
   border-right: none;
 }
 
-table th:nth-child(3), table th:nth-child(4)  {
+table th:nth-child(3),
+table th:nth-child(4) {
   border-left: none;
 }
 
@@ -628,7 +659,7 @@ table td {
 }
 
 /* Ausschlussverfahren Beispiel - im html code selbst stehen ebenfalls einige styles */
-.box-counter{
+.box-counter {
   width: fit-content !important;
   align-self: flex-end;
 }
@@ -636,12 +667,15 @@ table td {
 /* Pro Contra Beispiel */
 
 
-.table-pc, th, td {
+.table-pc,
+th,
+td {
   /* border-bottom: 1px solid var(--main-fg-color); */
   text-align: center;
 }
 
-th, td {
+th,
+td {
   padding: 10px;
 }
 
@@ -649,11 +683,11 @@ th, td {
   height: 35px;
 }
 
-.idea-pc{
+.idea-pc {
   width: 80%;
 }
 
-.train{
+.train {
   position: relative;
   white-space: nowrap;
   max-height: 30vh;
@@ -668,11 +702,168 @@ th, td {
   0% {
     left: -100%;
   }
+
   100% {
     left: 100%;
   }
 }
 
-.sunken-cost{
+.sunken-cost {
   scale: 0.75;
+}
+
+
+
+
+/* Container für das Layout */
+.df-interactive {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45vw;
+}
+
+/* Stil für die seitlichen Div-Boxen */
+.side-box {
+  width: 20%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Stil für das zentrale Bild und das benachbarte Kästchen */
+.center-box {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.curio {
+  max-width: 100%;
+}
+
+.side-box img {
+  max-width: 100%;
+}
+
+
+.stamina-bar-outer {
+  border: 1px solid var(--main-fg-color);
+  border-radius: 2px;
+  width: 12px;
+  height: 65px;
+  margin-left: 20px;
+}
+
+.stamina-bar-inner {
+  background-color: var(--main-fg-color);
+  width: 100%;
+  height: 100%;
+  transition: height 0.3s ease;
+}
+
+
+
+
+@media (max-width: 1080px) {
+
+  .article {
+    /* justify-content: center !important;
+            align-items: center !important; */
+    flex-direction: column !important;
+    max-width: 90% !important;
+  }
+
+  /* .sticky {
+    position: relative !important;
+  } */
+
+  .text{
+    padding-top: 1.25rem;
+  }
+
+  .article-headline {
+    padding-top: 5rem;
+    position: relative !important;
+  }
+
+  .absatz {
+    height: auto;
+    padding-bottom: 3vh !important;
+  }
+
+  .inner-single-content-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  /* Quellen */
+
+  .quellen-header h2 {
+    font-size: 33px;
+  }
+
+  .quellen-container, .quellen-content {
+    width: 90vw;
+  }
+
+  .quellen-arrow {
+    height: 15%;
+  }
+
+  .circle-section h2 {
+    width: 90vw !important;
+    padding-bottom: 18px;
+  }
+
+  /* Circle Beispiel */
+
+  .circle{
+    scale: 0.6;
+  }
+
+  /* Values Beispiel */
+
+  .beispiel-values {
+    height: 100vh;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-side{
+    width: 90%;
+    border-right: none;
+  }
+
+  .left-side h2{
+text-align: center;
+  }
+
+.box-values{
+    width: 90%;
+  }
+
+  .row {
+flex-wrap: wrap;
+  }
+
+  .small-box {
+    width: calc(40vw / 2 - 10px);
+    height: 70px;
+    border: 1px solid var(--main-fg-color);
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    cursor: pointer;
+    flex-wrap: wrap;
+  }
 }

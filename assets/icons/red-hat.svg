@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #242427;
+        stroke-miterlimit: 10;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m55.61,7.16c0,1.37-.56,3.55-1.57,4.84-1.13,1.44-2.79,2.45-4.26,2.45"/>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m55.61,7.16c0,1.37.56,3.55,1.57,4.84,1.13,1.44,2.79,2.45,4.26,2.45"/>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m55.61,21.74c0-1.37.56-3.55,1.57-4.84,1.13-1.44,2.79-2.45,4.26-2.45"/>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m55.61,21.74c0-1.37-.56-3.55-1.57-4.84-1.13-1.44-2.79-2.45-4.26-2.45"/>
+  </g>
+  <g>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m48.19,39.88s2.42-23.99-23.12-24.69C.82,14.52,3.23,41.74,3.23,41.74c0,0,5.3,1.16,12.99.55,10.55-.84,12.74-2.5,19.65-2.92,6.83-.41,12.31.52,12.31.52Z"/>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m27.03,15.63c.05-.24.38-1.85-.7-3.27-.14-.19-1.28-1.64-3.16-1.55-1.78.08-2.76,1.46-2.9,1.67-.78,1.14-.69,2.33-.65,2.66"/>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m36.08,38.97c.32-2.42.59-7.02-1.19-12.36-1.83-5.49-5.36-9.51-7.1-11.25"/>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m24.74,14.95c-1.95,2.18-4.52,6.42-6.47,11.32-2.58,6.47-2.65,12.22-2.45,15.45"/>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m47.56,39.56l10.87,7.64s1.36,1.26,1.99,2.57c.47.98.69,2.3-.17,3.24-.8.89-2.52.61-3.25.23-2.42-1.29-8.41-5.97-8.41-5.97"/>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m58.43,47.2c-1.03-.45-3.27-1.16-5.18-1.21-3.77-.1-6.58,1.77-8.01,2.64-5.82,3.53-11.94,6.27-16.75,4.97-5.61-1.52-11.72-6.11-15.89-11.14"/>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m15.75,50.86c1.2,1.23,2.84,2.68,5,4,1.44.88,2.8,1.53,4,2"/>
+    <path vector-effect="non-scaling-stroke" class="cls-1" d="m26.75,56.86c.4.31,1.07.75,2,1,1.34.36,2.47.14,3,0"/>
+  </g>
+</svg>
