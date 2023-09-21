@@ -654,6 +654,7 @@ rect,
 
 #flowers {
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .backnforth {
@@ -822,12 +823,17 @@ rect,
         justify-content: space-between;
         width: 100vw !important;
         overflow-x: hidden;
+
     }
 
     #section6 img {
         width: 300vw;
     }
 
+    #flowers{
+        background-size: cover; 
+        background-position: center center; 
+    }
 
     /* Message Box */
 
