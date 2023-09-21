@@ -324,7 +324,7 @@ function setHeight(element) {
 const menu_btn = document.querySelector('.hamburger');
 const mobile_menu = document.querySelector('.mobile-nav');
 
-menu_btn.addEventListener('click', function () {
+menu_btn?.addEventListener('click', function () {
   dropdownMenu();
 });
 
@@ -344,3 +344,22 @@ function dropdownMenu(){
   menu_btn.classList.toggle('is-active');
   mobile_menu.classList.toggle('is-active');
 }
+
+
+function limitContentToViewportWidth() {
+  // Die Breite des sichtbaren Bereichs (Viewport Width) des Geräts
+  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+  // Die maximale Breite, die der Inhalt haben soll (z.B., 90% des Viewport Width)
+  var maxContentWidth = viewportWidth;
+
+  // Selektiere das HTML-Element, das den Inhalt enthält
+  var contentContainer = document.getElementById('wrapper-all'); // Ersetze 'deinContentContainer' durch die tatsächliche ID deines Containers
+
+  // Setze die maximale Breite für den Inhalt
+  contentContainer.style.maxWidth = maxContentWidth + 'px';
+}
+
+// Rufe die Funktion auf, wenn das Fenster geladen wurde oder sich die Fenstergröße ändert
+window.addEventListener('load', limitContentToViewportWidth);
+window.addEventListener('resize', limitContentToViewportWidth);
