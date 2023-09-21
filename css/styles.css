@@ -46,6 +46,10 @@
     --secondary-fg-color: #37373b;
 }
 
+.no-overflow{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 html,
 body {
