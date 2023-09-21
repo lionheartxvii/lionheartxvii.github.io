@@ -492,7 +492,7 @@ a,
     align-items: center;
     justify-content: center;
     height: 50vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .line {
@@ -654,6 +654,7 @@ rect,
 
 #flowers {
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .backnforth {
