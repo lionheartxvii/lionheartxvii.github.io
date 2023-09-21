@@ -346,20 +346,13 @@ function dropdownMenu(){
 }
 
 
-function limitContentToViewportWidth() {
-  // Die Breite des sichtbaren Bereichs (Viewport Width) des Geräts
-  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+function berechneBreiten() {
+  var viewportBreite = window.innerWidth;
+  var elementBreite = document.getElementById("meinElement").offsetWidth;
+  var ergebnisText = "Viewport-Breite: " + viewportBreite + "px, Element-Breite: " + elementBreite + "px";
+  document.getElementById("ergebnis").textContent = ergebnisText;
 
-  // Die maximale Breite, die der Inhalt haben soll (z.B., 90% des Viewport Width)
-  var maxContentWidth = viewportWidth;
-
-  // Selektiere das HTML-Element, das den Inhalt enthält
-  var contentContainer = document.getElementById('wrapper-all'); // Ersetze 'deinContentContainer' durch die tatsächliche ID deines Containers
-
-  // Setze die maximale Breite für den Inhalt
-  contentContainer.style.maxWidth = maxContentWidth + 'px';
+  document.getElementsByTagName('body')[0].width = viewportBreite >= elementBreite ? elementBreite : viewportBreite;
 }
-
-// Rufe die Funktion auf, wenn das Fenster geladen wurde oder sich die Fenstergröße ändert
-window.addEventListener('load', limitContentToViewportWidth);
-window.addEventListener('resize', limitContentToViewportWidth);
+window.addEventListener("load", berechneBreiten);
+window.addEventListener("resize", berechneBreiten); 
