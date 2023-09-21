@@ -59,6 +59,16 @@ body {
     background-color: var(--primary-bg-color);
     overflow-x: hidden;
     overflow-y: auto;
+
+}
+
+@supports (-webkit-touch-callout: none) {
+    body {
+        height: -webkit-fill-available;
+    }
+    html {
+        height: -webkit-fill-available;
+    }
 }
 
 /* Exceptions */
@@ -371,7 +381,7 @@ a,
     justify-content: center;
     align-items: center;
     background-color: var(--primary-bg-color);
-    overflow-x: hidden;
+   
 }
 
 .inner-content {
