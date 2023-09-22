@@ -785,8 +785,10 @@ rect,
 
     #section4 {
         height: 100vh !important;
+        max-width: 100vw !important;
+        overflow: hidden;
         width: 100vw;
-        overflow-x: hidden;
+        position: relative;
     }
 
     /* Methoden Boxen */
