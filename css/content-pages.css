@@ -54,7 +54,7 @@ a.bold {
   position: absolute !important;
 }
 
-.fs-14 {
+.fs-16 {
   font-size: 16px !important;
 }
 
@@ -800,6 +800,10 @@ td {
     width: 90%;
   }
 
+  .arrow-right {
+    padding-top: 2.4rem;
+  }
+
   /* Quellen */
 
   .quellen-header h2 {
@@ -825,6 +829,21 @@ td {
   .circle {
     scale: 0.6;
   }
+
+  .circle-element .fs-16,
+  .hidden-box p{
+    font-size: 20px !important;
+  }
+
+  .circle-element img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .hidden-box h3{
+    font-size: 26px !important;
+  }
+
 
   /* Values Beispiel */
 

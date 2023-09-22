@@ -747,11 +747,11 @@ rect,
     }
 
     .hero-content {
-        padding-bottom: 30%;
+        padding-bottom: 40%;
     }
 
     .arrow {
-        bottom: 0%;
+        bottom: 8%;
       }
 
     .content-container {
@@ -760,6 +760,10 @@ rect,
         justify-content: center;
         max-width: 90%;
         height: auto;
+    }
+
+    .single-content-container {
+        padding-bottom: 15vh;
     }
 
     .reverse {
