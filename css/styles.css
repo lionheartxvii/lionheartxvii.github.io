@@ -665,9 +665,13 @@ rect,
     justify-content: flex-end;
 }
 
-#section6 img {
+#flowers{
     padding-top: 5vh;
+}
+
+#section6 img {
     width: 100vw;
+    height: 100%;
 }
 
 .pointer {
@@ -731,7 +735,7 @@ rect,
     }
 
     .hero-content p {
-        width: 95%;
+        width: 90%;
     }
 
     .hidden-text {
@@ -742,13 +746,20 @@ rect,
         display: none;
     }
 
+    .hero-content {
+        padding-bottom: 30%;
+    }
+
+    .arrow {
+        bottom: 0%;
+      }
+
     .content-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         max-width: 90%;
         height: auto;
-
     }
 
     .reverse {
