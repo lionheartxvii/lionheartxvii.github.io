@@ -695,7 +695,7 @@ rect,
 
     h1 {
         font-size: 40px;
-        max-width: 90%;
+        max-width: 95vw;
         /* 65% laptop */
         padding-bottom: 1.25rem;
     }
@@ -704,7 +704,7 @@ rect,
         text-align: left;
         font-size: 33px;
         padding-bottom: 1.25rem;
-        width: 90% !important;
+        width: 90vw !important;
     }
 
     h3,

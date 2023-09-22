@@ -804,6 +804,15 @@ td {
     padding-top: 2.4rem;
   }
 
+/* Header */
+.hero-content {
+  padding-bottom: 10% !important;
+}
+
+.arrow {
+  bottom: -4% !important;
+}
+
   /* Quellen */
 
   .quellen-header h2 {
@@ -893,5 +902,30 @@ td {
 
   #beispiel-section-values .radial-gradient-container {
     height: 100vh;
+  }
+
+  /* Nav Box */
+  .nav-box-container {
+    width: 90%;
+    overflow-x: hidden;
+  }
+
+  .nav-box .fs-16{
+    font-size: 11px !important;
+    max-width: 70px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  /* Reasons Beispiele */
+
+  .sunken-cost{
+    scale: 1 !important;
+  }
+
+  .train{
+    scale: 1.7;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
   }
 }
