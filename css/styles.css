@@ -665,23 +665,20 @@ rect,
     justify-content: flex-end;
 }
 
-#flowers{
-    padding-top: 5vh;
-}
-
 #section6 img {
     width: 100vw;
-    height: 100%;
+    height: auto;
+}
+
+#flowers {
+    overflow-x: hidden;
 }
 
 .pointer {
     cursor: pointer;
 }
 
-#flowers {
-    width: 100vw;
-    overflow-x: hidden;
-}
+
 
 .backnforth {
     display: none;

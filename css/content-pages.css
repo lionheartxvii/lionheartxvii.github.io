@@ -875,7 +875,7 @@ td {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0 10px;
   }
 
   .small-box {
