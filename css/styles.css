@@ -591,10 +591,10 @@ a,
     width: 100%;
     position: absolute;
     margin: 0 !important;
-    /* overflow: hidden; */
     filter: blur(100px);
     z-index: 10;
     opacity: 0.9;
+    overflow-x: hidden;
 }
 
 .radial-gradient-container div {
