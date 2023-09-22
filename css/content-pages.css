@@ -731,6 +731,7 @@ td {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 /* Stil für das zentrale Bild und das benachbarte Kästchen */
@@ -762,7 +763,10 @@ td {
   background-color: var(--main-fg-color);
   width: 100%;
   height: 100%;
+  bottom: 0;
+  left: 0;
   transition: height 0.3s ease;
+  animation-direction: reverse;
 }
 
 
@@ -923,9 +927,32 @@ td {
     scale: 1 !important;
   }
 
+  .beispiel-paradox, .beispiel-hats, .beispiel-10, .beispiel-pc {
+    width: 90%;
+  }
+
   .train{
-    scale: 1.7;
+    scale: 2;
     margin-top: 3vh;
     margin-bottom: 3vh;
   }
+
+  .df-interactive {
+    width: 90vw;
+  }
+
+  .side-box img {
+    padding-bottom: 12px;
+  }
+
+  /* .side-box img{
+    fill: none;
+    stroke: #242427;
+    stroke-width: 2px !important;
+  }
+    .cls-1{
+      fill: none;
+      stroke: #242427;
+      stroke-width: 5px !important;
+    } */
 }

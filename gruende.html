@@ -170,7 +170,7 @@
 
                         <div class="df-interactive">
                             <div class="side-box" id="leftBox" onclick="updateBoxes()">
-                                <img src="/assets/icons/mond.svg" alt="Bild 1">
+                                <img src="/assets/icons/mond.svg">
                                 <p>länger schlafen</p>
                             </div>
                             <div class="center-box">
@@ -181,7 +181,7 @@
                                 </div>
                             </div>
                             <div class="side-box" id="rightBox" onclick="updateBoxes()">
-                                <img src="/assets/icons/wecker.svg" alt="Bild 2">
+                                <img src="/assets/icons/wecker.svg">
                                 <p>früh aufstehen</p>
                             </div>
                         </div>
@@ -735,9 +735,13 @@
         const images = [];
         const leftBox = document.getElementById('leftBox');
         const rightBox = document.getElementById('rightBox');
+        const leftImage = leftBox.querySelector('img');
+        const leftText = leftBox.querySelector('p');
+        const rightImage = rightBox.querySelector('img');
+        const rightText = rightBox.querySelector('p');
+        const progressBarInner = document.getElementById('progressBar');
+        let innerProgress = 100;
         let currentIndex = 0;
-
-
 
         fetch('json/images.json')
             .then(response => response.json())
@@ -746,37 +750,25 @@
             })
             .catch(error => console.error('Fehler beim Laden der JSON-Datei:', error));
 
+
         function updateBoxes() {
             if (currentIndex < images[0].length) {
                 const entry = images[0][currentIndex];
 
-
-                const leftImage = leftBox.querySelector('img');
                 leftImage.src = entry.imageSrc1;
-                const leftText = leftBox.querySelector('p');
                 leftText.textContent = entry.text1;
-
-                // Bild in der rechten Box aktualisieren
-                const rightImage = rightBox.querySelector('img');
                 rightImage.src = entry.imageSrc2;
-
-                // Text in der rechten Box aktualisieren
-                const rightText = rightBox.querySelector('p');
                 rightText.textContent = entry.text2;
 
                 // Index erhöhen, um die Position im Array fortzusetzen
                 currentIndex++;
 
-                const progressBarInner = document.getElementById('progressBar');
-                let innerProgress = 100; //
                 innerProgress -= 20;
-                if (innerProgress >= 0) {
-                    progressBarInner.style.height = `${innerProgress}%`;
-                } else {
-                    progressBarInner.style.height = '0%';
-                }
+                progressBarInner.style.height = `${innerProgress}%`;
             } else {
-                // liste ist fertig
+                leftBox.style.visibility = "hidden";
+                rightBox.style.visibility = "hidden";
+                progressBarInner.style.height = '0%';
             }
         }
     </script>
