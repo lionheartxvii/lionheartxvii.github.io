@@ -552,7 +552,7 @@ a,
 /* Footer */
 
 .footer {
-    background-color: var(--primary-bg-color);
+    position: relative;
     border-top: 1px solid var(--main-fg-color);
     padding: 20px 0;
     text-align: center;
@@ -888,6 +888,7 @@ rect,
     }
 
     /* Footer */
+
 
     .footer-content {
         justify-content: space-between;

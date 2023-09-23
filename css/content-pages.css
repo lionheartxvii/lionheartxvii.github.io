@@ -116,6 +116,7 @@ h2 {
 /* Quellen */
 
 .quellen {
+  position: relative;
   height: 80px;
   border-top: 1px solid var(--main-fg-color);
   overflow: hidden;
@@ -774,6 +775,10 @@ td {
 
 @media (max-width: 1080px) {
 
+  .hidden{
+    display: none;
+  }
+
   .article {
     /* justify-content: center !important;
             align-items: center !important; */
@@ -860,7 +865,7 @@ td {
 
   /* Values Beispiel */
 
-  .beispiel-values {
+  .beispiel-values, .beispiel-paradox, .beispiel-hats, .beispiel-10{
     height: 100%;
     width: 90%;
     flex-direction: column;
@@ -899,10 +904,11 @@ td {
     margin-right: 0px;
   }
 
-  #beispiel-section-values{
+  .beispiel-section {
     height: auto !important;
     margin: 10vh 0;
   }
+
 
   #beispiel-section-values .radial-gradient-container {
     height: 100vh;
@@ -921,7 +927,7 @@ td {
     word-wrap: break-word;
   }
 
-  /* Reasons Beispiele */
+  /*+++++++++++++++++++++++ Reasons Beispiele +++++++++++++++++++++++*/
 
   .sunken-cost{
     scale: 1 !important;
@@ -945,14 +951,55 @@ td {
     padding-bottom: 12px;
   }
 
-  /* .side-box img{
-    fill: none;
-    stroke: #242427;
-    stroke-width: 2px !important;
+  .paradox {
+    width: 37vw !important;
+    height: 40px !important;
+    margin-right: 0px !important;
   }
-    .cls-1{
-      fill: none;
-      stroke: #242427;
-      stroke-width: 5px !important;
-    } */
+
+  .paradox:nth-child(3n) {
+    margin-right: 0px !important;
+  }
+
+  .box-aufgabenstellung {
+    width: 90%;
+    padding: 50px 20px;
+  }
+
+  /*+++++++++++++++++++++++ Methods Beispiele +++++++++++++++++++++++*/
+
+  .hat-container {
+    width: 90vw;
+    flex-wrap: wrap;
+  }
+
+  .hat-box{
+    width: 30vw;
+    margin: 0 0px;
+    padding-bottom: 5vh;
+  }
+
+  .bubble-container {
+    display: none;
+  }
+
+  .speech-bubble {
+    border-radius: 200px;
+    padding: 0px;
+    width: 90vw;
+    min-height: 25vh;
+    margin: 7vh 0;
+  }
+
+  .speech-bubble .hidden-box{
+    width: 100%;
+    height: auto;
+  }
+
+  .hidden-box p{
+    width: 85vw !important;
+    height: auto;
+    padding: 0 10px !important;
+  }
+
 }
