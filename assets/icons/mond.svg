@@ -13,15 +13,6 @@
         stroke-miterlimit: 10;
         stroke-width: 1.5px;
       }
-
-      @media (max-width: 1080px) {
-      .cls-2 {
-        fill: none;
-        stroke: #242427;
-        stroke-width: 1px;
-      }
-      
-      }
     </style>
   </defs>
   <g>

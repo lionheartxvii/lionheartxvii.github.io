@@ -14,15 +14,6 @@
         stroke-width: 1.5px;
       }
 
-
-     @media (max-width: 1080px) {
-     .cls-2 {
-        fill: none;
-        stroke: #242427;
-        stroke-width: 1px;
-      }
-      
-      }
     </style>
   </defs>
   <circle class="cls-1" cx="48.25" cy="36.56" r="1"/>

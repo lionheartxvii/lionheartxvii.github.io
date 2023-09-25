@@ -224,12 +224,58 @@
         <div class="nav-box-container sticky">
 
             <div class="vertical-buffer"></div>
-            <nav class="nav-box">
+            <nav class="nav-box hidden">
                 <a class="nav-box-link fs-16 active" onclick="func(0); scrollToSection('section2')">6 Hüte Methode</a>
                 <a class="nav-box-link fs-16" onclick="func(1); scrollToSection('section2')">10 / 10 / 10</a>
                 <a class="nav-box-link fs-16" onclick="func(2); scrollToSection('section2')">Pro- Kontra-Liste</a>
                 <a class="nav-box-link fs-16" onclick="func(3); scrollToSection('section2')">ICE-Scoring-Model</a>
                 <a class="nav-box-link fs-16" onclick="func(4); scrollToSection('section2')">Ausschlussverfahren</a>
+            </nav>
+
+            <!-- <nav class="nav-box-mobile hidden">
+
+                <div class="nav-box-link-mobile fs-14 active" onclick="func(0); scrollToSection('section2')">
+                    <div class="circle-nav-element">
+                        <img class="circle-nav-img" src="/assets/icons/hat.svg" alt="">
+                    </div>
+                 <a>6 Hüte</a>
+                </div>
+
+                <div class="nav-box-link-mobile fs-14" onclick="func(1); scrollToSection('section2')">
+                    <div class="circle-nav-element">
+                        <img class="circle-nav-img" src="/assets/icons/10.svg" alt="">
+                    </div>
+                    <a>10/10/10</a>
+                </div>
+
+                <div class="nav-box-link-mobile fs-14" onclick="func(2); scrollToSection('section2')">
+                    <div class="circle-nav-element">
+                        <img class="circle-nav-img" src="/assets/icons/pro.svg" alt="">
+                    </div>
+                    <a>Pro/Kontra</a>
+                </div>
+
+                <div class="nav-box-link-mobile fs-14" onclick="func(3); scrollToSection('section2')">
+                    <div class="circle-nav-element">
+                        <img class="circle-nav-img" src="/assets/icons/ice.svg" alt="">
+                    </div>
+                    <a>ICE</a>
+                </div>
+
+                <div class="nav-box-link-mobile fs-14" onclick="func(4); scrollToSection('section2')">
+                    <div class="circle-nav-element">
+                        <img class="circle-nav-img" src="/assets/icons/reduce.svg" alt="">
+                    </div>
+                    <a>Ausschluss</a>
+                </div>
+            </nav> -->
+
+            <nav class="nav-box mobile">
+                <a class="nav-box-link fs-14 active" onclick="func(0); scrollToSection('section2')">6 Hüte</a>
+                <a class="nav-box-link fs-14" onclick="func(1); scrollToSection('section2')">10/10/10</a>
+                <a class="nav-box-link fs-14" onclick="func(2); scrollToSection('section2')">Pro/Kontra</a>
+                <a class="nav-box-link fs-14" onclick="func(3); scrollToSection('section2')">ICE</a>
+                <a class="nav-box-link fs-14" onclick="func(4); scrollToSection('section2')">Ausschluss</a>
             </nav>
         </div>
 
@@ -563,76 +609,78 @@
 
                             <tr>
                                 <td rowspan="4" class="table-h3">Pro</td>
-                                <td  contenteditable="true" class="idea-pc">
-                                    <p class="table-text placeholder">Idee 1</p>
+                                <td class="idea-pc">
+                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Pro Argument 1"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')" /></td>
+                            </tr>
+
+
+                            <tr>
+                                <td class="idea-pc">
+                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Pro Argument 2"></textarea>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
-                                <td  contenteditable="true" class="idea-pc">
-                                    <p class="table-text placeholder">Idee 2</p>
+                                <td class="idea-pc">
+                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Pro Argument 3"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
-                                <td  contenteditable="true" class="idea-pc">
-                                    <p class="table-text placeholder">Idee 3</p>
+                                <td class="idea-pc">
+                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Pro Argument 4"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td rowspan="4" class="table-h3">Kontra</td>
+                                <td   class="idea-pc">
+                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Kontra Argument 1"></textarea>
+                                </td>
+                                <td>
+                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
-                                <td  contenteditable="true" class="idea-pc">
-                                    <p class="table-text placeholder">Idee 4</p>
+                                <td   class="idea-pc">
+                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Kontra Argument 2"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
-                                <td rowspan="4" class="table-h3">Contra</td>
-                                <td  contenteditable="true" class="idea-pc">
-                                    <p class="table-text placeholder">Idee 1</p>
+                                <td   class="idea-pc">
+                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Kontra Argument 3"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
-                                <td  contenteditable="true" class="idea-pc">
-                                    <p class="table-text placeholder">Idee 2</p>
+                                <td   class="idea-pc">
+                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Kontra Argument 4"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
-                            </tr>
-
-                            <tr>
-                                <td  contenteditable="true" class="idea-pc">
-                                    <p class="table-text placeholder">Idee 3</p>
-                                </td>
-                                <td>
-                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
-                            </tr>
-
-                            <tr>
-                                <td  contenteditable="true" class="idea-pc">
-                                    <p class="table-text placeholder">Idee 4</p>
-                                </td>
-                                <td>
-                                    <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-text" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
                             </tr>
 
                             <tr>
@@ -641,7 +689,7 @@
                                     <p class="table-text placeholder"></p>
                                 </td>
                                 <td>
-                                    <p class="table-text placeholder" id="summary_pro_score"></p>
+                                    <p  id="summary_pro_score"></p>
                                 </td>
                             </tr>
                         </table>
@@ -741,16 +789,16 @@
                         </div>
 
 
-                        <table>
+                        <table class="ice-table hidden">
                             <tr>
-                                <th class="table-h3">Ideen</th>
-                                <th class="table-h3">Impact</th>
-                                <th class="table-h3">Confidence</th>
-                                <th class="table-h3">Ease</th>
-                                <th class="table-h3">ICE Score</th>
+                                <th class="ice-table-h3">Ideen</th>
+                                <th class="ice-table-h3">Impact</th>
+                                <th class="ice-table-h3">Confidence</th>
+                                <th class="ice-table-h3">Ease</th>
+                                <th class="ice-table-h3">ICE Score</th>
                             </tr>
                             <!-- <tr>
-                                <td class="table-text placeholder" contenteditable="true" >
+                                <td class="table-text placeholder"  >
                                     <input type="text" id="uname" name="name" placeholder="Lower case, all one word" /></td>
                                 <td class="table-text placeholder" contenteditable="true">wie groß ist die Auswirkung?</td>
                                 <td class="table-text placeholder" contenteditable="true">wie sicher fühlst du dich?</td>
@@ -760,7 +808,7 @@
 
                             <tr>
                                 <td  contenteditable="true">
-                                    <p class="table-text placeholder">notiere hier deine erste Idee</p>
+                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 50%; text-align: center;" placeholder="notiere hier deine 1. Idee"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="firstIdea" min="1" max="10"
@@ -782,7 +830,7 @@
 
                             <tr>
                                 <td  contenteditable="true">
-                                    <p class="table-text placeholder">notiere hier deine zweite Idee</p>
+                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 50%; text-align: center;" placeholder="notiere hier deine 2. Idee"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="secondIdea" min="1" max="10"
@@ -803,7 +851,7 @@
                             </tr>
                             <tr>
                                 <td  contenteditable="true">
-                                    <p class="table-text placeholder">notiere hier deine dritte Idee</p>
+                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 50%; text-align: center; vertical-align: middle;" placeholder="notiere hier deine 3. Idee"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="thirdIdea" min="1" max="10"
@@ -825,6 +873,46 @@
 
                         </table>
 
+                        <table class="mobile">
+                            <!-- <tr>
+                                <th> </th>
+                                <th>Textfeld</th>
+                            </tr> -->
+                            <tr>
+                                <td class="ice-table-h3">Idee</td>
+                                <td class="ice-input-mobile">
+                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="notiere hier deine 3. Idee"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ice-table-h3">Impact</td>
+                                <td class="ice-input-mobile">
+                                    <input type="number" id="uname" name="fourthIdea" min="1" max="10"
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'fourthIdea')"
+                                        placeholder="wie groß ist die Auswirkung?" style="width: 100%;" /></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ice-table-h3">Confidence</td>
+                                <td class="ice-input-mobile">
+                                    <input type="number" id="uname" name="fourthIdea" min="1" max="10"
+                                    class="table-text placeholder" onblur="updateInputSummary(this, 'fourthIdea')"
+                                    placeholder="wie sicher fühlst du dich?" style="width: 100%;" /></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ice-table-h3">Ease</td>
+                                <td class="ice-input-mobile">
+                                    <input type="number" id="uname" name="fourthIdea" min="1" max="10"
+                                    class="table-text placeholder" onblur="updateInputSummary(this, 'fourthIdea')"
+                                    placeholder="wie leicht ist die Umsetzung?" style="width: 100%;" /></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ice-table-h3">Score</td>
+                                <td class="ice-input-mobile"><p class="table-text" id="summary_fourthIdea"></p></td>
+                            </tr>
+                        </table>
 
                     </div>
 
@@ -923,7 +1011,7 @@
 
                     <div class="beispiel-paradox inner-content">
                         <div class="center">
-                            <h2 class="no-padding">Eiscreme-Paradox</h2>
+                            <h2 class="paradox-headline">Eiscreme-Paradox</h2>
                             <p class="box-counter">1/2</p>
                             <div class="box-aufgabenstellung">
                                 <p>Wir versetzen uns erneut in die Situation vor den Eisladen,
@@ -947,10 +1035,10 @@
                                 <div class="small-box paradox">
                                     <p>Pistazie</p>
                                 </div>
-                                <div class="small-box paradox">
+                                <div class="small-box paradox hidden">
                                     <p>Waldmeister</p>
                                 </div>
-                                <div class="small-box paradox">
+                                <div class="small-box paradox hidden">
                                     <p>Joghurt</p>
                                 </div>
                             </div>
@@ -964,10 +1052,10 @@
                                 <div class="small-box paradox">
                                     <p>Walnuss</p>
                                 </div>
-                                <div class="small-box paradox">
+                                <div class="small-box paradox hidden">
                                     <p>Mint-Schokolade</p>
                                 </div>
-                                <div class="small-box paradox">
+                                <div class="small-box paradox hidden">
                                     <p>Salted Karamell</p>
                                 </div>
                             </div>
@@ -984,7 +1072,7 @@
                                 <div class="small-box paradox">
                                     <p>Nougat</p>
                                 </div>
-                                <div class="small-box paradox">
+                                <div class="small-box paradox hidden">
                                     <p>Nutella</p>
                                 </div>
                             </div>
@@ -1001,11 +1089,11 @@
                                 <div class="small-box paradox">
                                     <p>Erdnussbutter</p>
                                 </div>
-                                <div class="small-box paradox">
+                                <div class="small-box paradox hidden">
                                     <p>Snickers</p>
                                 </div>
                             </div>
-                            <div class="column-paradox">
+                            <div class="column-paradox row-paradox">
                                 <div class="small-box paradox fruity" onclick="toggleClick(this, 'ausschluss1')">
                                     <p>Mango</p>
                                 </div>
@@ -1018,7 +1106,7 @@
                                 <div class="small-box paradox">
                                     <p>Tiramisu</p>
                                 </div>
-                                <div class="small-box paradox">
+                                <div class="small-box paradox hidden">
                                     <p>Chai</p>
                                 </div>
                             </div>

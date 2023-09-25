@@ -58,6 +58,10 @@ a.bold {
   font-size: 16px !important;
 }
 
+.fs-14 a{
+  font-size: 14px !important;
+}
+
 /* Ausnahmen */
 .single-section {
   height: 100vh;
@@ -80,7 +84,7 @@ h2 {
   width: 20vw;
 }
 
-.no-padding {
+.paradox-headline{
   padding-bottom: 0 !important;
 }
 
@@ -335,10 +339,6 @@ h2 {
 
 .hidden-box h3 {
   text-align: center;
-}
-
-.needs-special-case {
-  width: 230px;
 }
 
 /* Anordnung der Elemente um den Kreis */
@@ -667,6 +667,22 @@ table td {
 
 /* Pro Contra Beispiel */
 
+.placeholder {
+  opacity: 0.8;
+  font-family: "textfont-italic";
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 .table-pc,
 th,
@@ -688,11 +704,39 @@ td {
   width: 80%;
 }
 
+.table-text, .table-score{
+    font-family: "textfont", Arial, sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 1.125rem;
+    color: var(--main-fg-color);
+    text-decoration: none;
+}
+
+.table-text {
+    text-align: center;
+    font-size: 1rem;
+    background: none;
+    border: none;
+}
+
+.table-score {
+  text-align: center;
+  font-size: 1rem;
+  background: none;
+  border: none;
+    width: 50%;
+}
+
+
+
+
+/* Illustrationen */
+
 .train {
   position: relative;
-  white-space: nowrap;
-  max-height: 30vh;
-  width: auto;
+  height: auto;
+  width: 100%;
   animation: moveTrain 15s linear infinite;
   margin-bottom: 4.9vh;
   scale: 0.8;
@@ -709,18 +753,27 @@ td {
   }
 }
 
+.curious-curio {
+  position: relative;
+  height: auto;
+  scale: 0.75;
+  
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .sunken-cost {
   scale: 0.75;
 }
-
-
 
 
 /* Container für das Layout */
 .df-interactive {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 45vw;
 }
 
@@ -736,14 +789,28 @@ td {
 }
 
 /* Stil für das zentrale Bild und das benachbarte Kästchen */
+
 .center-box {
-  width: 30%;
+  position: relative;
+  width: 25%;
+  height: 25vh;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+
+}
+
+.curio-box {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
   justify-content: center;
+  height: 25vh;
+  width: 20vw;
 }
 
 .curio {
+  position: absolute;
   max-width: 100%;
 }
 
@@ -755,9 +822,9 @@ td {
 .stamina-bar-outer {
   border: 1px solid var(--main-fg-color);
   border-radius: 2px;
-  width: 12px;
+  width: 16px;
   height: 65px;
-  margin-left: 20px;
+  margin-left: 10px
 }
 
 .stamina-bar-inner {
@@ -770,7 +837,9 @@ td {
   animation-direction: reverse;
 }
 
-
+.hidden{
+  display: none;
+}
 
 
 @media (max-width: 1080px) {
@@ -785,6 +854,8 @@ td {
     flex-direction: column !important;
     max-width: 90% !important;
   }
+
+
 
   /* .sticky {
     position: relative !important;
@@ -947,6 +1018,12 @@ td {
     width: 90vw;
   }
 
+  .stamina-bar-outer {
+    width: 12px;
+    margin-top: 80px;
+    margin-left: 20px;
+  }
+
   .side-box img {
     padding-bottom: 12px;
   }
@@ -967,7 +1044,7 @@ td {
   }
 
   /*+++++++++++++++++++++++ Methods Beispiele +++++++++++++++++++++++*/
-
+ /* 6 hats */
   .hat-container {
     width: 90vw;
     flex-wrap: wrap;
@@ -999,7 +1076,147 @@ td {
   .hidden-box p{
     width: 85vw !important;
     height: auto;
-    padding: 0 10px !important;
+    /* padding: 0 10px !important; */
   }
+
+  /* 10 / 10 / 10 */
+  .beispiel-10-row h3{
+    scale: 0.8;
+    padding: 0 3vw;
+}
+
+.beispiel-10-row img {
+  width: 60px;
+  height: 60px;
+}
+
+.beispiel-10-row {
+  padding: 16px 0;
+}
+
+/* pro kontra */
+
+.table-pc td {
+  height: 65px;
+}
+
+.table-h3 {
+  font-size: 22px;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+/* ice */
+
+.ice-table-h3 {
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.ice-table td {
+  height: 20vh !important;
+  width: 269%;
+}
+
+.ice-input-mobile{
+  width: 100%;
+}
+
+tr:nth-child(1) td:nth-child(1),
+tr:nth-child(1) td:nth-child(2){
+  border-top: none;
+}
+
+tr:nth-child(1) td:nth-child(1),
+tr:nth-child(1) td:nth-child(2){
+  border-top: none;
+}
+
+tr:nth-child(5) td:nth-child(1),
+tr:nth-child(5) td:nth-child(2){
+  border-bottom: none;
+}
+
+/* ausschlussverfahren */
+
+.paradox-headline{
+  padding-bottom: 1.25rem !important;
+}
+
+.row-paradox{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-paradox .small-box:nth-child(1),
+.row-paradox .small-box:nth-child(3){
+  margin-right: 10px !important;
+}
+
+  /*+++++++++++++++++++++++ Tipps Beispiele +++++++++++++++++++++++*/
+
+  /* 40 / 70 */
+.beispiel-4070 .svg-container{
+  width: 90%;
+}
+
+.frog{
+  width: 75% !important;
+}
+
+
+/* Navbar mobile */
+
+.nav-box-mobile{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--primary-bg-color);
+  width: 90%;
+  height: auto;
+  margin: 0 auto
+}
+
+.circle-nav-element{
+  width: 40px !important;
+  height: 40px !important;
+  flex-direction: column;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  border: 1px solid var(--main-fg-color);
+  background-color: var(--primary-bg-color);
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.circle-nav-element:hover {
+  background-color: rgba(36, 36, 39, 0.1);
+}
+
+.circle-nav-img{
+  width: 30px;
+  height: 30px;
+}
+
+.nav-box-link-mobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; 
+  width: 80px;
+  height: 80px;
+
+
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.fs-14 a, a.nav-box-link{
+  font-size: 14px !important;
+}
 
 }

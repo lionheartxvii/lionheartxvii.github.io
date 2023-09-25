@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #242427;
+        stroke-miterlimit: 10;
+        stroke-width: 1.3px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <circle vector-effect="non-scaling-stroke" class="cls-2" cx="31.75" cy="32.13" r="24.96"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m50.89,54.1c-1.43,1.25-2.98,2.36-4.63,3.31"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m59.41,41.22c-1.02,3.13-2.55,6.03-4.51,8.59"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m15.67,8.08c.8-.53,1.62-1.03,2.48-1.48"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m10.06,12.96c1.13-1.27,2.37-2.45,3.71-3.51"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m4.59,22.02c.83-2.21,1.93-4.3,3.25-6.22"/>
+  <line vector-effect="non-scaling-stroke" class="cls-1" x1="44.52" y1="32.23" x2="18.97" y2="32.23"/>
+</svg>

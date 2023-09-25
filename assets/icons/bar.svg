@@ -8,13 +8,6 @@
         stroke-miterlimit: 10;
         stroke-width: 1.5px;
       }
-
-      @media (max-width: 1080px) {
-      .cls-1{
-        fill: none;
-        stroke: #242427;
-        stroke-width: 1px;
-      }
     </style>
   </defs>
   <rect vector-effect="non-scaling-stroke" class="cls-1" x="5.07" y="19" width="54" height="29"/>

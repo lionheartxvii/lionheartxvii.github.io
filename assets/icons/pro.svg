@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #F5ECDF;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #242427;
+        stroke-miterlimit: 10;
+        stroke-width: 1.3px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <circle vector-effect="non-scaling-stroke" class="cls-2" cx="42.3" cy="41.99" r="17.1"/>
+  <circle vector-effect="non-scaling-stroke" class="cls-1" cx="21.7" cy="22.14" r="17.1"/>
+  <line vector-effect="non-scaling-stroke" class="cls-1" x1="49.81" y1="34.48" x2="34.79" y2="49.5"/>
+  <line vector-effect="non-scaling-stroke" class="cls-1" x1="49.81" y1="49.5" x2="34.79" y2="34.48"/>
+  <path vector-effect="non-scaling-stroke" class="cls-1" d="m11.76,23.44c.44.67,6.67,7.24,6.67,7.24l13.22-16.02"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m35,5.22c.89.66,1.98,1.6,3.04,2.89,1.26,1.53,2.04,3.02,2.52,4.15"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m41.26,14.66c.17.84.35,1.68.52,2.52"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m21.9,45.89c.16,1.26.53,2.96,1.36,4.83.61,1.37,1.32,2.47,1.95,3.31"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m26.17,55.39c.85.78,1.7,1.56,2.56,2.33"/>
+</svg>

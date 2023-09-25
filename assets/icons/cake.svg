@@ -14,14 +14,6 @@
         stroke-width: 1.5px;
       }
 
-     @media (max-width: 1080px) {
-      .cls-2 {
-        fill: none;
-        stroke: #242427;
-        stroke-width: 1px;
-      }
-
-            }
     </style>
   </defs>
   <polygon vector-effect="non-scaling-stroke" class="cls-2" points="56.8 45.98 7.14 56.2 7.14 38.53 56.8 28.31 56.8 45.98"/>

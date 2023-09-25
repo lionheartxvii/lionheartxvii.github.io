@@ -65,6 +65,28 @@ LottieInteractivity.create({
     ],
   });
 
+  LottieInteractivity.create({
+    mode: 'scroll',
+    player: '#illustration-2-mobile',
+    // actions: [
+    //   {
+    //     visibility: [0.2, 1],
+    //     type: 'seek',
+    //     frames: [0, 280],
+    //   },
+      
+    // ],
+    container: "#illustration-2-container-mobile",
+    mode: 'cursor',
+    speed: 0.2,
+    actions: [
+      {
+          type: "hover",
+          forceFlag: false
+      }
+    ],
+  });
+
   
 
 //   why its difficult
@@ -113,6 +135,52 @@ LottieInteractivity.create({
     ],
   });
 
+  //  Flowers
+  LottieInteractivity.create({
+    mode: 'scroll',
+    player: '#flowers-animation',
+    // actions: [
+    //   {
+    //     visibility: [0.2, 1],
+    //     type: 'seek',
+    //     frames: [0, 110],
+    //   },
+      
+    // ],
+
+    container: "#section6",
+    mode: 'cursor',
+    actions: [
+      {
+          type: "hover",
+          forceFlag: false
+      }
+    ],
+  });
+
+
+    //  Bee
+    LottieInteractivity.create({
+      mode: 'scroll',
+      player: '#bee-animation',
+      // actions: [
+      //   {
+      //     visibility: [0.2, 1],
+      //     type: 'seek',
+      //     frames: [0, 110],
+      //   },
+        
+      // ],
+  
+      container: "#section6",
+      mode: 'cursor',
+      actions: [
+        {
+            type: "hover",
+            forceFlag: false
+        }
+      ],
+    });
 
 //   flowers
 

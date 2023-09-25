@@ -138,7 +138,7 @@ h2 {
 }
 
 h3,
-.table-h3 {
+.table-h3, .ice-table-h3 {
     text-align: left;
     font-family: 'headlinefont', serif;
     font-size: 24px;
@@ -155,6 +155,8 @@ h3,
     width: 10%;
 }
 
+
+
 h4 {
     text-align: left;
     font-family: 'textfont-medium', Arial, sans-serif;
@@ -167,8 +169,7 @@ h4 {
 }
 
 p,
-a,
-.table-text {
+a{
     font-family: "textfont", Arial, sans-serif;
     margin: 0 !important;
     padding: 0 !important;
@@ -177,21 +178,8 @@ a,
     text-decoration: none;
 }
 
-.table-text {
-    text-align: center;
-    font-size: 1rem;
-    background: none;
-    border: none;
-}
-
 .hidden-text {
     display: block;
-}
-
-.placeholder {
-    /* color: var(--secondary-fg-color); */
-    opacity: 0.8;
-    font-family: "textfont-italic";
 }
 
 
@@ -472,16 +460,20 @@ a,
     flex-direction: column;
     /* flex-flow: row wrap; */
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 220px;
     /*250px*/
-    height: 220px;
+    height: 240px;
     margin: 0 10px;
     border: 1px solid var(--main-fg-color);
     border-radius: 2px;
     text-align: left;
     padding: 20px;
     margin-top: 2.5rem;
+}
+
+.box-content{
+    height: 100%;
 }
 
 .box:hover {
@@ -494,6 +486,12 @@ a,
 
 .box p {
     font-size: 16px !important;
+}
+
+.method-img{
+    height: 20%;
+    width: auto;
+    padding: 10px 0;
 }
 
 /*  test-section */
@@ -661,24 +659,35 @@ rect,
 }
 
 #section6 {
-    height: 80vh;
+    height: 100vh;
     justify-content: flex-end;
 }
 
-#section6 img {
+
+#flowers {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    position: relative;
+    margin-top: 7vh;
+    bottom: -10px;
+
     width: 100vw;
     height: auto;
 }
 
-#flowers {
-    overflow-x: hidden;
+#bee{
+    position: relative;
+
+align-self: flex-end;
+
+    height: 28vh;
 }
 
 .pointer {
     cursor: pointer;
 }
-
-
 
 .backnforth {
     display: none;
@@ -687,6 +696,10 @@ rect,
 .mobile-nav,
 .hamburger,
 .mobile-header {
+    display: none;
+}
+
+.mobile{
     display: none;
 }
 
@@ -707,12 +720,12 @@ rect,
         width: 90vw !important;
     }
 
-    h3,
-    .table-h3 {
+    h3 {
         font-size: 24px;
         margin: 0;
         padding-bottom: 0.5rem;
     }
+
 
     h4 {
         text-align: left;
@@ -767,9 +780,15 @@ rect,
         flex-direction: column-reverse !important;
     }
 
-    .start-text {
+    /* .start-text {
         min-height: 60vh;
         padding: 20vh 0;
+        width: 90vw;
+    } */
+
+    .start-text {
+        min-height: 55vh;
+        padding: 25vh 0 5vh 0;
         width: 90vw;
     }
 
@@ -799,6 +818,14 @@ rect,
         height: 100vh !important;
         /* width: 100vw;
         overflow-x: hidden; */
+    }
+
+    #illustration-2-container-mobile{
+    margin-top: 15vh;
+}
+
+    .mobile{
+        display: block;
     }
 
     /* Methoden Boxen */
@@ -855,10 +882,10 @@ rect,
     /* Fragerunde Box */
 
     #section6 {
-        height: 70vh;
-        justify-content: space-between;
+        height: 85vh;
+        justify-content: flex-end;
         width: 100vw !important;
-        overflow-x: hidden;
+        overflow: hidden;
 
     }
 
@@ -867,8 +894,12 @@ rect,
     }
 
     #flowers{
-        background-size: cover; 
-        background-position: center center; 
+      height: auto !important;
+      width: auto !important;
+    }
+
+    #flowers-animation{
+        width: 300vw;
     }
 
     /* Message Box */

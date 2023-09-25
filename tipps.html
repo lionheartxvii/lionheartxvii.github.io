@@ -181,12 +181,20 @@
         <div class="nav-box-container sticky">
 
             <div class="vertical-buffer"></div>
-            <nav class="nav-box">
+            <nav class="nav-box hidden">
                 <a class="nav-box-link fs-16 active" onclick="func(0); scrollToSection('section2')">40-70 Regel</a>
                 <a class="nav-box-link fs-16" onclick="func(1); scrollToSection('section2')">Satisficing</a>
                 <a class="nav-box-link fs-16" onclick="func(2); scrollToSection('section2')">Eat the Frog</a>
                 <a class="nav-box-link fs-16" onclick="func(3); scrollToSection('section2')">Gewohnheiten</a>
                 <a class="nav-box-link fs-16" onclick="func(4); scrollToSection('section2')">beat decision fatigue</a>
+            </nav>
+
+            <nav class="nav-box mobile">
+                <a class="nav-box-link fs-14 active" onclick="func(0); scrollToSection('section2')">40-70</a>
+                <a class="nav-box-link fs-14" onclick="func(1); scrollToSection('section2')">Satisficing</a>
+                <a class="nav-box-link fs-14" onclick="func(2); scrollToSection('section2')">Frosch</a>
+                <a class="nav-box-link fs-14" onclick="func(3); scrollToSection('section2')">Gewohnheiten</a>
+                <a class="nav-box-link fs-14" onclick="func(4); scrollToSection('section2')">Tipps</a>
             </nav>
         </div>
 
@@ -245,7 +253,7 @@
 
                 </div>
 
-                <div class="beispiel-section">
+                <div class="beispiel-section beispiel-4070">
 
                     <div class="svg-container inner-content">
                         <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg"
@@ -554,7 +562,7 @@
                 <div class="beispiel-section">
 
                     <div class="beispiel-paradox inner-content pointer">
-                        <lottie-interactive path="./json/eat-the-frog.json" interaction="click"></lottie-interactive>
+                        <lottie-interactive class="frog" path="./json/eat-the-frog.json" interaction="click"></lottie-interactive>
                     </div>
 
                     <div class="radial-gradient-container">

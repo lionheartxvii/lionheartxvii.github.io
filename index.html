@@ -167,8 +167,12 @@
 
         </section>
 
-        <div id="illustration-2-container">
+        <div id="illustration-2-container" class="hidden">
             <lottie-player id="illustration-2" src="/json/illustration2.json"></lottie-player>
+        </div>
+
+        <div id="illustration-2-container-mobile" class="mobile">
+            <lottie-player id="illustration-2-mobile" src="/json/illustration2-mobile.json"></lottie-player>
         </div>
 
         <section class="content-container scroll-section" id="section3">
@@ -214,42 +218,48 @@
             <div class="box-container inner-content">
                 <div class="box active">
                     <div class="box-content">
-                        <h4>6 hats method</h4>
+                        <img class="method-img" src="/assets/icons/hat.svg" alt="">
+                        <h4>6 Hüte Methode</h4>
                         <p>Schlüpfe durch das Tragen von metaphorischen Hüten in verschiedene Perspektiven, um Probleme
                             zu lösen.</p>
                     </div>
-                    <a href="methoden.html">Weiter</a>
+                    <a class="next-btn mobile" href="methoden.html">Weiter</a>
                 </div>
                 <div class="box">
                     <div class="box-content">
+                        <img class="method-img" src="/assets/icons/10.svg" alt="">
                         <h4>10 / 10 / 10</h4>
                         <p>Versetze dich durch diese Methode in die nahe und ferne Zukunft, um bessere Ergebnisse zu
                             erzielen.</p>
                     </div>
-                    <a class="next-btn" href="#">Weiter</a>
+                    <a class="next-btn mobile" href="#">Weiter</a>
                 </div>
                 <div class="box">
                     <div class="box-content">
-                        <h4>beyond pros & cons</h4>
+                        <img class="method-img" src="/assets/icons/pro2.svg" alt="">
+                        <h4>Mehr als pros & cons</h4>
                         <p>Erfahre wie du Pro und Contra Listen effektiver einsetzen kannst, um Entscheidungen besser zu
                             priorisieren.</p>
                     </div>
-                    <a href="#">Weiter</a>
+                    <a class="next-btn mobile" href="#">Weiter</a>
                 </div>
                 <div class="box">
                     <div class="box-content">
-                        <h4>Process of elimination</h4>
+                        
+                        <img class="method-img" src="/assets/icons/reduce.svg" alt="">
+                        <h4>Ausschlussverfahren</h4>
                         <p>Reduziere nach und nach deine Entscheidungen, bis nur noch die beste Wahl übrig bleibt.</p>
                     </div>
-                    <a class="next-btn" href="#">Weiter</a>
+                    <a class="next-btn mobile" href="#">Weiter</a>
                 </div>
                 <div class="box">
                     <div class="box-content">
-                        <h4>ice</h4>
+                        <img class="method-img" src="/assets/icons/ice.svg" alt="">
+                        <h4>ICE-Scoring-Model</h4>
                         <p>Bewerte mit dieser Methode deine Ideen mit 3 Kriterien, mit denen du die effektivste Lösung
                             finden kannst.</p>
                     </div>
-                    <a class="next-btn" href="#">Weiter</a>
+                    <a class="next-btn mobile" href="#">Weiter</a>
                 </div>
             </div>
 
@@ -289,7 +299,12 @@
 
         <section class="scroll-section center" id="section6">
 
+            <div id="bee">
+                <lottie-player id="bee-animation" src="/json/bee.json" ></lottie-player>
+            </div>
+
             <div class="center test-section">
+
                 <h2 class="center">do you want to try the test again? </h2>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                     sed diam nonumy eirmod tempor invidunt ut labore et dolore
@@ -305,11 +320,13 @@
             </div>
 
             <div id="flowers">
-                <img src="/assets/illustrations/flowers2.png">
+                <lottie-player id="flowers-animation" src="/json/flowers-3.json" ></lottie-player>
+                <!-- <lottie-interactive id="flowers-animation" interaction="play-on-show" 
+                    path="/json/flowers.json" s-width="1.3"></lottie-interactive> -->
             </div>
 
 
-
+         
 
         </section>
 

@@ -110,12 +110,19 @@
         <div class="nav-box-container sticky">
 
             <div class="vertical-buffer"></div>
-            <nav class="nav-box">
+            <nav class="nav-box hidden">
                 <a class="nav-box-link fs-16 active"
                     onclick="func(0); scrollToSection('section2')">Entscheidungsmüdigkeit</a>
                 <a class="nav-box-link fs-16" onclick="func(1); scrollToSection('section2')">Auswahlparadox</a>
                 <a class="nav-box-link fs-16" onclick="func(2); scrollToSection('section2')">Kognitive Verzerrungen</a>
                 <a class="nav-box-link fs-16" onclick="func(3); scrollToSection('section2')">Plannungs Paralyse</a>
+            </nav>
+
+            <nav class="nav-box mobile">
+                <a class="nav-box-link fs-14 active" onclick="func(0); scrollToSection('section2')">Müdigkeit</a>
+                <a class="nav-box-link fs-14" onclick="func(1); scrollToSection('section2')">Paradox</a>
+                <a class="nav-box-link fs-14" onclick="func(2); scrollToSection('section2')">Verzerrungen</a>
+                <a class="nav-box-link fs-14" onclick="func(3); scrollToSection('section2')">Paralyse</a>
             </nav>
         </div>
 
@@ -173,13 +180,21 @@
                                 <img src="/assets/icons/mond.svg">
                                 <p>länger schlafen</p>
                             </div>
+
                             <div class="center-box">
-                                <lottie-interactive class="curio" autoplay loop path="./json/curio.json"
+
+                                <div class="curio-box">
+                                    <lottie-interactive id="curio-awake" class="curio" autoplay loop path="./json/curio.json"
                                     interaction="play-on-show"></lottie-interactive>
+                                <lottie-interactive id="curio-asleep" class="curio" autoplay path="./json/tired-curio.json"
+                                    interaction="play-on-show"></lottie-interactive>
+                                </div>
+
                                 <div class="stamina-bar-outer">
                                     <div class="stamina-bar-inner" id="progressBar"></div>
                                 </div>
                             </div>
+
                             <div class="side-box" id="rightBox" onclick="updateBoxes()">
                                 <img src="/assets/icons/wecker.svg">
                                 <p>früh aufstehen</p>
@@ -486,9 +501,13 @@
                         </p>
                     </div>
 
-
-
                 </div>
+
+                <div class="curious-curio">
+                    <lottie-interactive id="train-inhalt" loop path="./json/bandwagon-curio.json"
+                    interaction="play-on-show"></lottie-interactive>
+                </div>
+
                 <div class="train">
                     <lottie-interactive id="train-inhalt" autoplay loop path="./json/bandwagon.json"
                         interaction="play-on-show"></lottie-interactive>
@@ -733,6 +752,8 @@
 
     <script>
         const images = [];
+        const curioAwake = document.getElementById('curio-awake');
+        const curioAsleep = document.getElementById('curio-asleep');
         const leftBox = document.getElementById('leftBox');
         const rightBox = document.getElementById('rightBox');
         const leftImage = leftBox.querySelector('img');
@@ -750,11 +771,14 @@
             })
             .catch(error => console.error('Fehler beim Laden der JSON-Datei:', error));
 
-
-        function updateBoxes() {
+            curioAsleep.style.display = "none";
+       
+            function updateBoxes() {
+            
             if (currentIndex < images[0].length) {
                 const entry = images[0][currentIndex];
 
+                
                 leftImage.src = entry.imageSrc1;
                 leftText.textContent = entry.text1;
                 rightImage.src = entry.imageSrc2;
@@ -768,6 +792,8 @@
             } else {
                 leftBox.style.visibility = "hidden";
                 rightBox.style.visibility = "hidden";
+                curioAwake.style.visibility = "hidden";
+                curioAsleep.style.display = "block";
                 progressBarInner.style.height = '0%';
             }
         }

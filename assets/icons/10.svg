@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #242427;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #242427;
+        stroke-miterlimit: 10;
+        stroke-width: 1.3px;
+      }
+    </style>
+  </defs>
+  <g>
+    <path vector-effect="non-scaling-stroke" class="cls-2" d="m13.17,22.28l7.65-3.15v28.6"/>
+    <path vector-effect="non-scaling-stroke" class="cls-2" d="m28.54,25.92c.73-2.13,1.78-3.82,3.13-5.08,1.36-1.25,2.97-1.88,4.82-1.88s3.5.63,4.86,1.88c1.36,1.25,2.4,2.95,3.14,5.08.73,2.13,1.1,4.51,1.1,7.15s-.37,5.02-1.1,7.15c-.73,2.13-1.78,3.82-3.14,5.08-1.36,1.25-2.98,1.88-4.86,1.88s-3.46-.63-4.82-1.88c-1.36-1.25-2.4-2.95-3.13-5.08-.73-2.13-1.1-4.51-1.1-7.15s.37-5.02,1.1-7.15Z"/>
+  </g>
+  <g>
+    <path vector-effect="non-scaling-stroke" class="cls-2" d="m52.81,48.28c-5.08,7.4-13.5,11.83-22.47,11.83-14.95,0-27.26-12.31-27.26-27.26S15.38,5.59,30.33,5.59s26.36,11.42,27.21,25.63"/>
+    <polygon vector-effect="non-scaling-stroke" class="cls-1" points="50.82 26.91 51.81 25.78 57.37 30.66 61.83 24.76 63.03 25.67 57.59 32.85 50.82 26.91"/>
+  </g>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m21.91,3.1c-1.23.29-2.66.72-4.2,1.36-1.79.74-3.27,1.58-4.46,2.36"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m10.89,8.49c-.43.31-.89.68-1.36,1.1-.58.52-1.06,1.04-1.46,1.52"/>
+  <path vector-effect="non-scaling-stroke" class="cls-2" d="m6.07,13.44c-.36.47-.73.93-1.09,1.4"/>
+</svg>
