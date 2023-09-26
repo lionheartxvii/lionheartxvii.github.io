@@ -703,12 +703,96 @@ align-self: flex-end;
     display: none;
 }
 
-@media (max-width: 1080px) {
+/* Tabletts */
+@media only screen and (min-width: 769px) and (max-width: 1100px) and (orientation: landscape) {
+    h1 {
+        font-size: 55px;
+        padding-bottom: 1.25rem;
+        min-width: 70%;
+      }
+
+      h2{
+        font-size: 40px;
+      }
+
+      .hero-content p {
+        width: 50%;
+    }
+
+    .center p {
+        width: 60vw;
+      }
+
+    .content-container {
+        max-width: 75%;
+      }
+
+      .start-text {
+        min-width: 47vw;
+      }
+
+      .illustration {
+        width: 45vw;
+      }
+
+      .buffer {
+        min-width: 10px;
+      }
+
+      .box {
+        margin-top: 1.5rem;
+      }
+
+      #section4 h2{
+        padding-bottom: 0rem !important;
+      }
+
+      #section4 .inner-content{
+        padding-bottom: 1.125rem !important;
+      }
+
+          /* Message Box */
+
+    .message-container {
+        height: 30vh;
+    }
+
+    .message-container h1{
+        font-size: 32px !important;
+    }
+
+    #gradient-canvas2 {
+        height: 30vh !important;
+        width: 100%;
+        position: absolute;
+    }
+
+    #flowers {
+        width: 120vw;
+      }
+
+    .footer-content {
+        max-width: 90%;
+    }
+
+    .footer-content>* {
+        padding-bottom: 2vh !important;
+    }
+
+    .up-button {
+        width: 45px;
+        height: 45px;
+      }
+}
+
+/* Tablett Portrait */
+/* Mobile */
+@media only screen and (max-width: 850px) and (orientation: portrait) {
     /* Fonts */
 
     h1 {
-        font-size: 40px;
-        max-width: 95vw;
+        font-size: 50px;
+        max-width: 75vw;
         /* 65% laptop */
         padding-bottom: 1.25rem;
     }
@@ -717,7 +801,7 @@ align-self: flex-end;
         text-align: left;
         font-size: 33px;
         padding-bottom: 1.25rem;
-        width: 90vw !important;
+        width: 60vw !important;
     }
 
     h3 {
@@ -745,51 +829,45 @@ align-self: flex-end;
     }
 
     .hero-content p {
-        width: 90%;
+        width: 55%;
     }
 
     .hidden-text {
         display: none;
     }
 
-    .scroll-nav {
+    /* .scroll-nav {
         display: none;
-    }
+    } */
 
     .hero-content {
-        padding-bottom: 35%;
+        padding-bottom: 15%;
     }
 
     .arrow {
-        bottom: 6%;
+        bottom: 0%;
       }
 
     .content-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: 90%;
+        max-width: 75%;
         height: auto;
     }
 
     .single-content-container {
-        padding-bottom: 15vh;
+        padding-bottom: 5vh;
     }
 
     .reverse {
         flex-direction: column-reverse !important;
     }
 
-    /* .start-text {
-        min-height: 60vh;
-        padding: 20vh 0;
-        width: 90vw;
-    } */
-
     .start-text {
-        min-height: 55vh;
+        min-height: 35vh;
         padding: 25vh 0 5vh 0;
-        width: 90vw;
+        width: 70vw;
     }
 
     .buffer {
@@ -799,14 +877,14 @@ align-self: flex-end;
     .center,
     .center h2,
     .center p {
-        width: 90vw !important;
+        width: 70vw !important;
     }
 
     /* Illustrationen */
     .illustration {
         position: relative;
         height: auto;
-        width: 90vw;
+        width: 70vw;
     }
 
     #illustration-1,
@@ -822,6 +900,7 @@ align-self: flex-end;
 
     #illustration-2-container-mobile{
     margin-top: 15vh;
+    width: 70vw !important;
 }
 
     .mobile{
@@ -905,6 +984,173 @@ align-self: flex-end;
     /* Message Box */
 
     .message-container {
+        height: 30vh;
+    }
+
+    .message-container h1{
+        font-size: 35px !important;
+    }
+
+    #gradient-canvas2 {
+        height: 30vh !important;
+        width: 100%;
+        position: absolute;
+    }
+
+    /* Footer */
+
+
+    .footer-content {
+        max-width: 90%;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .up-button {
+        width: 45px;
+        height: 45px;
+      }
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    /* Fonts */
+
+    h1 {
+        font-size: 40px;
+        max-width: 95vw;
+        /* 65% laptop */
+        padding-bottom: 1.25rem;
+    }
+
+    h2 {
+        text-align: left;
+        font-size: 33px;
+        padding-bottom: 1.25rem;
+        width: 90vw !important;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin: 0;
+        padding-bottom: 0.5rem;
+    }
+
+
+    h4 {
+        text-align: left;
+        font-size: 20px;
+        padding-bottom: 0.5rem;
+    }
+
+    p,
+    a,
+    .table-text {
+        font-size: 1.125rem;
+    }
+
+    .title,
+    .title a {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        width: 90%;
+    }
+
+    .hidden-text {
+        display: none;
+    }
+
+    .scroll-nav {
+        display: none;
+    }
+
+    .hero-content {
+        padding-bottom: 35%;
+    }
+
+    .arrow {
+        bottom: 6%;
+      }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 90%;
+        height: auto;
+    }
+
+    .single-content-container {
+        padding-bottom: 15vh;
+    }
+
+    .start-text {
+        min-height: 55vh;
+        padding: 25vh 0 5vh 0;
+        width: 90vw;
+    }
+
+    .buffer {
+        display: none;
+    }
+
+    .center,
+    .center h2,
+    .center p {
+        width: 90vw !important;
+    }
+
+    /* Illustrationen */
+    .illustration {
+        position: relative;
+        height: auto;
+        width: 90vw;
+    }
+
+    #illustration-1,
+    #illustration-3 {
+        height: 50% !important;
+    }
+
+    #section4 {
+        height: 100vh !important;
+        /* width: 100vw;
+        overflow-x: hidden; */
+    }
+
+    #illustration-2-container-mobile{
+    margin-top: 15vh;
+    width: 100vw !important;
+}
+
+    .mobile{
+        display: block;
+    }
+
+    /* Fragerunde Box */
+
+    #section6 {
+        height: 85vh;
+        justify-content: flex-end;
+        width: 100vw !important;
+        overflow: hidden;
+
+    }
+
+    #flowers{
+      height: auto !important;
+      width: auto !important;
+      scale: 1.25;
+      bottom: 0;
+    }
+
+    /* Message Box */
+
+    .message-container {
         height: 25vh;
     }
 
@@ -920,7 +1166,6 @@ align-self: flex-end;
 
     /* Footer */
 
-
     .footer-content {
         justify-content: space-between;
         align-items: flex-start;
@@ -935,7 +1180,7 @@ align-self: flex-end;
 
     /* Mobile Nav */
 
-    .hidden {
+    .hidden, .nav-hidden {
         display: none;
     }
 

@@ -493,9 +493,9 @@ h2 {
   margin-bottom: 0px !important;
 }
 
-.paradox:nth-child(3n) {
-  margin-right: 40px !important;
-}
+/* .paradox:nth-child(3n) {
+  margin-right: 30px !important;
+} */
 
 .paradox:nth-child(5n) {
   margin-right: 0 !important;
@@ -837,12 +837,474 @@ td {
   animation-direction: reverse;
 }
 
-.hidden{
-  display: none;
+/* Tablett */
+
+@media only screen and (min-width: 769px) and (max-width: 1100px) and (orientation: landscape) {
+ 
+  .text, .article-headline {
+    padding-top: 10rem;
+  }
+
+  .article {
+    max-width: 90% !important;
+  }
+
+  .inner-single-content-container,
+  .beispiel-values, .beispiel-pc, .beispiel-10{
+    width: 90%;
+  }
+
+  .inner-single-content-container p,
+  .arrow-right{
+    padding-left: 25px !important;
+  }
+
+ h2{
+    width: 35vw !important;
+  }
+
+  .center h2 {
+    width: 45vw !important;
+  }
+
+  .absatz {
+    height: auto;
+    padding-bottom: 10vh !important;
+    padding-left: 25px !important;
+  }
+
+  .box-aufgabenstellung {
+    width: 50vw;
+  }
+
+  .paradox {
+    width: calc(75vw / 5 - 10px) !important;
+  }
+
+  .quellen-container {
+    width: 90vw;
+  }
+
+  .vh-120{
+    height: 120vh !important;
+  }
+
+    /*+++++++++++++++++++++++ Reasons Beispiele +++++++++++++++++++++++*/
+    /* Auswahlparadox */
+    .box-values {
+      width: 25vw;
+    }
+
+    .left-side {
+      width: 32vw;
+    }
+
+    .right-side{
+      margin-left: 30px;
+    }
+
+    .small-box {
+      width: calc(53vw / 4 - 10px);
+    }
+
+    /* biases */
+    .sunken-cost {
+      scale: 0.65;
+    }
+
+    .curious-curio {
+      scale: 0.65;
+      width: 140%;
+    }
+
+    .train {
+      scale: 1.2;
+    }
+
+    .analysis{
+      scale: 0.8;
+    }
+
+/*+++++++++++++++++++++++ Methods Beispiele +++++++++++++++++++++++*/
+
+.speech-bubble {
+  width: 68vw;
+  height: 9vh;
+}
+
+/*+++++++++++++++++++++++ Tips Beispiele +++++++++++++++++++++++*/
+
+.beispiel-4070 .svg-container{
+  width: 75%;
+}
+
+.scale-08{
+  scale: 0.8;
 }
 
 
-@media (max-width: 1080px) {
+
+
+}
+
+/* Tablett portrait */
+@media only screen and (max-width: 850px) and (orientation: portrait) {
+  /* 768 / 769 */
+  
+    .hidden{
+      display: none;
+    }
+  
+    .article {
+      /* justify-content: center !important;
+              align-items: center !important; */
+      flex-direction: column !important;
+      max-width: 70% !important;
+    }
+  
+    .single-content-container {
+      height: 65vh;
+    }
+  
+    /* .sticky {
+      position: relative !important;
+    } */
+  
+    .text {
+      padding-top: 1.25rem;
+    }
+  
+    .article-headline {
+      padding-top: 8rem;
+      position: relative !important;
+    }
+  
+    .absatz {
+      height: auto;
+      padding-bottom: 3vh !important;
+    }
+  
+    .inner-single-content-container {
+      flex-direction: column;
+      width: 75%;
+    }
+  
+    .arrow-right {
+      padding-top: 2.4rem;
+    }
+  
+  /* Header */
+  .hero-content {
+    padding-bottom: 10% !important;
+  }
+  
+  .arrow {
+    bottom: -4% !important;
+  }
+  
+    /* Quellen */
+  
+    .quellen-header h2 {
+      font-size: 33px;
+    }
+  
+    .quellen-container,
+    .quellen-content {
+      width: 90vw;
+    }
+  
+    .quellen-arrow {
+      height: 15%;
+    }
+  
+    .circle-section h2 {
+      width: 75vw !important;
+      padding-bottom: 55px;
+    }
+  
+    /* Circle Beispiel */
+  
+    .circle {
+      scale: 0.8;
+    }
+  
+    .circle-element .fs-16,
+    .hidden-box p{
+      font-size: 20px !important;
+    }
+  
+    .circle-element img {
+      width: 65px;
+      height: 65px;
+    }
+  
+    .hidden-box h3{
+      font-size: 26px !important;
+    }
+
+    .circle .hidden-box p {
+      width: 30vw !important;
+      height: auto;
+      padding: 0 10px !important;
+    }
+  
+    /* Values Beispiel */
+  
+    .beispiel-values, .beispiel-paradox, .beispiel-hats, .beispiel-10{
+      height: 100%;
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-side {
+      min-width: 90%;
+      border-right: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 6vh 0;
+    }
+  
+    .left-side h2 {
+      text-align: center;
+    }
+  
+    .box-values {
+      width: 90%;
+    }
+  
+    .row {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0 10px;
+    }
+  
+    .small-box {
+      width: 40vw;
+      height: 70px;
+  
+      padding: 5px;
+      margin-right: 0px;
+    }
+  
+    .beispiel-section {
+      height: auto !important;
+      margin: 10vh 0;
+    }
+  
+  
+    #beispiel-section-values .radial-gradient-container {
+      height: 100vh;
+    }
+  
+    /* Nav Box */
+    .nav-box-container {
+      width: 70%;
+      overflow-x: hidden;
+    }
+  
+    .nav-box .fs-16{
+      font-size: 11px !important;
+      max-width: 70px;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+  
+    /*+++++++++++++++++++++++ Reasons Beispiele +++++++++++++++++++++++*/
+  
+    .sunken-cost{
+      scale: 0.7 !important;
+    }
+
+    .curious-curio {
+      scale: 0.65;
+      width: 111%;
+    }
+  
+    .beispiel-paradox, .beispiel-hats, .beispiel-10, .beispiel-pc {
+      width: 90%;
+    }
+  
+    .train{
+      scale: 1.5;
+      margin-top: 3vh;
+      margin-bottom: 3vh;
+    }
+  
+    .df-interactive {
+      width: 70vw;
+    }
+
+    .analysis{
+      scale: 0.7;
+    }
+  
+    .stamina-bar-outer {
+      width: 12px;
+      margin-top: 80px;
+      margin-left: 20px;
+    }
+  
+    .side-box img {
+      padding-bottom: 12px;
+    }
+  
+    .paradox {
+      width: 32vw !important;
+      height: 40px !important;
+      margin-right: 0px !important;
+    }
+  
+    .paradox:nth-child(3n) {
+      margin-right: 0px !important;
+    }
+  
+    .box-aufgabenstellung {
+      width: 90%;
+      padding: 50px 20px;
+    }
+  
+    /*+++++++++++++++++++++++ Methods Beispiele +++++++++++++++++++++++*/
+   /* 6 hats */
+    .hat-container {
+      width: 90vw;
+      flex-wrap: wrap;
+    }
+  
+    .hat-box{
+      width: 25vw;
+      margin: 0 0px;
+      padding-bottom: 5vh;
+    }
+  
+    .bubble-container {
+      display: none;
+    }
+  
+    .speech-bubble {
+      border-radius: 200px;
+      padding: 0px;
+      width: 70vw;
+      min-height: 15vh;
+      margin: 7vh 0;
+    }
+  
+    .speech-bubble .hidden-box{
+      width: 100%;
+      height: auto;
+    }
+  
+    .hidden-box p{
+      width: 70vw !important;
+      height: auto;
+      /* padding: 0 10px !important; */
+    }
+  
+    /* 10 / 10 / 10 */
+    .beispiel-10-row h3{
+      scale: 1;
+      padding: 0 3vw;
+  }
+  
+  .beispiel-10-row img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .beispiel-10-row {
+    padding: 16px 0;
+  }
+
+  .beispiel-10-tabelle {
+    width: 70vw;
+  }
+  
+  /* pro kontra */
+  
+  .table-pc td {
+    height: 65px;
+  }
+  
+  .table-h3 {
+    font-size: 22px;
+    margin: 0;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* ice */
+  
+  .ice-table-h3 {
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 0.5rem;
+  }
+  
+  table td {
+    height: 4vh;
+  }
+  
+  .ice-input-mobile{
+    width: 100%;
+  }
+  
+  tr:nth-child(1) td:nth-child(1),
+  tr:nth-child(1) td:nth-child(2){
+    border-top: none;
+  }
+  
+  tr:nth-child(1) td:nth-child(1),
+  tr:nth-child(1) td:nth-child(2){
+    border-top: none;
+  }
+  
+  tr:nth-child(5) td:nth-child(1),
+  tr:nth-child(5) td:nth-child(2){
+    border-bottom: none;
+  }
+  
+  /* ausschlussverfahren */
+  
+  .paradox-headline{
+    padding-bottom: 1.25rem !important;
+  }
+  
+  .row-paradox{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .row-paradox .small-box:nth-child(1),
+  .row-paradox .small-box:nth-child(3){
+    margin-right: 10px !important;
+  }
+  
+    /*+++++++++++++++++++++++ Tipps Beispiele +++++++++++++++++++++++*/
+  
+    /* 40 / 70 */
+  .beispiel-4070 .svg-container{
+    width: 70%;
+  }
+
+  .scale-08{
+    scale: 0.8;
+  }
+  
+  
+  /* Navbar mobile */
+
+  .fs-14 a, a.nav-box-link{
+    font-size: 14px !important;
+  }
+  
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+/* 768 / 769 */
 
   .hidden{
     display: none;
@@ -855,7 +1317,9 @@ td {
     max-width: 90% !important;
   }
 
-
+  .single-content-container {
+    height: 100vh;
+  }
 
   /* .sticky {
     position: relative !important;
@@ -895,7 +1359,7 @@ td {
 
   /* Quellen */
 
-  .quellen-header h2 {
+  /* .quellen-header h2 {
     font-size: 33px;
   }
 
@@ -906,20 +1370,21 @@ td {
 
   .quellen-arrow {
     height: 15%;
-  }
+  } */
 
   .circle-section h2 {
     width: 90vw !important;
     padding-bottom: 18px;
   }
 
+  /*+++++++++++++++++++++++ Origins Beispiele +++++++++++++++++++++++*/
   /* Circle Beispiel */
 
   .circle {
     scale: 0.6;
   }
 
-  .circle-element .fs-16,
+  /* .circle-element .fs-16,
   .hidden-box p{
     font-size: 20px !important;
   }
@@ -931,12 +1396,12 @@ td {
 
   .hidden-box h3{
     font-size: 26px !important;
-  }
+  } */
 
 
   /* Values Beispiel */
 
-  .beispiel-values, .beispiel-paradox, .beispiel-hats, .beispiel-10{
+  /* .beispiel-values, .beispiel-paradox, .beispiel-hats, .beispiel-10{
     height: 100%;
     width: 90%;
     flex-direction: column;
@@ -983,7 +1448,7 @@ td {
 
   #beispiel-section-values .radial-gradient-container {
     height: 100vh;
-  }
+  } */
 
   /* Nav Box */
   .nav-box-container {
@@ -991,12 +1456,12 @@ td {
     overflow-x: hidden;
   }
 
-  .nav-box .fs-16{
+  /* .nav-box .fs-16{
     font-size: 11px !important;
     max-width: 70px;
     overflow-wrap: break-word;
     word-wrap: break-word;
-  }
+  } */
 
   /*+++++++++++++++++++++++ Reasons Beispiele +++++++++++++++++++++++*/
 
@@ -1018,7 +1483,11 @@ td {
     width: 90vw;
   }
 
-  .stamina-bar-outer {
+  .analysis{
+    scale: 1;
+  }
+
+  /* .stamina-bar-outer {
     width: 12px;
     margin-top: 80px;
     margin-left: 20px;
@@ -1026,7 +1495,7 @@ td {
 
   .side-box img {
     padding-bottom: 12px;
-  }
+  } */
 
   .paradox {
     width: 37vw !important;
@@ -1094,9 +1563,13 @@ td {
   padding: 16px 0;
 }
 
+.beispiel-10-tabelle {
+  width: 90vw;
+}
+
 /* pro kontra */
 
-.table-pc td {
+/* .table-pc td {
   height: 65px;
 }
 
@@ -1104,7 +1577,7 @@ td {
   font-size: 22px;
   margin: 0;
   padding-bottom: 0.5rem;
-}
+} */
 
 /* ice */
 
@@ -1114,12 +1587,11 @@ td {
   padding-bottom: 0.5rem;
 }
 
-.ice-table td {
-  height: 20vh !important;
-  width: 269%;
+table td {
+  height: 10vh;
 }
 
-.ice-input-mobile{
+/* .ice-input-mobile{
   width: 100%;
 }
 
@@ -1136,11 +1608,11 @@ tr:nth-child(1) td:nth-child(2){
 tr:nth-child(5) td:nth-child(1),
 tr:nth-child(5) td:nth-child(2){
   border-bottom: none;
-}
+} */
 
 /* ausschlussverfahren */
 
-.paradox-headline{
+/* .paradox-headline{
   padding-bottom: 1.25rem !important;
 }
 
@@ -1154,7 +1626,7 @@ tr:nth-child(5) td:nth-child(2){
 .row-paradox .small-box:nth-child(1),
 .row-paradox .small-box:nth-child(3){
   margin-right: 10px !important;
-}
+} */
 
   /*+++++++++++++++++++++++ Tipps Beispiele +++++++++++++++++++++++*/
 
@@ -1167,10 +1639,14 @@ tr:nth-child(5) td:nth-child(2){
   width: 75% !important;
 }
 
+.scale-08{
+  scale: 1;
+}
+
 
 /* Navbar mobile */
 
-.nav-box-mobile{
+/* .nav-box-mobile{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -1178,9 +1654,9 @@ tr:nth-child(5) td:nth-child(2){
   width: 90%;
   height: auto;
   margin: 0 auto
-}
+} */
 
-.circle-nav-element{
+/* .circle-nav-element{
   width: 40px !important;
   height: 40px !important;
   flex-direction: column;
@@ -1210,10 +1686,9 @@ tr:nth-child(5) td:nth-child(2){
   width: 80px;
   height: 80px;
 
-
   cursor: pointer;
   transition: background-color 0.3s;
-}
+} */
 
 .fs-14 a, a.nav-box-link{
   font-size: 14px !important;
