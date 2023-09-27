@@ -757,15 +757,68 @@ align-self: flex-end;
     }
 } */
 
-
+/* Ipad pro landscape */
 @media only screen and (max-width: 1400px) and (orientation: landscape){ /* changed to 1.5*/
-    .box-container {
-        width: 80vw;
-      }
 
-      h1 {
-        color: #fff;
-    }
+.hero-content h1{
+    max-width: 65%;
+}
+
+.hero-content p {
+    width: 44%;
+  }
+
+ #illustration-2-container{
+    width: 100vw !important;
+ }
+
+ .arrow {
+    bottom: 6%;
+  }
+
+  .content-container {
+    max-width: 80%;
+  }
+
+  .start-text {
+    min-width: 40vw;
+  }
+
+  .illustration {
+    width: 36vw;
+  }
+
+  .buffer {
+    min-width: 50px;
+  }
+
+  .box-container {
+    width: 80vw;
+  }
+
+  .center p{
+    width: 47vw;
+  }
+
+              /* Message Box */
+
+              .message-container {
+                height: 35vh;
+            }
+        
+            .message-container h1{
+                font-size: 36px !important;
+            }
+        
+            #gradient-canvas2 {
+                height: 35vh !important;
+                width: 100%;
+                position: absolute;
+            }
+
+            .footer-content {
+                max-width: 65%;
+              }
 }
 
 
