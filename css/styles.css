@@ -720,7 +720,10 @@ align-self: flex-end;
   and (min-device-width: 1366px) 
   and (max-device-height: 1024px) 
   and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2) {
     .box-container {
         width: 80vw;
       }
