@@ -716,6 +716,10 @@ align-self: flex-end;
     .box-container {
         width: 80vw;
       }
+
+      h1 {
+        color: #fff;
+    }
   }
 
 /* Tabletts */
