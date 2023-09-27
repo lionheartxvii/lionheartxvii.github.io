@@ -9,32 +9,34 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Quiz</title>
     <style>
+
         .card-container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            width: 100vw;
             z-index: 0;
         }
 
         .card {
-            width: 60vh;
-            height: 80vh;
+            width: 50vw;
+            height: 100vh;
             padding: auto;
-            border: 1px solid #ccc;
+            background-color: #f5ecdf;
             margin: auto;
             box-sizing: border-box;
             text-align: center;
         }
         .card>h2 {
-            margin-top: 60%;
+            margin-top: 45%;
             text-align: center;
         }
 
         .central-box {
             width: 30vh;
             height: 40vh;
-            background-color: #f0f0f0;
+            background-color: #f5ecdf;
             border: 1px solid #ccc;
             position: absolute;
             top: 50%;
@@ -68,24 +70,27 @@
     </style>
 </head>
 <body>
-    <div class="card-container">
-        <div class="card" id="firstCard" onclick="answer(0)">
-            <h2>Karte 1</h2>
-        </div>
-        <div class="card" id="secondCard" onclick="answer(1)">
-            <h2>Karte 2</h2>
-        </div>
-    </div>
-
-    <!-- Zentrale Box -->
-    <div class="central-box" id="questionBox">
-        <h2></h2>
-        <p></p>
-        <!-- Button zum Ausblenden der zentralen Box -->
-        <button class="hide-button" onclick="hideCentralBox()">Antworten</button>
-    </div>
-
     <canvas id="gradient-canvas" data-transition-in></canvas>
+
+        <div class="card-container">
+            <div class="card" id="firstCard" onclick="answer(0)">
+                <h2>Karte 1</h2>
+                <canvas id="gradient-card-left" data-transition-in></canvas>
+            </div>
+            <div class="card" id="secondCard" onclick="answer(1)">
+                <h2>Karte 2</h2>
+                <canvas id="gradient-card-right" data-transition-in></canvas>
+            </div>
+        </div>
+    
+        <!-- Zentrale Box -->
+        <div class="central-box" id="questionBox">
+            <h2></h2>
+            <p></p>
+            <!-- Button zum Ausblenden der zentralen Box -->
+            <button class="hide-button" onclick="hideCentralBox()">Antworten</button>
+        </div>
+
     <script src="./javascript/Gradient.js"></script>
     <script>
         const gradientCanvas = document.getElementById('gradient-canvas');
@@ -93,6 +98,8 @@
         const secondCard = document.getElementById("secondCard");
         const questionBox = document.getElementById("questionBox");
         let gradient1 = new Gradient();
+        let gradientLeft = new Gradient();
+        let gradientRight = new Gradient();
         let questionArray = [];
         let questionNumber = 0;
 
@@ -129,17 +136,17 @@ fetch('./json/fragenkatalog.json')
     setCardValues();
 
     firstCard.addEventListener('mouseenter', function() {
-        firstCard.style.backgroundColor = questionArray[questionNumber][2][0];
+        firstCard.style.backgroundColor = "unset";
     });
     firstCard.addEventListener('mouseleave', function() {
-        firstCard.style.backgroundColor = "unset";
+        firstCard.style.backgroundColor = "#f5ecdf";
     });
 
     secondCard.addEventListener('mouseenter', function() {
-        secondCard.style.backgroundColor = questionArray[questionNumber][2][1];
+        secondCard.style.backgroundColor = "unset";
     });
     secondCard.addEventListener('mouseleave', function() {
-        secondCard.style.backgroundColor = "unset";
+        secondCard.style.backgroundColor = "#f5ecdf";
     });
   };
 
