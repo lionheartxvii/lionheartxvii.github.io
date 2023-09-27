@@ -758,11 +758,7 @@ align-self: flex-end;
 } */
 
 
-@media only screen 
-and (min-width: 1366px)
-and (max-width: 1366px)
-and (orientation: landscape)
-and (-webkit-min-device-pixel-ratio: 1.5)  { /* changed to 1.5*/
+@media only screen and (max-width: 1400px) and (orientation: landscape){ /* changed to 1.5*/
     .box-container {
         width: 80vw;
       }
@@ -772,19 +768,6 @@ and (-webkit-min-device-pixel-ratio: 1.5)  { /* changed to 1.5*/
     }
 }
 
-@media only screen 
-  and (min-width: 1024px) 
-  and (max-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1.5) { /* changed to 1.5*/
-    .box-container {
-        width: 80vw;
-      }
-
-      h1 {
-        color: #fff;
-    }
-  }
 
 
 /* Tabletts */
