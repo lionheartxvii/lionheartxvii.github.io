@@ -1,0 +1,29 @@
+[
+    {
+      "frage": "Was ist die Hauptstadt von Frankreich?",
+      "antworten": ["Paris", "Berlin"],
+      "farbe": ["red", "blue"]
+    },
+    {
+      "frage": "Wie viele Kontinente gibt es auf der Erde?",
+      "antworten": ["5", "7"],
+      "farbe": ["red", "blue"]
+
+    },
+    {
+      "frage": "Was ist die Hauptzutat in Pizza?",
+      "antworten": ["Teig", "Reis"],
+      "farbe": ["red", "blue"]
+    },
+    {
+      "frage": "Was ist die Hauptfarbe des Himmels am Tag?",
+      "antworten": ["Rot", "Blau"],
+      "farbe": ["red", "blue"]
+    },
+    {
+      "frage": "Was ist 2 + 2?",
+      "antworten": ["4", "5"],
+      "farbe": ["red", "blue"]
+    }
+  ]
+  

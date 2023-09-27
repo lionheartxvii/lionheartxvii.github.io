@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
+    maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Master Worktitel</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Quiz</title>
+    <style>
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            z-index: 0;
+        }
+
+        .card {
+            width: 60vh;
+            height: 80vh;
+            padding: auto;
+            border: 1px solid #ccc;
+            margin: auto;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .card>h2 {
+            margin-top: 60%;
+            text-align: center;
+        }
+
+        .central-box {
+            width: 30vh;
+            height: 40vh;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            text-align: center;
+        }
+        .central-box>h2 {
+            text-align: center;
+        }
+
+        .hide-button {
+            margin-top: 10px;
+            cursor: pointer;
+            color: blue;
+        }
+
+        #gradient-canvas {
+            --gradient-color-1: #FFC876; 
+            --gradient-color-2: #cc3c23; 
+            --gradient-color-3: #D9659A;  
+            --gradient-color-4: #96adf3;
+
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card" id="firstCard" onclick="answer(0)">
+            <h2>Karte 1</h2>
+        </div>
+        <div class="card" id="secondCard" onclick="answer(1)">
+            <h2>Karte 2</h2>
+        </div>
+    </div>
+
+    <!-- Zentrale Box -->
+    <div class="central-box" id="questionBox">
+        <h2></h2>
+        <p></p>
+        <!-- Button zum Ausblenden der zentralen Box -->
+        <button class="hide-button" onclick="hideCentralBox()">Antworten</button>
+    </div>
+
+    <canvas id="gradient-canvas" data-transition-in></canvas>
+    <script src="./javascript/Gradient.js"></script>
+    <script>
+        const gradientCanvas = document.getElementById('gradient-canvas');
+        const firstCard = document.getElementById("firstCard");
+        const secondCard = document.getElementById("secondCard");
+        const questionBox = document.getElementById("questionBox");
+        let gradient1 = new Gradient();
+        let questionArray = [];
+        let questionNumber = 0;
+
+        gradient1.initGradient('#gradient-canvas');
+
+        function hideCentralBox() {
+            const centralBox = document.querySelector('.central-box');
+            centralBox.style.display = 'none';
+        }
+        function showCentralBox() {
+            const centralBox = document.querySelector('.central-box');
+            centralBox.style.display = 'unset';
+        }
+
+fetch('./json/fragenkatalog.json')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(element => {
+      let questionEntry = [
+        element.frage,
+        [element.antworten[0], element.antworten[1]],
+        [element.farbe[0], element.farbe[1]]
+      ];
+      questionArray.push(questionEntry);
+      firstQuestion();
+    });
+  })
+  .catch(error => {
+    console.error('Fehler beim Laden der JSON-Datei:', error);
+  });
+
+  function firstQuestion() {
+
+    setCardValues();
+
+    firstCard.addEventListener('mouseenter', function() {
+        firstCard.style.backgroundColor = questionArray[questionNumber][2][0];
+    });
+    firstCard.addEventListener('mouseleave', function() {
+        firstCard.style.backgroundColor = "unset";
+    });
+
+    secondCard.addEventListener('mouseenter', function() {
+        secondCard.style.backgroundColor = questionArray[questionNumber][2][1];
+    });
+    secondCard.addEventListener('mouseleave', function() {
+        secondCard.style.backgroundColor = "unset";
+    });
+  };
+
+  function answer(card) {
+    this.hideCentralBox();
+    changeBackground(card);
+    questionNumber++;
+    setCardValues();
+    this.showCentralBox();
+
+  }
+
+  function setCardValues() {
+    questionBox.children[0].textContent = `${questionNumber+1}. Frage`;
+    questionBox.children[1].textContent = questionArray[0][0];
+    firstCard.children[0].textContent = questionArray[questionNumber][1][0];
+    secondCard.children[0].textContent = questionArray[questionNumber][1][1];
+  }
+
+  function changeBackground(cardValue) {
+    const wert = questionNumber % 4;
+    const color = questionArray[questionNumber][2][cardValue];
+
+    switch (wert) {
+        case 0:
+            gradientCanvas.style.setProperty('--gradient-color-1', color);
+            break;
+        case 1:
+            gradientCanvas.style.setProperty('--gradient-color-2', color);
+            break;
+        case 2:
+            gradientCanvas.style.setProperty('--gradient-color-3', color);
+            break;
+        case 3:
+            gradientCanvas.style.setProperty('--gradient-color-4', color);
+            break;
+        default:
+            console.log("Der Wert entspricht keinem der Fälle");
+}
+    gradient1.initGradient('#gradient-canvas');
+  }
+
+    </script>
+</body>
+</html>

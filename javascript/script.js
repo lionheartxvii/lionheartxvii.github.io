@@ -313,12 +313,6 @@ function setHeight(element) {
   element.style.height = height + "px";
 }
 
-
-
-
-
-
-
 // Hamburger Menu
 
 const menu_btn = document.querySelector('.hamburger');
@@ -327,7 +321,6 @@ const mobile_menu = document.querySelector('.mobile-nav');
 menu_btn?.addEventListener('click', function () {
   dropdownMenu();
 });
-
 
 // var animation1 = anime({
 //   targets: '.menu-item',
@@ -344,21 +337,3 @@ function dropdownMenu(){
   menu_btn.classList.toggle('is-active');
   mobile_menu.classList.toggle('is-active');
 }
-
-
-// function berechneBreiten() {
-//   body = document.getElementsByTagName('body')[0];
-//   body.style.width = "unset";
-//   var viewportBreite = window.innerWidth;
-
-//   var elementBreite = document.getElementsByClassName("radial-gradient-container")[0]?.offsetWidth;
-
-//   var ergebnisText = "Viewport-Breite: " + viewportBreite + "px, Element-Breite: " + elementBreite + "px";
-//   document.getElementById("ergebnis").textContent = ergebnisText;
-
-//   document.getElementsByTagName('body')[0].style.width = viewportBreite >= elementBreite ? elementBreite + 'px' : viewportBreite + 'px';
-// }
-
-// window.addEventListener("load", berechneBreiten);
-// window.addEventListener("resize", berechneBreiten);
-// window.addEventListener("DOMContentLoaded", berechneBreiten);
