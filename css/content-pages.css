@@ -837,8 +837,61 @@ td {
 }
 
 /* Media Query für Retina-Displays mit hoher Auflösung */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  /* CSS-Regeln für Retina-Displays */
+@media only screen and (max-width: 1400px) and (orientation: landscape) {
+
+  .hero-banner, 
+  #gradient-canvas-origins,
+  #gradient-canvas-reasons
+ {
+    height: 80vh !important;
+  }
+
+
+  .article {
+    max-width: 80%;
+  }
+
+  .buffer {
+    min-width: 200px !important;
+  }
+
+  .inner-single-content-container,
+  .beispiel-values  {
+    width: 80%;
+  }
+
+/* Quellen */
+  .quellen-container {
+    width: 80vw;
+  }
+
+
+  /* Beispiele */
+   /*+++++++++++++++++++++++ Reasons Beispiele +++++++++++++++++++++++*/
+  .box-values {
+    width: 20vw;
+  }
+
+  .left-side {
+    width: 32vw;
+    padding-right: 30px;
+  }
+
+  .right-side{
+    margin-left: 30px;
+  }
+
+  .small-box {
+    width: calc(53vw / 4 - 10px);
+  }
+
+ /*+++++++++++++++++++++++ Reasons Beispiele +++++++++++++++++++++++*/
+
+
+
+
+
+
 }
 
 /* Tablett landscape*/
@@ -901,6 +954,7 @@ td {
 
     .left-side {
       width: 32vw;
+      padding-right: 0px;
     }
 
     .right-side{

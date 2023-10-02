@@ -32,9 +32,9 @@
             --gradient-color-2: #6db4ee;
             --gradient-color-3: #ebbc95;
             --gradient-color-4: #e49b82;
-            
-            
-            
+
+
+
         }
 
         .nav-box-container {
@@ -139,6 +139,10 @@
             top: -18%;
             animation-delay: 1.2s;
             opacity: 0.8;
+        }
+
+        #gradient-canvas-reasons {
+            height: 80vh !important;
         }
     </style>
 </head>
@@ -562,7 +566,8 @@
                 <div class="beispiel-section">
 
                     <div class="beispiel-paradox inner-content pointer scale-08">
-                        <lottie-interactive class="frog" path="./json/eat-the-frog.json" interaction="click"></lottie-interactive>
+                        <lottie-interactive class="frog" path="./json/eat-the-frog.json" interaction="click">
+                        </lottie-interactive>
                     </div>
 
                     <div class="radial-gradient-container">
@@ -860,7 +865,8 @@
     <script src="/javascript/script.js"></script>
     <!-- Lottie Libraries -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js">
+    </script>
 
     <script>
         const gradient5 = new Gradient()

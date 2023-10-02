@@ -22,23 +22,23 @@
             --gradient-color-3: #7e8ff0;
             --gradient-color-4: #ab86fb;
 
-        /* --gradient-color-1: #FEDF8F; 
+            /* --gradient-color-1: #FEDF8F; 
             --gradient-color-2: #FFA152; 
             --gradient-color-3: #D56090;  
             --gradient-color-4: #FD6061; */
 
-            --gradient-color-1: #f5d992; 
-            --gradient-color-2: #e79d61; 
-            --gradient-color-3: #6c94eb;  
+            --gradient-color-1: #f5d992;
+            --gradient-color-2: #e79d61;
+            --gradient-color-3: #6c94eb;
             --gradient-color-4: #e26a6a;
 
             --gradient-color-4: #fccc8d;
             --gradient-color-3: #FB844D;
---gradient-color-3: #d96565;
---gradient-color-4: #96adf3;
+            --gradient-color-3: #d96565;
+            --gradient-color-4: #96adf3;
         }
 
-        
+
 
         .nav-box-container {
             max-width: 800px !important;
@@ -70,12 +70,12 @@
 --gradient-color-3: #fea8ae;
 --gradient-color-4: #fe8ab3; */
 
-/* --gradient-color-1: #edb4ee;
+            /* --gradient-color-1: #edb4ee;
 --gradient-color-2: #80d6d7;
 --gradient-color-3: #7e8ff0;
 --gradient-color-4: #ab86fb; */
 
-/* --gradient-color-1: #FFC876;
+            /* --gradient-color-1: #FFC876;
 --gradient-color-2: #cc3c23;
 --gradient-color-3: #D9659A;
 --gradient-color-4: #96adf3; */
@@ -83,8 +83,8 @@
 
             --gradient-color-4: #fccc8d;
             --gradient-color-3: #FB844D;
---gradient-color-3: #d96565;
---gradient-color-4: #96adf3;
+            --gradient-color-3: #d96565;
+            --gradient-color-4: #96adf3;
 
             height: 85vh;
             width: 100vw;
@@ -182,6 +182,10 @@
             100% {
                 outline-color: #e74c3c;
             }
+        }
+
+        #gradient-canvas-reasons {
+            height: 80vh !important;
         }
     </style>
 </head>
@@ -329,7 +333,8 @@
                         <h2>Die Fragen der Huete</h2>
                         <div class="speech-bubble">
                             <div class="hidden-box" id="hiddenBox1">
-                                <p>Welche Daten und Fakten haben wir bisher gesammelt? Gibt es zusätzliche Informationen, die wir benötigen?</p>
+                                <p>Welche Daten und Fakten haben wir bisher gesammelt? Gibt es zusätzliche
+                                    Informationen, die wir benötigen?</p>
                             </div>
 
                             <div class="hidden-box" id="hiddenBox2">
@@ -345,7 +350,7 @@
                             <div class="hidden-box" id="hiddenBox4">
                                 <p>Welche positiven Aspekte können wir aus dieser Idee oder diesem Ansatz ziehen?
                                     Welche Chancen und Vorteile sehen wir in dieser Situation? </p>
-                                
+
                             </div>
 
                             <div class="hidden-box" id="hiddenBox5">
@@ -354,7 +359,7 @@
                             </div>
 
                             <div class="hidden-box" id="hiddenBox6">
-                                <p>Können wir eine Zusammenfassung der wichtigsten Punkte bisher erstellen? 
+                                <p>Können wir eine Zusammenfassung der wichtigsten Punkte bisher erstellen?
                                     Welche offenen Fragen haben sich ergeben, die wir noch klären müssen?</p>
                             </div>
                         </div>
@@ -364,41 +369,36 @@
                             <div class="bubble" style="left: -400px"></div>
                         </div>
                         <div class="hat-container">
-                            <div class="hat-box" onmouseenter="showBox(1)" onmouseleave="hideBox()"
-                                onclick="pinBox(1)">
-                                <div class="circle-element"><img  src="assets/icons/white-hat.svg" alt="Image Weißer Hut"></div>
+                            <div class="hat-box" onmouseenter="showBox(1)" onmouseleave="hideBox()" onclick="pinBox(1)">
+                                <div class="circle-element"><img src="assets/icons/white-hat.svg"
+                                        alt="Image Weißer Hut"></div>
                                 <p class="fs-16">Weißer Hut</p>
                             </div>
-                            <div class="hat-box" onmouseenter="showBox(2)" onmouseleave="hideBox()"
-                                onclick="pinBox(2)">
+                            <div class="hat-box" onmouseenter="showBox(2)" onmouseleave="hideBox()" onclick="pinBox(2)">
                                 <div class="circle-element">
-                                    <img  src="assets/icons/red-hat.svg" alt="Image Roter Hut">
+                                    <img src="assets/icons/red-hat.svg" alt="Image Roter Hut">
                                 </div>
                                 <p class="fs-16">Roter Hut</p>
                             </div>
-                            <div class="hat-box" onmouseenter="showBox(3)" onmouseleave="hideBox()"
-                                onclick="pinBox(3)">
+                            <div class="hat-box" onmouseenter="showBox(3)" onmouseleave="hideBox()" onclick="pinBox(3)">
                                 <div class="circle-element">
-                                    <img  src="assets/icons/black-hat.svg" alt="Image Schwarzer Hut">
+                                    <img src="assets/icons/black-hat.svg" alt="Image Schwarzer Hut">
                                 </div>
                                 <p class="fs-16">Schwarzer Hut</p>
                             </div>
-                            <div class="hat-box" onmouseenter="showBox(4)" onmouseleave="hideBox()"
-                                onclick="pinBox(4)">
+                            <div class="hat-box" onmouseenter="showBox(4)" onmouseleave="hideBox()" onclick="pinBox(4)">
                                 <div class="circle-element">
                                     <img src="assets/icons/yellow-hat.svg" alt="Image Gelber Hut">
                                 </div>
                                 <p class="fs-16">Gelber Hut</p>
                             </div>
-                            <div class="hat-box" onmouseenter="showBox(5)" onmouseleave="hideBox()"
-                                onclick="pinBox(5)">
+                            <div class="hat-box" onmouseenter="showBox(5)" onmouseleave="hideBox()" onclick="pinBox(5)">
                                 <div class="circle-element">
                                     <img src="assets/icons/green-hat.svg" alt="Image Grüner Hut<">
                                 </div>
                                 <p class="fs-16">Grüner Hut</p>
                             </div>
-                            <div class="hat-box" onmouseenter="showBox(6)" onmouseleave="hideBox()"
-                                onclick="pinBox(6)">
+                            <div class="hat-box" onmouseenter="showBox(6)" onmouseleave="hideBox()" onclick="pinBox(6)">
                                 <div class="circle-element">
                                     <img src="assets/icons/blue-hat.svg" alt="Image Blauer Hut">
                                 </div>
@@ -522,9 +522,12 @@
                                 <h3 class="beispiel-10-headline">10 Wochen</h3>
                             </div>
                             <div class="beispiel-10-row">
-                                <img class="pointer" src="assets/icons/positive-smiley.png" alt="Bild 1" onclick="changeImage(this)">
-                                <img class="pointer" src="assets/icons/positive-smiley.png" alt="Bild 2" onclick="changeImage(this)">
-                                <img class="pointer" src="assets/icons/positive-smiley.png" alt="Bild 3" onclick="changeImage(this)">
+                                <img class="pointer" src="assets/icons/positive-smiley.png" alt="Bild 1"
+                                    onclick="changeImage(this)">
+                                <img class="pointer" src="assets/icons/positive-smiley.png" alt="Bild 2"
+                                    onclick="changeImage(this)">
+                                <img class="pointer" src="assets/icons/positive-smiley.png" alt="Bild 3"
+                                    onclick="changeImage(this)">
                             </div>
                         </div>
 
@@ -610,7 +613,8 @@
                             <tr>
                                 <td rowspan="4" class="table-h3">Pro</td>
                                 <td class="idea-pc">
-                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Pro Argument 1"></textarea>
+                                    <textarea type="text" class="table-text placeholder" name="" id=""
+                                        style="width: 100%; height: 70%;" placeholder="Pro Argument 1"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
@@ -620,67 +624,74 @@
 
                             <tr>
                                 <td class="idea-pc">
-                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Pro Argument 2"></textarea>
+                                    <textarea type="text" class="table-text placeholder" name="" id=""
+                                        style="width: 100%; height: 70%;" placeholder="Pro Argument 2"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')" /></td>
                             </tr>
 
                             <tr>
                                 <td class="idea-pc">
-                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Pro Argument 3"></textarea>
+                                    <textarea type="text" class="table-text placeholder" name="" id=""
+                                        style="width: 100%; height: 70%;" placeholder="Pro Argument 3"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')" /></td>
                             </tr>
 
                             <tr>
                                 <td class="idea-pc">
-                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Pro Argument 4"></textarea>
+                                    <textarea type="text" class="table-text placeholder" name="" id=""
+                                        style="width: 100%; height: 70%;" placeholder="Pro Argument 4"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')" /></td>
                             </tr>
 
-                            
+
                             <tr>
                                 <td rowspan="4" class="table-h3">Kontra</td>
-                                <td   class="idea-pc">
-                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Kontra Argument 1"></textarea>
+                                <td class="idea-pc">
+                                    <textarea type="text" class="table-text placeholder" name="" id=""
+                                        style="width: 100%; height: 70%;" placeholder="Kontra Argument 1"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')" /></td>
                             </tr>
 
                             <tr>
-                                <td   class="idea-pc">
-                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Kontra Argument 2"></textarea>
+                                <td class="idea-pc">
+                                    <textarea type="text" class="table-text placeholder" name="" id=""
+                                        style="width: 100%; height: 70%;" placeholder="Kontra Argument 2"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')" /></td>
                             </tr>
 
                             <tr>
-                                <td   class="idea-pc">
-                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Kontra Argument 3"></textarea>
+                                <td class="idea-pc">
+                                    <textarea type="text" class="table-text placeholder" name="" id=""
+                                        style="width: 100%; height: 70%;" placeholder="Kontra Argument 3"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')" /></td>
                             </tr>
 
                             <tr>
-                                <td   class="idea-pc">
-                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="Kontra Argument 4"></textarea>
+                                <td class="idea-pc">
+                                    <textarea type="text" class="table-text placeholder" name="" id=""
+                                        style="width: 100%; height: 70%;" placeholder="Kontra Argument 4"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
-                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')"/></td>
+                                        class="table-score" onblur="updateInputSummary(this, 'pro_score')" /></td>
                             </tr>
 
                             <tr>
@@ -689,7 +700,7 @@
                                     <p class="table-text placeholder"></p>
                                 </td>
                                 <td>
-                                    <p  id="summary_pro_score"></p>
+                                    <p id="summary_pro_score"></p>
                                 </td>
                             </tr>
                         </table>
@@ -807,8 +818,10 @@
                             </tr> -->
 
                             <tr>
-                                <td  contenteditable="true">
-                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 50%; text-align: center;" placeholder="notiere hier deine 1. Idee"></textarea>
+                                <td contenteditable="true">
+                                    <textarea type="text" class="table-text placeholder" name="" id=""
+                                        style="width: 100%; height: 50%; text-align: center;"
+                                        placeholder="notiere hier deine 1. Idee"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="firstIdea" min="1" max="10"
@@ -829,8 +842,10 @@
                             </tr>
 
                             <tr>
-                                <td  contenteditable="true">
-                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 50%; text-align: center;" placeholder="notiere hier deine 2. Idee"></textarea>
+                                <td contenteditable="true">
+                                    <textarea type="text" class="table-text placeholder" name="" id=""
+                                        style="width: 100%; height: 50%; text-align: center;"
+                                        placeholder="notiere hier deine 2. Idee"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="secondIdea" min="1" max="10"
@@ -850,8 +865,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td  contenteditable="true">
-                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 50%; text-align: center; vertical-align: middle;" placeholder="notiere hier deine 3. Idee"></textarea>
+                                <td contenteditable="true">
+                                    <textarea type="text" class="table-text placeholder" name="" id=""
+                                        style="width: 100%; height: 50%; text-align: center; vertical-align: middle;"
+                                        placeholder="notiere hier deine 3. Idee"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="thirdIdea" min="1" max="10"
@@ -881,7 +898,9 @@
                             <tr>
                                 <td class="ice-table-h3">Idee</td>
                                 <td class="ice-input-mobile">
-                                    <textarea type="text" class="table-text placeholder" name="" id="" style="width: 100%; height: 70%;" placeholder="notiere hier deine 3. Idee"></textarea>
+                                    <textarea type="text" class="table-text placeholder" name="" id=""
+                                        style="width: 100%; height: 70%;"
+                                        placeholder="notiere hier deine 3. Idee"></textarea>
                                 </td>
                             </tr>
                             <tr>
@@ -896,21 +915,23 @@
                                 <td class="ice-table-h3">Confidence</td>
                                 <td class="ice-input-mobile">
                                     <input type="number" id="uname" name="fourthIdea" min="1" max="10"
-                                    class="table-text placeholder" onblur="updateInputSummary(this, 'fourthIdea')"
-                                    placeholder="wie sicher fühlst du dich?" style="width: 100%;" /></td>
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'fourthIdea')"
+                                        placeholder="wie sicher fühlst du dich?" style="width: 100%;" /></td>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="ice-table-h3">Ease</td>
                                 <td class="ice-input-mobile">
                                     <input type="number" id="uname" name="fourthIdea" min="1" max="10"
-                                    class="table-text placeholder" onblur="updateInputSummary(this, 'fourthIdea')"
-                                    placeholder="wie leicht ist die Umsetzung?" style="width: 100%;" /></td>
+                                        class="table-text placeholder" onblur="updateInputSummary(this, 'fourthIdea')"
+                                        placeholder="wie leicht ist die Umsetzung?" style="width: 100%;" /></td>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="ice-table-h3">Score</td>
-                                <td class="ice-input-mobile"><p class="table-text" id="summary_fourthIdea"></p></td>
+                                <td class="ice-input-mobile">
+                                    <p class="table-text" id="summary_fourthIdea"></p>
+                                </td>
                             </tr>
                         </table>
 
@@ -1110,8 +1131,8 @@
                                     <p>Chai</p>
                                 </div>
                             </div>
-                        </div>    
                         </div>
+                    </div>
 
                     <div class="radial-gradient-container">
                         <div></div>
@@ -1263,10 +1284,10 @@
         maxSelectedBoxes = 5;
 
         function correctInputNumber(newValue) {
-            if(Number(newValue.value) > Number(newValue.max)) {
+            if (Number(newValue.value) > Number(newValue.max)) {
                 newValue.value = newValue.max;
             }
-            if(Number(newValue.value) < Number(newValue.min)) {
+            if (Number(newValue.value) < Number(newValue.min)) {
                 newValue.value = newValue.min;
             }
             return newValue;
@@ -1293,8 +1314,9 @@
         const images = ["positive-smiley.png", "neutral-smiley.png", "negative-smiley.png"];
 
         function changeImage(img) {
-            const currentImgSrc  = img.src;
-            const currentImgName = currentImgSrc.substring(currentImgSrc.lastIndexOf("/") + 1); // Extrahiere den Bildnamen
+            const currentImgSrc = img.src;
+            const currentImgName = currentImgSrc.substring(currentImgSrc.lastIndexOf("/") +
+            1); // Extrahiere den Bildnamen
 
             switch (currentImgName) {
                 case "positive-smiley.png":
