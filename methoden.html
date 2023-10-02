@@ -184,8 +184,11 @@
             }
         }
 
-        #gradient-canvas-reasons {
-            height: 80vh !important;
+
+        @media only screen and (max-width: 1400px) and (orientation: landscape) {
+            #gradient-canvas-reasons {
+                height: 80vh !important;
+            }
         }
     </style>
 </head>
@@ -1316,7 +1319,7 @@
         function changeImage(img) {
             const currentImgSrc = img.src;
             const currentImgName = currentImgSrc.substring(currentImgSrc.lastIndexOf("/") +
-            1); // Extrahiere den Bildnamen
+                1); // Extrahiere den Bildnamen
 
             switch (currentImgName) {
                 case "positive-smiley.png":

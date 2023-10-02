@@ -857,7 +857,7 @@ td {
   }
 
   .buffer {
-    min-width: 140px !important;
+    min-width: 140px;
   }
 
   .inner-single-content-container,
@@ -924,6 +924,24 @@ td {
   scale: 0.8;
 }
 
+/*+++++++++++++++++++++++ Methods IPad Pro Beispiele +++++++++++++++++++++++*/
+
+.speech-bubble {
+  width: 60vw;
+}
+
+.beispiel-10-tabelle {
+  width: 70vw;
+}
+
+/*+++++++++++++++++++++++ Tipps IPad Pro Beispiele +++++++++++++++++++++++*/
+.beispiel-4070 .svg-container{
+  width: 70%;
+}
+
+.scale-08{
+  scale: 0.8;
+}
 
 }
 
@@ -937,6 +955,10 @@ td {
 
   .article {
     max-width: 90% !important;
+  }
+
+  .buffer {
+    min-width: 10px;
   }
 
   .inner-single-content-container,
@@ -1008,7 +1030,7 @@ td {
   height: 9vh;
 }
 
-/*+++++++++++++++++++++++ Tips IPad Beispiele +++++++++++++++++++++++*/
+/*+++++++++++++++++++++++ Tipps IPad Beispiele +++++++++++++++++++++++*/
 
 .beispiel-4070 .svg-container{
   width: 75%;
@@ -1017,9 +1039,6 @@ td {
 .scale-08{
   scale: 0.8;
 }
-
-
-
 
 }
 
@@ -1188,7 +1207,7 @@ td {
       word-wrap: break-word;
     }
   
-    /*+++++++++++++++++++++++ Reasons Beispiele +++++++++++++++++++++++*/
+    /*+++++++++++++++++++++++ Reasons IPad Portrait Beispiele +++++++++++++++++++++++*/
   
     .sunken-cost{
       scale: 0.7 !important;
@@ -1242,7 +1261,7 @@ td {
       padding: 50px 20px;
     }
   
-    /*+++++++++++++++++++++++ Methods Beispiele +++++++++++++++++++++++*/
+    /*+++++++++++++++++++++++ Methods IPad Portrait Beispiele +++++++++++++++++++++++*/
    /* 6 hats */
     .hat-container {
       width: 90vw;
@@ -1358,7 +1377,7 @@ td {
     margin-right: 10px !important;
   }
   
-    /*+++++++++++++++++++++++ Tipps Beispiele +++++++++++++++++++++++*/
+    /*+++++++++++++++++++++++ Tipps IPad Portrait Beispiele +++++++++++++++++++++++*/
   
     /* 40 / 70 */
   .beispiel-4070 .svg-container{
@@ -1453,7 +1472,7 @@ td {
     padding-bottom: 18px;
   }
 
-  /*+++++++++++++++++++++++ Origins Beispiele +++++++++++++++++++++++*/
+  /*+++++++++++++++++++++++ Origins Iphone Beispiele +++++++++++++++++++++++*/
   /* Circle Beispiel */
 
   .circle {
@@ -1539,7 +1558,7 @@ td {
     word-wrap: break-word;
   } */
 
-  /*+++++++++++++++++++++++ Reasons Beispiele +++++++++++++++++++++++*/
+  /*+++++++++++++++++++++++ Reasons Iphone Beispiele +++++++++++++++++++++++*/
 
   .sunken-cost{
     scale: 1 !important;
@@ -1588,7 +1607,7 @@ td {
     padding: 50px 20px;
   }
 
-  /*+++++++++++++++++++++++ Methods Beispiele +++++++++++++++++++++++*/
+  /*+++++++++++++++++++++++ Methods Iphone Beispiele +++++++++++++++++++++++*/
  /* 6 hats */
   .hat-container {
     width: 90vw;
@@ -1704,7 +1723,7 @@ tr:nth-child(5) td:nth-child(2){
   margin-right: 10px !important;
 } */
 
-  /*+++++++++++++++++++++++ Tipps Beispiele +++++++++++++++++++++++*/
+  /*+++++++++++++++++++++++ Tipps Iphone Beispiele +++++++++++++++++++++++*/
 
   /* 40 / 70 */
 .beispiel-4070 .svg-container{
