@@ -839,6 +839,11 @@ td {
 /* Media Query für Retina-Displays mit hoher Auflösung */
 @media only screen and (max-width: 1400px) and (orientation: landscape) {
 
+  h2 {
+    width: 25vw;
+  }
+
+
   .hero-banner, 
   #gradient-canvas-origins,
   #gradient-canvas-reasons
@@ -852,11 +857,15 @@ td {
   }
 
   .buffer {
-    min-width: 200px !important;
+    min-width: 140px !important;
   }
 
   .inner-single-content-container,
-  .beispiel-values  {
+  .beispiel-values,
+  .beispiel-paradox, 
+  .beispiel-hats, 
+  .beispiel-10, 
+  .beispiel-pc  {
     width: 80%;
   }
 
@@ -866,8 +875,9 @@ td {
   }
 
 
+
   /* Beispiele */
-   /*+++++++++++++++++++++++ Reasons Beispiele +++++++++++++++++++++++*/
+   /*+++++++++++++++++++++++ Origins IPad Pro Beispiele +++++++++++++++++++++++*/
   .box-values {
     width: 20vw;
   }
@@ -885,11 +895,34 @@ td {
     width: calc(53vw / 4 - 10px);
   }
 
- /*+++++++++++++++++++++++ Reasons Beispiele +++++++++++++++++++++++*/
+ /*+++++++++++++++++++++++ Reasons IPad Pro Beispiele +++++++++++++++++++++++*/
 
+ .paradox {
+  width: calc(70vw / 5 - 10px) !important;
+}
 
+.left-side {
+  width: 32vw;
+  padding-right: 0px;
+}
 
+/* biases */
+.sunken-cost {
+  max-width: 80%;
+}
 
+.curious-curio {
+  scale: 0.7;
+  width: 117%;
+}
+
+.train {
+  scale: 1;
+}
+
+.analysis{
+  scale: 0.8;
+}
 
 
 }
@@ -946,7 +979,7 @@ td {
     height: 120vh !important;
   }
 
-    /*+++++++++++++++++++++++ Reasons Beispiele +++++++++++++++++++++++*/
+    /*+++++++++++++++++++++++ Reasons IPad Beispiele +++++++++++++++++++++++*/
     /* Auswahlparadox */
     .box-values {
       width: 25vw;
@@ -957,18 +990,7 @@ td {
       padding-right: 0px;
     }
 
-    .right-side{
-      margin-left: 30px;
-    }
-
-    .small-box {
-      width: calc(53vw / 4 - 10px);
-    }
-
     /* biases */
-    .sunken-cost {
-      scale: 0.65;
-    }
 
     .curious-curio {
       scale: 0.65;
@@ -979,18 +1001,14 @@ td {
       scale: 1.2;
     }
 
-    .analysis{
-      scale: 0.8;
-    }
-
-/*+++++++++++++++++++++++ Methods Beispiele +++++++++++++++++++++++*/
+/*+++++++++++++++++++++++ Methods IPad Beispiele +++++++++++++++++++++++*/
 
 .speech-bubble {
   width: 68vw;
   height: 9vh;
 }
 
-/*+++++++++++++++++++++++ Tips Beispiele +++++++++++++++++++++++*/
+/*+++++++++++++++++++++++ Tips IPad Beispiele +++++++++++++++++++++++*/
 
 .beispiel-4070 .svg-container{
   width: 75%;
