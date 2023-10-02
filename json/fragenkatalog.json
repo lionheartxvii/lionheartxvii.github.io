@@ -1,29 +1,253 @@
 [
     {
-      "frage": "Was ist die Hauptstadt von Frankreich?",
-      "antworten": ["Paris", "Berlin"],
-      "farbe": ["red", "blue"]
+      "question": "Was ist die Hauptstadt von Frankreich?",
+      "answer": ["Paris", "Berlin"],
+      "difficulty": 0
     },
     {
-      "frage": "Wie viele Kontinente gibt es auf der Erde?",
-      "antworten": ["5", "7"],
-      "farbe": ["red", "blue"]
-
+      "question": "Wie viele Kontinente gibt es auf der Erde?",
+      "answer": ["5", "7"],
+      "difficulty": 0
     },
     {
-      "frage": "Was ist die Hauptzutat in Pizza?",
-      "antworten": ["Teig", "Reis"],
-      "farbe": ["red", "blue"]
+      "question": "Was ist die Hauptzutat in Pizza?",
+      "answer": ["Teig", "Reis"],
+      "difficulty": 0
     },
     {
-      "frage": "Was ist die Hauptfarbe des Himmels am Tag?",
-      "antworten": ["Rot", "Blau"],
-      "farbe": ["red", "blue"]
+      "question": "Was ist die Hauptfarbe des Himmels am Tag?",
+      "answer": ["Rot", "Blau"],
+      "difficulty": 0
     },
     {
-      "frage": "Was ist 2 + 2?",
-      "antworten": ["4", "5"],
-      "farbe": ["red", "blue"]
+      "question": "Was ist 2 + 2?",
+      "answer": ["4", "5"],
+      "difficulty": 0
+    },
+    {
+      "question": "Was ist die Hauptstadt von Deutschland?",
+      "answer": ["Paris", "Berlin"],
+      "difficulty": 0
+    },
+    {
+      "question": "Wie viele Kontinente gibt es auf dem Mars?",
+      "answer": ["5", "7"],
+      "difficulty": 0
+    },
+    {
+      "question": "Was ist die Hauptzutat in Curry?",
+      "answer": ["Teig", "Reis"],
+      "difficulty": 0
+    },
+    {
+      "question": "Was ist die Hauptfarbe des Himmels am Abend?",
+      "answer": ["Rot", "Blau"],
+      "difficulty": 0
+    },
+    {
+      "question": "Was ist 2 + 3?",
+      "answer": ["4", "5"],
+      "difficulty": 0
+    },
+    {
+      "question": "Was ist die Hauptstadt von Frankreich?",
+      "answer": ["Paris", "Berlin"],
+      "difficulty": 1
+    },
+    {
+      "question": "Wie viele Kontinente gibt es auf der Erde?",
+      "answer": ["5", "7"],
+      "difficulty": 1
+    },
+    {
+      "question": "Was ist die Hauptzutat in Pizza?",
+      "answer": ["Teig", "Reis"],
+      "difficulty": 1
+    },
+    {
+      "question": "Was ist die Hauptfarbe des Himmels am Tag?",
+      "answer": ["Rot", "Blau"],
+      "difficulty": 1
+    },
+    {
+      "question": "Was ist 2 + 2?",
+      "answer": ["4", "5"],
+      "difficulty": 1
+    },
+    {
+      "question": "Was ist die Hauptstadt von Deutschland?",
+      "answer": ["Paris", "Berlin"],
+      "difficulty": 1
+    },
+    {
+      "question": "Wie viele Kontinente gibt es auf dem Mars?",
+      "answer": ["5", "7"],
+      "difficulty": 1
+    },
+    {
+      "question": "Was ist die Hauptzutat in Curry?",
+      "answer": ["Teig", "Reis"],
+      "difficulty": 1
+    },
+    {
+      "question": "Was ist die Hauptfarbe des Himmels am Abend?",
+      "answer": ["Rot", "Blau"],
+      "difficulty": 1
+    },
+    {
+      "question": "Was ist 2 + 3?",
+      "answer": ["4", "5"],
+      "difficulty": 1
+    },
+    {
+      "question": "Was ist die Hauptstadt von Frankreich?",
+      "answer": ["Paris", "Berlin"],
+      "difficulty": 2
+    },
+    {
+      "question": "Wie viele Kontinente gibt es auf der Erde?",
+      "answer": ["5", "7"],
+      "difficulty": 2
+    },
+    {
+      "question": "Was ist die Hauptzutat in Pizza?",
+      "answer": ["Teig", "Reis"],
+      "difficulty": 2
+    },
+    {
+      "question": "Was ist die Hauptfarbe des Himmels am Tag?",
+      "answer": ["Rot", "Blau"],
+      "difficulty": 2
+    },
+    {
+      "question": "Was ist 2 + 2?",
+      "answer": ["4", "5"],
+      "difficulty": 2
+    },
+    {
+      "question": "Was ist die Hauptstadt von Deutschland?",
+      "answer": ["Paris", "Berlin"],
+      "difficulty": 2
+    },
+    {
+      "question": "Wie viele Kontinente gibt es auf dem Mars?",
+      "answer": ["5", "7"],
+      "difficulty": 2
+    },
+    {
+      "question": "Was ist die Hauptzutat in Curry?",
+      "answer": ["Teig", "Reis"],
+      "difficulty": 2
+    },
+    {
+      "question": "Was ist die Hauptfarbe des Himmels am Abend?",
+      "answer": ["Rot", "Blau"],
+      "difficulty": 2
+    },
+    {
+      "question": "Was ist 2 + 3?",
+      "answer": ["4", "5"],
+      "difficulty": 2
+    },
+    {
+      "question": "Was ist die Hauptstadt von Frankreich?",
+      "answer": ["Paris", "Berlin"],
+      "difficulty": 3
+    },
+    {
+      "question": "Wie viele Kontinente gibt es auf der Erde?",
+      "answer": ["5", "7"],
+      "difficulty": 3
+    },
+    {
+      "question": "Was ist die Hauptzutat in Pizza?",
+      "answer": ["Teig", "Reis"],
+      "difficulty": 3
+    },
+    {
+      "question": "Was ist die Hauptfarbe des Himmels am Tag?",
+      "answer": ["Rot", "Blau"],
+      "difficulty": 3
+    },
+    {
+      "question": "Was ist 2 + 2?",
+      "answer": ["4", "5"],
+      "difficulty": 3
+    },
+    {
+      "question": "Was ist die Hauptstadt von Deutschland?",
+      "answer": ["Paris", "Berlin"],
+      "difficulty": 3
+    },
+    {
+      "question": "Wie viele Kontinente gibt es auf dem Mars?",
+      "answer": ["5", "7"],
+      "difficulty": 3
+    },
+    {
+      "question": "Was ist die Hauptzutat in Curry?",
+      "answer": ["Teig", "Reis"],
+      "difficulty": 3
+    },
+    {
+      "question": "Was ist die Hauptfarbe des Himmels am Abend?",
+      "answer": ["Rot", "Blau"],
+      "difficulty": 3
+    },
+    {
+      "question": "Was ist 2 + 3?",
+      "answer": ["4", "5"],
+      "difficulty": 3
+    },
+    {
+      "question": "Was ist die Hauptstadt von Frankreich?",
+      "answer": ["Paris", "Berlin"],
+      "difficulty": 4
+    },
+    {
+      "question": "Wie viele Kontinente gibt es auf der Erde?",
+      "answer": ["5", "7"],
+      "difficulty": 4
+    },
+    {
+      "question": "Was ist die Hauptzutat in Pizza?",
+      "answer": ["Teig", "Reis"],
+      "difficulty": 4
+    },
+    {
+      "question": "Was ist die Hauptfarbe des Himmels am Tag?",
+      "answer": ["Rot", "Blau"],
+      "difficulty": 4
+    },
+    {
+      "question": "Was ist 2 + 2?",
+      "answer": ["4", "5"],
+      "difficulty": 4
+    },
+    {
+      "question": "Was ist die Hauptstadt von Deutschland?",
+      "answer": ["Paris", "Berlin"],
+      "difficulty": 4
+    },
+    {
+      "question": "Wie viele Kontinente gibt es auf dem Mars?",
+      "answer": ["5", "7"],
+      "difficulty": 4
+    },
+    {
+      "question": "Was ist die Hauptzutat in Curry?",
+      "answer": ["Teig", "Reis"],
+      "difficulty": 4
+    },
+    {
+      "question": "Was ist die Hauptfarbe des Himmels am Abend?",
+      "answer": ["Rot", "Blau"],
+      "difficulty": 4
+    },
+    {
+      "question": "Was ist 2 + 3?",
+      "answer": ["4", "5"],
+      "difficulty": 4
     }
   ]
   

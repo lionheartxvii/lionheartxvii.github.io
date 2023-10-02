@@ -97,13 +97,20 @@
         const firstCard = document.getElementById("firstCard");
         const secondCard = document.getElementById("secondCard");
         const questionBox = document.getElementById("questionBox");
-        let gradient1 = new Gradient();
-        let gradientLeft = new Gradient();
-        let gradientRight = new Gradient();
+        let gradient = new Gradient();
         let questionArray = [];
-        let questionNumber = 0;
+        let answerArray = [];
+        let colorPoolArray = [];
+        let gradientArray = [];
+        let questionNumber;
+        let currentDifficulty = 0;
+        let questionNumberMax = 5;
+        let questionsPerDifficulty = 1;
+        let maxDifficulty = 4;
+        let minQuestionIndex = 0;
+        let maxQuestionIndex = 0;
 
-        gradient1.initGradient('#gradient-canvas');
+        gradient.initGradient('#gradient-canvas');
 
         function hideCentralBox() {
             const centralBox = document.querySelector('.central-box');
@@ -119,20 +126,36 @@ fetch('./json/fragenkatalog.json')
   .then(data => {
     data.forEach(element => {
       let questionEntry = [
-        element.frage,
-        [element.antworten[0], element.antworten[1]],
-        [element.farbe[0], element.farbe[1]]
+        element.question,
+        [element.answer[0], element.answer[1]],
+        element.difficulty,
       ];
       questionArray.push(questionEntry);
-      firstQuestion();
     });
   })
+  .finally(data => firstQuestion())
+  .catch(error => {
+    console.error('Fehler beim Laden der JSON-Datei:', error);
+  });
+
+  fetch('./json/colorpool.json')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(element => {
+      let colorEntry = [
+        element.color
+      ];
+      colorPoolArray.push(colorEntry);
+    });
+  })
+  .finally(data => changeBackground())
   .catch(error => {
     console.error('Fehler beim Laden der JSON-Datei:', error);
   });
 
   function firstQuestion() {
 
+    setQuestionIndex();
     setCardValues();
 
     firstCard.addEventListener('mouseenter', function() {
@@ -150,45 +173,98 @@ fetch('./json/fragenkatalog.json')
     });
   };
 
-  function answer(card) {
+  function answer() {
     this.hideCentralBox();
-    changeBackground(card);
-    questionNumber++;
+    changeBackground();
     setCardValues();
-    this.showCentralBox();
-
   }
 
   function setCardValues() {
-    questionBox.children[0].textContent = `${questionNumber+1}. Frage`;
-    questionBox.children[1].textContent = questionArray[0][0];
+    questionNumber = getRandomIndex();
+    if (questionNumber === false) {
+        console.log("ende");
+        this.hideCentralBox();
+        firstCard.removeAttribute('onClick');           
+        secondCard.removeAttribute('onClick');    
+        return;
+    }
+    answerArray.push(questionNumber);
+    this.showCentralBox();
+    questionBox.children[0].textContent = `${answerArray.length}. Frage von ${questionNumberMax}`;
+    questionBox.children[1].textContent = questionArray[questionNumber][0];
     firstCard.children[0].textContent = questionArray[questionNumber][1][0];
     secondCard.children[0].textContent = questionArray[questionNumber][1][1];
   }
 
-  function changeBackground(cardValue) {
-    const wert = questionNumber % 4;
-    const color = questionArray[questionNumber][2][cardValue];
+  function changeBackground() {
+    let usedGradient = true;
+    var color1;
+    var color2;
+    var color3;
+    var color4;
 
-    switch (wert) {
-        case 0:
-            gradientCanvas.style.setProperty('--gradient-color-1', color);
-            break;
-        case 1:
-            gradientCanvas.style.setProperty('--gradient-color-2', color);
-            break;
-        case 2:
-            gradientCanvas.style.setProperty('--gradient-color-3', color);
-            break;
-        case 3:
-            gradientCanvas.style.setProperty('--gradient-color-4', color);
-            break;
-        default:
-            console.log("Der Wert entspricht keinem der Fälle");
-}
-    gradient1.initGradient('#gradient-canvas');
+    while (usedGradient === true) {
+        color1 = colorPoolArray[Math.floor(Math.random() * colorPoolArray.length)];
+        color2 = colorPoolArray[Math.floor(Math.random() * colorPoolArray.length)];
+        color3 = colorPoolArray[Math.floor(Math.random() * colorPoolArray.length)];
+        color4 = colorPoolArray[Math.floor(Math.random() * colorPoolArray.length)];
+
+        const sortedColors = [color1, color2, color3, color4].sort();
+
+        const isCombinationExist = gradientArray.some(gradient => {
+        const sortedGradient = gradient.slice().sort();
+        return sortedGradient[0] === sortedColors[0] && 
+               sortedGradient[1] === sortedColors[1] &&
+               sortedGradient[2] === sortedColors[2] &&
+               sortedGradient[3] === sortedColors[3];
+        });
+
+        if (!isCombinationExist) {
+            gradientArray.push(sortedColors);
+            usedGradient = false;
+        }
+    }
+    gradientCanvas.style.setProperty('--gradient-color-1', color1);
+    gradientCanvas.style.setProperty('--gradient-color-2', color2);
+    gradientCanvas.style.setProperty('--gradient-color-3', color3);
+    gradientCanvas.style.setProperty('--gradient-color-4', color4);
+    gradient.initGradient('#gradient-canvas');
   }
 
+  function getRandomIndex() {
+    if (answerArray.length >= questionNumberMax) {
+        return false;
+    } 
+    if (answerArray.length >= (currentDifficulty+1) * questionsPerDifficulty) {
+        currentDifficulty++;
+        setQuestionIndex();
+    }
+    return getRandom();
+  }
+
+  function getRandom() {
+    let reValue = Math.floor(Math.random() * (maxQuestionIndex - minQuestionIndex) + minQuestionIndex);
+    for (var i = 0; i < answerArray.length; i++) {
+        if (answerArray[i] === reValue) {
+            return getRandom();
+        }
+    }
+    return reValue;
+  }
+
+  function setQuestionIndex() {
+    let count = maxQuestionIndex;
+    minQuestionIndex = maxQuestionIndex;
+    for (let i = minQuestionIndex; i < questionArray.length; i++) {
+        if (questionArray[i][2] === currentDifficulty) {
+            console.log("test");
+            count++;
+        }
+    }
+    maxQuestionIndex = count;
+    console.log(minQuestionIndex);
+    console.log(maxQuestionIndex);
+  }
     </script>
 </body>
 </html>
