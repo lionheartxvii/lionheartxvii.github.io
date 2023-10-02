@@ -80,6 +80,28 @@
             width: 100vw;
             overflow-x: hidden;
         }
+
+        .box{
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+         -moz-transform: translateY(40px);
+            -ms-transform: translateY(40px);
+             -o-transform: translateY(40px);
+                    transform: translateY(40px);
+    -webkit-transition: all 0.6s ease-out;
+         -moz-transition: all 0.6s ease-out;
+            -ms-transition: all 0.6s ease-out;
+             -o-transition: all 0.6s ease-out;
+                    transition: all 0.6s ease-out;
+}
+
+.box.visible {
+    opacity: 1;
+    -webkit-transform: none;
+         -moz-transform: none;
+            -ms-transform: none;
+             -o-transform: none;
+                    transform: none;}
     </style>
 </head>
 
@@ -113,7 +135,7 @@
             <a href="tipps.html" class="menu-item">Fragerunde</a>
         </div>
 
-        <canvas id="gradient-canvas3" data-transition-in> </canvas>
+        <canvas id="gradient-canvas3"> </canvas>
     </div>
 
     <nav class="scroll-nav">
@@ -127,7 +149,7 @@
 
     <section class="hero-banner scroll-section" id="section1">
         <canvas id="gradient-canvas" data-transition-in> </canvas>
-        <div class="hero-content scroll" data-rate=".2" data-direction="vertical">
+        <div class="hero-content scroll" data-rate=".3" data-direction="vertical">
             <h1>making decisions can be hard and here is why</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -152,7 +174,6 @@
             <div class="buffer"></div>
 
             <div class="inner-content start-text">
-
                 <h2>Auf welcher Basis treffen wir Entscheidungen?</h2>
                 <p>Hast du dich schon einmal darüber gewundert, wieso wir
                     Entscheidungen oft aus unserem Bauchgefühl heraus treffen?
@@ -216,7 +237,7 @@
             </div>
 
             <div class="box-container inner-content">
-                <div class="box active">
+                <div class="box box-0 active">
                     <div class="box-content">
                         <img class="method-img" src="/assets/icons/hat.svg" alt="">
                         <h4>6 Hüte Methode</h4>
@@ -225,7 +246,7 @@
                     </div>
                     <a class="next-btn mobile" href="methoden.html">Weiter</a>
                 </div>
-                <div class="box">
+                <div class="box box-1">
                     <div class="box-content">
                         <img class="method-img" src="/assets/icons/10.svg" alt="">
                         <h4>10 / 10 / 10</h4>
@@ -234,7 +255,7 @@
                     </div>
                     <a class="next-btn mobile" href="#">Weiter</a>
                 </div>
-                <div class="box">
+                <div class="box box-2">
                     <div class="box-content">
                         <img class="method-img" src="/assets/icons/pro2.svg" alt="">
                         <h4>Mehr als pros & cons</h4>
@@ -243,7 +264,7 @@
                     </div>
                     <a class="next-btn mobile" href="#">Weiter</a>
                 </div>
-                <div class="box">
+                <div class="box box-3">
                     <div class="box-content">
                         
                         <img class="method-img" src="/assets/icons/reduce.svg" alt="">
@@ -252,7 +273,7 @@
                     </div>
                     <a class="next-btn mobile" href="#">Weiter</a>
                 </div>
-                <div class="box">
+                <div class="box box-4">
                     <div class="box-content">
                         <img class="method-img" src="/assets/icons/ice.svg" alt="">
                         <h4>ICE-Scoring-Model</h4>
@@ -376,31 +397,6 @@
         });
     </script>
 
-    <!-- Quelle: Youtube: DesignCourse, "Awesome Scrolling SVG Line Drawing - How they did it"-->
-    <script>
-        window.addEventListener('scroll', () => {
-
-            const target = document.querySelectorAll('.scroll');
-
-
-            var index = 0,
-                length = target.length;
-            for (index; index < length; index++) {
-                var pos = window.pageYOffset * target[index].dataset.rate;
-
-                if (target[index].dataset.direction === 'vertical') {
-                    target[index].style.transform = 'translate3d(0px, ' + pos + 'px, 0px)';
-                } else {
-                    var posX = window.pageYOffset * target[index].dataset.ratex;
-                    var posY = window.pageYOffset * target[index].dataset.ratey;
-
-                    target[index].style.transform = 'translate3d(' + posX + 'px, ' + posY + 'px, 0 px)';
-                }
-            }
-        })
-    </script>
-
-
 
     <script src="/libs/anime-master/lib/anime.min.js"></script>
     <script src="/javascript/script.js"></script>
@@ -411,10 +407,10 @@
     </script>
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 
+
     <!-- Scrollmagic Libraries -->
     <script src="/libs/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script src="/libs/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
-
 
     <script src="/javascript/animations.js"></script>
 

@@ -472,6 +472,8 @@ a {
     text-align: left;
     padding: 20px;
     margin-top: 2.5rem;
+
+    cursor: pointer;
 }
 
 .box-content {
@@ -1046,6 +1048,7 @@ rect,
 
     .box {
         display: none;
+        cursor: default;
         /* width: 90vw;
         height: 33vh; */
     }
@@ -1074,10 +1077,12 @@ rect,
     #prevBtn {
         transform: rotate(90deg);
         margin-right: 2rem;
+        cursor: pointer;
     }
 
     #nextBtn {
         transform: rotate(270deg);
+        cursor: pointer;
     }
 
     /* button {
