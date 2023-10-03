@@ -1889,4 +1889,47 @@ tr:nth-child(5) td:nth-child(2){
   .analysis {
     scale: 0.5;
   }
+
+  /*+++++++++++++++++++++++ Reaons Iphone Landscape Beispiele +++++++++++++++++++++++*/
+
+  /* 6 hats */
+  .hat-container {
+    width: 90vw;
+    flex-wrap: wrap;
+  }
+
+  .hat-box {
+    width: 30vw;
+    margin: 0 0px;
+    padding-bottom: 5vh;
+  }
+
+  .bubble-container {
+    display: none;
+  }
+
+  .speech-bubble {
+    border-radius: 200px;
+    padding: 0px;
+    width: 70vw;
+    min-height: 25vh;
+    margin: 7vh 0;
+  }
+
+  .speech-bubble .hidden-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .hidden-box p {
+    width: 70vw !important;
+    height: auto;
+    /* padding: 0 10px !important; */
+  }
+
+  .vh-120 {
+    height: 220vh !important;
+  }
+
+  
 }
