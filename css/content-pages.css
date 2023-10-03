@@ -1127,8 +1127,23 @@ td {
   }
 
   .circle-element .fs-16,
-  .hidden-box p {
+  .circle p {
     font-size: 20px !important;
+  }
+
+  .speech-bubble p{
+    font-size: 15px !important;
+  }
+
+  .speech-bubble .hidden-box {
+    width: 84% !important;
+    height: auto;
+  }
+
+  .speech-bubble .hidden-box p {
+    width: 70vw !important;
+    height: auto;
+    padding: 0 10px !important;
   }
 
   .circle-element img {
@@ -1141,7 +1156,7 @@ td {
   }
 
   .circle .hidden-box p {
-    width: 30vw !important;
+    width: 65vw !important;
     height: auto;
     padding: 0 10px !important;
   }
@@ -1841,6 +1856,10 @@ tr:nth-child(5) td:nth-child(2){
     font-size: 30px;
   }
 
+  .article {
+    max-width: 85% !important;
+  }
+
   /*+++++++++++++++++++++++ Origins Iphone Landscape Beispiele +++++++++++++++++++++++*/
   /* Origins */
   .beispiel-section,
@@ -1931,5 +1950,24 @@ tr:nth-child(5) td:nth-child(2){
     height: 220vh !important;
   }
 
-  
+  .ice-input-mobile{
+    width: 80vw;
+  }
+
+  .column-paradox .hidden{
+    display: block !important;
+  }
+
+    /*+++++++++++++++++++++++ Tipps Iphone Beispiele +++++++++++++++++++++++*/
+
+  /* 40 / 70 */
+  .beispiel-4070 .svg-container {
+    width: 80%;
+  }
+
+
+  .scale-08 {
+    scale: 0.6;
+  }
+
 }
