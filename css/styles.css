@@ -1272,7 +1272,7 @@ rect,
     }
 
     #flowers {
-        height: 28vh !important;
+        min-height: 17vh !important;
         width: auto !important;
         scale: 1.25;
         bottom: 0;
