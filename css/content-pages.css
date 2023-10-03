@@ -1208,8 +1208,6 @@ td {
   .beispiel-section {
     height: auto !important;
     margin: 10vh 0;
-    overflow-x: hidden;
-    position: relative;
   }
 
 
