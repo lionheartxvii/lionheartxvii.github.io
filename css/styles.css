@@ -1098,9 +1098,9 @@ rect,
 
     }
 
-    #section6 img {
+    /* #section6 img {
         width: 300vw;
-    }
+    } */
 
     #flowers {
         height: auto !important;
@@ -1273,9 +1273,13 @@ rect,
 
     #flowers {
         min-height: 17vh !important;
-        width: auto !important;
+        width: 200vw !important;
         scale: 1.25;
         bottom: 0;
+    }
+
+    #flowers-animation {
+        width: auto;
     }
 
     /* Message Box */
