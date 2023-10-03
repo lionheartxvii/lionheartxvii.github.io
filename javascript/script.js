@@ -337,3 +337,50 @@ function dropdownMenu(){
   menu_btn.classList.toggle('is-active');
   mobile_menu.classList.toggle('is-active');
 }
+
+
+// function berechneBreiten() {
+//   body = document.getElementsByTagName('body')[0];
+//   body.style.width = "unset";
+//   var viewportBreite = window.innerWidth;
+
+//   var elementBreite = document.getElementsByClassName("radial-gradient-container")[0]?.offsetWidth;
+
+//   var ergebnisText = "Viewport-Breite: " + viewportBreite + "px, Element-Breite: " + elementBreite + "px";
+//   document.getElementById("ergebnis").textContent = ergebnisText;
+
+//   document.getElementsByTagName('body')[0].style.width = viewportBreite >= elementBreite ? elementBreite + 'px' : viewportBreite + 'px';
+// }
+
+// window.addEventListener("load", berechneBreiten);
+// window.addEventListener("resize", berechneBreiten);
+// window.addEventListener("DOMContentLoaded", berechneBreiten);
+
+
+
+
+
+
+// Quelle: Youtube: DesignCourse, "Awesome Scrolling SVG Line Drawing - How they did it"
+
+    window.addEventListener('scroll', () => {
+
+        const target = document.querySelectorAll('.scroll');
+
+
+        var index = 0,
+            length = target.length;
+        for (index; index < length; index++) {
+            var pos = window.pageYOffset * target[index].dataset.rate;
+
+            if (target[index].dataset.direction === 'vertical') {
+                target[index].style.transform = 'translate3d(0px, ' + pos + 'px, 0px)';
+            } else {
+                var posX = window.pageYOffset * target[index].dataset.ratex;
+                var posY = window.pageYOffset * target[index].dataset.ratey;
+
+                target[index].style.transform = 'translate3d(' + posX + 'px, ' + posY + 'px, 0 px)';
+            }
+        }
+    })
+

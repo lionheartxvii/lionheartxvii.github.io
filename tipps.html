@@ -146,6 +146,13 @@
                 height: 80vh !important;
             }
         }
+
+        @media only screen and (max-width: 900px) and (orientation: landscape) {
+            .hero-banner,
+            #gradient-canvas-reasons {
+                height: 100vh !important;
+            }
+        }
     </style>
 </head>
 
@@ -172,7 +179,7 @@
 
     <section class="hero-banner scroll-section" id="section1">
         <canvas id="gradient-canvas-reasons" data-transition-in> </canvas>
-        <div class="hero-content">
+        <div class="hero-content scroll" data-rate=".2" data-direction="vertical">
             <h1>More tipps that might help to make better decisions</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
