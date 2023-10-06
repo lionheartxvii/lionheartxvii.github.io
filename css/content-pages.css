@@ -458,6 +458,7 @@ h2 {
 }
 
 .beispiel-hats h2 {
+  width: 40vw;
   padding-bottom: 0px !important;
 }
 
@@ -593,7 +594,7 @@ h2 {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  width: 100%;
+  width: 60%;
   border-bottom: 1px solid var(--main-fg-color);
   padding: 22px 0;
 }
@@ -1334,6 +1335,7 @@ td {
 
   .beispiel-10-row {
     padding: 16px 0;
+    width: 65vw;
   }
 
   .beispiel-10-tabelle {
@@ -1422,7 +1424,7 @@ td {
 
 }
 
-/* Mobile */
+/* Mobile portrait*/
 @media only screen and (max-width: 768px) and (orientation: portrait) {
   /* 768 / 769 */
 
@@ -1690,7 +1692,7 @@ td {
     padding: 16px 0;
   }
 
-  .beispiel-10-tabelle {
+  .beispiel-10-row {
     width: 90vw;
   }
 
@@ -1824,6 +1826,7 @@ tr:nth-child(5) td:nth-child(2){
 
 }
 
+/* Mobile landscape*/
 @media only screen and (max-width: 900px) and (orientation: landscape) {
 
   .hidden {
