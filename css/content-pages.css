@@ -84,6 +84,7 @@ h2 {
   width: 20vw;
 }
 
+
 .paradox-headline {
   padding-bottom: 0 !important;
 }
@@ -220,7 +221,8 @@ h2 {
 }
 
 .absatz {
-  height: 60vh;
+  min-height: 55vh;
+  margin-bottom: 10vh !important;
 }
 
 .text,
@@ -237,7 +239,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   margin: 0;
 }
@@ -335,6 +337,7 @@ h2 {
   align-items: center;
   padding: 10px;
   text-align: center;
+  flex-direction: column;
 }
 
 .hidden-box h3 {
@@ -482,6 +485,10 @@ h2 {
   align-content: center;
 }
 
+.df>.box-aufgabenstellung {
+  margin-bottom: 1rem;
+}
+
 .paradox {
   width: calc(55vw / 5 - 10px) !important;
   height: 40px !important;
@@ -497,14 +504,8 @@ h2 {
   margin-right: 0 !important;
 }
 
-
 /* Six Hat Method */
 
-
-/* .container {
-  text-align: center;
-  position: relative;
-} */
 
 .speech-bubble {
   position: relative;
@@ -566,8 +567,6 @@ h2 {
   width: 60px;
   height: 60px;
   padding-bottom: 0.5rem;
-  /* max-width: 100%;
-  height: auto; */
 }
 
 .hat-box p {
@@ -659,6 +658,20 @@ table td {
 .box-counter {
   width: fit-content !important;
   align-self: flex-end;
+}
+
+.iceIllustration{
+  width: 100%;
+  height: 20vh;
+  visibility: hidden;
+}
+
+.icecream{
+  scale: 0.4;
+}
+
+.vh-120 {
+  height: 160vh !important;
 }
 
 /* Pro Contra Beispiel */
@@ -857,6 +870,10 @@ td {
     max-width: 80%;
   }
 
+  .absatz{
+    height: 60vh;
+  }
+
   .buffer {
     min-width: 140px;
   }
@@ -919,6 +936,12 @@ td {
 
   .train {
     scale: 1;
+  }
+
+  .train-container{
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .analysis {
@@ -1025,6 +1048,12 @@ td {
 
   .train {
     scale: 1.2;
+  }
+
+  .train-container{
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   /*+++++++++++++++++++++++ Methods IPad Beispiele +++++++++++++++++++++++*/
@@ -1603,11 +1632,18 @@ td {
   }
 
   .train {
-    scale: 2;
-    margin-top: 3vh;
+    scale: 2.6;
+    margin-top: 0vh;
     margin-bottom: 3vh;
   }
 
+
+  .curious-curio{
+    scale: 0.5;
+    width: 177%;
+  }
+  
+  
   .df-interactive {
     width: 90vw;
   }
@@ -1900,12 +1936,6 @@ tr:nth-child(5) td:nth-child(2){
   .curious-curio {
     scale: 0.55;
     width: 159%;
-  }
-
-  .train-container{
-    position: relative;
-    width: 100%;
-    overflow-x: hidden;
   }
 
   .analysis {

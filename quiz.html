@@ -10,19 +10,23 @@
   <link rel="stylesheet" href="css/styles.css">
   <title>Quiz</title>
   <style>
+    html {
+      overflow: hidden;
+    }
+
     .card-container {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: row;
-      height: 100vh;
+      height: calc(100vh - 10px);
       width: 100vw;
       z-index: 0;
     }
 
     .card {
       width: 50vw;
-      height: 100vh;
+      height: calc(100vh - 10px);
       padding: auto;
       background-color: #f5ecdf;
       margin: auto;
@@ -60,6 +64,7 @@
       flex-direction: column;
     }
 
+
     #gradient-card-right,
     #gradient-card-left {
       position: absolute;
@@ -67,6 +72,11 @@
 
     .central-box>h2 {
       text-align: center;
+      padding-bottom: 0.5rem;
+    }
+
+    .central-box>p {
+      font-size: 1.25rem !important;
     }
 
     /* .hide-button {
@@ -88,19 +98,18 @@
       top: 0;
     }
 
-
     .skip-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      border-radius: 2px; 
+      border-radius: 2px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: row;
       cursor: pointer;
       /* transition: background-color 0.3s; */
-      padding: 5px 20px!important;
+      padding: 5px 20px !important;
       z-index: 300;
     }
 
@@ -118,8 +127,79 @@
       margin-right: 20px !important;
     }
 
-    /* Mobile portrait*/
-    @media only screen and (max-width: 768px) and (orientation: portrait) {
+    .progress-container {
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid var(--main-fg-color);
+      /* background-color: var(--primary-bg-color); */
+    }
+
+    .quizInhalt{
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 10px;
+      background-color: var(--main-fg-color);
+
+      transition: width 0.5s ease-in-out;
+    }
+
+    .startScreen, .endScreen {
+      position: absolute;
+      z-index: 600;
+      height: 100vh;
+      width: 100%;
+      opacity: 1;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+    }
+    
+    .endScreen{
+      opacity: 0;
+      transition: 0.8s;
+    }
+
+    .center>h1 {
+      font-size: 55px !important;
+      max-width: 60%;
+    }
+
+    .center>p {
+      width: 50%;
+    }
+
+    .hidden {
+      opacity: 0;
+      z-index: -1;
+    }
+
+    #gradient-canvas-start {
+      --gradient-color-1: #FFC876;
+      --gradient-color-2: #cc3c23;
+      --gradient-color-3: #D9659A;
+      --gradient-color-4: #96adf3;
+
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+    }
+
+    /* portrait*/
+    @media only screen and (orientation: portrait) {
+
+      .central-box {
+        height: 10vh;
+        top: 10%;
+        left: 50%;
+      }
+
       .card-container {
         flex-direction: column;
         height: 100vh;
@@ -142,24 +222,76 @@
       }
 
       .skip-button {
-      bottom: 6px;
-      right: 4px;
+        bottom: 6px;
+        right: 4px;
+      }
+
+
     }
 
-
+    @media only screen and (max-width: 900px) and (orientation: landscape) {
+      .central-box {
+        margin-top: 1rem;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <div class="startScreen" id="hideStartScreen">
+
+    <div class="center">
+      <h1>Lass uns versuchen, einige Fragen über dich zu beantworten</h1>
+      <p>Im Folgenden werden fünf verschiedene Fragen gestellt, die keine Auswirkungen auf den übrigen Inhalt der
+        Webseite haben.
+        Die angegebenen Antworten werden ebenfalls nicht gespeichert.
+        <a class="hidden-text">Diese Fragen sollen zum Nachdenken anregen, also nimm dir ruhig ein wenig Zeit, um sie zu
+          beantworten.</a>
+      </p>
+
+      <div type="button" class="primary-button" id="moveBackButton">
+        <a>starte hier</a>
+      </div>
+      <canvas id="gradient-canvas-start" data-transition-in> </canvas>
+
+    </div>
+
+    <a class="skip-button" href="index.html">
+      <p>überspringe die Fragen</p>
+      <img src="assets/arrow-right.svg" alt="Icon">
+    </a>
+  </div>
+
+  <div class="endScreen  hidden" id="showEndScreen">
+    <div class="hero-content">
+      <h1>making decisions can be hard and here is why</h1>
+      <p>Du hast erfolgreich die Fragerunde durchgeführt! Wenn du mehr dazu erfahren willst, 
+        wieso es uns schwer fällt Entscheidungen zu treffen, fahre fort!
+      </p>
+    </div>
+
+
+    <a href="index.html">
+      <img class="arrow" src="/assets/arrow-down-long.svg">
+    </a>
+
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="ProgressBar"></div>
+  </div>
+
   <canvas id="gradient-canvas" data-transition-in></canvas>
 
+  <div class="quizInhalt">
+
   <div class="card-container">
-    <div class="card" id="firstCard" onclick="answer(0)">
+    <div class="card" id="firstCard" onclick="answer(0); increaseProgressBar()">
       <h2>Karte 1</h2>
       <canvas id="gradient-card-left" data-transition-in></canvas>
     </div>
-    <div class="card" id="secondCard" onclick="answer(1)">
+    <div class="card" id="secondCard" onclick="answer(1); increaseProgressBar()">
       <h2>Karte 2</h2>
       <canvas id="gradient-card-right" data-transition-in></canvas>
     </div>
@@ -173,16 +305,19 @@
     <!-- <button class="hide-button" onclick="hideCentralBox()">Antworten</button> -->
   </div>
 
-  <div>
-    <a class="skip-button" href="index.html">
-      <p>überspringe die Fragen</p>
-      <img src="assets/arrow-right.svg" alt="Icon">
+  <a class="skip-button" href="index.html">
+    <p>überspringe die Fragen</p>
+    <img src="assets/arrow-right.svg" alt="Icon">
   </a>
+</div>
 
-  </div>
+
+ 
 
   <script src="./javascript/Gradient.js"></script>
   <script>
+
+    const gradient2 = new Gradient()
     const gradientCanvas = document.getElementById('gradient-canvas');
     const firstCard = document.getElementById("firstCard");
     const secondCard = document.getElementById("secondCard");
@@ -201,15 +336,22 @@
     let maxQuestionIndex = 0;
 
     gradient.initGradient('#gradient-canvas');
+    gradient2.initGradient('#gradient-canvas-start');
+
 
     function hideCentralBox() {
-      const centralBox = document.querySelector('.central-box');
+      const centralBox = document.querySelector('.quizInhalt');
       centralBox.style.opacity = '0';
     }
 
     function showCentralBox() {
-      const centralBox = document.querySelector('.central-box');
+      const centralBox = document.querySelector('.quizInhalt');
       centralBox.style.opacity = '1';
+    }
+
+    function showEndScreen() {
+      const endScreen = document.querySelector('.endScreen');
+      endScreen.style.cssText = 'opacity: 1; z-index: 100 ';
     }
 
     fetch('./json/fragenkatalog-2.json')
@@ -275,6 +417,7 @@
       if (questionNumber === false) {
         console.log("ende");
         this.hideCentralBox();
+        this.showEndScreen();
         firstCard.removeAttribute('onClick');
         secondCard.removeAttribute('onClick');
         return;
@@ -356,6 +499,45 @@
       console.log(minQuestionIndex);
       console.log(maxQuestionIndex);
     }
+
+    // Progress Bar
+    let progress = 0; // Startwert des Fortschritts
+
+    function increaseProgressBar() {
+      if (progress < 100) {
+        progress += 20; // Jede Klick auf eine der Div-Boxen erhöht den Fortschritt um 20%
+        updateProgressBar();
+      }
+    }
+
+    function updateProgressBar() {
+      const progressBar = document.getElementById('ProgressBar');
+      progressBar.style.width = progress + '%';
+    }
+
+    // Hide Start Screen
+    document.getElementById("moveBackButton").addEventListener("click", function () {
+      var myBox = document.getElementById("hideStartScreen");
+      myBox.classList.add("hidden");
+    });
+
+
+    var speed = 'slow';
+
+$('html, body').hide();
+
+$(document).ready(function() {
+    $('html, body').fadeIn(speed, function() {
+        $('a[href], button[href]').click(function(event) {
+            var url = $(this).attr('href');
+            if (url.indexOf('#') == 0 || url.indexOf('javascript:') == 0) return;
+            event.preventDefault();
+            $('html, body').fadeOut(speed, function() {
+                window.location = url;
+            });
+        });
+    });
+});
   </script>
 </body>
 

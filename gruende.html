@@ -35,18 +35,18 @@
         }
 
         .radial-gradient-container div:nth-child(1) {
-            height: 84%;
-            width: 80%;
+            height: 94%;
+            width: 88%;
             background-color: var(--gradient-color-4);
             left: -29%;
             top: 21%;
         }
 
         .radial-gradient-container div:nth-child(2) {
-            height: 75%;
-            width: 63%;
+            height: 60%;
+            width: 52%;
             background-color: var(--gradient-color-2);
-            left: 43%;
+            left: 60%;
             top: 32%;
             animation-delay: 8s;
         }
@@ -61,13 +61,12 @@
         }
 
         .radial-gradient-container div:nth-child(4) {
-            height: 88%;
-            width: 59%;
+            height: 80%;
+            width: 53%;
             background-color: var(--gradient-color-1);
             left: -10%;
             top: -18%;
-            animation-delay: 1.2s;
-            opacity: 0.8;
+            animation-delay: 5.2s;
         }
     </style>
 </head>
@@ -173,36 +172,52 @@
 
                 <div class="beispiel-section">
 
-                    <div class="beispiel-10 inner-content">
-
-                        <div class="df-interactive">
-                            <div class="side-box" id="leftBox" onclick="updateBoxes()">
-                                <img src="/assets/icons/mond.svg">
-                                <p>länger schlafen</p>
+                    <div class="center inner-content">
+                        <div class="center df">
+                            <h2>Tagtägliche Entscheidungen</h2>
+                            <div class="box-aufgabenstellung">
+                                <p>
+                                    Tagtäglich treffen wir viele verschiedene und auch kleinere Entscheidung, die dazu führen können, dass wir unter 
+                                    Entscheidungsmüdigkeit leiden. In dem Beispiel werden einige dieser alltäglichen Entscheidung dargestellt,
+                                    helfe Curio sich zu entscheiden.
+                                </p>
                             </div>
-
-                            <div class="center-box">
-
-                                <div class="curio-box">
-                                    <lottie-interactive id="curio-awake" class="curio" autoplay loop path="./json/curio.json"
-                                    interaction="play-on-show"></lottie-interactive>
-                                <lottie-interactive id="curio-asleep" class="curio" autoplay path="./json/tired-curio.json"
-                                    interaction="play-on-show"></lottie-interactive>
+    
+                        </div>
+    
+                        <div class="beispiel-10">
+    
+                            <div class="df-interactive">
+                                <div class="side-box" id="leftBox" onclick="updateBoxes()">
+                                    <img src="/assets/icons/mond.svg">
+                                    <p>länger schlafen</p>
                                 </div>
-
-                                <div class="stamina-bar-outer">
-                                    <div class="stamina-bar-inner" id="progressBar"></div>
+    
+                                <div class="center-box">
+    
+                                    <div class="curio-box">
+                                        <lottie-interactive id="curio-awake" class="curio" autoplay loop path="./json/curio.json"
+                                        interaction="play-on-show"></lottie-interactive>
+                                    <lottie-interactive id="curio-asleep" class="curio" autoplay path="./json/tired-curio.json"
+                                        interaction="play-on-show"></lottie-interactive>
+                                    </div>
+    
+                                    <div class="stamina-bar-outer">
+                                        <div class="stamina-bar-inner" id="progressBar"></div>
+                                    </div>
+                                </div>
+    
+                                <div class="side-box" id="rightBox" onclick="updateBoxes()">
+                                    <img src="/assets/icons/wecker.svg">
+                                    <p>früh aufstehen</p>
                                 </div>
                             </div>
-
-                            <div class="side-box" id="rightBox" onclick="updateBoxes()">
-                                <img src="/assets/icons/wecker.svg">
-                                <p>früh aufstehen</p>
-                            </div>
+    
+    
                         </div>
 
-
                     </div>
+
 
                     <div class="radial-gradient-container">
                         <div></div>
@@ -727,9 +742,9 @@
         <div class="footer-content">
             <a href="index.html" class="title">Wahl x Weise</a>
             <nav class="footer-nav">
-                <a href="#">About</a>
-                <a href="#">Impressum</a>
-                <a href="#">Kontakt</a>
+                <a href="about.html">About</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
                 <!-- Weitere Navigationselemente hier -->
             </nav>
             <p class="footer-copyright">©2023 - Form | All rights reserved</p>

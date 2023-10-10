@@ -133,7 +133,7 @@ function showBox(boxNumber) {
     hideBox();
     activeBox = boxNumber;
     const hiddenBox = document.getElementById(`hiddenBox${boxNumber}`);
-    hiddenBox.style.display = "block";
+    hiddenBox.style.display = "flex";
     circleElements[boxNumber - 1 ].style.scale = 1.1;
     circleElements[boxNumber - 1 ].style.backgroundColor = "rgba(36, 36, 39, 0.1)";
   }
@@ -305,6 +305,11 @@ function executeAusschluss(value) {
     }, 300);
     document.querySelector('.box-counter').innerHTML = "2/2";
     document.querySelector('.beispiel-paradox').children[0].children[2].children[0].textContent = "Gratulation!";
+
+      const showIce = document.querySelector('.iceIllustration').children[0];
+      showIce.style.cssText = 'visibility: visible;';
+
+
   }
 }
 
