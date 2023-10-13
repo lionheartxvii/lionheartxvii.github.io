@@ -134,7 +134,7 @@
       /* background-color: var(--primary-bg-color); */
     }
 
-    .quizInhalt{
+    .quizInhalt {
       transition: opacity 0.5s ease-in-out;
     }
 
@@ -146,7 +146,8 @@
       transition: width 0.5s ease-in-out;
     }
 
-    .startScreen, .endScreen {
+    .startScreen,
+    .endScreen {
       position: absolute;
       z-index: 600;
       height: 100vh;
@@ -158,15 +159,38 @@
       align-items: center;
       transition: 0.5s;
     }
-    
-    .endScreen{
+
+    .endScreen {
       opacity: 0;
       transition: 0.8s;
     }
 
-    .center>h1 {
-      font-size: 55px !important;
+    h1 {
+      font-size: 55px;
       max-width: 60%;
+    }
+
+    @media only screen and (max-width: 1100px) and (orientation: landscape) {
+      h1 {
+        font-size: 55px;
+        padding-bottom: 1.25rem;
+        min-width: 70%;
+      }
+    }
+
+    @media only screen and (max-width: 900px) and (orientation: landscape) {
+      h1 {
+        font-size: 40px;
+        padding-bottom: 0.3rem;
+      }
+    }
+
+    @media only screen and (max-width: 768px) and (orientation: portrait) {
+      h1 {
+        font-size: 40px;
+        max-width: 95vw;
+        padding-bottom: 1.25rem;
+      }
     }
 
     .center>p {
@@ -266,7 +290,7 @@
   <div class="endScreen  hidden" id="showEndScreen">
     <div class="hero-content">
       <h1>making decisions can be hard and here is why</h1>
-      <p>Du hast erfolgreich die Fragerunde durchgeführt! Wenn du mehr dazu erfahren willst, 
+      <p>Du hast erfolgreich die Fragerunde durchgeführt! Wenn du mehr dazu erfahren willst,
         wieso es uns schwer fällt Entscheidungen zu treffen, fahre fort!
       </p>
     </div>
@@ -286,37 +310,36 @@
 
   <div class="quizInhalt">
 
-  <div class="card-container">
-    <div class="card" id="firstCard" onclick="answer(0); increaseProgressBar()">
-      <h2>Karte 1</h2>
-      <canvas id="gradient-card-left" data-transition-in></canvas>
+    <div class="card-container">
+      <div class="card" id="firstCard" onclick="answer(0); increaseProgressBar()">
+        <h2>Karte 1</h2>
+        <canvas id="gradient-card-left" data-transition-in></canvas>
+      </div>
+      <div class="card" id="secondCard" onclick="answer(1); increaseProgressBar()">
+        <h2>Karte 2</h2>
+        <canvas id="gradient-card-right" data-transition-in></canvas>
+      </div>
     </div>
-    <div class="card" id="secondCard" onclick="answer(1); increaseProgressBar()">
-      <h2>Karte 2</h2>
-      <canvas id="gradient-card-right" data-transition-in></canvas>
+
+    <!-- Zentrale Box -->
+    <div class="central-box center" id="questionBox">
+      <h2></h2>
+      <p></p>
+      <!-- Button zum Ausblenden der zentralen Box -->
+      <!-- <button class="hide-button" onclick="hideCentralBox()">Antworten</button> -->
     </div>
+
+    <a class="skip-button" href="index.html">
+      <p>überspringe die Fragen</p>
+      <img src="assets/arrow-right.svg" alt="Icon">
+    </a>
   </div>
 
-  <!-- Zentrale Box -->
-  <div class="central-box center" id="questionBox">
-    <h2></h2>
-    <p></p>
-    <!-- Button zum Ausblenden der zentralen Box -->
-    <!-- <button class="hide-button" onclick="hideCentralBox()">Antworten</button> -->
-  </div>
-
-  <a class="skip-button" href="index.html">
-    <p>überspringe die Fragen</p>
-    <img src="assets/arrow-right.svg" alt="Icon">
-  </a>
-</div>
 
 
- 
 
   <script src="./javascript/Gradient.js"></script>
   <script>
-
     const gradient2 = new Gradient()
     const gradientCanvas = document.getElementById('gradient-canvas');
     const firstCard = document.getElementById("firstCard");
@@ -524,20 +547,20 @@
 
     var speed = 'slow';
 
-$('html, body').hide();
+    $('html, body').hide();
 
-$(document).ready(function() {
-    $('html, body').fadeIn(speed, function() {
-        $('a[href], button[href]').click(function(event) {
-            var url = $(this).attr('href');
-            if (url.indexOf('#') == 0 || url.indexOf('javascript:') == 0) return;
-            event.preventDefault();
-            $('html, body').fadeOut(speed, function() {
-                window.location = url;
-            });
+    $(document).ready(function () {
+      $('html, body').fadeIn(speed, function () {
+        $('a[href], button[href]').click(function (event) {
+          var url = $(this).attr('href');
+          if (url.indexOf('#') == 0 || url.indexOf('javascript:') == 0) return;
+          event.preventDefault();
+          $('html, body').fadeOut(speed, function () {
+            window.location = url;
+          });
         });
+      });
     });
-});
   </script>
 </body>
 
