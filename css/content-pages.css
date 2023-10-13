@@ -1282,6 +1282,12 @@ td {
     margin-bottom: 3vh;
   }
 
+  .train-container{
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   .df-interactive {
     width: 70vw;
   }
