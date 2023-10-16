@@ -1,209 +1,466 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
     maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Master Worktitel</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Quiz</title>
-    <style>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Master Worktitel</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Quiz</title>
+  <style>
+    html {
+      overflow: hidden;
+    }
 
-        .card-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            width: 100vw;
-            z-index: 0;
-        }
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      height: calc(100vh - 10px);
+      width: 100vw;
+      z-index: 0;
+    }
 
-        .card {
-            width: 50vw;
-            height: 100vh;
-            padding: auto;
-            background-color: #f5ecdf;
-            margin: auto;
-            box-sizing: border-box;
-            text-align: center;
-        }
-        .card>h2 {
-            margin-top: 45%;
-            text-align: center;
-        }
+    .card {
+      width: 50vw;
+      height: calc(100vh - 10px);
+      padding: auto;
+      background-color: #f5ecdf;
+      margin: auto;
+      box-sizing: border-box;
+      text-align: center;
+      cursor: pointer;
 
-        .central-box {
-            width: 30vh;
-            height: 40vh;
-            background-color: #f5ecdf;
-            border: 1px solid #ccc;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            text-align: center;
-        }
-        .central-box>h2 {
-            text-align: center;
-        }
+      transition: 0.7s;
 
-        .hide-button {
-            margin-top: 10px;
-            cursor: pointer;
-            color: blue;
-        }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        #gradient-canvas {
-            --gradient-color-1: #FFC876; 
-            --gradient-color-2: #cc3c23; 
-            --gradient-color-3: #D9659A;  
-            --gradient-color-4: #96adf3;
+    .card>h2 {
+      /* margin-top: 53%; */
+      text-align: center;
+      width: 20vw;
+    }
 
-            height: 100vh;
-            width: 100vw;
-            position: absolute;
-            z-index: -1;
-            top: 0;
-        }
-    </style>
+    .central-box {
+      width: 100vh;
+      height: 20vh;
+      /* background-color: #f5ecdf; */
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      text-align: center;
+
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+
+    #gradient-card-right,
+    #gradient-card-left {
+      position: absolute;
+    }
+
+    .central-box>h2 {
+      text-align: center;
+      padding-bottom: 0.5rem;
+    }
+
+    .central-box>p {
+      font-size: 1.25rem !important;
+    }
+
+    /* .hide-button {
+      margin-top: 10px;
+      cursor: pointer;
+      color: blue;
+    } */
+
+    #gradient-canvas {
+      --gradient-color-1: #FFC876;
+      --gradient-color-2: #cc3c23;
+      --gradient-color-3: #D9659A;
+      --gradient-color-4: #96adf3;
+
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+    }
+
+    .skip-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      border-radius: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      cursor: pointer;
+      /* transition: background-color 0.3s; */
+      padding: 5px 20px !important;
+      z-index: 300;
+    }
+
+    .skip-button:hover {
+      background-color: rgba(36, 36, 39, 0.1);
+    }
+
+    .skip-button img {
+      width: 50px;
+      height: 50px;
+      display: block;
+    }
+
+    .skip-button p {
+      margin-right: 20px !important;
+    }
+
+    .progress-container {
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid var(--main-fg-color);
+      /* background-color: var(--primary-bg-color); */
+    }
+
+    .quizInhalt {
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 10px;
+      background-color: var(--main-fg-color);
+
+      transition: width 0.5s ease-in-out;
+    }
+
+    .startScreen,
+    .endScreen {
+      position: absolute;
+      z-index: 600;
+      height: 100vh;
+      width: 100%;
+      opacity: 1;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+    }
+
+    .endScreen {
+      opacity: 0;
+      transition: 0.8s;
+    }
+
+    h1 {
+      font-size: 55px;
+      max-width: 60%;
+    }
+
+    @media only screen and (max-width: 1100px) and (orientation: landscape) {
+      h1 {
+        font-size: 55px;
+        padding-bottom: 1.25rem;
+        min-width: 70%;
+      }
+    }
+
+    @media only screen and (max-width: 900px) and (orientation: landscape) {
+      h1 {
+        font-size: 40px;
+        padding-bottom: 0.3rem;
+      }
+    }
+
+    @media only screen and (max-width: 768px) and (orientation: portrait) {
+      h1 {
+        font-size: 40px;
+        max-width: 95vw;
+        padding-bottom: 1.25rem;
+      }
+    }
+
+    .center>p {
+      width: 50%;
+    }
+
+    .hidden {
+      opacity: 0;
+      z-index: -1;
+    }
+
+    #gradient-canvas-start {
+      --gradient-color-1: #FFC876;
+      --gradient-color-2: #cc3c23;
+      --gradient-color-3: #D9659A;
+      --gradient-color-4: #96adf3;
+
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+    }
+
+    /* portrait*/
+    @media only screen and (orientation: portrait) {
+
+      .central-box {
+        height: 10vh;
+        top: 10%;
+        left: 50%;
+      }
+
+      .card-container {
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .central-box {
+        justify-content: flex-start;
+      }
+
+      .card {
+        width: 100vw;
+        height: 50vh;
+        padding: none;
+        margin: none;
+      }
+
+      #firstCard>h2 {
+        margin-top: 6rem;
+      }
+
+      .skip-button {
+        bottom: 6px;
+        right: 4px;
+      }
+
+
+    }
+
+    @media only screen and (max-width: 900px) and (orientation: landscape) {
+      .central-box {
+        margin-top: 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <canvas id="gradient-canvas" data-transition-in></canvas>
 
-        <div class="card-container">
-            <div class="card" id="firstCard" onclick="answer(0)">
-                <h2>Karte 1</h2>
-                <canvas id="gradient-card-left" data-transition-in></canvas>
-            </div>
-            <div class="card" id="secondCard" onclick="answer(1)">
-                <h2>Karte 2</h2>
-                <canvas id="gradient-card-right" data-transition-in></canvas>
-            </div>
-        </div>
-    
-        <!-- Zentrale Box -->
-        <div class="central-box" id="questionBox">
-            <h2></h2>
-            <p></p>
-            <!-- Button zum Ausblenden der zentralen Box -->
-            <button class="hide-button" onclick="hideCentralBox()">Antworten</button>
-        </div>
+  <div class="startScreen" id="hideStartScreen">
 
-    <script src="./javascript/Gradient.js"></script>
-    <script>
-        const gradientCanvas = document.getElementById('gradient-canvas');
-        const firstCard = document.getElementById("firstCard");
-        const secondCard = document.getElementById("secondCard");
-        const questionBox = document.getElementById("questionBox");
-        let gradient = new Gradient();
-        let questionArray = [];
-        let answerArray = [];
-        let colorPoolArray = [];
-        let gradientArray = [];
-        let questionNumber;
-        let currentDifficulty = 0;
-        let questionNumberMax = 5;
-        let questionsPerDifficulty = 1;
-        let maxDifficulty = 4;
-        let minQuestionIndex = 0;
-        let maxQuestionIndex = 0;
+    <div class="center">
+      <h1>Lass uns versuchen, einige Fragen über dich zu beantworten</h1>
+      <p>Im Folgenden werden fünf verschiedene Fragen gestellt, die keine Auswirkungen auf den übrigen Inhalt der
+        Webseite haben.
+        Die angegebenen Antworten werden ebenfalls nicht gespeichert.
+        <a class="hidden-text">Diese Fragen sollen zum Nachdenken anregen, also nimm dir ruhig ein wenig Zeit, um sie zu
+          beantworten.</a>
+      </p>
 
-        gradient.initGradient('#gradient-canvas');
+      <div type="button" class="primary-button" id="moveBackButton">
+        <a>starte hier</a>
+      </div>
+      <canvas id="gradient-canvas-start" data-transition-in> </canvas>
 
-        function hideCentralBox() {
-            const centralBox = document.querySelector('.central-box');
-            centralBox.style.display = 'none';
-        }
-        function showCentralBox() {
-            const centralBox = document.querySelector('.central-box');
-            centralBox.style.display = 'unset';
-        }
+    </div>
 
-fetch('./json/fragenkatalog.json')
-  .then(response => response.json())
-  .then(data => {
-    data.forEach(element => {
-      let questionEntry = [
-        element.question,
-        [element.answer[0], element.answer[1]],
-        element.difficulty,
-      ];
-      questionArray.push(questionEntry);
-    });
-  })
-  .finally(data => firstQuestion())
-  .catch(error => {
-    console.error('Fehler beim Laden der JSON-Datei:', error);
-  });
+    <a class="skip-button" href="index.html">
+      <p>überspringe die Fragen</p>
+      <img src="assets/arrow-right.svg" alt="Icon">
+    </a>
+  </div>
 
-  fetch('./json/colorpool.json')
-  .then(response => response.json())
-  .then(data => {
-    data.forEach(element => {
-      let colorEntry = [
-        element.color
-      ];
-      colorPoolArray.push(colorEntry);
-    });
-  })
-  .finally(data => changeBackground())
-  .catch(error => {
-    console.error('Fehler beim Laden der JSON-Datei:', error);
-  });
+  <div class="endScreen  hidden" id="showEndScreen">
+    <div class="hero-content">
+      <h1>making decisions can be hard and here is why</h1>
+      <p>Du hast erfolgreich die Fragerunde durchgeführt! Wenn du mehr dazu erfahren willst,
+        wieso es uns schwer fällt Entscheidungen zu treffen, fahre fort!
+      </p>
+    </div>
 
-  function firstQuestion() {
 
-    setQuestionIndex();
-    setCardValues();
+    <a href="index.html">
+      <img class="arrow" src="/assets/arrow-down-long.svg">
+    </a>
 
-    firstCard.addEventListener('mouseenter', function() {
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="ProgressBar"></div>
+  </div>
+
+  <canvas id="gradient-canvas" data-transition-in></canvas>
+
+  <div class="quizInhalt">
+
+    <div class="card-container">
+      <div class="card" id="firstCard" onclick="answer(0); increaseProgressBar()">
+        <h2>Karte 1</h2>
+        <canvas id="gradient-card-left" data-transition-in></canvas>
+      </div>
+      <div class="card" id="secondCard" onclick="answer(1); increaseProgressBar()">
+        <h2>Karte 2</h2>
+        <canvas id="gradient-card-right" data-transition-in></canvas>
+      </div>
+    </div>
+
+    <!-- Zentrale Box -->
+    <div class="central-box center" id="questionBox">
+      <h2></h2>
+      <p></p>
+      <!-- Button zum Ausblenden der zentralen Box -->
+      <!-- <button class="hide-button" onclick="hideCentralBox()">Antworten</button> -->
+    </div>
+
+    <a class="skip-button" href="index.html">
+      <p>überspringe die Fragen</p>
+      <img src="assets/arrow-right.svg" alt="Icon">
+    </a>
+  </div>
+
+
+
+
+  <script src="./javascript/Gradient.js"></script>
+  <script>
+    const gradient2 = new Gradient()
+    const gradientCanvas = document.getElementById('gradient-canvas');
+    const firstCard = document.getElementById("firstCard");
+    const secondCard = document.getElementById("secondCard");
+    const questionBox = document.getElementById("questionBox");
+    let gradient = new Gradient();
+    let questionArray = [];
+    let answerArray = [];
+    let colorPoolArray = [];
+    let gradientArray = [];
+    let questionNumber;
+    let currentDifficulty = 0;
+    let questionNumberMax = 5;
+    let questionsPerDifficulty = 1;
+    let maxDifficulty = 4;
+    let minQuestionIndex = 0;
+    let maxQuestionIndex = 0;
+
+    gradient.initGradient('#gradient-canvas');
+    gradient2.initGradient('#gradient-canvas-start');
+
+
+    function hideCentralBox() {
+      const centralBox = document.querySelector('.quizInhalt');
+      centralBox.style.opacity = '0';
+    }
+
+    function showCentralBox() {
+      const centralBox = document.querySelector('.quizInhalt');
+      centralBox.style.opacity = '1';
+    }
+
+    function showEndScreen() {
+      const endScreen = document.querySelector('.endScreen');
+      endScreen.style.cssText = 'opacity: 1; z-index: 100 ';
+    }
+
+    fetch('./json/fragenkatalog-2.json')
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(element => {
+          let questionEntry = [
+            element.question,
+            [element.answer[0], element.answer[1]],
+            element.difficulty,
+          ];
+          questionArray.push(questionEntry);
+        });
+      })
+      .finally(data => firstQuestion())
+      .catch(error => {
+        console.error('Fehler beim Laden der JSON-Datei:', error);
+      });
+
+    fetch('./json/colorpool.json')
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(element => {
+          let colorEntry = [
+            element.color
+          ];
+          colorPoolArray.push(colorEntry);
+        });
+      })
+      .finally(data => changeBackground())
+      .catch(error => {
+        console.error('Fehler beim Laden der JSON-Datei:', error);
+      });
+
+    function firstQuestion() {
+
+      setQuestionIndex();
+      setCardValues();
+
+      firstCard.addEventListener('mouseenter', function () {
         firstCard.style.backgroundColor = "unset";
-    });
-    firstCard.addEventListener('mouseleave', function() {
+      });
+      firstCard.addEventListener('mouseleave', function () {
         firstCard.style.backgroundColor = "#f5ecdf";
-    });
+      });
 
-    secondCard.addEventListener('mouseenter', function() {
+      secondCard.addEventListener('mouseenter', function () {
         secondCard.style.backgroundColor = "unset";
-    });
-    secondCard.addEventListener('mouseleave', function() {
+      });
+      secondCard.addEventListener('mouseleave', function () {
         secondCard.style.backgroundColor = "#f5ecdf";
-    });
-  };
+      });
+    };
 
-  function answer() {
-    this.hideCentralBox();
-    changeBackground();
-    setCardValues();
-  }
+    function answer() {
+      this.hideCentralBox();
+      changeBackground();
+      setCardValues();
+    }
 
-  function setCardValues() {
-    questionNumber = getRandomIndex();
-    if (questionNumber === false) {
+    function setCardValues() {
+      questionNumber = getRandomIndex();
+      if (questionNumber === false) {
         console.log("ende");
         this.hideCentralBox();
-        firstCard.removeAttribute('onClick');           
-        secondCard.removeAttribute('onClick');    
+        this.showEndScreen();
+        firstCard.removeAttribute('onClick');
+        secondCard.removeAttribute('onClick');
         return;
+      }
+      answerArray.push(questionNumber);
+      this.showCentralBox();
+      questionBox.children[0].textContent = `${answerArray.length}. Frage von ${questionNumberMax}`;
+      questionBox.children[1].textContent = questionArray[questionNumber][0];
+      firstCard.children[0].textContent = questionArray[questionNumber][1][0];
+      secondCard.children[0].textContent = questionArray[questionNumber][1][1];
     }
-    answerArray.push(questionNumber);
-    this.showCentralBox();
-    questionBox.children[0].textContent = `${answerArray.length}. Frage von ${questionNumberMax}`;
-    questionBox.children[1].textContent = questionArray[questionNumber][0];
-    firstCard.children[0].textContent = questionArray[questionNumber][1][0];
-    secondCard.children[0].textContent = questionArray[questionNumber][1][1];
-  }
 
-  function changeBackground() {
-    let usedGradient = true;
-    var color1;
-    var color2;
-    var color3;
-    var color4;
+    function changeBackground() {
+      let usedGradient = true;
+      var color1;
+      var color2;
+      var color3;
+      var color4;
 
-    while (usedGradient === true) {
+      while (usedGradient === true) {
         color1 = colorPoolArray[Math.floor(Math.random() * colorPoolArray.length)];
         color2 = colorPoolArray[Math.floor(Math.random() * colorPoolArray.length)];
         color3 = colorPoolArray[Math.floor(Math.random() * colorPoolArray.length)];
@@ -212,59 +469,99 @@ fetch('./json/fragenkatalog.json')
         const sortedColors = [color1, color2, color3, color4].sort();
 
         const isCombinationExist = gradientArray.some(gradient => {
-        const sortedGradient = gradient.slice().sort();
-        return sortedGradient[0] === sortedColors[0] && 
-               sortedGradient[1] === sortedColors[1] &&
-               sortedGradient[2] === sortedColors[2] &&
-               sortedGradient[3] === sortedColors[3];
+          const sortedGradient = gradient.slice().sort();
+          return sortedGradient[0] === sortedColors[0] &&
+            sortedGradient[1] === sortedColors[1] &&
+            sortedGradient[2] === sortedColors[2] &&
+            sortedGradient[3] === sortedColors[3];
         });
 
         if (!isCombinationExist) {
-            gradientArray.push(sortedColors);
-            usedGradient = false;
+          gradientArray.push(sortedColors);
+          usedGradient = false;
         }
+      }
+      gradientCanvas.style.setProperty('--gradient-color-1', color1);
+      gradientCanvas.style.setProperty('--gradient-color-2', color2);
+      gradientCanvas.style.setProperty('--gradient-color-3', color3);
+      gradientCanvas.style.setProperty('--gradient-color-4', color4);
+      gradient.initGradient('#gradient-canvas');
     }
-    gradientCanvas.style.setProperty('--gradient-color-1', color1);
-    gradientCanvas.style.setProperty('--gradient-color-2', color2);
-    gradientCanvas.style.setProperty('--gradient-color-3', color3);
-    gradientCanvas.style.setProperty('--gradient-color-4', color4);
-    gradient.initGradient('#gradient-canvas');
-  }
 
-  function getRandomIndex() {
-    if (answerArray.length >= questionNumberMax) {
+    function getRandomIndex() {
+      if (answerArray.length >= questionNumberMax) {
         return false;
-    } 
-    if (answerArray.length >= (currentDifficulty+1) * questionsPerDifficulty) {
+      }
+      if (answerArray.length >= (currentDifficulty + 1) * questionsPerDifficulty) {
         currentDifficulty++;
         setQuestionIndex();
+      }
+      return getRandom();
     }
-    return getRandom();
-  }
 
-  function getRandom() {
-    let reValue = Math.floor(Math.random() * (maxQuestionIndex - minQuestionIndex) + minQuestionIndex);
-    for (var i = 0; i < answerArray.length; i++) {
+    function getRandom() {
+      let reValue = Math.floor(Math.random() * (maxQuestionIndex - minQuestionIndex) + minQuestionIndex);
+      for (var i = 0; i < answerArray.length; i++) {
         if (answerArray[i] === reValue) {
-            return getRandom();
+          return getRandom();
         }
+      }
+      return reValue;
     }
-    return reValue;
-  }
 
-  function setQuestionIndex() {
-    let count = maxQuestionIndex;
-    minQuestionIndex = maxQuestionIndex;
-    for (let i = minQuestionIndex; i < questionArray.length; i++) {
+    function setQuestionIndex() {
+      let count = maxQuestionIndex;
+      minQuestionIndex = maxQuestionIndex;
+      for (let i = minQuestionIndex; i < questionArray.length; i++) {
         if (questionArray[i][2] === currentDifficulty) {
-            console.log("test");
-            count++;
+          console.log("test");
+          count++;
         }
+      }
+      maxQuestionIndex = count;
+      console.log(minQuestionIndex);
+      console.log(maxQuestionIndex);
     }
-    maxQuestionIndex = count;
-    console.log(minQuestionIndex);
-    console.log(maxQuestionIndex);
-  }
-    </script>
+
+    // Progress Bar
+    let progress = 0; // Startwert des Fortschritts
+
+    function increaseProgressBar() {
+      if (progress < 100) {
+        progress += 20; // Jede Klick auf eine der Div-Boxen erhöht den Fortschritt um 20%
+        updateProgressBar();
+      }
+    }
+
+    function updateProgressBar() {
+      const progressBar = document.getElementById('ProgressBar');
+      progressBar.style.width = progress + '%';
+    }
+
+    // Hide Start Screen
+    document.getElementById("moveBackButton").addEventListener("click", function () {
+      var myBox = document.getElementById("hideStartScreen");
+      myBox.classList.add("hidden");
+    });
+
+
+    var speed = 'slow';
+
+    $('html, body').hide();
+
+    $(document).ready(function () {
+      $('html, body').fadeIn(speed, function () {
+        $('a[href], button[href]').click(function (event) {
+          var url = $(this).attr('href');
+          if (url.indexOf('#') == 0 || url.indexOf('javascript:') == 0) return;
+          event.preventDefault();
+          $('html, body').fadeOut(speed, function () {
+            window.location = url;
+          });
+        });
+      });
+    });
+  </script>
 </body>
+
 </html>

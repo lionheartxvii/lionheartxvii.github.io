@@ -87,7 +87,7 @@ LottieInteractivity.create({
     ],
   });
 
-  
+
 
 //   why its difficult
   LottieInteractivity.create({
