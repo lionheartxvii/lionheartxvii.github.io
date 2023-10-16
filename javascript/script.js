@@ -68,7 +68,13 @@ async function func(newArticleValue) {
 };
 
 function setNavBar(oldArticle, newArticle) {
-  const navElements = document.getElementsByClassName("nav-box-link");
+  var navBox = document.querySelector('.nav-box-container');
+  var navElements;
+  if (window.innerWidth >= 900) {
+    navElements = navBox.children[1].getElementsByClassName("nav-box-link");
+  } else {
+    navElements = navBox.children[2].getElementsByClassName("nav-box-link");
+  }
   navElements[newArticle].classList.add("active");
   navElements[oldArticle].classList.remove("active");
 }
@@ -389,3 +395,33 @@ function dropdownMenu(){
         }
     })
 
+
+    window.onload = function() {
+      var hash = window.location.hash;
+      if (hash !== null) {
+        triggerNavElementWithHash();
+      }
+  }
+  
+  function triggerNavElementWithHash() {
+    var hash = window.location.hash;
+    if (hash) {
+        hash = hash.replace(/%20/g, " ");
+        console.log(hash);
+        var navBox = document.querySelector('.nav-box-container');
+        var navElement;
+        if (window.innerWidth >= 900) {
+          navElement = navBox.children[1];
+        } else {
+          navElement = navBox.children[2];
+        }
+
+        var navLink = navElement.querySelector('a[href="' + hash + '"]');
+
+        if (navLink !== null) {
+            navLink.click();
+        } else {
+            return null;
+        }
+    }
+}

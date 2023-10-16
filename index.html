@@ -237,49 +237,49 @@
 
             <div class="box-container inner-content">
                 <div class="box box-0 active">
-                    <div class="box-content">
+                    <div class="box-content" onclick="navigateTo('./methoden.html#6 Huete Methode')">
                         <img class="method-img" src="/assets/icons/hat.svg" alt="">
                         <h4>6 Hüte Methode</h4>
                         <p>Schlüpfe durch das Tragen von metaphorischen Hüten in verschiedene Perspektiven, um Probleme
                             zu lösen.</p>
                     </div>
-                    <a class="next-btn mobile" href="methoden.html">Weiter</a>
+                    <a class="next-btn mobile" href="./methoden.html#6 Huete Methode">Weiter</a>
                 </div>
                 <div class="box box-1">
-                    <div class="box-content">
+                    <div class="box-content" onclick="navigateTo('./methoden.html#10 / 10 / 10')">
                         <img class="method-img" src="/assets/icons/10.svg" alt="">
                         <h4>10 / 10 / 10</h4>
                         <p>Versetze dich durch diese Methode in die nahe und ferne Zukunft, um bessere Ergebnisse zu
                             erzielen.</p>
                     </div>
-                    <a class="next-btn mobile" href="#">Weiter</a>
+                    <a class="next-btn mobile" href="./methoden.html#10 / 10 / 10">Weiter</a>
                 </div>
                 <div class="box box-2">
-                    <div class="box-content">
+                    <div class="box-content" onclick="navigateTo('./methoden.html#Pro- Kontra-Liste')">
                         <img class="method-img" src="/assets/icons/pro2.svg" alt="">
                         <h4>Mehr als pros & cons</h4>
                         <p>Erfahre wie du Pro und Contra Listen effektiver einsetzen kannst, um Entscheidungen besser zu
                             priorisieren.</p>
                     </div>
-                    <a class="next-btn mobile" href="#">Weiter</a>
+                    <a class="next-btn mobile" href="./methoden.html#Pro- Kontra-Liste">Weiter</a>
                 </div>
                 <div class="box box-3">
-                    <div class="box-content">
+                    <div class="box-content" onclick="navigateTo('./methoden.html#ICE-Scoring-Model')">
 
                         <img class="method-img" src="/assets/icons/reduce.svg" alt="">
                         <h4>Ausschlussverfahren</h4>
                         <p>Reduziere nach und nach deine Entscheidungen, bis nur noch die beste Wahl übrig bleibt.</p>
                     </div>
-                    <a class="next-btn mobile" href="#">Weiter</a>
+                    <a class="next-btn mobile" href="./methoden.html#ICE-Scoring-Model">Weiter</a>
                 </div>
                 <div class="box box-4">
-                    <div class="box-content">
+                    <div class="box-content" onclick="navigateTo('./methoden.html#Ausschlussverfahren')">
                         <img class="method-img" src="/assets/icons/ice.svg" alt="">
                         <h4>ICE-Scoring-Model</h4>
                         <p>Bewerte mit dieser Methode deine Ideen mit 3 Kriterien, mit denen du die effektivste Lösung
                             finden kannst.</p>
                     </div>
-                    <a class="next-btn mobile" href="#">Weiter</a>
+                    <a class="next-btn mobile" href="./methoden.html#Ausschlussverfahren">Weiter</a>
                 </div>
             </div>
 
@@ -448,6 +448,12 @@
                 showBox(currentIndex);
             });
         });
+
+        function navigateTo(href) {
+            if (window.innerWidth >= 900) {
+                window.location.href = href;
+            }
+        }
     </script>
 </body>
 
