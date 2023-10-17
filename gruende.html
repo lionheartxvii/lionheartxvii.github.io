@@ -203,6 +203,7 @@
                                     </div>
     
                                     <div class="stamina-bar-outer">
+                                        <div class="stamina-bar-opposite" id="oppositeBar"></div>
                                         <div class="stamina-bar-inner" id="progressBar"></div>
                                     </div>
                                 </div>
@@ -779,6 +780,8 @@
         const rightImage = rightBox.querySelector('img');
         const rightText = rightBox.querySelector('p');
         const progressBarInner = document.getElementById('progressBar');
+        const progressBarOpposite = document.getElementById('oppositeBar');
+
         let innerProgress = 100;
         let currentIndex = 0;
 
@@ -807,12 +810,14 @@
 
                 innerProgress -= 20;
                 progressBarInner.style.height = `${innerProgress}%`;
+                progressBarOpposite.style.height = `${100 - innerProgress}%`;
             } else {
                 leftBox.style.visibility = "hidden";
                 rightBox.style.visibility = "hidden";
                 curioAwake.style.visibility = "hidden";
                 curioAsleep.style.display = "block";
                 progressBarInner.style.height = '0%';
+                progressBarOpposite.style.height = '100%';
             }
         }
     </script>
