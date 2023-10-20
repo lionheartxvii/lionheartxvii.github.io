@@ -157,15 +157,93 @@
 
 <body>
 
-    <nav class="navbar">
+    <nav class="navbar nav-hidden">
         <ul class="nav-list">
             <li><a href="ursprung.html" class="nav-link">Ursprung</a></li>
             <li><a href="gruende.html" class="nav-link">Gründe</a></li>
             <li class="title"><a href="index.html">Wahl x Weise</a></li>
             <li><a href="methoden.html" class="nav-link">5 Methoden</a></li>
-            <li><a href="tipps.html" class="nav-link active">Tipps</a></li>
+            <li><a href="tipps.html" class="nav-link">Tipps</a></li>
         </ul>
     </nav>
+
+    <div class="mobile-header">
+        <div class="title"><a href="index.html">Wahl x Weise</a></div>
+
+        <button class="hamburger">
+            <div class="ham-bar"></div>
+        </button>
+    </div>
+
+    <div class="mobile-nav">
+        <div class="hamburger-content">
+            <a href="index.html" class="menu-item">home</a>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="ursprung.html" class="menu-item">Ursprünge von Entscheidungen</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./ursprung.html#Beduerfnisse">Bedürfnisse</a>
+                        <a href="./ursprung.html#Werte">Werte</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="gruende.html" class="menu-item">Auftretende Probleme</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./gruende.html#Entscheidungsmuedigkeit">Entscheidungsmüdigkeit</a>
+                        <a href="./gruende.html#Auswahlparadox">Auswahlparadox</a>
+                        <a href="./gruende.html#Kognitive Verzerrungen">Kognitive Verzerrungen</a>
+                        <a href="./gruende.html#Plannungs Paralyse">Plannungs Paralyse</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="methoden.html" class="menu-item">5 Methoden</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./methoden.html#6 Huete Methode">6 Hüte Methode</a>
+                        <a href="./methoden.html#10 / 10 / 10">10 / 10 / 10</a>
+                        <a href="./methoden.html#Pro- Kontra-Liste">Pro- Kontra-Liste</a>
+                        <a href="./methoden.html#ICE-Scoring-Model">ICE-Scoring-Model</a>
+                        <a href="./methoden.html#Ausschlussverfahren">Ausschlussverfahren</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="tipps.html" class="menu-item">Tipps und Tricks</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./tipps.html#40-70 Regel">40-70 Regel</a>
+                        <a href="./tipps.html#Satisficing">Satisficing</a>
+                        <a href="./tipps.html#Eat the Frog">Eat the Frog</a>
+                        <a href="./tipps.html#Gewohnheiten">Gewohnheiten</a>
+                        <a href="./tipps.html#beat decision fatigue">beat decision fatigue</a>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="quiz.html" class="menu-item">Fragerunde</a>
+        </div>
+
+        <canvas id="gradient-canvas3"> </canvas>
+    </div>
 
     <!-- <nav class="scroll-nav">
         <ul>
@@ -221,22 +299,19 @@
 
                     <div class="inner-content text">
                         <p class="absatz">Die 40-70-Regel besagt, dass jedes Mal, wenn man vor einer schwierigen
-                            Entscheidung steht,
-                            man idealerweise zwischen 40% und 70% der benötigten Informationen haben sollte, um eine
+                            Entscheidung steht, man idealerweise zwischen 40% und 70% der benötigten Informationen haben sollte, um eine
                             fundierte Entscheidung zu treffen.<a id="reference1" class="reference" href="#quelle1">1</a>
                             Wenn man weniger als 40% der notwendigen Informationen hat, handelt man impulsiv und es
                             kann zu Fehlern kommen, da einem wichtige Fakten fehlen. Hingegen, wenn man mehr als 70%
                             der benötigten Informationen sammelt, könnte der Entscheiungsprozess zu lange dauern, bis
-                            die
-                            Gelegenheit eventuell verstreicht.<a id="reference1" class="reference" href="#quelle1">1</a>
+                            die Gelegenheit eventuell verstreicht.<a id="reference1" class="reference" href="#quelle1">1</a>
                             Darüber hinaus kann es bei einer zu langen Suche zu Überforderung und Unentschlossenheit
                             kommen.<a id="reference2" class="reference" href="#quelle2">2</a>
                             <br>
                             Die 40-70-Regel ist darauf ausgerichtet, eine ausgewogene Balance zwischen genügend
                             Informationen und einem akzeptablen Zeitrahmen für die Entscheidungsfindung zu finden.
                             Das Finden des richtigen Gleichgewichts kann jedoch schwierig sein und erfordert eine
-                            Schätzung
-                            basierend auf den vorhandenen Informationen. Wenn man zwischen 40% und 70% liegt, wird
+                            Schätzung basierend auf den vorhandenen Informationen. Wenn man zwischen 40% und 70% liegt, wird
                             empfohlen, auf seine Intuition zu vertrauen, um die richtige Entscheidung zu treffen.<a
                                 id="reference2" class="reference" href="#quelle2">2</a>
 
@@ -247,8 +322,7 @@
                             vermeiden, besteht darin, Ziele und Ergebnisse vor dem Beginn der Analysephase festzulegen
                             sowie den zeitlichen Rahmen für die Aufgabe zu bestimmen. Sobald man merkt, dass man sich in
                             einer endlosen Suche befindet, ist es ratsam, sich eine Auszeit zu nehmen oder die Situation
-                            mit
-                            jemandem zu besprechen. Dies kann dazu beitragen, die Entscheidung erneut klarer zu
+                            mit jemandem zu besprechen. Dies kann dazu beitragen, die Entscheidung erneut klarer zu
                             betrachten.
                             <br>
                             Die 40-70-Regel ist besonders in Situationen nützlich, in denen man nicht alle Informationen
@@ -257,9 +331,7 @@
                             treffen.
                             Es ist jedoch wichtig zu beachten, dass die Anwendung dieser Regel von der Art der
                             Entscheidung und den Umständen abhängen kann, da es keine allgemeingültige Regel gibt, die
-                            für alle Situationen immer gilt.
-                            (Stephanie Famuyide)
-                            <a id="reference3" class="reference" href="#quelle3">3</a>
+                            für alle Situationen immer gilt.<a id="reference3" class="reference" href="#quelle3">3</a>
                         </p>
                     </div>
 
@@ -440,22 +512,20 @@
                             "suffice" (genügen) ab und beschreibt eine Entscheidungsstrategie, die auf ein
                             zufriedenstellendes oder angemessenes Ergebnis abzielt, anstatt die perfekte Lösung
                             anzustreben.<a id="reference5" class="reference" href="#quelle5">5</a>
-                            <!-- Quellen raussuchen :c -->
                         </p>
 
                         <p class="absatz">
                             Statt alle verfügbaren Optionen zu analysieren und die beste auszuwählen, akzeptiert man
-                            eine frühere Lösung, die zwar nicht perfekt ist, <a id="reference6" class="reference"
-                                href="#quelle6">6</a> aber ausreichend gut, um die
-                            Anforderungen oder Kriterien der Aufgabe zu erfüllen <a id="reference7" class="reference"
-                                href="#quelle7">7</a>. Denn Satisficing
-                            bedeutet
-                            nicht, sich mit schlechten oder inakzeptablen Ergebnissen zufrieden zu geben, sondern
+                            eine frühere Lösung, die zwar nicht perfekt ist<a id="reference6" class="reference"
+                                href="#quelle6">6</a>, aber ausreichend gut, um die
+                            Anforderungen oder Kriterien der Aufgabe zu erfüllen.<a id="reference7" class="reference"
+                                href="#quelle7">7</a> Denn Satisficing bedeutet nicht, sich mit schlechten oder 
+                                inakzeptablen Ergebnissen zufrieden zu geben, sondern
                             pragmatisch zu handeln und eine annehmbare Lösung zu wählen, die die Anforderungen erfüllt,
                             ohne den Prozess unnötig zu verzögern oder sich in endlosen Optionen zu verlieren.<a
                                 id="reference7" class="reference" href="#quelle7">7</a>
                             Denn das Streben nach der optimalen Lösung kann unnötigen Zeitaufwand, Energie
-                            und Ressourcen erfordern. <a id="reference6" class="reference" href="#quelle6">6</a>
+                            und Ressourcen erfordern.<a id="reference6" class="reference" href="#quelle6">6</a>
                         </p>
 
                         <p class="absatz">
@@ -671,17 +741,13 @@
                         <p class="absatz">
                             Um Entscheidungsmüdigkeit zu bewältigen, gibt es verschiedene Ansätze. Ein offensichtlicher
                             Weg ist, die Anzahl der täglichen Entscheidungen zu reduzieren. Je weniger Entscheidungen
-                            wir
-                            jeden Tag treffen müssen, desto mehr Kapazität haben wir für weitere, unerwartete
+                            wir jeden Tag treffen müssen, desto mehr Kapazität haben wir für weitere, unerwartete
                             Entscheidungen.<a id="reference14" class="reference" href="#quelle14">14</a> <br>
                             Dies kann erreicht werden, indem wir Entscheidungen vereinfachen: Plane im Voraus, erstellen
-                            To-
-                            Do Listen, erledige Aufgaben frühzeitig und löse Probleme, bevor sie eskalieren. Dies kann
-                            auch
-                            auf alltägliche Situationen übertragen werden, indem wir z.B., unser Mittagessen und unsere
+                            To-Do Listen, erledige Aufgaben frühzeitig und löse Probleme, bevor sie eskalieren. Dies kann
+                            auch auf alltägliche Situationen übertragen werden, indem wir z.B., unser Mittagessen und unsere
                             Outfits im Vorhinein planen, oder eine Musikplaylist anlegen, auf die wir immer
-                            zurückgreifen
-                            können.<a id="reference15" class="reference" href="#quelle15">15</a> <a id="reference16"
+                            zurückgreifen können.<a id="reference15" class="reference" href="#quelle15">15</a> <a id="reference16"
                                 class="reference" href="#quelle16">16</a>
                         </p>
                         <p class="absatz">
@@ -691,28 +757,24 @@
                                 class="reference" href="#quelle15">15</a> <a id="reference17" class="reference"
                                 href="#quelle17">17</a>
                             Jedoch ist es gesünder, eine ausgewogene Ernährung zu anzuzielen, die den Blutzucker erst
-                            gar
-                            nicht stark absinken lässt.<a id="reference15" class="reference" href="#quelle15">15</a> In
+                            gar nicht stark absinken lässt.<a id="reference15" class="reference" href="#quelle15">15</a> In
                             manchen Fällen kann es ebenfalls hilfreich sein
-                            Entscheidungen nach dem Essen zu treffen, um Entscheidungsmüdigkeit zu verhindern.
-                            <a id="reference17" class="reference" href="#quelle17">17</a>
+                            Entscheidungen nach dem Essen zu treffen, um Entscheidungsmüdigkeit zu verhindern.<a 
+                            id="reference17" class="reference" href="#quelle17">17</a>
                         </p>
                         <p class="absatz">
                             Darüber hinaus ist es wichtig, den eigenen mentalen Zustand im Auge zu behalten und zu
-                            wissen,
-                            wann man eine Auszeit nehmen sollte. Letztendlich hilft auch Ruhe dabei, das Gleichgewicht
+                            wissen, wann man eine Auszeit nehmen sollte. Letztendlich hilft auch Ruhe dabei, das Gleichgewicht
                             aufrechtzuerhalten und bessere Entscheidungen zu treffen. Sich durchgehend zu überanstrengen
                             und ständig Entscheidungen treffen, überlastet die kognitiven Prozesse und sich eine Pause
-                            zu
-                            gönnen, kann Entscheidungsmüdigkeit reduzieren.<a id="reference15" class="reference"
+                            zu gönnen, kann Entscheidungsmüdigkeit reduzieren.<a id="reference15" class="reference"
                                 href="#quelle15">15</a> <a id="reference17" class="reference" href="#quelle17">17</a>
                             Sobald man weiß, dass bald wichtige Entscheidungen bevorstehen, kann man sich zuvor einen
                             Ruhetag einplanen, um die mentale Energie aufzuladen.<a id="reference16" class="reference"
                                 href="#quelle16">16</a>
                             Außerdem kann es helfen, mehr Zeit für Entscheidungen einzuplanen, denn oft dauert ein
                             Entscheidungsprozess länger als erwartet, wodurch Stress entstehen kann. Stress und Angst
-                            sind
-                            schlecht für die Entscheidungsfindung, da sie die Funktion des präfrontalen Cortex
+                            sind schlecht für die Entscheidungsfindung, da sie die Funktion des präfrontalen Cortex
                             beeinträchtigen, wo auch ein Großteil des Entscheidungsprozesses stattfindet.<a
                                 id="reference16" class="reference" href="#quelle16">16</a>
                         </p>
@@ -720,10 +782,8 @@
                         <p class="absatz">
                             Weitere Tipps: Treffe wichtige Entscheidungen morgens, wie in der "Eat the Frog"-Strategie
                             beschrieben, um Prokrastination zu verhindern. Oder versuche Entscheidungen durch
-                            „satisficing“
-                            zu treffen, um den Aufwand und die Zeit zu reduzieren, die für das Treffen einer
-                            Entscheidung
-                            benötigt werden.
+                            „satisficing“ zu treffen, um den Aufwand und die Zeit zu reduzieren, die für das Treffen einer
+                            Entscheidung benötigt werden.
                         </p>
                     </div>
                 </div>
@@ -779,74 +839,114 @@
             </div>
 
             <div class="quellen-content">
-                <p>6 Hüte Methode</p>
+                <p>40-70 Regel</p>
                 <div id="quelle1">
                     <p><a href="#reference1" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 1:
-                        </a>Informationen aus Quelle 1.</p>
+                        </a>Anderson, S. L. (N.d.). „The 40-70 rule“. Integrated Leadership Systems. https://
+                        integratedleader.com/articles/40-70rule.pdf (abgerufen am 26.07.2023)</p>
                 </div>
                 <div id="quelle2">
                     <p><a href="#reference2" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 2:
-                        </a>Informationen aus Quelle 2.</p>
+                        </a>Hattangadi, V. (2022, 26. September). „What is the 40-70 rule of decision making.“ Dr. Vidya
+                        Hattangadi. https://drvidyahattangadi.com/what-is-the-40-70-rule-of-decision-making/ (abgerufen
+                        am 26.07.2023)</p>
                 </div>
-
-                <br><br>
-
-                <p>10 / 10 / 10</p>
                 <div id="quelle3">
                     <p><a href="#reference3" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 3:
-                        </a>Informationen aus Quelle 3.</p>
-                </div>
-                <div id="quelle4">
-                    <p><a href="#reference4" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 4:
-                        </a>Informationen aus Quelle 4.</p>
+                        </a>Famuyide, S. (2017, 14. Februar). „Managing Analysis Paralysis“. Business Analyst Learnings.
+                        https://www.businessanalystlearnings.com/blog/2014/2/10/managing-analysis-paralysis?
+                        expand_article=1 (abgerufen am 20.07.2023)</p>
                 </div>
 
                 <br><br>
 
-                <p>Pro- & Kontra-Liste</p>
+                <p>Satisficing</p>
+                <div id="quelle4">
+                    <p><a href="#reference4" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 4:
+                        </a>Wikipedia-Mitwirkende. (2023). Analysis paralysis. Wikipedia, The Free Encyclopedia.
+                        Bearbeitungsstand: 16. Juli 2023 https://en.wikipedia.org/w/index.php?
+                        title=Analysis_paralysis&oldid=1172493205 (abgerufen am 26.07.2023)</p>
+                </div>
                 <div id="quelle5">
                     <p><a href="#reference5" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 5:
-                        </a>Informationen aus Quelle 5.</p>
+                        </a>Wikipedia-Mitwirkende. (2023). Satisficing. Wikipedia, Die freie Enzyklopädie.
+                        Bearbeitungsstand: 10. Mai 2023 https://de.wikipedia.org/wiki/Satisficing (abgerufen am 26.07.2023)</p>
                 </div>
                 <div id="quelle6">
                     <p><a href="#reference6" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 6:
-                        </a>Informationen aus Quelle 6.</p>
+                        </a>Frankenfield, J. (2022). „Satisficing: Definition, How the Strategy Works, and an Example“.
+                        Investopedia. https://www.investopedia.com/terms/s/satisficing.asp (abgerufen am 26.07.2023)</p>
                 </div>
                 <div id="quelle7">
                     <p><a href="#reference7" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 7:
-                        </a>Informationen aus Quelle 7.</p>
+                        </a>Schwartz, B. (2007). „The paradox of choice: why more is less.“ (Adobe Acrobat eBook Reader
+                        Edition). HarperCollins Publishers Inc. S. 78, 84f, 225f</p>
                 </div>
 
                 <br><br>
 
-                <p>ICE-Scoring-Modell</p>
+                <p>Eat the frog</p>
                 <div id="quelle8">
                     <p><a href="#reference8" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 8:
-                        </a>Informationen aus Quelle 8.</p>
+                        </a>Mai, J. (2022, 18. November). „Eat that Frog: Besseres Zeitmanagement ganz einfach“.
+                        karrierebibel.de. https://karrierebibel.de/eat-the-frog/ (abgerufen am 28.07.2023)</p>
                 </div>
                 <div id="quelle9">
                     <p><a href="#reference9" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 9:
-                        </a>Informationen aus Quelle 9.</p>
-                </div>
-                <div id="quelle10">
-                    <p><a href="#reference10" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 10:
-                        </a>Informationen aus Quelle 10.</p>
+                        </a>Tracy, B. (2017). „Eat that frog!: 21 Great Ways to Stop Procrastinating and Get More Done in Less
+                        Time.“ (Dritte Edition, PDF E-Book). Berrett-Koehler Publishers. S. 20-24.</p>
                 </div>
 
                 <br><br>
 
-                <p>Ausschlussverfahren</p>
+                <p>Gewohnheiten</p>
+                <div id="quelle10">
+                    <p><a href="#reference10" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 10:
+                        </a>Schwartz, B. (2007). „The paradox of choice: why more is less.“ (Adobe Acrobat eBook Reader
+                        Edition). HarperCollins Publishers Inc. S. 43.</p>
+                </div>
                 <div id="quelle11">
                     <p><a href="#reference11" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 11:
-                        </a>Informationen aus Quelle 11.</p>
+                        </a>The Decision Lab. (n.d.). „Habits.“ https://thedecisionlab.com/reference-guide/neuroscience/
+                        habits (abgerufen am 28.07.2023)</p>
                 </div>
                 <div id="quelle12">
                     <p><a href="#reference12" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 12:
-                        </a>Informationen aus Quelle 12.</p>
+                        </a>Oto, B. (2012). „When thinking is hard: managing decision fatigue.“ EMS world. 41. 46-50.
+                        https://www.researchgate.net/publication/
+                        225279309_When_thinking_is_hard_managing_decision_fatigue (abgerufen am 22.07.2023)</p>
                 </div>
                 <div id="quelle13">
                     <p><a href="#reference13" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 13:
-                        </a>Informationen aus Quelle 13.</p>
+                        </a>Hollins, P. (2021). „The Art of Strategic Decision-Making: How to make tough decisions quickly,
+                        intelligently, and safely.“. S. 67-70.</p>
+                </div>
+
+                <br><br>
+
+                <p>Die Entscheidungsmüdigkeit überwinden</p>
+                <div id="quelle14">
+                    <p><a href="#reference14" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 14:
+                        </a>Huang, D. (2019). „Where There's a Will, There's a Way: Implementing Motivational Strategies to
+                        Combat Decision Fatigue“. CMC Senior Theses. 2022. https://scholarship.claremont.edu/
+                        cmc_theses/2022. (abgerufen am 28.07.2023)</p>
+                </div>
+                <div id="quelle15">
+                    <p><a href="#reference15" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 15:
+                        </a>Oto, B. (2012). „When thinking is hard: managing decision fatigue.“ EMS world. 41. 46-50.
+                        https://www.researchgate.net/publication/
+                        225279309_When_thinking_is_hard_managing_decision_fatigue (abgerufen am 22.07.2023)</p>
+                </div>
+                <div id="quelle16">
+                    <p><a href="#reference16" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 16:
+                        </a>Hollins, P. (2021). „The Art of Strategic Decision-Making: How to make tough decisions quickly,
+                        intelligently, and safely.“ S. 56-66.</p>
+                </div>
+                <div id="quelle17">
+                    <p><a href="#reference17" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 17:
+                        </a>The Decision Lab. (n.d.). „Why do we make worse decisions at the end of the day? Decision
+                        Fatigue, explained.“ https://thedecisionlab.com/biases/decision-fatigue (abgerufen am
+                        28.07.2023)</p>
                 </div>
 
             </div>
@@ -878,8 +978,10 @@
 
     <script>
         const gradient5 = new Gradient()
-
         gradient5.initGradient('#gradient-canvas-reasons');
+
+        const gradient3 = new Gradient()
+        gradient3.initGradient('#gradient-canvas3');
     </script>
 
 </body>

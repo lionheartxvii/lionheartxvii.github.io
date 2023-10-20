@@ -4,52 +4,74 @@
     font-family: "textfont";
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/jost-v15-latin-regular.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/jost-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/jost-v15-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-         url('../fonts/jost-v15-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-         url('../fonts/jost-v15-latin-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-         url('../fonts/jost-v15-latin-regular.svg#Jost') format('svg'); /* Legacy iOS */
-  }
-  
-  /* jost-italic - latin */
-  @font-face {
+    src: url('../fonts/jost-v15-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/jost-v15-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/jost-v15-latin-regular.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('../fonts/jost-v15-latin-regular.woff') format('woff'),
+        /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+        url('../fonts/jost-v15-latin-regular.ttf') format('truetype'),
+        /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+        url('../fonts/jost-v15-latin-regular.svg#Jost') format('svg');
+    /* Legacy iOS */
+}
+
+/* jost-italic - latin */
+@font-face {
     font-display: swap;
     font-family: "textfont-italic";
     font-style: italic;
     font-weight: 400;
-    src: url('../fonts/jost-v15-latin-italic.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/jost-v15-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/jost-v15-latin-italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-         url('../fonts/jost-v15-latin-italic.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-         url('../fonts/jost-v15-latin-italic.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-         url('../fonts/jost-v15-latin-italic.svg#Jost') format('svg'); /* Legacy iOS */
-  }
-  
-  /* jost-500 - latin */
-  @font-face {
+    src: url('../fonts/jost-v15-latin-italic.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/jost-v15-latin-italic.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/jost-v15-latin-italic.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('../fonts/jost-v15-latin-italic.woff') format('woff'),
+        /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+        url('../fonts/jost-v15-latin-italic.ttf') format('truetype'),
+        /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+        url('../fonts/jost-v15-latin-italic.svg#Jost') format('svg');
+    /* Legacy iOS */
+}
+
+/* jost-500 - latin */
+@font-face {
     font-display: swap;
     font-family: "textfont-medium";
     font-style: normal;
     font-weight: 500;
-    src: url('../fonts/jost-v15-latin-500.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/jost-v15-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/jost-v15-latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-         url('../fonts/jost-v15-latin-500.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-         url('../fonts/jost-v15-latin-500.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-  }
-  
+    src: url('../fonts/jost-v15-latin-500.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/jost-v15-latin-500.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/jost-v15-latin-500.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('../fonts/jost-v15-latin-500.woff') format('woff'),
+        /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+        url('../fonts/jost-v15-latin-500.ttf') format('truetype'),
+        /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
 
 
 @font-face {
     font-family: "headlinefont";
     font-weight: 200;
-    src: url('../fonts/LUNARY.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/LUNARY.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/LUNARY.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-         url('../fonts/LUNARY.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-         url('../fonts/LUNARY.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-    
+    src: url('../fonts/LUNARY.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/LUNARY.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/LUNARY.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('../fonts/LUNARY.woff') format('woff'),
+        /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+        url('../fonts/LUNARY.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+
 }
 
 
@@ -167,7 +189,7 @@ h3,
     pointer-events: none;
     margin: 0;
     padding-bottom: 0.5rem;
-    
+
     font-weight: 300;
     width: 20vw;
     min-width: fit-content;
@@ -803,7 +825,7 @@ rect,
         bottom: 2%;
     }
 
-    .content-container, 
+    .content-container,
     .footer-content {
         max-width: 80%;
     }
@@ -830,7 +852,7 @@ rect,
 
     #bee {
         scale: 1.2;
-      }
+    }
 
     /* Message Box */
 
@@ -1294,11 +1316,19 @@ rect,
     }
 
     #flowers {
-        min-height: 17vh !important;
+        /* min-height: 17vh !important;
         width: 200vw !important;
         scale: 1.25;
-        bottom: 0;
+        bottom: 0; */
+        
     }
+
+    #flowers {
+        min-height: auto !important;
+        scale: 3;
+        bottom: 55px;
+        margin-top: 16vh;
+      }
 
     #flowers-animation {
         width: auto;
@@ -1434,11 +1464,69 @@ rect,
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        margin-top: 32vh;
+        margin-top: 26vh;
         padding-bottom: 10vh;
         line-height: 3;
 
     }
+
+
+    .mobile-nav-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+        width: 90vw;
+    }
+
+    .dropdown {
+        position: relative;
+        height: 60px;
+        overflow: hidden;
+        transition: height 0.3s;
+        width: 100%;
+      
+      }
+
+    .expanded {
+        height: 10vh;
+      }
+
+    .dropdownOptions ul{
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        padding: 0 0 20px 20px;
+        line-height: 2;
+        margin: 0 !important;
+    }
+
+    .dropdownOptions ul a{
+        font-family: 'textfont', Arial, sans-serif !important;
+    }
+
+    .mobile-nav-arrow {
+        height: 15px;
+        transition: transform 0.5s;
+        margin-left: auto;
+        padding: 20px 0;
+        cursor: pointer;
+    }
+
+    .mobile-nav-arrow.up {
+        transform: rotate(180deg);
+    }
+
+
+    .mobile-nav-arrow .menu-item {
+        cursor: pointer;
+    }
+
+    
+    .expanded {
+        height: auto;
+      }
 
     #gradient-canvas3 {
         height: 100%;
@@ -1454,46 +1542,48 @@ rect,
 /* Mobile Landscape*/
 @media only screen and (max-width: 900px) and (orientation: landscape) {
 
-    .hidden-text{
+    .hidden-text {
         display: none;
-      }
-    
-      .hidden, .scroll-nav{
-        display: none;
-      }
+    }
 
-    
+    .hidden,
+    .scroll-nav {
+        display: none;
+    }
+
+
     h1 {
         font-size: 40px;
         padding-bottom: 0.3rem;
-      }
+    }
 
-      h2 {
+    h2 {
         font-size: 28px;
-      }
+    }
 
-      p, a {
+    p,
+    a {
         font-size: 1rem;
-      }
+    }
 
-      .content-container {
+    .content-container {
         max-width: 85%;
         height: 120vh;
-      }
+    }
 
-      .primary-button {
+    .primary-button {
         padding: 6px 30px;
-      }
+    }
 
-      .up-button {
+    .up-button {
         width: 40px;
         height: 40px;
-      }
+    }
 
 
-      /* Method Boxes */
+    /* Method Boxes */
 
-      .box-container {
+    .box-container {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -1507,7 +1597,8 @@ rect,
         height: 33vh; */
     }
 
-    #section4 .center, #section4 .center p{
+    #section4 .center,
+    #section4 .center p {
         text-align: left !important;
         align-items: flex-start;
         width: 40vw;
@@ -1541,39 +1632,39 @@ rect,
         cursor: pointer;
     }
 
-#section4{
-    height: 190vh;
-    display: flex;
-    flex-direction: row !important;
-}
+    #section4 {
+        height: 190vh;
+        display: flex;
+        flex-direction: row !important;
+    }
 
-.box {
-    width: 220px;
-    height: 220px;
-  }
-
-
-  #section6 {
-    height: 142vh;
-    justify-content: flex-end;
-  }
-
-  #bee {
-    scale: 1.4;
-  }
-    
-  .line.line-top {
-    top: 44%;
-  }
-
-  .line.line-bottom {
-    bottom: 44%;
-  }
+    .box {
+        width: 220px;
+        height: 220px;
+    }
 
 
+    #section6 {
+        height: 142vh;
+        justify-content: flex-end;
+    }
+
+    #bee {
+        scale: 1.4;
+    }
+
+    .line.line-top {
+        top: 44%;
+    }
+
+    .line.line-bottom {
+        bottom: 44%;
+    }
 
 
-      
+
+
+
     /* Mobile Nav */
 
     .hidden,
@@ -1596,9 +1687,10 @@ rect,
         padding-left: 4%;
     }
 
-    .title, .title a {
+    .title,
+    .title a {
         font-size: 24px;
-      }
+    }
 
     .hamburger {
         position: absolute;
@@ -1683,4 +1775,4 @@ rect,
         line-height: 3;
 
     }
-  }
+}

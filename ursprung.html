@@ -88,18 +88,93 @@
 
 <body>
 
-
-
-
-    <nav class="navbar">
+    <nav class="navbar nav-hidden">
         <ul class="nav-list">
-            <li><a href="ursprung.html" class="nav-link active">Ursprung</a></li>
+            <li><a href="ursprung.html" class="nav-link">Ursprung</a></li>
             <li><a href="gruende.html" class="nav-link">Gründe</a></li>
             <li class="title"><a href="index.html">Wahl x Weise</a></li>
             <li><a href="methoden.html" class="nav-link">5 Methoden</a></li>
             <li><a href="tipps.html" class="nav-link">Tipps</a></li>
         </ul>
     </nav>
+
+    <div class="mobile-header">
+        <div class="title"><a href="index.html">Wahl x Weise</a></div>
+
+        <button class="hamburger">
+            <div class="ham-bar"></div>
+        </button>
+    </div>
+
+    <div class="mobile-nav">
+        <div class="hamburger-content">
+            <a href="index.html" class="menu-item">home</a>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="ursprung.html" class="menu-item">Ursprünge von Entscheidungen</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./ursprung.html#Beduerfnisse">Bedürfnisse</a>
+                        <a href="./ursprung.html#Werte">Werte</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="gruende.html" class="menu-item">Auftretende Probleme</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./gruende.html#Entscheidungsmuedigkeit">Entscheidungsmüdigkeit</a>
+                        <a href="./gruende.html#Auswahlparadox">Auswahlparadox</a>
+                        <a href="./gruende.html#Kognitive Verzerrungen">Kognitive Verzerrungen</a>
+                        <a href="./gruende.html#Plannungs Paralyse">Plannungs Paralyse</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="methoden.html" class="menu-item">5 Methoden</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./methoden.html#6 Huete Methode">6 Hüte Methode</a>
+                        <a href="./methoden.html#10 / 10 / 10">10 / 10 / 10</a>
+                        <a href="./methoden.html#Pro- Kontra-Liste">Pro- Kontra-Liste</a>
+                        <a href="./methoden.html#ICE-Scoring-Model">ICE-Scoring-Model</a>
+                        <a href="./methoden.html#Ausschlussverfahren">Ausschlussverfahren</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="tipps.html" class="menu-item">Tipps und Tricks</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./tipps.html#40-70 Regel">40-70 Regel</a>
+                        <a href="./tipps.html#Satisficing">Satisficing</a>
+                        <a href="./tipps.html#Eat the Frog">Eat the Frog</a>
+                        <a href="./tipps.html#Gewohnheiten">Gewohnheiten</a>
+                        <a href="./tipps.html#beat decision fatigue">beat decision fatigue</a>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="quiz.html" class="menu-item">Fragerunde</a>
+        </div>
+
+        <canvas id="gradient-canvas3"> </canvas>
+    </div>
 
     <!-- <nav class="scroll-nav">
         <ul>
@@ -152,20 +227,16 @@
 
                     <div class="inner-content text">
                         <p class="absatz">Bei jeder Entscheidung spielt die dahinterliegende Motivation eine wichtige
-                            Rolle.
-                            Diese unterscheidet sich bei jedem Menschen stark, oft ohne dass wir es bewusst merken.
-                            Vieles, was
-                            unsere Entscheidungen und Handlungen beeinflusst, sind unbewusste Bedürfnisse und Wünsche,
-                            welche wir oft als unser „Bauchgefühl“ wahrnehmen.<a id="reference1" class="reference"
-                                href="#quelle1">1</a>
-                            Diese unbewussten Bedürfnisse variieren bei jedem Individuum und beeinflussen schließlich
+                            Rolle. Diese unterscheidet sich bei jedem Menschen stark, oft ohne dass wir es bewusst merken.
+                            Vieles, was unsere Entscheidungen und Handlungen beeinflusst, sind unbewusste Bedürfnisse und Wünsche,
+                            welche wir oft als unser „Bauchgefühl“ wahrnehmen. Diese unbewussten Bedürfnisse variieren bei jedem Individuum und beeinflussen schließlich
                             unsere tagtäglichen Entscheidungen.
                             Indem wir uns bewusst mit diesen Motivationen auseinandersetzen und verstehen, können wir
                             besser nachvollziehen, was uns antreibt und welche Faktoren unsere Entscheidungen
                             beeinflussen. <br>
                             Dies führt dazu, dass wir bewusster und fundierter entscheiden und uns selbst
                             besser kennenlernen, indem wir unsere eigenen Gedanken reflektieren. Es ist wie ein Versuch,
-                            unser Unterbewusstsein bewusster zu machen, damit wir uns selbst besser verstehen können.
+                            unser Unterbewusstsein bewusster zu machen, damit wir uns selbst besser verstehen können.<a id="reference1" class="reference" href="#quelle1">1</a>
                         </p>
                         <p class="absatz">
                             Theorie der menschlichen Bedürfnisse
@@ -173,31 +244,23 @@
                             Max-Neef, einem chilenischen Ökonomen und Umweltaktivisten, erläutert, um uns diese
                             Bedürfnisse bewusster zu machen. <br>
                             Manfred Max-Neef, entwickelte die Theorie der menschlichen Bedürfnisse, um ein
-                            ganzheitliches
-                            Verständnis von menschlichen Anforderungen zu schaffen. Bei dieser Theorie wird
-                            hervorgehoben
-                            dass es wichtig ist, zwischen Bedürfnissen und ihren „Satisfier“ zu unterscheiden.
-                            Bedürfnisse sind
-                            grundlegende menschliche Anforderungen, während Satisfier die Mittel sind, um diese
+                            ganzheitliches Verständnis von menschlichen Anforderungen zu schaffen. Bei dieser Theorie wird
+                            hervorgehoben dass es wichtig ist, zwischen Bedürfnissen und ihren „Satisfier“ zu unterscheiden.
+                            Bedürfnisse sind grundlegende menschliche Anforderungen, während Satisfier die Mittel sind, um diese
                             Bedürfnisse zu erfüllen. Dabei können mehrere Satisfier ein Bedürfnis gleichzeitig erfüllen,
-                            und ein
-                            Satisfier kann verschiedene Bedürfnisse befriedigen.
+                            und ein Satisfier kann verschiedene Bedürfnisse befriedigen.<a id="reference2" class="reference" href="#quelle2">2</a>
                         </p>
 
                         <p class="absatz">
                             In seiner Theorie beschreibt Manfred Max-Neef, dass alle menschlichen Bedürfnisse in einem
                             System interagieren und voneinander abhängig sind. Es gibt keine Hierarchie, außer beim
                             grundlegenden Bedürfnis nach Existenz, welches vorrangig ist. Stattdessen stehen Bedürfnisse
-                            in
-                            Beziehung zueinander, und ihre Erfüllung kann gleichzeitig, ergänzend oder auch
-                            konkurrierend
-                            sein. <br>
+                            in Beziehung zueinander, und ihre Erfüllung kann gleichzeitig, ergänzend oder auch
+                            konkurrierend sein. <br>
                             Ein weiterer Aspekt seiner Theorie ist die Unterscheidung der Bedürfnisbefriedigung in drei
                             Kontexten: dem individuellen Selbst (Eigenwelt), der sozialen Gruppe (Mitwelt) und der
-                            Umwelt.
-                            Die Erfüllung eines Bedürfnisses kann in diesen verschiedenen Kontexten unterschiedlich
-                            sein,
-                            abhängig von Zeit, Ort und Umständen.
+                            Umwelt. Die Erfüllung eines Bedürfnisses kann in diesen verschiedenen Kontexten unterschiedlich
+                            sein, abhängig von Zeit, Ort und Umständen.<a id="reference2" class="reference" href="#quelle2">2</a>
                         </p>
                     </div>
 
@@ -326,18 +389,13 @@
                         <div class="inner-content">
                             <p>
                                 Die Theorie von Max-Neef betont die Ganzheitlichkeit und Komplexität menschlicher
-                                Bedürfnisse.
-                                Sie bietet einen umfassenden Rahmen, um die menschliche Erfahrung zu verstehen und
+                                Bedürfnisse. Sie bietet einen umfassenden Rahmen, um die menschliche Erfahrung zu verstehen und
                                 Lösungsansätze für individuelle und gesellschaftliche Herausforderungen zu entwickeln.
-                                Darüber
-                                hinaus betont sie die Vielfalt menschlicher Bedürfnisse und zeigt, dass sie sich
-                                wechselseitig
-                                beeinflussen können. Ein Bedürfnis kann nicht isoliert betrachtet werden, sondern steht
-                                in
-                                Beziehung zu anderen Bedürfnissen. <br> <br>
+                                Darüber hinaus betont sie die Vielfalt menschlicher Bedürfnisse und zeigt, dass sie sich
+                                wechselseitig beeinflussen können. Ein Bedürfnis kann nicht isoliert betrachtet werden, sondern steht
+                                in Beziehung zu anderen Bedürfnissen. <br> <br>
                                 Folgend wird zusätzlich erklärt, wie ebenfalls unsere persönlichen Werte Einfluss auf
-                                unsere
-                                Entscheidungen nehmen.
+                                unsere Entscheidungen nehmen.
                             </p>
 
                             <img class="arrow-right" src="assets/arrow-right.svg"
@@ -359,35 +417,30 @@
 
                     <div class="inner-content text">
                         <p class="absatz">Ähnlich wie die Bedürfnisse beeinflussen auch Werte unsere
-                            Entscheidungen.
-                            Werte sind Prinzipien, Regeln oder Überzeugungen, die darüber Aussagen machen, welche
+                            Entscheidungen. Werte sind Prinzipien, Regeln oder Überzeugungen, die darüber Aussagen machen, welche
                             Prioritäten wir im Leben haben. Daher bauen viele Entscheidungen auf diesen auf. Doch was
                             geschieht, wenn wir uns unseren Werten nicht klar sind? <br>
                             Innere Werte und Prinzipien sind wie ein innerer Kompass, der uns sagt, wie wir in jeder
                             Situation handeln sollen. Dies ist unser eigener Verhaltenskodex, den wir für uns selbst
-                            entwickelt
-                            haben, und er wirkt wie ein Leitlicht, vor allem wenn der Weg unklar ist. Wenn wir uns
-                            unserer
-                            Werte nicht sicher sind, kann es uns schwer fallen, Entscheidungen zu treffen. <br>
+                            entwickelt haben, und er wirkt wie ein Leitlicht, vor allem wenn der Weg unklar ist. Wenn wir uns
+                            unserer Werte nicht sicher sind, kann es uns schwer fallen, Entscheidungen zu treffen. <br>
                             Viele Werte, die wir bewusst oder unbewusst haben, stammen von äußeren Faktoren. Wir
                             bekommen diese durch unsere Kultur, unsere Eltern, unserer Religion oder unserer politischen
                             Umgebung vermittelt. Manche dieser Werte übernehmen wir, andere Werte wiederum können
                             durch eine persönliche Erfahrungen entstehen. Dazu ist es wichtig zu verstehen, dass sich
-                            Werte über Zeit hinweg verändern können.
+                            Werte über Zeit hinweg verändern können.<a id="reference3" class="reference" href="#quelle3">3</a>
 
                         </p>
                         <p class="absatz">
                             Werte spielen eine entscheidende Rolle in unseren Entscheidungen und geben unserem Leben
                             Bedeutung. Bewusstsein über unsere inneren Werte ermöglicht es uns, klarere und
-                            zielgerichtete
-                            Entscheidungen zu treffen, die mit unseren Überzeugungen übereinstimmen. Werte können nicht
+                            zielgerichtete Entscheidungen zu treffen, die mit unseren Überzeugungen übereinstimmen. Werte können nicht
                             gewählt werden, sie entwickeln sich über die Zeit hinweg und spiegeln sich in unseren Taten
                             wider. <br>
                             Sofern du dir deiner Werte noch nicht bewusst bist, kannst du in deinem Alltag darauf
-                            achten, wofür
-                            du dich entscheidest, um dir dessen bewusster zu werden. Frage dich: Wie sieht ein
+                            achten, wofür du dich entscheidest, um dir dessen bewusster zu werden. Frage dich: Wie sieht ein
                             guter Tag für dich aus? Was macht dich stolz und glücklich? Was macht das Leben lebenswert?
-                            Was schätzt du an anderen Personen in deinem Leben? Ohne was könntest du nicht leben?
+                            Was schätzt du an anderen Personen in deinem Leben? Ohne was könntest du nicht leben?<a id="reference3" class="reference" href="#quelle3">3</a>
                         </p>
 
                     </div>
@@ -401,12 +454,9 @@
                             <h2>Deine Werte</h2>
                             <div class="box-values">
                                 <p>Folgend werden einige Beispiele aufgelistet, die von Peter Hollins zu diesem Thema
-                                    aufgelistet
-                                    wurden. <a class="bold">Versuche dich für drei dieser Werte zu entscheiden.</a> Es
-                                    sind alles wichtige Werte
-                                    und es kann schwierig wirken diese zu reduzieren, doch versuche dich zu fragen:
-                                    Welche dieser
-                                    Werte scheint dir am meisten Glück und Zufriedenheit zu bringen?
+                                    aufgelistet wurden.<a id="reference3" class="reference" href="#quelle3">3</a> <a class="bold">Versuche dich für drei dieser Werte zu entscheiden.</a> Es
+                                    sind alles wichtige Werte und es kann schwierig wirken diese zu reduzieren, doch versuche dich zu fragen:
+                                    Welche dieser Werte scheint dir am meisten Glück und Zufriedenheit zu bringen?
                                     <!-- Dies hilft dir zu erkennen auf welcher Basis du 
                             Entscheidungen trifft.-->
                                 </p>
@@ -527,14 +577,28 @@
                 </div>
 
                 <div class="quellen-content">
-                    <div id="quelle1">
 
+                    <p>Bedürfnisse</p>
+                    <div id="quelle1">
                         <p><a href="#reference1" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 1:
-                            </a>Informationen aus Quelle 1.</p>
+                            </a>Hollins, P. (2021). „The Art of Strategic Decision-Making: How to make tough decisions quickly,
+                            intelligently, and safely.“ S. 12ff.</p>
                     </div>
                     <div id="quelle2">
                         <p><a href="#reference2" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 2:
-                            </a>Informationen aus Quelle 2.</p>
+                            </a>Max-Neef, M., Elizalde, A., Hopenhayn, M., Herrera, F., Zemelman, H., Jataba, J., Weinstein, L.
+                            (1989): „Human Scale Development“. Dag Hammarskjöld foundation. Development Dialogue, 1,
+                            S. 19-33. http://www.daghammarskjold.se/wp-content/uploads/1989/05/89_1.pdf (abgerufen am
+                            15.10.2022)</p>
+                    </div>
+
+                    <br><br>
+
+                    <p>Werte</p>
+                    <div id="quelle3">
+                        <p><a href="#reference3" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 3:
+                            </a>Hollins, P. (2021). „The Art of Strategic Decision-Making: How to make tough decisions quickly,
+                            intelligently, and safely.“ S. 34-39, 47.</p>
                     </div>
                 </div>
 
@@ -562,11 +626,11 @@
     <script src="/javascript/script.js"></script>
 
     <script>
-        const gradient3 = new Gradient()
-        const gradient4 = new Gradient()
+        const gradient2 = new Gradient()
+        gradient2.initGradient('#gradient-canvas-origins');
 
-        gradient3.initGradient('#gradient-canvas-origins');
-        gradient4.initGradient('#gradient-canvas-origins2');
+        const gradient3 = new Gradient()
+        gradient3.initGradient('#gradient-canvas3');
 
         maxSelectedBoxes = 3;
     </script>
