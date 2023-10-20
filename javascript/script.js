@@ -149,8 +149,10 @@ function showBox(boxNumber) {
     activeBox = boxNumber;
     const hiddenBox = document.getElementById(`hiddenBox${boxNumber}`);
     hiddenBox.style.display = "flex";
-    circleElements[boxNumber - 1 ].style.scale = 1.1;
-    circleElements[boxNumber - 1 ].style.backgroundColor = "rgba(36, 36, 39, 0.1)";
+    if (circleElements[boxNumber - 1 ]) {
+      circleElements[boxNumber - 1 ].style.scale = 1.1;
+      circleElements[boxNumber - 1 ].style.backgroundColor = "rgba(36, 36, 39, 0.1)";
+    }
   }
 }
 
@@ -158,8 +160,10 @@ function hideBox() {
   if (activeBox !== 0 && !pinnedBox) {
     const hiddenBox = document.getElementById(`hiddenBox${activeBox}`);
     hiddenBox.style.display = "none";
-    circleElements[activeBox - 1].style.scale = 1;
-    circleElements[activeBox - 1 ].style.backgroundColor = "rgba(36, 36, 39, 0.0)";
+    if (circleElements[activeBox - 1 ]) {
+      circleElements[activeBox - 1].style.scale = 1;
+      circleElements[activeBox - 1 ].style.backgroundColor = "rgba(36, 36, 39, 0.0)";
+    }
     activeBox = 0;
   }
 }

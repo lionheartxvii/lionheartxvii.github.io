@@ -325,7 +325,6 @@ h2 {
   position: relative;
 } */
 
-
 .hidden-box {
   display: none;
   position: absolute;
@@ -839,6 +838,15 @@ td {
   background-color: var(--main-fg-color);
   width: 100%;
   height: 100%;
+  bottom: 0;
+  left: 0;
+  transition: height 0.3s ease;
+  animation-direction: reverse;
+}
+
+.stamina-bar-opposite {
+  width: 100%;
+  height: 0%;
   bottom: 0;
   left: 0;
   transition: height 0.3s ease;
