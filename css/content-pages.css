@@ -668,7 +668,7 @@ table td {
 }
 
 .vh-120 {
-  height: 160vh !important;
+  height: 120vh !important;
 }
 
 /* Pro Contra Beispiel */
@@ -857,6 +857,11 @@ td {
   display: none;
 }
 
+.verschieben{
+  transform: translateX(80px);
+}
+
+
 /* Media Query für Retina-Displays mit hoher Auflösung */
 @media only screen and (max-width: 1400px) and (orientation: landscape) {
 
@@ -882,6 +887,10 @@ td {
 
   .buffer {
     min-width: 140px;
+  }
+
+  .verschieben{
+    transform: translateX(0px);
   }
 
   .inner-single-content-container,
@@ -977,6 +986,7 @@ td {
 
 /* Tablett landscape*/
 @media only screen and (min-width: 769px) and (max-width: 1100px) and (orientation: landscape) {
+
 
 
   .text,
@@ -1084,6 +1094,17 @@ td {
 /* Tablett portrait */
 @media only screen and (max-width: 1050px) and (orientation: portrait) {
   /* 768 / 769 */
+
+  .verschieben{
+    transform: translateX(0px);
+  }
+
+  .absprungSection{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 
   .hidden {
     display: none;

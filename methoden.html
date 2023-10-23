@@ -204,11 +204,50 @@
 
     <nav class="navbar nav-hidden">
         <ul class="nav-list">
-            <li><a href="ursprung.html" class="nav-link">Ursprung</a></li>
-            <li><a href="gruende.html" class="nav-link">Gründe</a></li>
+
+            <li class="dropdown">
+                <a href="ursprung.html" class="dropbtn">Ursprung</a>
+                <div class="dropdown-content">
+                        <a href="./ursprung.html#Beduerfnisse">Bedürfnisse</a> <br>
+                        <a href="./ursprung.html#Werte">Werte</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="gruende.html" class="dropbtn">Gründe</a>
+                <div class="dropdown-content">
+                        <a href="./gruende.html#Entscheidungsmuedigkeit">Entscheidungsmüdigkeit</a> <br>
+                        <a href="./gruende.html#Auswahlparadox">Auswahlparadox</a><br>
+                        <a href="./gruende.html#Kognitive Verzerrungen">Kognitive Verzerrungen</a><br>
+                        <a href="./gruende.html#Plannungs Paralyse">Plannungs Paralyse</a><br>
+                </div>
+            </li>
+
+
             <li class="title"><a href="index.html">Wahl x Weise</a></li>
-            <li><a href="methoden.html" class="nav-link">5 Methoden</a></li>
-            <li><a href="tipps.html" class="nav-link">Tipps</a></li>
+
+            <li class="dropdown">
+                <a href="methoden.html" class="dropbtn active">5 Methoden</a>
+                <div class="dropdown-content">
+                        <a href="./methoden.html#6 Huete Methode">6 Hüte Methode</a> <br>
+                        <a href="./methoden.html#10 / 10 / 10">10 / 10 / 10</a><br>
+                        <a href="./methoden.html#Pro- Kontra-Liste">Pro- Kontra-Liste</a><br>
+                        <a href="./methoden.html#ICE-Scoring-Model">ICE-Scoring-Model</a><br>
+                        <a href="./methoden.html#Ausschlussverfahren">Ausschlussverfahren</a><br>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="tipps.html" class="dropbtn">Tipps</a>
+                <div class="dropdown-content">
+                        <a href="./tipps.html#40-70 Regel">40-70 Regel</a><br>
+                        <a href="./tipps.html#Satisficing">Satisficing</a><br>
+                        <a href="./tipps.html#Eat the Frog">Eat the Frog</a><br>
+                        <a href="./tipps.html#Gewohnheiten">Gewohnheiten</a><br>
+                        <a href="./tipps.html#beat decision fatigue">beat decision fatigue</a><br>
+                </div>
+            </li>
+            
         </ul>
     </nav>
 
@@ -1198,25 +1237,27 @@
         </div>
 
 
-        <div class="content-container" id="section3">
+        <div class="content-container absprungSection" id="section3">
 
             <div class="inner-content">
                 <h2>Weitere Tipps und Tricks</h2>
-                <p>Noch nicht genug gelernt? Wenn du mehr erfahren willst, lerne hier wie man Entscheidungsmüdigkeit
+                <p>Konntest du dich noch nicht entscheiden? Wenn du mehr erfahren willst, lerne hier wie man Entscheidungsmüdigkeit
                     vermeiden kann, was der Begriff "Satisficing" bedeutet und wie die 40/70-Regel dazu beitragen kann,
                     schneller und bessere Entscheidungen zu treffen.
                 </p>
 
-                <div type="button" onclick="location.href='problems.html'" class="primary-button">
-                    <a href="origins.html">erfahre mehr</a>
+                <div type="button" onclick="location.href='tipps.html'" class="primary-button">
+                    <a href="tipps.html">erfahre mehr</a>
                 </div>
 
             </div>
 
             <div class="buffer"></div>
 
-            <div class="illustration">
-                <img class="illustration" src="/assets/cat3.jpg">
+            <div>
+                <div class="illustration verschieben">
+                    <lottie-interactive autoplay loop path="./json/illustration4.json" interaction="play-on-show"></lottie-interactive>
+                </div>
             </div>
 
         </div>
@@ -1345,12 +1386,16 @@
 
     <script src="/javascript/Gradient.js"></script>
     <script src="/javascript/script.js"></script>
+    
 
-    <!-- Lottie Libraries -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js">
-    </script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+ <!-- Lottie Libraries -->
+ <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
+ <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js">
+ </script>
+ <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+
+
+
 
     <script>
         const gradient5 = new Gradient()
