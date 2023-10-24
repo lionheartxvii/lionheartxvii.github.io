@@ -334,6 +334,10 @@ a {
     text-decoration: none;
 }
 
+.navbar .title{
+    max-height: 38px;
+}
+
 .dropbtn {
     text-decoration: none;
     color: var(--main-fg-color);
