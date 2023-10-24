@@ -159,12 +159,53 @@
 
     <nav class="navbar nav-hidden">
         <ul class="nav-list">
-            <li><a href="ursprung.html" class="nav-link">Ursprung</a></li>
-            <li><a href="gruende.html" class="nav-link">Gründe</a></li>
-            <li class="title"><a href="index.html">Wahl x Weise</a></li>
-            <li><a href="methoden.html" class="nav-link">5 Methoden</a></li>
-            <li><a href="tipps.html" class="nav-link active">Tipps</a></li>
+
+            <li class="dropdown">
+                <a href="ursprung.html" class="dropbtn">Ursprung</a>
+                <div class="dropdown-content">
+                        <a href="./ursprung.html#Beduerfnisse">Bedürfnisse</a> <br>
+                        <a href="./ursprung.html#Werte">Werte</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="gruende.html" class="dropbtn">Gründe</a>
+                <div class="dropdown-content">
+                        <a href="./gruende.html#Entscheidungsmuedigkeit">Entscheidungsmüdigkeit</a> <br>
+                        <a href="./gruende.html#Auswahlparadox">Auswahlparadox</a><br>
+                        <a href="./gruende.html#Kognitive Verzerrungen">Kognitive Verzerrungen</a><br>
+                        <a href="./gruende.html#Plannungs Paralyse">Plannungs Paralyse</a><br>
+                </div>
+            </li>
+
+
+            <li class="title"><a href="index.html"><lottie-interactive path="./json/logo3.json" interaction="morph"></lottie-interactive></a></li>
+
+            <li class="dropdown">
+                <a href="methoden.html" class="dropbtn">5 Methoden</a>
+                <div class="dropdown-content">
+                        <a href="./methoden.html#6 Huete Methode">6 Hüte Methode</a> <br>
+                        <a href="./methoden.html#10 / 10 / 10">10 / 10 / 10</a><br>
+                        <a href="./methoden.html#Pro- Kontra-Liste">Pro- Kontra-Liste</a><br>
+                        <a href="./methoden.html#ICE-Scoring-Model">ICE-Scoring-Model</a><br>
+                        <a href="./methoden.html#Ausschlussverfahren">Ausschlussverfahren</a><br>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="tipps.html" class="dropbtn active">Tipps</a>
+                <div class="dropdown-content">
+                        <a href="./tipps.html#40-70 Regel">40-70 Regel</a><br>
+                        <a href="./tipps.html#Satisficing">Satisficing</a><br>
+                        <a href="./tipps.html#Eat the Frog">Eat the Frog</a><br>
+                        <a href="./tipps.html#Gewohnheiten">Gewohnheiten</a><br>
+                        <a href="./tipps.html#beat decision fatigue">beat decision fatigue</a><br>
+                </div>
+            </li>
+            
         </ul>
+
+        <div class="navbarLine"></div>
     </nav>
 
     <div class="mobile-header">
@@ -344,6 +385,23 @@
                             viewBox="0 0 1068.44 384">
                             <defs>
                                 <style>
+
+                                    @font-face {
+                                        font-family: "textfont";
+                                        src: url('/fonts/jost-v15-latin-regular.eot');
+                                        /* IE9 Compat Modes */
+                                        src: url('/fonts/jost-v15-latin-regular.eot?#iefix') format('embedded-opentype'),
+                                            /* IE6-IE8 */
+                                            url('/fonts/jost-v15-latin-regular.woff2') format('woff2'),
+                                            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+                                            url('/fonts/jost-v15-latin-regular.woff') format('woff'),
+                                            /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+                                            url('/fonts/jost-v15-latin-regular.ttf') format('truetype'),
+                                            /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+                                            url('/fonts/jost-v15-latin-regular.svg#Jost') format('svg');
+                                        /* Legacy iOS */
+                                    }
+
                                     .cls-1 {
                                         stroke-width: 0px;
                                     }
@@ -363,7 +421,7 @@
 
                                     .cls-3,
                                     .cls-5 {
-                                        font-family: Jost-Regular, Jost;
+                                        font-family: "textfont", Jost-Regular, Jost, sans-serif;
                                         font-size: 22px;
                                         font-variation-settings: 'wght'400;
                                     }
@@ -373,7 +431,7 @@
                                     }
 
                                     .cls-5 {
-                                        fill: #abafca;
+                                        fill: #cdb7aa;
                                     }
                                 </style>
                             </defs>
