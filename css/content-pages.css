@@ -907,7 +907,9 @@ td {
     width: 80vw;
   }
 
-
+  .minwidth45 {
+    min-width: 45vw;
+  }
 
   /* Beispiele */
   /*+++++++++++++++++++++++ Origins IPad Pro Beispiele +++++++++++++++++++++++*/
@@ -1088,6 +1090,8 @@ td {
   .scale-08 {
     scale: 0.8;
   }
+
+
 
 }
 
