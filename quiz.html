@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
     maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <title>Master Worktitel</title>
+  <title>Wahl x Weise</title>
   <link rel="stylesheet" href="css/styles.css">
   <title>Quiz</title>
   <style>
@@ -170,38 +170,6 @@
       max-width: 60%;
     }
 
-    @media only screen and (max-width: 1400px) and (orientation: landscape){
-      h1 {
-      font-size: 55px;
-      min-width: 70%;
-    }
-    }
-
-    @media only screen and (max-width: 1100px) and (orientation: landscape) {
-      h1 {
-        padding-bottom: 1.25rem;
-      }
-
-      .center > p {
-  width: 65%;
-}
-    }
-
-    @media only screen and (max-width: 900px) and (orientation: landscape) {
-      h1 {
-        font-size: 40px;
-        padding-bottom: 0.3rem;
-      }
-    }
-
-    @media only screen and (max-width: 768px) and (orientation: portrait) {
-      h1 {
-        font-size: 40px;
-        max-width: 95vw;
-        padding-bottom: 1.25rem;
-      }
-    }
-
     .center>p {
       width: 50%;
     }
@@ -222,6 +190,50 @@
       position: absolute;
       z-index: -1;
       top: 0;
+    }
+
+    @media only screen and (max-width: 1400px) and (orientation: landscape) {
+      h1 {
+        font-size: 55px;
+        min-width: 70%;
+      }
+    }
+
+    @media only screen and (max-width: 1100px) and (orientation: landscape) {
+      h1 {
+        padding-bottom: 1.25rem;
+      }
+
+      .center>p {
+        width: 65%;
+      }
+    }
+
+    @media only screen and (max-width: 900px) and (orientation: landscape) {
+      h1 {
+        font-size: 40px;
+        padding-bottom: 0.3rem;
+      }
+
+      .center>p {
+        width: 75%;
+      }
+
+      .central-box {
+        margin-top: 1rem;
+      }
+
+      .dropdownOptions ul a {
+        font-size: 12px;
+      }
+    }
+
+    @media only screen and (max-width: 768px) and (orientation: portrait) {
+      h1 {
+        font-size: 40px;
+        max-width: 95vw;
+        padding-bottom: 1.25rem;
+      }
     }
 
     /* portrait*/
@@ -260,12 +272,6 @@
       }
 
 
-    }
-
-    @media only screen and (max-width: 900px) and (orientation: landscape) {
-      .central-box {
-        margin-top: 1rem;
-      }
     }
   </style>
 </head>

@@ -1734,6 +1734,10 @@ rect,
         z-index: 1000;
     }
 
+    .title, .title a {
+        font-size: 26px;
+      }
+
     .title {
         padding-left: 5%;
     }
