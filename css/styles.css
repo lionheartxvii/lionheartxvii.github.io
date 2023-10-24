@@ -201,8 +201,6 @@ h3,
     font-weight: 300;
 }
 
-
-
 h4 {
     text-align: left;
     font-family: 'textfont-medium', Arial, sans-serif;
@@ -228,8 +226,6 @@ a {
     display: block;
 }
 
-
-
 .nav-list a {
     font-size: 14px;
     text-transform: uppercase;
@@ -240,6 +236,15 @@ a {
     width: 35%;
     /* 45% laptop */
 }
+
+::placeholder {
+    color: #424247;
+    opacity: 1; /* Firefox */
+  }
+  
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #424247;
+  }
 
 /* Button */
 
@@ -295,16 +300,7 @@ a {
     height: 60px;
 } */
 
-.navbarLine{
-    z-index: 800;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    background-color: var(--main-fg-color);
-    width: 100vw;
-    height: 1px;
-    z-index: 2000;
-}
+
 
 .nav-list {
     display: flex;
@@ -332,10 +328,6 @@ a {
     font-size: 30px;
     text-transform: none !important;
     text-decoration: none;
-}
-
-.navbar .title{
-    max-height: 38px;
 }
 
 .dropbtn {
