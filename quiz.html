@@ -372,6 +372,10 @@
     let maxDifficulty = 4;
     let minQuestionIndex = 0;
     let maxQuestionIndex = 0;
+    let color1;
+    let color2;
+    let color3;
+    let color4;
 
     gradient.initGradient('#gradient-canvas');
     gradient2.initGradient('#gradient-canvas-start');
@@ -453,11 +457,14 @@
     function setCardValues() {
       questionNumber = getRandomIndex();
       if (questionNumber === false) {
-        console.log("ende");
         this.hideCentralBox();
         this.showEndScreen();
         firstCard.removeAttribute('onClick');
         secondCard.removeAttribute('onClick');
+        localStorage.setItem('color1', color1);
+        localStorage.setItem('color2', color2);
+        localStorage.setItem('color3', color3);
+        localStorage.setItem('color4', color4);
         return;
       }
       answerArray.push(questionNumber);
@@ -470,10 +477,6 @@
 
     function changeBackground() {
       let usedGradient = true;
-      var color1;
-      var color2;
-      var color3;
-      var color4;
 
       while (usedGradient === true) {
         color1 = colorPoolArray[Math.floor(Math.random() * colorPoolArray.length)];
