@@ -117,6 +117,15 @@ link.addEventListener('click', (event) => {
 });
 });
 
+const dropdowns = document.querySelectorAll('.dropdown');
+dropdowns.forEach(dropdown => {
+  const navArrow = dropdown.querySelector('.mobile-nav-arrow');
+  navArrow?.addEventListener('click', () => {
+    dropdown.classList.toggle('expanded');
+    navArrow.classList.toggle('up');
+  });
+})
+
 // Max Neefs Bedürfnisse Kreis
 
 document.querySelectorAll( '.circle' ).forEach( ( circle )=>{

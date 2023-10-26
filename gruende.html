@@ -28,6 +28,8 @@
             --gradient-color-3: #FB844D;
             --gradient-color-4: #fccc8d;
 
+            
+
             height: 85vh;
             width: 100vw;
             position: absolute;
@@ -73,15 +75,135 @@
 
 <body>
 
-    <nav class="navbar">
+    <nav class="navbar nav-hidden">
         <ul class="nav-list">
-            <li><a href="ursprung.html" class="nav-link">Ursprung</a></li>
-            <li><a href="gruende.html" class="nav-link active">Gründe</a></li>
-            <li class="title"><a href="index.html">Wahl x Weise</a></li>
-            <li><a href="methoden.html" class="nav-link">5 Methoden</a></li>
-            <li><a href="tipps.html" class="nav-link">Tipps</a></li>
+
+            <li class="dropdown">
+                <a href="ursprung.html" class="dropbtn">Ursprung</a>
+                <div class="dropdown-content">
+                        <a href="./ursprung.html#Beduerfnisse">Bedürfnisse</a> <br>
+                        <a href="./ursprung.html#Werte">Werte</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="gruende.html" class="dropbtn active">Gründe</a>
+                <div class="dropdown-content">
+                        <a href="./gruende.html#Entscheidungsmuedigkeit">Entscheidungsmüdigkeit</a> <br>
+                        <a href="./gruende.html#Auswahlparadox">Auswahlparadox</a><br>
+                        <a href="./gruende.html#Kognitive Verzerrungen">Kognitive Verzerrungen</a><br>
+                        <a href="./gruende.html#Plannungs Paralyse">Plannungs Paralyse</a><br>
+                </div>
+            </li>
+
+
+            <li class="title titleDesktop"><a href="index.html"><lottie-interactive path="./json/logo3.json" interaction="morph"></lottie-interactive></a></li>
+            <li class="title titleTablett"><a href="index.html">Wahl x Weise</a></li>
+            
+            <li class="dropdown">
+                <a href="methoden.html" class="dropbtn">5 Methoden</a>
+                <div class="dropdown-content">
+                        <a href="./methoden.html#6 Huete Methode">6 Hüte Methode</a> <br>
+                        <a href="./methoden.html#10 / 10 / 10">10 / 10 / 10</a><br>
+                        <a href="./methoden.html#Pro- Kontra-Liste">Pro- Kontra-Liste</a><br>
+                        <a href="./methoden.html#ICE-Scoring-Model">ICE-Scoring-Model</a><br>
+                        <a href="./methoden.html#Ausschlussverfahren">Ausschlussverfahren</a><br>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="tipps.html" class="dropbtn">Tipps</a>
+                <div class="dropdown-content">
+                        <a href="./tipps.html#40-70 Regel">40-70 Regel</a><br>
+                        <a href="./tipps.html#Satisficing">Satisficing</a><br>
+                        <a href="./tipps.html#Eat the Frog">Eat the Frog</a><br>
+                        <a href="./tipps.html#Gewohnheiten">Gewohnheiten</a><br>
+                        <a href="./tipps.html#beat decision fatigue">beat decision fatigue</a><br>
+                </div>
+            </li>
+            
         </ul>
+
+        <!-- <div class="navbarLine"></div> -->
     </nav>
+
+    <div class="mobile-header">
+        <div class="title"><a href="index.html">Wahl x Weise</a></div>
+
+        <button class="hamburger">
+            <div class="ham-bar"></div>
+        </button>
+    </div>
+
+    <div class="mobile-nav">
+        <div class="hamburger-content">
+            <a href="index.html" class="menu-item">home</a>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="ursprung.html" class="menu-item">Ursprünge von Entscheidungen</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./ursprung.html#Beduerfnisse">Bedürfnisse</a>
+                        <a href="./ursprung.html#Werte">Werte</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="gruende.html" class="menu-item">Auftretende Probleme</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./gruende.html#Entscheidungsmuedigkeit">Entscheidungsmüdigkeit</a>
+                        <a href="./gruende.html#Auswahlparadox">Auswahlparadox</a>
+                        <a href="./gruende.html#Kognitive Verzerrungen">Kognitive Verzerrungen</a>
+                        <a href="./gruende.html#Plannungs Paralyse">Plannungs Paralyse</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="methoden.html" class="menu-item">5 Methoden</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./methoden.html#6 Huete Methode">6 Hüte Methode</a>
+                        <a href="./methoden.html#10 / 10 / 10">10 / 10 / 10</a>
+                        <a href="./methoden.html#Pro- Kontra-Liste">Pro- Kontra-Liste</a>
+                        <a href="./methoden.html#ICE-Scoring-Model">ICE-Scoring-Model</a>
+                        <a href="./methoden.html#Ausschlussverfahren">Ausschlussverfahren</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="tipps.html" class="menu-item">Tipps und Tricks</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./tipps.html#40-70 Regel">40-70 Regel</a>
+                        <a href="./tipps.html#Satisficing">Satisficing</a>
+                        <a href="./tipps.html#Eat the Frog">Eat the Frog</a>
+                        <a href="./tipps.html#Gewohnheiten">Gewohnheiten</a>
+                        <a href="./tipps.html#beat decision fatigue">beat decision fatigue</a>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="quiz.html" class="menu-item">Fragerunde</a>
+        </div>
+
+        <canvas id="gradient-canvas3"> </canvas>
+    </div>
 
     <!-- <nav class="scroll-nav">
         <ul>
@@ -158,13 +280,13 @@
                             Entscheidungen
                             leiden. <a id="reference2" class="reference" href="#quelle2">2</a> Daher kann der Prozess
                             der Ego-Depletion zur Entscheidungsmüdigkeit
-                            führen. <a id="reference3" class="reference" href="#quelle3">3</a> <br>
+                            führen. <a id="reference1" class="reference" href="#quelle1">1</a> <br>
                             Entscheidungsmüdigkeit bezeichnet den Zustand, in dem die Qualität und Effizienz von
                             Entscheidungen abnimmt, je mehr Entscheidungen im Laufe des Tages getroffen werden. Dieser
                             Zustand kann dazu führen, dass unüberlegte Entscheidungen getroffen werden,
                             da der Analyseprozess übersprungen wird. Es kann auch dazu führen, dass die Entscheidung
-                            verschoben oder gar nicht getroffen wird. <a id="reference4" class="reference"
-                                href="#quelle4">4</a>
+                            verschoben oder gar nicht getroffen wird. <a id="reference2" class="reference"
+                                href="#quelle2">2</a>
                         </p>
                     </div>
 
@@ -247,7 +369,7 @@
                             z.B. bei einem Restaurantbesuch wenn man ein spezifisches Gericht erwartet, oder bei einem
                             Einkauf mit schwierig zu findenden Zutaten. Doch gleichzeitig gibt es das Phänomen der
                             „Überwahl“, das auftritt, wenn es zu viele ähnliche und gleichwertige Optionen gibt.<a
-                                id="reference5" class="reference" href="#quelle5">5</a> <br><br>
+                                id="reference3" class="reference" href="#quelle3">3</a> <br><br>
                             Mit einer steigenden Anzahl von Auswahlmöglichkeiten steigt auch der Aufwand, eine gute
                             Entscheidung zu treffen, was zu einer Belastung werden kann. Die Entscheidungsfindung wird
                             komplexer und kann zu Überforderung führen. Eine Zunahme der Auswahlmöglichkeiten kann
@@ -256,7 +378,7 @@
                             Zögern
                             kommt. Auch kann es zu Unzufriedenheit mit der schließlich gewählten Option kommen, da
                             immer wieder hinterfragt wird, ob die anderen Optionen besser gewesen wären.<a
-                                id="reference6" class="reference" href="#quelle6">6</a>
+                                id="reference4" class="reference" href="#quelle4">4</a>
                         </p>
                         <p class="absatz">
                             Es ist nicht immer schlecht eine größere Auswahl an Optionen zu haben, daher müssen zuerst
@@ -267,13 +389,13 @@
                             klare Präferenzen gibt, kann die Entscheidungsfindung leichter fallen.
                             Darüber hinaus kann es zu einem Auswahlparadox kommen, wenn es keinen klaren Favoriten in
                             der Auswahl hervorsticht und alle Optionen als gleichgesehen angesehen werden.<a
-                                id="reference7" class="reference" href="#quelle7">7</a> Wenn ein Artikel, z.B. durch
+                                id="reference5" class="reference" href="#quelle5">5</a> Wenn ein Artikel, z.B. durch
                             einen Rabatt, aus der Menge
                             hervorsticht, kann unsere Wahl erleichtert werden. <br>
                             Ebenfalls kann es zu einer höheren Zufriedenheit bei einer großen Auswahl kommen, wenn die
                             Person eine bestimmte Expertise in dem Thema hat, wodurch sie die Optionen besser abschätzen
-                            kann und nicht von der Vielfalt überwältigt wird.<a id="reference7" class="reference"
-                                href="#quelle7">7</a>
+                            kann und nicht von der Vielfalt überwältigt wird.<a id="reference5" class="reference"
+                                href="#quelle5">5</a>
                         </p>
 
                     </div>
@@ -405,8 +527,8 @@
                             unserem
                             Denkprozess. Sie entstehen aufgrund unserer begrenzten Fähigkeit, Informationen objektiv zu
                             verarbeiten und werden durch persönliche Erfahrungen, Erwartungen, Emotionen und
-                            unbewusste Denkmuster beeinflusst.<a id="reference8" class="reference" href="#quelle8">8</a>
-                            <a id="reference9" class="reference" href="#quelle9">9</a> <br><br>
+                            unbewusste Denkmuster beeinflusst.<a id="reference6" class="reference" href="#quelle6">6</a> <a 
+                            id="reference7" class="reference" href="#quelle7">7</a> <br><br>
                             Diese Verzerrungen können dazu führen, dass wir unlogische oder irrationale Entscheidungen
                             treffen, bestimmte Informationen ignorieren oder falsch interpretieren. Es sind Schwächen im
                             Denken, bei denen wir Schlussfolgerungen ziehen, ohne ausreichende Beweise zu haben. Man
@@ -414,7 +536,7 @@
                             aber
                             im Nachhinein bei genauerer Betrachtung zusammenbrechen. Es gibt zahlreiche Verzerrungen,
                             die Verhaltensweisen beeinflussen, wie Entscheidungsfindung, Urteilsvermögen und soziale
-                            Interaktionen.<a id="reference8" class="reference" href="#quelle8">8</a>
+                            Interaktionen.<a id="reference7" class="reference" href="#quelle7">7</a>
                         </p>
 
 
@@ -436,14 +558,14 @@
                             stark
                             wie die Freude, etwas zu gewinnen. Wenn uns eine 50:50-Chance gegeben wird, entweder 100 €
                             zu gewinnen oder 100 € zu verlieren, entscheiden sich die meisten von uns gegen das
-                            Spiel, weil der erwartete Wert als negativ wahrgenommen wird.<a id="reference10"
-                                class="reference" href="#quelle10">10</a> <br><br>
+                            Spiel, weil der erwartete Wert als negativ wahrgenommen wird.<a id="reference8"
+                                class="reference" href="#quelle8">8</a> <br><br>
                             Diese Verlustaversion kann ebenfalls zu dem Sunk-Costs-Phänomen führen. Diese
                             beschreibt unsere Tendenz, an einer Entscheidung festzuhalten, wenn wir bereits Zeit, Mühe
                             oder
                             Geld investiert haben, unabhängig davon, ob die aktuellen Kosten die Vorteile überwiegen.
                             Denn würden wir uns dazu entscheiden die Aktivität abzubrechen, gingen unsere vorherigen
-                            Investitionen verloren.<a id="reference11" class="reference" href="#quelle11">11</a>
+                            Investitionen verloren.<a id="reference9" class="reference" href="#quelle9">9</a>
                         </p>
                     </div>
                 </div>
@@ -475,18 +597,14 @@
                     <div class="inner-content text">
                         <p class="absatz">
                             Der „Confirmation Bias“ beschreibt die Neigung, Informationen so zu interpretieren oder zu
-                            suchen, dass sie unsere bestehenden Überzeugungen bestätigen. <a id="reference12"
-                                class="reference" href="#quelle12">12</a>
-                            Nachdem wir eine
-                            Meinung oder Entscheidung gebildet haben, neigen wir dazu, nur die positiven Aspekte zu
-                            sehen
-                            und Fakten so auszulegen, dass sie unsere Entscheidung unterstützen. Dies birgt das Risiko
+                            suchen, dass sie unsere bestehenden Überzeugungen bestätigen.
+                            Nachdem wir eine Meinung oder Entscheidung gebildet haben, neigen wir dazu, nur die positiven Aspekte zu
+                            sehen und Fakten so auszulegen, dass sie unsere Entscheidung unterstützen. Dies birgt das Risiko
                             fehlerhafte Entscheidungen zu treffen, da wir Argumente, die unserer Meinung widersprechen
-                            könnten, ignorieren oder verdrehen.<a id="reference13" class="reference"
-                                href="#quelle13">13</a> <br>
+                            könnten, ignorieren oder verdrehen.<a id="reference8" class="reference" href="#quelle8">8</a> 
+                            <br>
                             Dies kann zu schlechten Entscheidungen führen, da es die Realität verfälscht, von der wir
-                            unsere
-                            Beweise ziehen.<a id="reference14" class="reference" href="#quelle14">14</a>
+                            unsere Beweise ziehen.<a id="reference10" class="reference" href="#quelle10">10</a>
                         </p>
                     </div>
                 </div>
@@ -513,24 +631,26 @@
                             und Verhaltensweisen auf ihre Merkmale und Auswirkungen für uns zu prüfen und dann
                             Entscheidungen zu treffen. Der Bandwagon-Effekt kann uns davon abhalten, unabhängige
                             Entscheidungen zu treffen, indem er uns glauben lässt, dass die populäre Entscheidung die
-                            richtige ist.<a id="reference15" class="reference" href="#quelle15">15</a>
+                            richtige ist.<a id="reference11" class="reference" href="#quelle11">11</a>
                         </p>
                     </div>
 
                 </div>
 
-                <div class="curious-curio">
-                    <lottie-interactive id="curious-curio" loop path="./json/bandwagon-curio.json"
-                    interaction="play-on-show"></lottie-interactive>
-                </div>
 
-                <div class="train-container">
-                    <div class="train">
-                        <lottie-interactive id="train-inhalt" autoplay loop path="./json/bandwagon.json"
-                            interaction="play-on-show"></lottie-interactive>
+                <div class="bandwagonBsp">
+                    <div class="curious-curio">
+                        <lottie-interactive id="curious-curio" loop path="./json/bandwagon-curio.json"
+                        interaction="play-on-show"></lottie-interactive>
+                    </div>
+    
+                    <div class="train-container">
+                        <div class="train">
+                            <lottie-interactive id="train-inhalt" autoplay loop path="./json/bandwagon.json"
+                                interaction="play-on-show"></lottie-interactive>
+                        </div>
                     </div>
                 </div>
-
 
             </div>
 
@@ -549,12 +669,12 @@
                             besseres Ergebnis zu erzielen. Dadurch entsteht das Gefühl, dass es weitere Informationen
                             gibt,
                             welche benötigt werden, um voranzukommen. Doch dieser Ansatz hat seine Grenzen, da mit der
-                            Zeit der Nutzen der zusätzlichen Informationen und Analysen abnimmt.<a id="reference16"
-                                class="reference" href="#quelle16">16</a>
+                            Zeit der Nutzen der zusätzlichen Informationen und Analysen abnimmt.<a id="reference12"
+                                class="reference" href="#quelle12">12</a>
                             Es ist wichtig, ein Gleichgewicht zu finden und nicht zwischen zwei Extremen zu schwanken:
                             Entscheidungen ohne gründliche Studien und Reflexion („Extinction by Instinct“) oder die
                             übermäßige Verwendung von Zahlen, Analysen und Berichten ohne klares Ziel („Paralysis by
-                            Analysis“).<a id="reference17" class="reference" href="#quelle17">17</a> <br><br>
+                            Analysis“).<a id="reference13" class="reference" href="#quelle13">13</a> <br><br>
                             Es kann schnell zu einer Analysis Paralysis / Entscheidungslähmung kommen, wenn es zu viele
                             Informationen gibt und man sich in einem Übermaß von Informationen verliert. Darüber hinaus
                             kann ein Auslöser sein, dass versucht wird sich vor der eigentlichen Umsetzung der Aufgabe
@@ -562,31 +682,24 @@
                             des Projekts zu scheuen. Dazu kommt das Perfektionismus und der Versuch, die Analysephase
                             komplett abzuschließen, zu einer Entscheidungslähmung führen können. Fehlende Zeitvorgaben
                             für die Analyse können die Situation weiter verschlimmern, da kein klarer Rahmen für die
-                            Entscheidungsfindung vorgegeben ist.
-                            <a id="reference16" class="reference" href="#quelle16">16</a>
+                            Entscheidungsfindung vorgegeben ist.<a id="reference12" class="reference" href="#quelle12">12</a>
                         </p>
                         <p class="absatz">
                             Die Ursachen für Analysis Paralysis können vielfältig sein: Zum Beispiel könnte man mit
-                            einer
-                            Lösung für ein Problem starten, nur um später herauszufinden, dass diese nicht funktioniert.
-                            Dann
-                            beginnt man verzweifelt nach weiteren Beweisen zu suchen, um die ursprüngliche Theorie zu
+                            einer Lösung für ein Problem starten, nur um später herauszufinden, dass diese nicht funktioniert.
+                            Dann beginnt man verzweifelt nach weiteren Beweisen zu suchen, um die ursprüngliche Theorie zu
                             stützen oder eine neue zu entwickeln. Manchmal sucht man auch nach zusätzlichen Beweisen, um
                             eine Empfehlung zu unterstützen, von der man glaubt, dass sie nicht gut aufgenommen wird.
-                            Ein
-                            Mangel an Selbstvertrauen in die eigene Arbeit oder Angst und Unentschlossenheit können
-                            ebenfalls zu Analysis Paralysis führen.<a id="reference16" class="reference"
-                                href="#quelle16">16</a> <br>
+                            Ein Mangel an Selbstvertrauen in die eigene Arbeit oder Angst und Unentschlossenheit können
+                            ebenfalls zu Analysis Paralysis führen.<a id="reference12" class="reference"
+                                href="#quelle12">12</a> <br>
                             Dieses Phänomen ist vergleichbar mit der „Planungsparalyse“, bei der die Planung einen
-                            höheren
-                            Stellenwert einnimmt als das eigentliche Handeln.
+                            höheren Stellenwert einnimmt als das eigentliche Handeln.
                             Planen und Analysieren sind Komfortzonen, da diese leicht auszuführen sind und kein aktives
                             Handeln benötigen, welche Risiken mit sich führen könnten. Es ist einfacher, in der
                             Komfortzone der Planung zu bleiben, weil es technisch gesehen zu der Erfüllung der Aufgabe
                             beiträgt. Dadurch entsteht das Gefühl produktiv zu sein, obwohl ab einem bestimmten Punkt
-                            die
-                            Entscheidung nur noch heraus gezögert wird.
-                            <a id="reference18" class="reference" href="#quelle18">18</a>
+                            die Entscheidung nur noch heraus gezögert wird.<a id="reference14" class="reference" href="#quelle14">14</a>
                         </p>
 
                     </div>
@@ -612,28 +725,31 @@
         </div>
 
 
-        <!-- <div class="content-container" id="section3">
+        <div class="content-container absprungSection" id="section3">
 
             <div class="inner-content">
                 <h2>Learn more about 5 methods that might be helpful to you</h2>
-                <p>Schon mal von der 6 Hut Methode gehört? Oder der 10 / 10 / 10 Methode? Es gibt viele unterschiedliche
-                    Techniken, die verwendet werden können, um den Entscheidungsprozess zu erleichtern. Finde hier mehr
-                    über fünf Methoden heraus, die dich dabei unterstützen könnten.
+                <p>Schon mal von der 6 Hut Methode gehört? Oder der 10 / 10 / 10 Methode? 
+                    Es gibt viele unterschiedliche Techniken, die verwendet werden können, 
+                    um den Entscheidungsprozess zu erleichtern. Finde hier mehr über fünf Methoden heraus, 
+                    die dich dabei unterstützen könnten.
                 </p>
 
-                <div type="button" onclick="location.href='problems.html'" class="primary-button">
-                    <a href="origins.html">erfahre mehr</a>
+                <div type="button" onclick="location.href='methoden.html'" class="primary-button">
+                    <a href="methoden.html">erfahre mehr</a>
                 </div>
 
             </div>
 
             <div class="buffer"></div>
 
-            <div class="inner-content illustration">
-                <img class="illustration" src="/assets/cat4.jpg">
+            <div>
+                <div class="illustration verschieben">
+                    <lottie-interactive autoplay loop path="./json/methoden-illu.json" interaction="play-on-show"></lottie-interactive>
+                </div>
             </div>
 
-        </div> -->
+        </div>
     </section>
 
 
@@ -651,87 +767,95 @@
                 <p>Entscheidungsmüdigkeit</p>
                 <div id="quelle1">
                     <p><a href="#reference1" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 1:
-                        </a>Informationen aus Quelle 1.</p>
+                        </a>Pignatiello, G. A., Martin, R. J., & Hickman, R. L. (2018). „Decision fatigue: A conceptual analysis.“
+                        Journal of Health Psychology, 25(1), 123–135. https://doi.org/10.1177/1359105318763510
+                        (abgerufen am 22.07.2023)</p>
                 </div>
                 <div id="quelle2">
                     <p><a href="#reference2" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 2:
-                        </a>Informationen aus Quelle 2.</p>
-                </div>
-                <div id="quelle3">
-                    <p><a href="#reference3" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 3:
-                        </a>Informationen aus Quelle 3.</p>
-                </div>
-                <div id="quelle4">
-                    <p><a href="#reference4" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 4:
-                        </a>Informationen aus Quelle 4.</p>
+                        </a>Oto, B. (2012). „When thinking is hard: managing decision fatigue.“ EMS
+                        world. 41. 46-50. https://www.researchgate.net/publication/
+                        225279309_When_thinking_is_hard_managing_decision_fatigue (abgerufen am 22.07.2023)</p>
                 </div>
 
                 <br><br>
 
                 <p>Paradox der Wahl</p>
+                <div id="quelle3">
+                    <p><a href="#reference3" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 3:
+                        </a>Iyengar, S. S., & Lepper, M. R. (2000). „When choice is demotivating: Can one desire too
+                        much of a good thing?“ Journal of Personality and Social Psychology, 79(6), 995–1006. https://
+                        faculty.washington.edu/jdb/345/345%20Articles/Iyengar%20&%20Lepper%20(2000).pdf
+                        (abgerufen am 21.07.2023)</p>
+                </div>
+                <div id="quelle4">
+                    <p><a href="#reference4" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 4:
+                        </a>Schwartz, B. (2007). „The paradox of choice: why more is less.“ (Adobe Acrobat eBook Reader
+                        Edition). HarperCollins Publishers Inc. S. 5, 48, 85.</p>
+                </div>
                 <div id="quelle5">
                     <p><a href="#reference5" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 5:
-                        </a>Informationen aus Quelle 5.</p>
-                </div>
-                <div id="quelle6">
-                    <p><a href="#reference6" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 6:
-                        </a>Informationen aus Quelle 6.</p>
-                </div>
-                <div id="quelle7">
-                    <p><a href="#reference7" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 7:
-                        </a>Informationen aus Quelle 7.</p>
+                        </a>Scheibehenne, B., Todd, P. M., Greifeneder, R. (2010) „Can there ever be too many options? A
+                        meta‐analytic review of choice overload.“ Journal of consumer research. 37(3). S. 409–425.
+                        https://archive-ouverte.unige.ch//unige:76440 (abgerufen am 21.07.2023)</p>
                 </div>
 
                 <br><br>
 
                 <p>Kognitive Verzerrungen</p>
-                <div id="quelle8">
+                <div id="quelle6">
+                    <p><a href="#reference6" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 6:
+                        </a>MindTools. (o.D.). „Cognitive Bias - How to Make Objective Decisions“ https://
+                        www.mindtools.com/a0ozgex/cognitive-bias (abgerufen am 20.07.2023)</p>
+                </div>
+                <div id="quelle7">
+                    <p><a href="#reference7" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 7:
+                        </a>Hollins, P. (2021). „The Art of Strategic Decision-Making: How to make tough decisions quickly,
+                        intelligently, and safely“. S. 140ff.</p>
+                </div>
+                <div id="quelle9">
                     <p><a href="#reference8" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 8:
-                        </a>Informationen aus Quelle 8.</p>
+                        </a>Spreer, P. (2021). „PsyConversion®“ (2. Auflage). Springer Gabler. S. 226, 246. https://doi.org/
+                        10.1007/878-3-658-32255-7 (abgerufen am 22.07.2023)</p>
                 </div>
                 <div id="quelle9">
                     <p><a href="#reference9" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 9:
-                        </a>Informationen aus Quelle 9.</p>
+                        </a>The Decision Lab. (o.D.). „Why do we buy insurance? Loss-aversion, explained.“. https://
+                        thedecisionlab.com/biases/loss-aversion (abgerufen am 22.07.2023)</p>
                 </div>
                 <div id="quelle10">
                     <p><a href="#reference10" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 10:
-                        </a>Informationen aus Quelle 10.</p>
+                        </a>The Decision Lab. (o.D.). „Why do we favor our existing beliefs? - The Confirmation Bias,
+                        explained“. https://thedecisionlab.com/biases/confirmation-bias (abgerufen am 22.07.2023)</p>
                 </div>
                 <div id="quelle11">
                     <p><a href="#reference11" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 11:
-                        </a>Informationen aus Quelle 11.</p>
+                        </a>The Decision Lab. (o.D.). „Why do we support opinions as they become more popular?
+                        Bandwagon Effect, explained“. https://thedecisionlab.com/biases/bandwagon-effect (abgerufen
+                        am 22.07.2023)</p>
                 </div>
-                <div id="quelle12">
-                    <p><a href="#reference12" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 12:
-                        </a>Informationen aus Quelle 12.</p>
-                </div>
-                <div id="quelle13">
-                    <p><a href="#reference13" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 13:
-                        </a>Informationen aus Quelle 13.</p>
-                </div>
-                <div id="quelle14">
-                    <p><a href="#reference14" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 14:
-                        </a>Informationen aus Quelle 14.</p>
-                </div>
-                <div id="quelle15">
-                    <p><a href="#reference15" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 15:
-                        </a>Informationen aus Quelle 15.</p>
-                </div>
+ 
+
 
                 <br><br>
 
                 <p>Plannungs Paralyse</p>
-                <div id="quelle16">
-                    <p><a href="#reference16" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 16:
-                        </a>Informationen aus Quelle 16.</p>
+                <div id="quelle12">
+                    <p><a href="#reference12" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 12:
+                        </a>Famuyide, S. (2017, 14. Februar). „Managing Analysis Paralysis“. Business Analyst Learnings.
+                        https://www.businessanalystlearnings.com/blog/2014/2/10/managing-analysis-paralysis?
+                        expand_article=1 (abgerufen am 20.07.2023)</p>
                 </div>
-                <div id="quelle17">
-                    <p><a href="#reference17" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 17:
-                        </a>Informationen aus Quelle 17.</p>
+                <div id="quelle13">
+                    <p><a href="#reference13" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 13:
+                        </a>Langley, A. (1995). „Between "Paralysis by Analysis" and "Extinction by Instinct"“. Sloan
+                        Management Review. 36(3). S. 63. https://researchbcc.files.wordpress.com/2012/10
+                        between_paralysis_by_analysis_and_extinction_by_instinct.pdf (abgerufen am 20.07.2023)</p>
                 </div>
-                <div id="quelle18">
-                    <p><a href="#reference18" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 18:
-                        </a>Informationen aus Quelle 18.</p>
+                <div id="quelle14">
+                    <p><a href="#reference14" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 14:
+                        </a>Hollins, P. (2021). „The Art of Strategic Decision-Making: How to make tough decisions quickly,
+                        intelligently, and safely.“ S. 172.</p>
                 </div>
             </div>
 
@@ -764,6 +888,8 @@
     <script>
         const gradient5 = new Gradient()
         gradient5.initGradient('#gradient-canvas-reasons');
+        const gradient3 = new Gradient()
+        gradient3.initGradient('#gradient-canvas3');
 
         maxSelectedBoxes = 2;
     </script>

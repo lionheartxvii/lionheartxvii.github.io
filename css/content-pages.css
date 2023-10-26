@@ -147,8 +147,6 @@ h2 {
 
 }
 
-
-
 .quellen-arrow {
   height: 20%;
   transition: transform 0.5s;
@@ -659,18 +657,18 @@ table td {
   align-self: flex-end;
 }
 
-.iceIllustration{
+.iceIllustration {
   width: 100%;
   height: 20vh;
   visibility: hidden;
 }
 
-.icecream{
+.icecream {
   scale: 0.4;
 }
 
 .vh-120 {
-  height: 160vh !important;
+  height: 120vh !important;
 }
 
 /* Pro Contra Beispiel */
@@ -859,6 +857,11 @@ td {
   display: none;
 }
 
+.verschieben{
+  transform: translateX(80px);
+}
+
+
 /* Media Query für Retina-Displays mit hoher Auflösung */
 @media only screen and (max-width: 1400px) and (orientation: landscape) {
 
@@ -878,12 +881,16 @@ td {
     max-width: 80%;
   }
 
-  .absatz{
+  .absatz {
     height: 60vh;
   }
 
   .buffer {
     min-width: 140px;
+  }
+
+  .verschieben{
+    transform: translateX(0px);
   }
 
   .inner-single-content-container,
@@ -900,7 +907,9 @@ td {
     width: 80vw;
   }
 
-
+  .minwidth45 {
+    min-width: 45vw;
+  }
 
   /* Beispiele */
   /*+++++++++++++++++++++++ Origins IPad Pro Beispiele +++++++++++++++++++++++*/
@@ -946,7 +955,7 @@ td {
     scale: 1;
   }
 
-  .train-container{
+  .train-container {
     position: relative;
     width: 100%;
     overflow-x: hidden;
@@ -979,6 +988,7 @@ td {
 
 /* Tablett landscape*/
 @media only screen and (min-width: 769px) and (max-width: 1100px) and (orientation: landscape) {
+
 
 
   .text,
@@ -1058,7 +1068,7 @@ td {
     scale: 1.2;
   }
 
-  .train-container{
+  .train-container {
     position: relative;
     width: 100%;
     overflow-x: hidden;
@@ -1081,11 +1091,24 @@ td {
     scale: 0.8;
   }
 
+
+
 }
 
 /* Tablett portrait */
 @media only screen and (max-width: 1050px) and (orientation: portrait) {
   /* 768 / 769 */
+
+  .verschieben{
+    transform: translateX(0px);
+  }
+
+  .absprungSection{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 
   .hidden {
     display: none;
@@ -1169,7 +1192,7 @@ td {
     font-size: 20px !important;
   }
 
-  .speech-bubble p{
+  .speech-bubble p {
     font-size: 15px !important;
   }
 
@@ -1284,16 +1307,35 @@ td {
     width: 90%;
   }
 
+  .bandwagonBsp {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    height: auto !important;
+    margin: 0 0 10vh 0;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .train {
     scale: 1.5;
     margin-top: 3vh;
     margin-bottom: 3vh;
   }
 
-  .train-container{
+  .train-container {
     position: relative;
     width: 100%;
     overflow-x: hidden;
+
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .df-interactive {
@@ -1652,12 +1694,12 @@ td {
   }
 
 
-  .curious-curio{
+  .curious-curio {
     scale: 0.5;
     width: 177%;
   }
-  
-  
+
+
   .df-interactive {
     width: 90vw;
   }
@@ -1929,13 +1971,13 @@ tr:nth-child(5) td:nth-child(2){
     padding-bottom: 2px;
   }
 
-  .single-content-container{
+  .single-content-container {
     height: 120vh;
     margin-bottom: 20vh;
   }
 
 
-/*+++++++++++++++++++++++ Reaons Iphone Landscape Beispiele +++++++++++++++++++++++*/
+  /*+++++++++++++++++++++++ Reaons Iphone Landscape Beispiele +++++++++++++++++++++++*/
 
   .box-values {
     padding: 60px 20px;
@@ -1997,15 +2039,15 @@ tr:nth-child(5) td:nth-child(2){
     height: 220vh !important;
   }
 
-  .ice-input-mobile{
+  .ice-input-mobile {
     width: 80vw;
   }
 
-  .column-paradox .hidden{
+  .column-paradox .hidden {
     display: block !important;
   }
 
-    /*+++++++++++++++++++++++ Tipps Iphone Beispiele +++++++++++++++++++++++*/
+  /*+++++++++++++++++++++++ Tipps Iphone Beispiele +++++++++++++++++++++++*/
 
   /* 40 / 70 */
   .beispiel-4070 .svg-container {

@@ -182,6 +182,21 @@ LottieInteractivity.create({
       ],
     });
 
+
+    // methoden
+    // LottieInteractivity.create({
+    //   player: '#illustration-methoden',
+    //   container: "#section3",
+    //   mode: 'cursor',
+    //   speed: 0.2,
+    //   actions: [
+    //     {
+    //         type: "hover",
+    //         forceFlag: false
+    //     }
+    //   ],
+    // });
+
 //   flowers
 
 // var animation2 = anime({

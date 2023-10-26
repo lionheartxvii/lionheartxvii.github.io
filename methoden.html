@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
     maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Master Worktitel</title>
+    <title>Wahl x Weise</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/content-pages.css">
 
@@ -37,10 +37,10 @@
             --gradient-color-3: #d96565;
             --gradient-color-4: #96adf3; */
 
-            --gradient-color-2: #ab86fb;
-            --gradient-color-1: #96adf3;
-            --gradient-color-4: #e978a7;
-            --gradient-color-3: #faaa69;
+            --gradient-color-2: #b499f0;
+            --gradient-color-1: #a8baf0;
+            --gradient-color-4: #ec8db5;
+            --gradient-color-3: #f5b078;
         }
 
 
@@ -79,7 +79,7 @@
             --gradient-color-3: #80d6d7;
             --gradient-color-4: #fedf8f;
 
-            --gradient-color-1: #ab86fb;
+            --gradient-color-1: #a584eb;
             --gradient-color-3: #96adf3;
             --gradient-color-4: #e978a7;
             --gradient-color-2: #faaa69;
@@ -202,15 +202,132 @@
 
 <body>
 
-    <nav class="navbar">
+    <nav class="navbar nav-hidden">
         <ul class="nav-list">
-            <li><a href="ursprung.html" class="nav-link">Ursprung</a></li>
-            <li><a href="gruende.html" class="nav-link">Gründe</a></li>
-            <li class="title"><a href="index.html">Wahl x Weise</a></li>
-            <li><a href="methoden.html" class="nav-link active">5 Methoden</a></li>
-            <li><a href="tipps.html" class="nav-link">Tipps</a></li>
+
+            <li class="dropdown">
+                <a href="ursprung.html" class="dropbtn">Ursprung</a>
+                <div class="dropdown-content">
+                        <a href="./ursprung.html#Beduerfnisse">Bedürfnisse</a> <br>
+                        <a href="./ursprung.html#Werte">Werte</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="gruende.html" class="dropbtn">Gründe</a>
+                <div class="dropdown-content">
+                        <a href="./gruende.html#Entscheidungsmuedigkeit">Entscheidungsmüdigkeit</a> <br>
+                        <a href="./gruende.html#Auswahlparadox">Auswahlparadox</a><br>
+                        <a href="./gruende.html#Kognitive Verzerrungen">Kognitive Verzerrungen</a><br>
+                        <a href="./gruende.html#Plannungs Paralyse">Plannungs Paralyse</a><br>
+                </div>
+            </li>
+
+            <li class="title titleDesktop"><a href="index.html"><lottie-interactive path="./json/logo3.json" interaction="morph"></lottie-interactive></a></li>
+            <li class="title titleTablett"><a href="index.html">Wahl x Weise</a></li>
+            
+            <li class="dropdown">
+                <a href="methoden.html" class="dropbtn active">5 Methoden</a>
+                <div class="dropdown-content">
+                        <a href="./methoden.html#6 Huete Methode">6 Hüte Methode</a> <br>
+                        <a href="./methoden.html#10 / 10 / 10">10 / 10 / 10</a><br>
+                        <a href="./methoden.html#Pro- Kontra-Liste">Pro- Kontra-Liste</a><br>
+                        <a href="./methoden.html#ICE-Scoring-Model">ICE-Scoring-Model</a><br>
+                        <a href="./methoden.html#Ausschlussverfahren">Ausschlussverfahren</a><br>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="tipps.html" class="dropbtn">Tipps</a>
+                <div class="dropdown-content">
+                        <a href="./tipps.html#40-70 Regel">40-70 Regel</a><br>
+                        <a href="./tipps.html#Satisficing">Satisficing</a><br>
+                        <a href="./tipps.html#Eat the Frog">Eat the Frog</a><br>
+                        <a href="./tipps.html#Gewohnheiten">Gewohnheiten</a><br>
+                        <a href="./tipps.html#beat decision fatigue">beat decision fatigue</a><br>
+                </div>
+            </li>
+            
         </ul>
     </nav>
+
+    <div class="mobile-header">
+        <div class="title"><a href="index.html">Wahl x Weise</a></div>
+
+        <button class="hamburger">
+            <div class="ham-bar"></div>
+        </button>
+    </div>
+
+    <div class="mobile-nav">
+        <div class="hamburger-content">
+            <a href="index.html" class="menu-item">home</a>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="ursprung.html" class="menu-item">Ursprünge von Entscheidungen</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./ursprung.html#Beduerfnisse">Bedürfnisse</a>
+                        <a href="./ursprung.html#Werte">Werte</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="gruende.html" class="menu-item">Auftretende Probleme</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./gruende.html#Entscheidungsmuedigkeit">Entscheidungsmüdigkeit</a>
+                        <a href="./gruende.html#Auswahlparadox">Auswahlparadox</a>
+                        <a href="./gruende.html#Kognitive Verzerrungen">Kognitive Verzerrungen</a>
+                        <a href="./gruende.html#Plannungs Paralyse">Plannungs Paralyse</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="methoden.html" class="menu-item">5 Methoden</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./methoden.html#6 Huete Methode">6 Hüte Methode</a>
+                        <a href="./methoden.html#10 / 10 / 10">10 / 10 / 10</a>
+                        <a href="./methoden.html#Pro- Kontra-Liste">Pro- Kontra-Liste</a>
+                        <a href="./methoden.html#ICE-Scoring-Model">ICE-Scoring-Model</a>
+                        <a href="./methoden.html#Ausschlussverfahren">Ausschlussverfahren</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="mobile-nav-row">
+                    <a href="tipps.html" class="menu-item">Tipps und Tricks</a>
+                    <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                </div>
+                <div class="dropdownOptions">
+                    <ul>
+                        <a href="./tipps.html#40-70 Regel">40-70 Regel</a>
+                        <a href="./tipps.html#Satisficing">Satisficing</a>
+                        <a href="./tipps.html#Eat the Frog">Eat the Frog</a>
+                        <a href="./tipps.html#Gewohnheiten">Gewohnheiten</a>
+                        <a href="./tipps.html#beat decision fatigue">beat decision fatigue</a>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="quiz.html" class="menu-item">Fragerunde</a>
+        </div>
+
+        <canvas id="gradient-canvas3"> </canvas>
+    </div>
 
     <!-- <nav class="scroll-nav">
         <ul>
@@ -586,7 +703,7 @@
                                 <td rowspan="4" class="table-h3">Pro</td>
                                 <td class="idea-pc">
                                     <textarea type="text" class="table-text placeholder" name="" id=""
-                                        style="width: 100%; height: 70%;" placeholder="Pro Argument 1"></textarea>
+                                        style="width: 100%; height: 70%; color: rgb(2, 2, 2);" placeholder="Pro Argument 1"></textarea>
                                 </td>
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
@@ -936,8 +1053,7 @@
                                 weiteren Methoden verwendet werden, die bei dem Entscheidungsprozess helfen sollen, um
                                 die Ergebnisse zu bestätigen. Es ist für keine lebensbedrohenden Situationen ausgelegt,
                                 doch für alltägliche Situationen in denen man entscheiden muss wie man sich Zeit und
-                                Ressourcen aufteilt, kann sie von Nutzen sein.<a id="reference10" class="reference"
-                                    href="#quelle10">10</a>
+                                Ressourcen aufteilt, kann sie von Nutzen sein.<a id="reference10" class="reference" href="#quelle10">10</a>
 
                             </p>
                         </div>
@@ -959,8 +1075,7 @@
                         <p class="absatz">
                             Wenn die Anzahl der Entscheidungen, mit denen wir konfrontiert sind, zunimmt, wird die
                             Freiheit der Wahl letztendlich zur Qual. Routineentscheidungen beanspruchen oft so viel Zeit
-                            und
-                            Aufmerksamkeit, dass sie unsere mentale Energie verbrauchen.
+                            und Aufmerksamkeit, dass sie unsere mentale Energie verbrauchen.
                             Hierfür kann es hilfreich sein, zu erkennen, wie Beschränkungen uns tatsächlich nützen und
                             nicht benachteiligen können. <br>
                             Durch eine Beschränkung oder Regel (z.B. immer nur einmal die Snooze-Taste zu drücken),
@@ -976,11 +1091,9 @@
                         </p>
                         <p class="absatz">
                             Hierbei wird die Auswahl der Möglichkeiten soweit reduziert bis nur noch wenige oder nur
-                            noch
-                            eine Option zur Verfügung stehen. Um dies zu erreichen, werden nacheinander die Optionen
+                            noch eine Option zur Verfügung stehen. Um dies zu erreichen, werden nacheinander die Optionen
                             anhand von Ausschlusskriterien reduziert. Die Optionen, welche nicht zu diesen Kriterien
-                            passen,
-                            werden schlussendlich eliminiert und die übrigen Optionen werden erneut abgewogen.<a
+                            passen, werden schlussendlich eliminiert und die übrigen Optionen werden erneut abgewogen.<a
                                 id="reference13" class="reference" href="#quelle13">13</a>
                             Bei einem Autokauf kann z.B. erst die Marke, dann das Modell und der Preis
                             als Kriterium gelten, um die verfügbaren Möglichkeiten zu reduzieren.
@@ -988,11 +1101,9 @@
                             Optionen oder sogar ein endgültiges Ergebnis zu erhalten.
                             <br><br>
                             Durch dieses Vorgehen kann sichergestellt werden, dass die getroffenen Entscheidungen in
-                            deine
-                            momentane Lebenslage passen, sondern auch Entscheidungsmüdigkeit verhindert werden. Denn
+                            deine momentane Lebenslage passen, sondern auch Entscheidungsmüdigkeit verhindert werden. Denn
                             die Fähigkeit, Entscheidungen zu treffen, ist begrenzt und verbraucht tagtäglich viel
-                            Energie. Vor
-                            allem durch das Anwenden der Regeln und Begrenzungen bei kleinen alltäglichen
+                            Energie. Vor allem durch das Anwenden der Regeln und Begrenzungen bei kleinen alltäglichen
                             Entscheidungen, kann diese mentale Energie für größere Entscheidungen gespart werden.<a
                                 id="reference12" class="reference" href="#quelle12">12</a>
                         </p>
@@ -1126,25 +1237,27 @@
         </div>
 
 
-        <div class="content-container" id="section3">
+        <div class="content-container absprungSection" id="section3">
 
             <div class="inner-content">
                 <h2>Weitere Tipps und Tricks</h2>
-                <p>Noch nicht genug gelernt? Wenn du mehr erfahren willst, lerne hier wie man Entscheidungsmüdigkeit
+                <p>Konntest du dich noch nicht entscheiden? Wenn du mehr erfahren willst, lerne hier wie man Entscheidungsmüdigkeit
                     vermeiden kann, was der Begriff "Satisficing" bedeutet und wie die 40/70-Regel dazu beitragen kann,
                     schneller und bessere Entscheidungen zu treffen.
                 </p>
 
-                <div type="button" onclick="location.href='problems.html'" class="primary-button">
-                    <a href="origins.html">erfahre mehr</a>
+                <div type="button" onclick="location.href='tipps.html'" class="primary-button">
+                    <a href="tipps.html">erfahre mehr</a>
                 </div>
 
             </div>
 
             <div class="buffer"></div>
 
-            <div class="illustration">
-                <img class="illustration" src="/assets/cat3.jpg">
+            <div>
+                <div class="illustration verschieben">
+                    <lottie-interactive autoplay loop path="./json/illustration4.json" interaction="play-on-show"></lottie-interactive>
+                </div>
             </div>
 
         </div>
@@ -1165,11 +1278,14 @@
                 <p>6 Hüte Methode</p>
                 <div id="quelle1">
                     <p><a href="#reference1" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 1:
-                        </a>Informationen aus Quelle 1.</p>
+                        </a>MindTools. (o.D.). „Six Thinking Hats® - Looking at a Decision in Different Ways“ https://
+                        www.mindtools.com/ajlpp1e/six-thinking-hats (abgerufen am 23.07.2023)</p>
                 </div>
                 <div id="quelle2">
                     <p><a href="#reference2" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 2:
-                        </a>Informationen aus Quelle 2.</p>
+                        </a>De Bono, E. (2017). „Six thinking hats“ (eBook Edition). Penguin UK. S. 18-21, 133.
+                        MindTools. (n.d.). „Six Thinking Hats® - Looking at a Decision in Different Ways“ https://
+                        www.mindtools.com/ajlpp1e/six-thinking-hats (abgerufen am 23.07.2023)</p>
                 </div>
 
                 <br><br>
@@ -1177,11 +1293,14 @@
                 <p>10 / 10 / 10</p>
                 <div id="quelle3">
                     <p><a href="#reference3" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 3:
-                        </a>Informationen aus Quelle 3.</p>
+                        </a>Wolf, K. (2022, 22. September). „Besser entscheiden mit der 10:10:10-Methode“. handwerk.com.
+                        https://www.handwerk.com/besser-entscheiden-mit-der-101010-methode (abgerufen am
+                        23.07.2023)</p>
                 </div>
                 <div id="quelle4">
                     <p><a href="#reference4" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 4:
-                        </a>Informationen aus Quelle 4.</p>
+                        </a>Hollins, P. (2021). „The Art of Strategic Decision-Making: How to make tough decisions quickly,
+                        intelligently, and safely.“ S. 112-116.</p>
                 </div>
 
                 <br><br>
@@ -1189,15 +1308,19 @@
                 <p>Pro- & Kontra-Liste</p>
                 <div id="quelle5">
                     <p><a href="#reference5" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 5:
-                        </a>Informationen aus Quelle 5.</p>
+                        </a>Sridharan, M. (2020, 11. Februar). „Pros-And-Cons - An Approach For Decision-Making. Think
+                        Insights.“ https://thinkinsights.net/strategy/pros-and-cons-decision-making/ (abgerufen am
+                        24.07.2023)</p>
                 </div>
                 <div id="quelle6">
                     <p><a href="#reference6" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 6:
-                        </a>Informationen aus Quelle 6.</p>
+                        </a>MindTools. (o.D.). „Quantitative Pros and Cons: Weigh up Decisions With a Simple Approach“
+                        https://www.mindtools.com/a7asu8d/quantitative-pros-and-cons (abgerufen am 24.07.2023)</p>
                 </div>
                 <div id="quelle7">
                     <p><a href="#reference7" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 7:
-                        </a>Informationen aus Quelle 7.</p>
+                        </a>Hollins, P. (2021). „The Art of Strategic Decision-Making: How to make tough decisions quickly,
+                        intelligently, and safely.“ S. 130f.</p>
                 </div>
 
                 <br><br>
@@ -1205,15 +1328,20 @@
                 <p>ICE-Scoring-Modell</p>
                 <div id="quelle8">
                     <p><a href="#reference8" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 8:
-                        </a>Informationen aus Quelle 8.</p>
+                        </a>Mayan, K. (2023, 30. April). „What is the ICE Scoring Model for Feature Prioritization? Overview,
+                        Guide, and Template“. Savio. https://www.savio.io/product-roadmap/ice-scoring-model/
+                        (abgerufen am 25.07.2023)</p>
                 </div>
                 <div id="quelle9">
                     <p><a href="#reference9" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 9:
-                        </a>Informationen aus Quelle 9.</p>
+                        </a>Gilad, I. (2022, 17. August). „Idea Prioritization With ICE and The Confidence Meter.“ Itamar
+                        Gilad. https://itamargilad.com/the-tool-that-will-help-you-choose-better-product-ideas/
+                        (abgerufen am 25.07.2023)</p>
                 </div>
                 <div id="quelle10">
                     <p><a href="#reference10" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 10:
-                        </a>Informationen aus Quelle 10.</p>
+                        </a>Hollins, P. (2021). „The Art of Strategic Decision-Making: How to make tough decisions quickly,
+                        intelligently, and safely.“ S. 106ff.</p>
                 </div>
 
                 <br><br>
@@ -1221,15 +1349,19 @@
                 <p>Ausschlussverfahren</p>
                 <div id="quelle11">
                     <p><a href="#reference11" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 11:
-                        </a>Informationen aus Quelle 11.</p>
+                        </a>Schwartz, B. (2007). „The paradox of choice: why more is less.“ (Adobe Acrobat eBook Reader
+                        Edition). HarperCollins Publishers Inc. S. 235f.</p>
                 </div>
                 <div id="quelle12">
                     <p><a href="#reference12" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 12:
-                        </a>Informationen aus Quelle 12.</p>
+                        </a>Hollins, P. (2021). „The Art of Strategic Decision-Making: How to make tough decisions quickly,
+                        intelligently, and safely.“ S. 120-123.</p>
                 </div>
                 <div id="quelle13">
                     <p><a href="#reference13" aria-label="Hochspringen" title="Hochspringen">↑ Quelle 13:
-                        </a>Informationen aus Quelle 13.</p>
+                        </a>Wolking, S. (2022, 18. Januar). „Entscheidungen treffen: Wie du gute Entscheidungen treffen
+                        kannst“ e-fellows.net. https://www.e-fellows.net/skills/selbstmanagement/entscheidungen-treffen
+                        (abgerufen am 24.07.2023)</p>
                 </div>
 
             </div>
@@ -1254,16 +1386,23 @@
 
     <script src="/javascript/Gradient.js"></script>
     <script src="/javascript/script.js"></script>
+    
 
-    <!-- Lottie Libraries -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js">
-    </script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+ <!-- Lottie Libraries -->
+ <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
+ <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js">
+ </script>
+ <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+
+
+
 
     <script>
         const gradient5 = new Gradient()
         gradient5.initGradient('#gradient-canvas-reasons');
+
+        const gradient3 = new Gradient()
+        gradient3.initGradient('#gradient-canvas3');
 
         maxSelectedBoxes = 5;
 
