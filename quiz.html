@@ -86,10 +86,10 @@
     } */
 
     #gradient-canvas {
-      --gradient-color-1: #FFC876;
-      --gradient-color-2: #cc3c23;
-      --gradient-color-3: #D9659A;
-      --gradient-color-4: #96adf3;
+      --gradient-color-4: #f0ca8c;
+      --gradient-color-2: #da6564;
+      --gradient-color-3: #fb936c;
+      --gradient-color-1: #96adf3;
 
       height: 100vh;
       width: 100vw;
@@ -108,14 +108,15 @@
       align-items: center;
       flex-direction: row;
       cursor: pointer;
-      /* transition: background-color 0.3s; */
       padding: 5px 20px !important;
       z-index: 300;
+
+      /* transition: background-color 0.3s; */
     }
 
-    .skip-button:hover {
+    /* .skip-button:hover {
       background-color: rgba(36, 36, 39, 0.1);
-    }
+    } */
 
     .skip-button img {
       width: 50px;
@@ -170,6 +171,11 @@
       max-width: 60%;
     }
 
+    .endScreen>.hero-content>h1 {
+      font-size: 66px;
+      max-width: 55%;
+    }
+
     .center>p {
       width: 50%;
     }
@@ -180,9 +186,9 @@
     }
 
     #gradient-canvas-start {
-      --gradient-color-1: #FFC876;
-      --gradient-color-2: #cc3c23;
-      --gradient-color-3: #D9659A;
+      --gradient-color-1: #f0ca8c;
+      --gradient-color-2: #da6564;
+      --gradient-color-3: #fb936c;
       --gradient-color-4: #96adf3;
 
       height: 100vh;
@@ -281,10 +287,10 @@
   <div class="startScreen" id="hideStartScreen">
 
     <div class="center">
-      <h1>Lass uns versuchen, einige Fragen über dich zu beantworten</h1>
+      <h1>Bist du bereit, ein paar Fragen über dich selbst zu beantworten?</h1>
       <p>Im Folgenden werden fünf verschiedene Fragen gestellt, die keine Auswirkungen auf den übrigen Inhalt der
         Webseite haben.
-        Die angegebenen Antworten werden ebenfalls nicht gespeichert.
+        Die gegebenen Antworten werden nicht gespeichert.
         <a class="hidden-text">Diese Fragen sollen zum Nachdenken anregen, also nimm dir ruhig ein wenig Zeit, um sie zu
           beantworten.</a>
       </p>
@@ -302,9 +308,9 @@
     </a>
   </div>
 
-  <div class="endScreen  hidden" id="showEndScreen">
+  <div class="endScreen hidden" id="showEndScreen">
     <div class="hero-content">
-      <h1>making decisions can be hard and here is why</h1>
+      <h1>Entscheidungen treffen ist oft schwierig, hier sind die Gründe</h1>
       <p>Du hast erfolgreich die Fragerunde durchgeführt! Wenn du mehr dazu erfahren willst,
         wieso es uns schwer fällt Entscheidungen zu treffen, fahre fort!
       </p>

@@ -252,9 +252,6 @@ a {
     font-weight: 300 !important;
 }
 
-.navbar .title{
-    max-height: 38px;
-}
 
 .dropbtn {
     text-decoration: none;
@@ -304,14 +301,18 @@ li.dropdown {
     margin-bottom: 8px !important;
 }
 
+
+.mobile,
 .mobile-nav,
 .hamburger,
-.mobile-header {
+.mobile-header,
+.titleTablett {
     display: none;
 }
 
-.mobile {
-    display: none;
+
+.titleDesktop{
+    display: flex !important;
 }
 
 /* Footer */
@@ -348,6 +349,24 @@ li.dropdown {
 
 .footer-copyright {
     font-size: 14px;
+}
+
+
+.article-container {
+    border-left: 0px !important;
+  }
+
+@media only screen and (max-width: 1400px) and (orientation: landscape) {
+    /* changed to 1.5*/
+
+    .titleDesktop{
+        display: none;
+    }
+
+    .titleTablett{
+        display: block;
+    }
+   
 }
 
 @media (max-width: 900px) {
@@ -387,6 +406,19 @@ footer a,
 
 
 }
+
+/* Tablett Portrait */
+@media only screen and (max-width: 1050px) and (orientation: portrait) {
+
+    .titleDesktop{
+        display: none;
+    }
+
+    .titleTablett{
+        display: block;
+    }
+}
+
 
 @media only screen and (max-width: 768px) and (orientation: portrait){
     .mobile {

@@ -258,6 +258,8 @@ a {
     cursor: pointer;
     display: inline-block;
     margin-top: 2rem;
+    transition: background-color 0.3s;
+
 }
 
 .primary-button:hover {
@@ -461,7 +463,7 @@ li.dropdown {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     width: 100%;
 }
 

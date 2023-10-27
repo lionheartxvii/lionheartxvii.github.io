@@ -21,12 +21,12 @@
     },
     {
       "question": "Wähle eins der folgenden Optionen aus",
-      "answer": ["Arktik", "Wüste"],
+      "answer": ["Richtig", "Falsch"],
       "difficulty": 0
     },
     {
       "question": "Wähle eins der folgenden Optionen aus",
-      "answer": ["Himmel", "Meer"],
+      "answer": ["Anfang", "Ende"],
       "difficulty": 0
     },
     {
