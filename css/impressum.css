@@ -334,7 +334,7 @@ li.dropdown {
 
 
 .titleDesktop{
-    display: flex !important;
+    display: block;
 }
 
 /* Footer */
