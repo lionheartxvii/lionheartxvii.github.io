@@ -295,7 +295,9 @@ a.bold {
     margin: 0;
     padding: 0;
 
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
+    
 }
 
 /* .navbarBlur{
@@ -365,15 +367,20 @@ li.dropdown {
     justify-content: center;
     padding: 40px 10px 10px 0px;
     text-align: left;
-    /* background-color: #F5ECDF; */
+    /* background-color: rgba(245, 236, 223, 1); */
+    
+    border: #242427 1px solid;
+    border-top: none;
     display: none;
     position: absolute;
     /* min-width: 160px; */
-    /* backdrop-filter: blur(5px); */
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    height: auto;
 }
 
 .dropdown-content a:hover {
-    font-family: "textfont-medium";
+    font-family: "textfont-medium", sans-serif;
     font-weight: 500;
 }
 
@@ -384,8 +391,18 @@ li.dropdown {
 .dropdown-content a {
     font-size: 16px;
     text-transform: capitalize;
-    margin-bottom: 8px !important;
+    margin: 0 8px 8px 8px !important;
 }
+
+/* .navbarLine{
+    height: 1px;
+    width: 100%;
+    position: fixed;
+    position: absolute;
+    top: 60px;
+    z-index: 2000;
+    background-color: #242427;
+} */
 
 
 
