@@ -77,7 +77,7 @@ function parseEasingParameters(string) {
   return match ? match[1].split(',').map(function (p) { return parseFloat(p); }) : [];
 }
 
-// Spring solver inspired by Webkit Copyright © 2016 Apple Inc. All rights reserved. https://webkit.org/demos/spring/spring.js
+// Spring solver inspired by Webkit Copyright © 2016 Apple Inc. Alle Rechte vorbehalten. https://webkit.org/demos/spring/spring.js
 
 function spring(string, duration) {
 

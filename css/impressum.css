@@ -11,52 +11,74 @@
     font-family: "textfont";
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/jost-v15-latin-regular.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/jost-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/jost-v15-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-         url('../fonts/jost-v15-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-         url('../fonts/jost-v15-latin-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-         url('../fonts/jost-v15-latin-regular.svg#Jost') format('svg'); /* Legacy iOS */
-  }
-  
-  /* jost-italic - latin */
-  @font-face {
+    src: url('../fonts/jost-v15-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/jost-v15-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/jost-v15-latin-regular.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('../fonts/jost-v15-latin-regular.woff') format('woff'),
+        /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+        url('../fonts/jost-v15-latin-regular.ttf') format('truetype'),
+        /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+        url('../fonts/jost-v15-latin-regular.svg#Jost') format('svg');
+    /* Legacy iOS */
+}
+
+/* jost-italic - latin */
+@font-face {
     font-display: swap;
     font-family: "textfont-italic";
     font-style: italic;
     font-weight: 400;
-    src: url('../fonts/jost-v15-latin-italic.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/jost-v15-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/jost-v15-latin-italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-         url('../fonts/jost-v15-latin-italic.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-         url('../fonts/jost-v15-latin-italic.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-         url('../fonts/jost-v15-latin-italic.svg#Jost') format('svg'); /* Legacy iOS */
-  }
-  
-  /* jost-500 - latin */
-  @font-face {
+    src: url('../fonts/jost-v15-latin-italic.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/jost-v15-latin-italic.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/jost-v15-latin-italic.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('../fonts/jost-v15-latin-italic.woff') format('woff'),
+        /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+        url('../fonts/jost-v15-latin-italic.ttf') format('truetype'),
+        /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+        url('../fonts/jost-v15-latin-italic.svg#Jost') format('svg');
+    /* Legacy iOS */
+}
+
+/* jost-500 - latin */
+@font-face {
     font-display: swap;
     font-family: "textfont-medium";
     font-style: normal;
     font-weight: 500;
-    src: url('../fonts/jost-v15-latin-500.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/jost-v15-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/jost-v15-latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-         url('../fonts/jost-v15-latin-500.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-         url('../fonts/jost-v15-latin-500.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-  }
-  
+    src: url('../fonts/jost-v15-latin-500.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/jost-v15-latin-500.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/jost-v15-latin-500.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('../fonts/jost-v15-latin-500.woff') format('woff'),
+        /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+        url('../fonts/jost-v15-latin-500.ttf') format('truetype'),
+        /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
 
 
 @font-face {
     font-family: "headlinefont";
     font-weight: 200;
-    src: url('../fonts/LUNARY.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/LUNARY.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/LUNARY.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-         url('../fonts/LUNARY.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-         url('../fonts/LUNARY.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-    
+    src: url('../fonts/LUNARY.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/LUNARY.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/LUNARY.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('../fonts/LUNARY.woff') format('woff'),
+        /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+        url('../fonts/LUNARY.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+
 }
 
 
@@ -95,7 +117,7 @@ body{
     line-height: 1.5rem;
     color: var(--main-fg-color);
     height: auto;
-    font-family: 'textfont', sans-serif;
+    font-family: 'textfont', 'Jost', sans-serif;
 }
 
 /* Up-Button */
@@ -252,9 +274,6 @@ a {
     font-weight: 300 !important;
 }
 
-.navbar .title{
-    max-height: 38px;
-}
 
 .dropbtn {
     text-decoration: none;
@@ -304,14 +323,18 @@ li.dropdown {
     margin-bottom: 8px !important;
 }
 
+
+.mobile,
 .mobile-nav,
 .hamburger,
-.mobile-header {
+.mobile-header,
+.titleTablett {
     display: none;
 }
 
-.mobile {
-    display: none;
+
+.titleDesktop{
+    display: block;
 }
 
 /* Footer */
@@ -348,6 +371,24 @@ li.dropdown {
 
 .footer-copyright {
     font-size: 14px;
+}
+
+
+.article-container {
+    border-left: 0px !important;
+  }
+
+@media only screen and (max-width: 1400px) and (orientation: landscape) {
+    /* changed to 1.5*/
+
+    .titleDesktop{
+        display: none;
+    }
+
+    .titleTablett{
+        display: block;
+    }
+   
 }
 
 @media (max-width: 900px) {
@@ -387,6 +428,19 @@ footer a,
 
 
 }
+
+/* Tablett Portrait */
+@media only screen and (max-width: 1050px) and (orientation: portrait) {
+
+    .titleDesktop{
+        display: none;
+    }
+
+    .titleTablett{
+        display: block;
+    }
+}
+
 
 @media only screen and (max-width: 768px) and (orientation: portrait){
     .mobile {
