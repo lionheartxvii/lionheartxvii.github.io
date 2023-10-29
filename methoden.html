@@ -899,21 +899,21 @@
                             </tr>
 
                             <tr>
-                                <td contenteditable="true">
+                                <td>
                                     <textarea type="text" class="table-text placeholder" name="" id=""
                                         style="width: 100%; height: 50%; text-align: center;"
                                         placeholder="notiere hier deine 1. Idee"></textarea>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="firstIdea" min="1" max="10"
+                                    <input type="number" id="uname" name="firstIdea" min="0" max="10"
                                         class="table-text placeholder " onblur="updateInputSummary(this, 'firstIdea')"
                                         placeholder="wie groß ist die Auswirkung?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="firstIdea" min="1" max="10"
+                                    <input type="number" id="uname" name="firstIdea" min="0" max="10"
                                         class="table-text placeholder" onblur="updateInputSummary(this, 'firstIdea')"
                                         placeholder="wie sicher fühlst du dich?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="firstIdea" min="1" max="10"
+                                    <input type="number" id="uname" name="firstIdea" min="0" max="10"
                                         class="table-text placeholder" onblur="updateInputSummary(this, 'firstIdea')"
                                         placeholder="wie leicht ist die Umsetzung?" style="width: 100%;" /></td>
 
@@ -923,44 +923,44 @@
                             </tr>
 
                             <tr>
-                                <td contenteditable="true">
+                                <td>
                                     <textarea type="text" class="table-text placeholder" name="" id=""
                                         style="width: 100%; height: 50%; text-align: center;"
                                         placeholder="notiere hier deine 2. Idee"></textarea>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="secondIdea" min="1" max="10"
+                                    <input type="number" id="uname" name="secondIdea" min="0" max="10"
                                         class="table-text placeholder" onblur="updateInputSummary(this, 'secondIdea')"
                                         placeholder="wie groß ist die Auswirkung?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="secondIdea" min="1" max="10"
+                                    <input type="number" id="uname" name="secondIdea" min="0" max="10"
                                         class="table-text placeholder" onblur="updateInputSummary(this, 'secondIdea')"
                                         placeholder="wie sicher fühlst du dich?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="secondIdea" min="1" max="10"
+                                    <input type="number" id="uname" name="secondIdea" min="0" max="10"
                                         class="table-text placeholder" onblur="updateInputSummary(this, 'secondIdea')"
-                                        placeholder="wie leicht ist die Umsetzung?" style="width: 100%;" /></td>
+                                        placeholder="wie leicht ist die Um                                    <input type="number" id="uname" name="thirdIdeasetzung?" style="width: 100%;" /></td>
 
                                 <td>
                                     <p class="table-text" id="summary_secondIdea"></p>
                                 </td>
                             </tr>
                             <tr>
-                                <td contenteditable="true">
+                                <td>
                                     <textarea type="text" class="table-text placeholder" name="" id=""
                                         style="width: 100%; height: 50%; text-align: center; vertical-align: middle;"
                                         placeholder="notiere hier deine 3. Idee"></textarea>
                                 </td>
                                 <td>
-                                    <input type="number" id="uname" name="thirdIdea" min="1" max="10"
+                                    <input type="number" id="uname" name="thirdIdea" min="0" max="10"
                                         class="table-text placeholder" onblur="updateInputSummary(this, 'thirdIdea')"
                                         placeholder="wie groß ist die Auswirkung?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="thirdIdea" min="1" max="10"
+                                    <input type="number" id="uname" name="thirdIdea" min="0" max="10"
                                         class="table-text placeholder" onblur="updateInputSummary(this, 'thirdIdea')"
                                         placeholder="wie sicher fühlst du dich?" style="width: 100%;" /></td>
                                 <td>
-                                    <input type="number" id="uname" name="thirdIdea" min="1" max="10"
+                                    <input type="number" id="uname" name="thirdIdea" min="0" max="10"
                                         class="table-text placeholder" onblur="updateInputSummary(this, 'thirdIdea')"
                                         placeholder="wie leicht ist die Umsetzung?" style="width: 100%;" /></td>
 
@@ -1443,6 +1443,15 @@
                     console.error("unexpected case on changeImage");
             }
         }
+
+        document.getElementById('uname').addEventListener('input', function() {
+        var value = this.value;
+        if (!value.match(/^\d+$/) || value < 1 || value > 10) {
+            this.setCustomValidity('Bitte geben Sie eine Zahl zwischen 1 und 10 ein.');
+        } else {
+            this.setCustomValidity('');
+        }
+    });
     </script>
 
 </body>
