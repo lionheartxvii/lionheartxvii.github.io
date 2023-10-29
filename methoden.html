@@ -1422,7 +1422,7 @@
 
         // 10/10/10 image change
         const basePath = "assets/icons/";
-        const images = ["positive-smiley.png", "neutral-smiley.png", "negative-smiley.png"];
+        const images = ["positive-smiley.png", "negative-smiley.png"];
 
         function changeImage(img) {
             const currentImgSrc = img.src;
@@ -1431,9 +1431,6 @@
 
             switch (currentImgName) {
                 case "positive-smiley.png":
-                    img.src = basePath + "neutral-smiley.png";
-                    break;
-                case "neutral-smiley.png":
                     img.src = basePath + "negative-smiley.png";
                     break;
                 case "negative-smiley.png":
