@@ -204,6 +204,7 @@ h3,
 h4 {
     text-align: left;
     font-family: 'textfont-medium', Arial, Helvetica, sans-serif;
+    font-weight: 500;
     font-size: 20px;
     color: var(--main-fg-color);
     /* width: 100%; */
@@ -373,6 +374,7 @@ li.dropdown {
 
 .dropdown-content a:hover {
     font-family: "textfont-medium";
+    font-weight: 500;
 }
 
 .dropdown:hover .dropdown-content {
@@ -1521,6 +1523,7 @@ rect,
         margin: 0 auto;
         padding: 12px 0;
         font-family: 'textfont-medium', Arial, Helvetica, sans-serif;
+        font-weight: 500;
     }
 
     .menu-item {
@@ -1854,6 +1857,7 @@ rect,
         margin: 0 auto;
         padding: 12px 0;
         font-family: 'textfont-medium', Arial, Helvetica, sans-serif;
+        font-weight: 500;
     }
 
     .menu-item {
