@@ -416,6 +416,13 @@ function dropdownMenu(){
       }
   }
   
+  window.addEventListener('hashchange', function() {
+    var hash = window.location.hash;
+    if (hash !== null) {
+      triggerNavElementWithHash();
+    }
+});
+
   function triggerNavElementWithHash() {
     var hash = window.location.hash;
     if (hash) {
