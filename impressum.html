@@ -79,16 +79,77 @@
     </div>
 
     <div class="mobile-nav">
-        <div class="hamburger-content">
-            <a href="index.html" class="menu-item">home</a>
-            <a href="grundlagen.html" class="menu-item">Ursprünge des Entscheidungsprozesses</a>
-            <a href="ursachen.html" class="menu-item">Auftretende Probleme</a>
-            <a href="methoden.html" class="menu-item">5 Methoden zur Entscheidungsfindung</a>
-            <a href="tipps.html" class="menu-item">Tipps und Tricks</a>
-            <a href="tipps.html" class="menu-item">Fragerunde</a>
+
+        <div class="mobile-navWrapper">
+            <div class="hamburger-content">
+                <a href="index.html" class="menu-item">home</a>
+    
+                <div class="dropdown">
+                    <div class="mobile-nav-row">
+                        <a href="grundlagen.html" class="menu-item">Grundlagen</a>
+                        <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                    </div>
+                    <div class="dropdownOptions">
+                        <ul>
+                            <a href="./grundlagen.html#Beduerfnisse">Bedürfnisse</a>
+                            <a href="./grundlagen.html#Werte">Werte</a>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <div class="mobile-nav-row">
+                        <a href="ursachen.html" class="menu-item">Ursachen</a>
+                        <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                    </div>
+                    <div class="dropdownOptions">
+                        <ul>
+                            <a href="./ursachen.html#Entscheidungsmuedigkeit">Entscheidungsmüdigkeit</a>
+                            <a href="./ursachen.html#Auswahlparadox">Auswahlparadox</a>
+                            <a href="./ursachen.html#Kognitive Verzerrungen">Kognitive Verzerrungen</a>
+                            <a href="./ursachen.html#Plannungs Paralyse">Plannungs Paralyse</a>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <div class="mobile-nav-row">
+                        <a href="methoden.html" class="menu-item">5 Methoden</a>
+                        <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                    </div>
+                    <div class="dropdownOptions">
+                        <ul>
+                            <a href="./methoden.html#6 Huete Methode">6 Hüte Methode</a>
+                            <a href="./methoden.html#10 / 10 / 10">10 / 10 / 10</a>
+                            <a href="./methoden.html#Pro- Kontra-Liste">Pro- Kontra-Liste</a>
+                            <a href="./methoden.html#ICE-Scoring-Model">ICE-Scoring-Model</a>
+                            <a href="./methoden.html#Ausschlussverfahren">Ausschlussverfahren</a>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <div class="mobile-nav-row">
+                        <a href="tipps.html" class="menu-item">Tipps und Tricks</a>
+                        <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                    </div>
+                    <div class="dropdownOptions">
+                        <ul>
+                            <a href="./tipps.html#40-70 Regel">40-70 Regel</a>
+                            <a href="./tipps.html#Satisficing">Satisficing</a>
+                            <a href="./tipps.html#Eat the Frog">Eat the Frog</a>
+                            <a href="./tipps.html#Gewohnheiten">Gewohnheiten</a>
+                            <a href="./tipps.html#beat decision fatigue">beat decision fatigue</a>
+                        </ul>
+                    </div>
+                </div>
+    
+                <a href="quiz.html" class="menu-item">Fragerunde</a>
+            </div>
         </div>
 
-        <canvas id="gradient-canvas"> </canvas>
+
+        <canvas id="gradient-canvas3"> </canvas>
     </div>
 
     <div class="up-button">
@@ -194,6 +255,9 @@
     <script>
         const gradient = new Gradient()
         gradient.initGradient('#gradient-canvas');
+
+        const gradient3 = new Gradient()
+        gradient3.initGradient('#gradient-canvas3');
     </script>
 
 

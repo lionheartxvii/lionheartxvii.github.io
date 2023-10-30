@@ -16,7 +16,7 @@
     },
     {
       "question": "Wähle eins der folgenden Optionen aus",
-      "answer": ["Rechts", "Links"],
+      "answer": ["Links", "Rechts"],
       "difficulty": 0
     },
     {
