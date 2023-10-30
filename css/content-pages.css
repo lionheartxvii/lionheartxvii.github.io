@@ -20,10 +20,6 @@ a.nav-box-link {
   cursor: pointer;
 }
 
-a.bold {
-  font-family: "textfont-medium";
-}
-
 .nav-box-link.active::before {
   content: "";
   position: absolute;
@@ -793,6 +789,7 @@ td {
   justify-content: center;
   align-items: center;
   text-align: center;
+  cursor: pointer;
 }
 
 /* Stil für das zentrale Bild und das benachbarte Kästchen */
