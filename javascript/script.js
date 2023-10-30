@@ -31,9 +31,9 @@ async function func(newArticleValue) {
   const oldArticle = document.querySelector(`#article-container-${activePageValue}`);
   const newArticle = document.querySelector(`#article-container-${newArticleValue}`);
   setNavBar(activePageValue, newArticleValue);
-
   newArticle.style.display = "flex";
   if ( newArticleValue === 0 ) {
+      allArticle.style.height = newArticle.offsetHeight.toString() + "px";
       newArticle.style.zIndex = "0";
       oldArticle.style.zIndex = "100";
       oldArticle.style.transition = "0.75s";
@@ -46,7 +46,7 @@ async function func(newArticleValue) {
       return;
   }
   if  ( newArticleValue > 0 ) {
-    allArticle.style.height = newArticle.offsetHeight.toString() + "px";
+      allArticle.style.height = newArticle.offsetHeight.toString() + "px";
       oldArticle.style.zIndex = "0";
       newArticle.style.transition = "0.75s";
       newArticle.style.zIndex = "100";
@@ -379,11 +379,6 @@ function dropdownMenu(){
 // window.addEventListener("load", berechneBreiten);
 // window.addEventListener("resize", berechneBreiten);
 // window.addEventListener("DOMContentLoaded", berechneBreiten);
-
-
-
-
-
 
 // Quelle: Youtube: DesignCourse, "Awesome Scrolling SVG Line Drawing - How they did it"
 
