@@ -487,24 +487,6 @@
         }
 
 
-        //check gradient colors from quiz
-        let color1 = localStorage.getItem('color1');
-        let color2 = localStorage.getItem('color2');
-        let color3 = localStorage.getItem('color3');
-        let color4 = localStorage.getItem('color4');
-
-
-        if (color1 && color2 && color3 && color4) {
-            document.documentElement.style.setProperty('--gradient-color-1', color1);
-            document.documentElement.style.setProperty('--gradient-color-2', color2);
-            document.documentElement.style.setProperty('--gradient-color-3', color3);
-            document.documentElement.style.setProperty('--gradient-color-4', color4);
-            gradient1.initGradient('#gradient-canvas');
-            gradient2.initGradient('#gradient-canvas2');
-            gradient3.initGradient('#gradient-canvas3');
-        }
-
-
         // Automatisch Kreise für Abschnitte erstellen
         const sections = document.querySelectorAll('.scroll-section');
         const navList = document.querySelector('.scroll-nav ul');
