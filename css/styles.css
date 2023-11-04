@@ -301,8 +301,8 @@ a.bold {
 }
 
 .navbarBlur{
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     z-index: 800;
     position: fixed;
     top: 0;
@@ -366,7 +366,7 @@ li.dropdown {
     min-width: auto;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 10px 10px 0px;
+    padding: 30px 10px 10px 0px;
     text-align: left;
     /* background-color: rgba(245, 236, 223, 1); */
     
@@ -444,7 +444,8 @@ li.dropdown {
     border: 1px solid var(--main-fg-color);
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0);
-    background-clip: padding-box;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
 }
 
 .scroll-nav a:hover {
@@ -468,6 +469,9 @@ li.dropdown {
     transition: background-color 0.3s;
 
     z-index: 300;
+
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
 }
 
 .up-button:hover {
