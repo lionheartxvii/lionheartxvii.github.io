@@ -150,7 +150,7 @@ function showBox(boxNumber) {
     const hiddenBox = document.getElementById(`hiddenBox${boxNumber}`);
     hiddenBox.style.display = "flex";
     if (circleElements[boxNumber - 1 ]) {
-      circleElements[boxNumber - 1 ].style.scale = 1.1;
+      circleElements[boxNumber - 1 ].style.transform += "scale(1.1)";
       circleElements[boxNumber - 1 ].style.backgroundColor = "rgba(36, 36, 39, 0.1)";
     }
   }
@@ -161,7 +161,9 @@ function hideBox() {
     const hiddenBox = document.getElementById(`hiddenBox${activeBox}`);
     hiddenBox.style.display = "none";
     if (circleElements[activeBox - 1 ]) {
-      circleElements[activeBox - 1].style.scale = 1;
+      let transform = circleElements[activeBox - 1].style.transform;
+      let newTransform = transform.replace(/scale\(1\.1\)/g, '');
+      circleElements[activeBox - 1].style.transform = newTransform;
       circleElements[activeBox - 1 ].style.backgroundColor = "rgba(36, 36, 39, 0.0)";
     }
     activeBox = 0;
