@@ -52,7 +52,7 @@ async function func(newArticleValue) {
       newArticle.style.zIndex = "100";
       await setTimeout(() => {
         newArticle.style.width = "100%"; // Artikel einblenden
-      }, 10); // Warten Sie 10 Millisekunden (kann angepasst werden)
+      }, 10); // Warte 10 Millisekunden (kann angepasst werden)
       
       await waitForTransitionEnd(newArticle, 'width');
   }
