@@ -444,6 +444,7 @@ li.dropdown {
     border: 1px solid var(--main-fg-color);
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0);
+    background-clip: padding-box;
 }
 
 .scroll-nav a:hover {

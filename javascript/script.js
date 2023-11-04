@@ -422,8 +422,10 @@ function dropdownMenu(){
     var hash = window.location.hash;
     if (hash) {
         hash = hash.replace(/%20/g, " ");
-        console.log(hash);
         var navBox = document.querySelector('.nav-box-container');
+        if (navBox === null) {
+          return;
+        }
         var navElement;
         if (window.innerWidth >= 900) {
           navElement = navBox.children[1];

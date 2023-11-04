@@ -247,21 +247,21 @@
         <img src="assets/arrow-up-smol.svg" alt="Icon">
     </div>
 
-    <section class="hero-banner scroll-section" id="section1">
-        <canvas id="gradient-canvas" data-transition-in> </canvas>
-        <div class="hero-content scroll" data-rate=".3" data-direction="vertical">
-            <h1>Entscheidungen treffen ist oft schwierig, hier sind die Gründe</h1>
-            <p>Ergründe die Tiefe des Entscheidungsprozesses und finde heraus, warum es uns oft schwerfällt, Entscheidungen zu treffen.
-                <a class="hidden-text">Denn tagtäglich stehen wir vor zahlreichen Entscheidungen, und diese Website ist hier, um dich dabei zu unterstützen!</a>
-            </p>
-        </div>
-        <div>
-            <img onclick="scrollToSection('section2')" class="arrow" src="/assets/arrow-down-long.svg">
-        </div>
-    </section>
 
     <div class="content">
 
+        <section class="hero-banner scroll-section" id="section1">
+            <canvas id="gradient-canvas" data-transition-in> </canvas>
+            <div class="hero-content scroll" data-rate=".3" data-direction="vertical">
+                <h1>Entscheidungen treffen ist oft schwierig, hier sind die Gründe</h1>
+                <p>Ergründe die Tiefe des Entscheidungsprozesses und finde heraus, warum es uns oft schwerfällt, Entscheidungen zu treffen.
+                    <a class="hidden-text">Denn tagtäglich stehen wir vor zahlreichen Entscheidungen, und diese Website ist hier, um dich dabei zu unterstützen!</a>
+                </p>
+            </div>
+            <div>
+                <img onclick="scrollToSection('section2')" class="arrow" src="/assets/arrow-down-long.svg">
+            </div>
+        </section>
 
         <section class="content-container scroll-section" id="section2">
 
@@ -571,6 +571,33 @@
                 window.location.href = href;
             }
         }
+
+
+        function markCurrentSection() {
+            var sections = document.getElementsByClassName("scroll-section");
+            var windowHeight = window.scrollY;
+            var currentSection = null;
+            for (var i = 0; i < sections.length; i++) {
+                var section = sections[i];
+                var sectionTop = section.offsetTop;
+                var sectionBottom = sectionTop + section.offsetHeight;
+                if (sectionTop <= windowHeight && sectionBottom >= windowHeight) {
+                    currentSection = i;
+                    document.getElementsByClassName("scroll-nav")[0].children[0].children[i].children[0].style.backgroundColor = "#242427";
+                }
+            }
+            if ( currentSection === null ){
+                return;
+            }
+            for (var i = 0; i < sections.length; i++) {
+                if (i != currentSection) {
+                    document.getElementsByClassName("scroll-nav")[0].children[0].children[i].children[0].style.backgroundColor = "";
+                }
+            }
+        }
+
+window.addEventListener("scroll", markCurrentSection);
+
     </script>
 
 <!-- Dropdown -->
