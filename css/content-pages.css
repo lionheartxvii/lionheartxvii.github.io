@@ -100,7 +100,7 @@ h2 {
 }
 
 .nav-box {
-  background-color: var(--primary-bg-color);
+  /* background-color: var(--primary-bg-color); */
   border: 1px solid var(--main-fg-color);
 
   display: flex;
@@ -108,6 +108,9 @@ h2 {
   align-items: center;
   padding: 10px;
   border-radius: 2px;
+
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
 }
 
 .vertical-buffer {
@@ -315,6 +318,7 @@ h2 {
   width: 100px;
   height: 100px;
   margin: calc(-100px / 2);
+  cursor: pointer;
 }
 
 /* .circle-element{
@@ -740,7 +744,7 @@ td {
   position: relative;
   height: auto;
   width: 100%;
-  animation: moveTrain 15s linear infinite;
+  animation: moveTrain 18s linear infinite;
   margin-bottom: 4.9vh;
   scale: 0.8;
 }
@@ -1863,50 +1867,6 @@ tr:nth-child(5) td:nth-child(2){
 
 
   /* Navbar mobile */
-
-  /* .nav-box-mobile{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: var(--primary-bg-color);
-  width: 90%;
-  height: auto;
-  margin: 0 auto
-} */
-
-  /* .circle-nav-element{
-  width: 40px !important;
-  height: 40px !important;
-  flex-direction: column;
-  display: flex;
-  align-items: center; 
-  justify-content: center;
-  border: 1px solid var(--main-fg-color);
-  background-color: var(--primary-bg-color);
-  border-radius: 50%;
-  margin: 10px;
-}
-
-.circle-nav-element:hover {
-  background-color: rgba(36, 36, 39, 0.1);
-}
-
-.circle-nav-img{
-  width: 30px;
-  height: 30px;
-}
-
-.nav-box-link-mobile{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center; 
-  width: 80px;
-  height: 80px;
-
-  cursor: pointer;
-  transition: background-color 0.3s;
-} */
 
   .fs-14 a,
   a.nav-box-link {

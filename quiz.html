@@ -293,6 +293,7 @@
       <div type="button" class="primary-button" id="moveBackButton">
         <a>starte hier</a>
       </div>
+
       <canvas id="gradient-canvas-start" data-transition-in> </canvas>
 
     </div>
@@ -301,6 +302,7 @@
       <p>überspringe die Fragen</p>
       <img src="assets/arrow-right.svg" alt="Icon">
     </a>
+    
   </div>
 
   <div class="endScreen hidden" id="showEndScreen">
@@ -315,9 +317,6 @@
       </div>
     </div>
 
-
-
-
   </div>
 
   <div class="progress-container">
@@ -331,11 +330,9 @@
     <div class="card-container">
       <div class="card" id="firstCard" onclick="answer(0); increaseProgressBar()">
         <h2>Karte 1</h2>
-        <canvas id="gradient-card-left" data-transition-in></canvas>
       </div>
       <div class="card" id="secondCard" onclick="answer(1); increaseProgressBar()">
         <h2>Karte 2</h2>
-        <canvas id="gradient-card-right" data-transition-in></canvas>
       </div>
     </div>
 
@@ -343,14 +340,13 @@
     <div class="central-box center" id="questionBox">
       <h2></h2>
       <p></p>
-      <!-- Button zum Ausblenden der zentralen Box -->
-      <!-- <button class="hide-button" onclick="hideCentralBox()">Antworten</button> -->
     </div>
 
     <a class="skip-button" href="index.html">
       <p>überspringe die Fragen</p>
       <img src="assets/arrow-right.svg" alt="Icon">
     </a>
+
   </div>
 
 
@@ -379,6 +375,7 @@
     let color2;
     let color3;
     let color4;
+
 
     gradient.initGradient('#gradient-canvas');
     gradient2.initGradient('#gradient-canvas-start');
