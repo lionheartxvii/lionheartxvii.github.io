@@ -541,7 +541,7 @@ li.dropdown {
     align-items: center;
     max-width: 100%;
     /* 73% laptop */
-    height: 80vh;
+    height: 90vh;
 }
 
 .inner-single-content-container {
@@ -854,15 +854,24 @@ rect,
 
 
 
-/* Größere Tabletts landscape */
+/* Kleinere Laptops landscape */
 
-@media only screen and (max-width: 1550px) {
+@media only screen and (max-width: 1550px) and (orientation: landscape) {
     .box {
         width: 200px;
         height: 220px;
     }
+
+    h1 {
+        font-size: 56px;
+      }
+
+      .message-container h1 {
+        font-size: 42px !important;
+      }
 }
 
+/* Größere Tabletts landscape */
 
 @media only screen and (max-width: 1400px) and (orientation: landscape) {
     /* changed to 1.5*/
@@ -1262,7 +1271,7 @@ rect,
     /* Fonts */
 
     h1 {
-        font-size: 40px;
+        font-size: 38px;
         max-width: 95vw;
         /* 65% laptop */
         padding-bottom: 1.25rem;
@@ -1361,6 +1370,10 @@ rect,
     #illustration-1,
     #illustration-3 {
         height: 50% !important;
+    }
+
+    #section2 .illustration{
+        padding-top: 8rem !important;
     }
 
     #section4 {
@@ -1669,12 +1682,16 @@ rect,
 
     p,
     a {
-        font-size: 1rem;
+        font-size: 16px;
     }
 
     .content-container {
         max-width: 85%;
         height: 120vh;
+    }
+
+    .dropdownOptions a{
+        font-size: 16px !important;
     }
 
     .primary-button {

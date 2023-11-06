@@ -142,11 +142,6 @@
       "difficulty": 2
     },
     {
-      "question": "Welche der folgenden Optionen würdest du bevorzugen?",
-      "answer": ["ein Jahr lang ganz allein sein", "ein Jahr lang immer von Menschen umgeben sein"],
-      "difficulty": 2
-    },
-    {
       "question": "Welche der folgenden Optionen würdest du lieber tun können?",
       "answer": ["ein Gespräch mit dir in der Vergangenheit führen", "ein Gespräch mit dir in der Zukunft führen"],
       "difficulty": 2
@@ -156,8 +151,6 @@
       "answer": ["Fähigkeit Zeit anhalten zu können", "Fähigkeit Zeit zurückspulen zu können"],
       "difficulty": 2
     },
-
-
     {
         "question": "Welche der folgenden Optionen würdest du lieber tun können?",
         "answer": ["den Weltraum erforschen", "den Ozean erforschen"],
@@ -210,8 +203,8 @@
       "difficulty": 3
     },
     {
-      "question": "Auf welche der folgenden Optionen könntest du dein Leben lang verzichten?",
-      "answer": ["tagsüber rausgehen", "nachts rausgehen"],
+      "question": "Welche der folgenden Optionen würdest du bevorzugen?",
+      "answer": ["ein Jahr lang ganz allein sein", "ein Jahr lang immer von Menschen umgeben sein"],
       "difficulty": 3
     },
 

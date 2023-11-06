@@ -219,7 +219,7 @@ h2 {
 
 .absatz {
   min-height: 55vh;
-  margin-bottom: 10vh !important;
+  margin-bottom: 5vh !important;
 }
 
 .text,
@@ -745,6 +745,11 @@ td {
   scale: 0.8;
 }
 
+.train-container {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
 
 @keyframes moveTrain {
   0% {
@@ -858,6 +863,17 @@ td {
   transform: translateX(80px);
 }
 
+
+
+@media only screen and (max-width: 1550px) and (orientation: landscape) {
+  .text, .article-headline {
+    padding-top: 8rem;
+  }
+
+  h2 {
+    width: 22vw;
+  }
+}
 
 /* Media Query für Retina-Displays mit hoher Auflösung */
 @media only screen and (max-width: 1400px) and (orientation: landscape) {
@@ -1063,12 +1079,6 @@ td {
 
   .train {
     scale: 1.2;
-  }
-
-  .train-container {
-    position: relative;
-    width: 100%;
-    overflow-x: hidden;
   }
 
   /*+++++++++++++++++++++++ Methods IPad Beispiele +++++++++++++++++++++++*/
