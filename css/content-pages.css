@@ -957,8 +957,14 @@ td {
   /* biases */
   .sunken-cost {
     max-width: 80%;
-    width: 560px;
+    height: 70vh;
+    
   }
+
+  /* #train-inhalt{
+    height: 20vh;
+    width: 100%;
+  } */
 
   .curious-curio {
     scale: 0.7;
