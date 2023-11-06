@@ -864,7 +864,7 @@ td {
 }
 
 
-
+/* Kleinere Bildschirme */
 @media only screen and (max-width: 1550px) and (orientation: landscape) {
   .text, .article-headline {
     padding-top: 8rem;
@@ -872,6 +872,15 @@ td {
 
   h2 {
     width: 22vw;
+  }
+
+  .sunken-cost {
+    max-width: 65%;
+    
+  }
+
+  .scale-08, .analysis {
+    scale: 0.8;
   }
 }
 
