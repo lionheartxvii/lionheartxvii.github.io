@@ -1683,15 +1683,13 @@ rect,
     p,
     a {
         font-size: 16px;
+        -webkit-text-size-adjust: none; 
+        text-size-adjust: none;
     }
 
     .content-container {
         max-width: 85%;
         height: 120vh;
-    }
-
-    .dropdownOptions a{
-        font-size: 12px !important;
     }
 
     .primary-button {
