@@ -6,8 +6,6 @@ function scrollToSection(sectionId) {
   });
 }
 
-
-
 // Scroll-Up 
 const stickyButton = document.querySelector('.up-button');
 
@@ -18,8 +16,8 @@ if (section1) {
 }
 });
 
-
-// Artikel Rein und Rausfahren
+// Quelle: Frontend-Developer, Funktion, um Elemente ein- und auszublenden
+// Funktion: Artikel Ein- und Ausblenden
 let activePageValue = 0;
 let isFunctionRunning = false;
 const allArticle = document.querySelector(".all-articles");
@@ -92,8 +90,8 @@ function waitForTransitionEnd(element, propertyName) {
   });
 }
 
-  // Quellen Box
 
+// Quellen Box
 const header = document.querySelector('.quellen-header');
 const arrow = document.querySelector('.quellen-arrow');
 const expandableBox = document.querySelector('.quellen');
@@ -126,7 +124,10 @@ dropdowns.forEach(dropdown => {
   });
 })
 
-// Max Neefs Bedürfnisse Kreis
+
+// Beispiele: Bedürfnisse Kreis und 6 Sorting Hat
+// Anordnugn von Elementen in einem Kreis
+// Itay Grudev unter: https://jsfiddle.net/ItayGrudev/3jqryc1m/
 
 document.querySelectorAll( '.circle' ).forEach( ( circle )=>{
   let circles = circle.querySelectorAll( '.circle-element' )
@@ -138,7 +139,7 @@ document.querySelectorAll( '.circle' ).forEach( ( circle )=>{
   }
 })
 
-
+// Quelle: Frontend-Developer, Funktion, um Elemente ein- und auszublenden
 let activeBox = 0;
 let pinnedBox = false;
 let circleElements = document.querySelectorAll(".circle-element");
@@ -183,9 +184,9 @@ function pinBox(boxNumber){
   }
 }
 
-
-
-// Werte / Eis Bespiel
+// Beispiele: Werte & Paradox der Wahl Bespiel
+// Code Zeilen wurden mit Hilfe von dem Frontend-Developer ergänzt
+// Funktion: Spezifische Anzahl von Elementen anklicken zu können
 
 let maxSelectedBoxes = 0;
 let selectedBoxes = 0;
@@ -197,7 +198,7 @@ function toggleClick(element, verfahren) {
     if (selectedBoxes <= maxSelectedBoxes) {
       selectedBoxes++;
     } else {
-      return; // Limit reached, prevent further selection
+      return;
     }
   }
   element.classList.toggle("clicked");
@@ -220,15 +221,7 @@ function checkMaxSelectedBoxes() {
 }
 
 
-// Code von: https://stackoverflow.com/questions/49923588/input-type-number-with-pattern-0-9-allows-letters-in-firefox
-function preventNonNumericalInput(e) {
-  e = e || window.event;
-  var charCode = (typeof e.which == "undefined") ? e.keyCode : e.which;
-  var charStr = String.fromCharCode(charCode);
-
-  if (!charStr.match(/^[0-9]+$/))
-    e.preventDefault();
-}
+// Quelle: Frontend-Developer, Beispiel Auschlussverfahren
 
 function executeAusschluss(value) {
   if (selectedBoxes === maxSelectedBoxes && value === 'ausschluss1') {
@@ -339,6 +332,7 @@ function setHeight(element) {
   element.style.height = height + "px";
 }
 
+
 // Hamburger Menu
 
 const menu_btn = document.querySelector('.hamburger');
@@ -348,39 +342,10 @@ menu_btn?.addEventListener('click', function () {
   dropdownMenu();
 });
 
-// var animation1 = anime({
-//   targets: '.menu-item',
-//   delay: anime.stagger(80, {
-//     start: 80,
-//     easing: 'easeInSine'
-//   }),
-//   autoplay: false,
-//   translateY: 20,
-// });
-// document.querySelector('.hamburger').onclick = animation1.play;
-
 function dropdownMenu(){
   menu_btn.classList.toggle('is-active');
   mobile_menu.classList.toggle('is-active');
 }
-
-
-// function berechneBreiten() {
-//   body = document.getElementsByTagName('body')[0];
-//   body.style.width = "unset";
-//   var viewportBreite = window.innerWidth;
-
-//   var elementBreite = document.getElementsByClassName("radial-gradient-container")[0]?.offsetWidth;
-
-//   var ergebnisText = "Viewport-Breite: " + viewportBreite + "px, Element-Breite: " + elementBreite + "px";
-//   document.getElementById("ergebnis").textContent = ergebnisText;
-
-//   document.getElementsByTagName('body')[0].style.width = viewportBreite >= elementBreite ? elementBreite + 'px' : viewportBreite + 'px';
-// }
-
-// window.addEventListener("load", berechneBreiten);
-// window.addEventListener("resize", berechneBreiten);
-// window.addEventListener("DOMContentLoaded", berechneBreiten);
 
 // Quelle: Youtube: DesignCourse, "Awesome Scrolling SVG Line Drawing - How they did it"
 
@@ -405,6 +370,8 @@ function dropdownMenu(){
         }
     })
 
+
+// Quelle: Frontend-Developer, Funktion damit einzelne Artikel über Links aufrufbar sind
 
     window.onload = function() {
       var hash = window.location.hash;
@@ -443,4 +410,14 @@ function dropdownMenu(){
             return null;
         }
     }
+}
+
+// Code von: https://stackoverflow.com/questions/49923588/input-type-number-with-pattern-0-9-allows-letters-in-firefox
+function preventNonNumericalInput(e) {
+  e = e || window.event;
+  var charCode = (typeof e.which == "undefined") ? e.keyCode : e.which;
+  var charStr = String.fromCharCode(charCode);
+
+  if (!charStr.match(/^[0-9]+$/))
+    e.preventDefault();
 }

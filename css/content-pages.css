@@ -321,10 +321,6 @@ h2 {
   cursor: pointer;
 }
 
-/* .circle-element{
-  position: relative;
-} */
-
 .hidden-box {
   display: none;
   position: absolute;
@@ -1113,6 +1109,10 @@ td {
 
   .hidden {
     display: none;
+  }
+
+  .mobile {
+    display: flex;
   }
 
   .article {

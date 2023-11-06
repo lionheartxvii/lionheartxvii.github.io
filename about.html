@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, minimum-scale=1.0, 
+   maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+   <title>Wahl x Weise</title>
+
+   <link rel="icon" href="/favicon5.png">
+    <link rel="stylesheet" href="./css/impressum.css">
+    <link rel="stylesheet" href="./css/content-pages.css">
+
+    <style>
+        #gradient-canvas3 {
+            --gradient-color-1: #f0ca8c;
+            --gradient-color-2: #da6564;
+            --gradient-color-3: #fb936c;
+            --gradient-color-4: #96adf3;
+
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        .navbar {
+            position: fixed !important;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <nav class="navbar nav-hidden">
+        <ul class="nav-list">
+
+            <li class="dropdown">
+                <a href="grundlagen.html" class="dropbtn">Grundlagen</a>
+                <div class="dropdown-content">
+                        <a href="./grundlagen.html#Beduerfnisse">Bedürfnisse</a> <br>
+                        <a href="./grundlagen.html#Werte">Werte</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="ursachen.html" class="dropbtn">Ursachen</a>
+                <div class="dropdown-content">
+                        <a href="./ursachen.html#Entscheidungsmuedigkeit">Entscheidungsmüdigkeit</a> <br>
+                        <a href="./ursachen.html#Auswahlparadox">Auswahlparadox</a><br>
+                        <a href="./ursachen.html#Kognitive Verzerrungen">Kognitive Verzerrungen</a><br>
+                        <a href="./ursachen.html#Planungs Paralyse">Planungs Paralyse</a><br>
+                </div>
+            </li>
+
+            <li class="title titleDesktop"><a href="index.html"><lottie-interactive path="./json/logo3.json" interaction="morph"></lottie-interactive></a></li>
+            <li class="title titleTablett"><a href="index.html">Wahl x Weise</a></li>
+            
+            <li class="dropdown">
+                <a href="methoden.html" class="dropbtn">5 Methoden</a>
+                <div class="dropdown-content">
+                        <a href="./methoden.html#6 Huete Methode">6 Hüte Methode</a> <br>
+                        <a href="./methoden.html#10 / 10 / 10">10 / 10 / 10</a><br>
+                        <a href="./methoden.html#Pro-Kontra-Liste">Pro-Kontra-Liste</a><br>
+                        <a href="./methoden.html#ICE-Scoring-Model">ICE-Scoring-Model</a><br>
+                        <a href="./methoden.html#Ausschlussverfahren">Ausschlussverfahren</a><br>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="tipps.html" class="dropbtn">Tipps & Tricks</a>
+                <div class="dropdown-content">
+                        <a href="./tipps.html#40-70 Regel">40-70 Regel</a><br>
+                        <a href="./tipps.html#Satisficing">Satisficing</a><br>
+                        <a href="./tipps.html#Eat the Frog">Eat the Frog</a><br>
+                        <a href="./tipps.html#Gewohnheiten">Gewohnheiten</a><br>
+                        <a href="./tipps.html#beat decision fatigue">beat decision fatigue</a><br>
+                </div>
+            </li>
+            
+        </ul>
+
+        <!-- <div class="navbarLine"></div> -->
+    </nav>
+
+    <div class="navbarBlur"></div>
+
+    <div class="mobile-header">
+        <div class="title"><a href="index.html">Wahl x Weise</a></div>
+
+        <button class="hamburger">
+            <div class="ham-bar"></div>
+        </button>
+    </div>
+
+    <div class="mobile-nav">
+
+        <div class="mobile-navWrapper">
+            <div class="hamburger-content">
+                <a href="index.html" class="menu-item">home</a>
+    
+                <div class="dropdown">
+                    <div class="mobile-nav-row">
+                        <a href="grundlagen.html" class="menu-item">Grundlagen</a>
+                        <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                    </div>
+                    <div class="dropdownOptions">
+                        <ul>
+                            <a href="./grundlagen.html#Beduerfnisse">Bedürfnisse</a>
+                            <a href="./grundlagen.html#Werte">Werte</a>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <div class="mobile-nav-row">
+                        <a href="ursachen.html" class="menu-item">Ursachen</a>
+                        <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                    </div>
+                    <div class="dropdownOptions">
+                        <ul>
+                            <a href="./ursachen.html#Entscheidungsmuedigkeit">Entscheidungsmüdigkeit</a>
+                            <a href="./ursachen.html#Auswahlparadox">Auswahlparadox</a>
+                            <a href="./ursachen.html#Kognitive Verzerrungen">Kognitive Verzerrungen</a>
+                            <a href="./ursachen.html#Planungs Paralyse">Planungs Paralyse</a>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <div class="mobile-nav-row">
+                        <a href="methoden.html" class="menu-item">5 Methoden</a>
+                        <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                    </div>
+                    <div class="dropdownOptions">
+                        <ul>
+                            <a href="./methoden.html#6 Huete Methode">6 Hüte Methode</a>
+                            <a href="./methoden.html#10 / 10 / 10">10 / 10 / 10</a>
+                            <a href="./methoden.html#Pro-Kontra-Liste">Pro-Kontra-Liste</a>
+                            <a href="./methoden.html#ICE-Scoring-Model">ICE-Scoring-Model</a>
+                            <a href="./methoden.html#Ausschlussverfahren">Ausschlussverfahren</a>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <div class="mobile-nav-row">
+                        <a href="tipps.html" class="menu-item">Tipps und Tricks</a>
+                        <img class="mobile-nav-arrow" src="assets/arrow-head.svg" alt="Icon">
+                    </div>
+                    <div class="dropdownOptions">
+                        <ul>
+                            <a href="./tipps.html#40-70 Regel">40-70 Regel</a>
+                            <a href="./tipps.html#Satisficing">Satisficing</a>
+                            <a href="./tipps.html#Eat the Frog">Eat the Frog</a>
+                            <a href="./tipps.html#Gewohnheiten">Gewohnheiten</a>
+                            <a href="./tipps.html#beat decision fatigue">beat decision fatigue</a>
+                        </ul>
+                    </div>
+                </div>
+    
+                <a href="quiz.html" class="menu-item">Fragerunde</a>
+            </div>
+        </div>
+
+
+        <canvas id="gradient-canvas3"> </canvas>
+    </div>
+
+    <div class="up-button">
+        <img src="assets/arrow-up-smol.svg" alt="Icon">
+    </div>
+
+
+
+    <div class="article-container" id="article-container-0">
+        <div class="article">
+
+
+            <div class="inner-content sticky article-headline">
+                <h2>About</h2>
+            </div>
+
+            <div class="buffer"></div>
+
+            <div class="inner-content text">
+
+                    <p>Im Rahmen meiner Masterarbeit wurde ein Konzept entwickelt und umgesetzt, das sich mit dem Thema Entscheidungen befasst. Hierdurch entstand die interaktive Informations-Website Wahl x Weise.
+                        Die Website vermittelt die Inhalte durch eine Kombination aus interaktiven Elementen und informativen Texten zu verschiedenen Aspekten des Entscheidungsprozesses. Einerseits behandelt sie die Hintergründe des Entscheidungsprozesses und erklärt, auf welcher Grundlage Entscheidungen getroffen werden und warum es manchmal schwierig sein kann, dies zu tun. Andererseits stellt sie Methoden und Tipps zur Verfügung, die durch interaktive Elemente und Illustrationen ergänzt werden. Diese sollen dabei helfen, die vermittelten Methoden anzuwenden und das erworbene Wissen zu vertiefen.
+                        Darüber hinaus bietet die Website eine Fragerunde an, in welcher die Nutzer*innen fünf Fragen mit aufsteigender Schwierigkeit über sich selbst beantworten können. Dies soll das Engagement der Nutzer*innen wecken und sie in das Thema einführen. Später können hiermit die erlernten Methoden angewendet werden um die gelernten Informationen testen zu können.
+                    </p>
+                    <br>
+
+                    <p>Die Website wurde so gestaltet, dass sie eine moderne und beruhigende Wirkung hat, um die Nutzer dazu einzuladen, mehr über das Thema zu erfahren. Aus diesem Grund werden Farbverläufe mit langsamen Bewegungen verwendet, um einen beruhigenden, aber dennoch dynamischen Effekt zu erzielen.
+                        Zusätzlich begleitet eine Katze die Nutzer*innen auf der Website, die des Öfteren in den Illustrationen auftaucht. Diese Katze fungiert als eine Art Maskottchen und stellt daher einige der Beispiele vor. Sie dient auch dazu, das Thema leichter zugänglich zu machen, da es für einige Menschen eine Herausforderung sein kann, sich mit diesem auseinanderzusetzen.
+                        Das Hauptziel von Wahl x Weise besteht darin, das Thema den Nutzer*innen näherzubringen und zu vermitteln, dass es möglich ist, sich im Entscheidungsprozess zu verbessern. Gleichzeitig soll die Website Aufmerksamkeit auf dieses Thema lenken, da Entscheidungsprozesse alltäglich und häufig unbewusst ablaufen. Die Website soll ein besseres Verständnis dafür schaffen, wie Entscheidungen getroffen werden und wie man sich darin verbessern kann.
+                    </p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="index.html" class="title">Wahl x Weise</a>
+            <nav class="footer-nav">
+                <a href="about.html">About</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+                
+            </nav>
+            <p class="footer-copyright">©2023 - Form | Alle Rechte vorbehalten</p>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+
+    <script src="/libs/anime-master/lib/anime.min.js"></script>
+    <script src="/javascript/script.js"></script>
+
+    <script src="/javascript/Gradient.js"></script>
+
+    <script>
+        const gradient = new Gradient()
+        gradient.initGradient('#gradient-canvas');
+
+        const gradient3 = new Gradient()
+        gradient3.initGradient('#gradient-canvas3');
+    </script>
+
+
+        <!-- Lottie Libraries -->
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js">
+        </script>
+</body>
+
+
+
+
+
+</html>

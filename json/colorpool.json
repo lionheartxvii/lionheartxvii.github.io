@@ -1,75 +1,95 @@
 [
     {
-        "color": "#95cea4"
+        "color": "#FBE5AD"
     },
     {
-        "color": "#A0E1C0"
-    },
-    {
-        "color": "#f59c73"
-    },
-    {
-        "color": "#fccc8d"
+        "color": "#FEDF8F"
     },
     {
         "color": "#FFC876"
     },
     {
-        "color": "#cc3c23"
+        "color": "#F0B9A0"
     },
     {
-        "color": "#D9659A"
+        "color": "#FAAA69"
     },
     {
-        "color": "#96adf3"
+        "color": "#F59C73"
     },
     {
-        "color": "#b298fa"
+        "color": "#FD7E60"
+    },
+    {
+        "color": "#E97979"
     },    
     {
-        "color": "#f87db0"
+        "color": "#CC3C23"
     },    
     {
-        "color": "#fcebc2"
+        "color": "#AC3939"
     },    
     {
-        "color": "#e780eb"
+        "color": "#B4E0A0"
     },    
     {
-        "color": "#edb4ee"
-    },    
-    {
-        "color": "#80d6d7"
-    },    
-    {
-        "color": "#7e8ff0"
-    },    
-    {
-        "color": "#ab86fb"
-    },    
-    {
-        "color": "#FEDF8F"
-    },    
-    {
-        "color": "#faaa69"
-    },    
-    {
-        "color": "#e978a7"
-    },    
-    {
-        "color": "#e97979"
-    },    
-    {
-        "color": "#b499f0"
-    },    
+        "color": "#95CEA4"
+    },       
     {
         "color": "#FFB4FF"
     },    
     {
+        "color": "#EDB4EE"
+    },    
+    {
+        "color": "#E978A7"
+    },    
+    {
+        "color": "#D9659A"
+    },    
+    {
+        "color": "#D298FF"
+    },    
+    {
+        "color": "#B499F0"
+    },    
+    {
+        "color": "#AB86FB"
+    },    
+    {
+        "color": "#6DB4EE"
+    },    
+    {
         "color": "#81AEFF"
+    },
+    {
+        "color": "#708BD6"
+    },    
+    {
+        "color": "#4B68B9"
+    },
+    {
+        "color": "#96ADF3"
+    },    
+    {
+        "color": "#8492C7"
+    },
+    {
+        "color": "#7E8FF0"
     },    
     {
         "color": "#7D80FF"
+    },
+    {
+        "color": "#9BE5D8"
+    },    
+    {
+        "color": "#95E1EB"
+    },
+    {
+        "color": "#80D6D7"
+    },    
+    {
+        "color": "#58BBC1"
     }
-    
 ]
