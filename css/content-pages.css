@@ -957,6 +957,7 @@ td {
   /* biases */
   .sunken-cost {
     max-width: 80%;
+    width: 560px;
   }
 
   .curious-curio {
