@@ -578,7 +578,7 @@
 
                     <div class="beispiel-paradox inner-content analysis">
                         <div class="sunken-cost">
-                            <lottie-player id="sunkenCost" src="./json/sunken-cost.json"></lottie-player>
+                            <lottie-player autoplay loop id="sunkenCost" src="./json/sunken-cost.json"></lottie-player>
                         </div>
                     </div>
 
@@ -647,7 +647,7 @@
     
                     <div class="train-container">
                         <div class="train">
-                            <lottie-player id="trainAnimation" src="./json/bandwagon.json" disableCheck></lottie-player>
+                            <lottie-player autoplay loop id="trainAnimation" src="./json/bandwagon.json"></lottie-player>
                         </div>
                     </div>
                 </div>
@@ -740,7 +740,7 @@
             <div class="buffer"></div>
 
             <div>
-                <div class="illustration verschieben" id="test-test">
+                <div class="illustration verschieben" id="fiveHatCurio">
                     <lottie-interactive autoplay loop path="./json/methoden-illu.json" interaction="play-on-show"></lottie-interactive>
                 </div>
             </div>
@@ -948,34 +948,25 @@
 
     const train = document.querySelector('#trainAnimation');
     const sunkenCost = document.querySelector('#sunkenCost');
-    const test = document.querySelector('#test-test');
+    const test = document.querySelector('#fiveHatCurio');
 
 function startTrain(entries, observer) {
   entries.forEach(entry => {
-    train.setLooping(true);
-    train.play();
-    train.resize();
     let trainContainer = document.getElementsByClassName("train-container")[0];
     trainContainer.style.width = "100%";
-    trainContainer.style.height = "100%";
     });
   };
 
   function startFishing(entries, observer) {
   entries.forEach(entry => {
-    sunkenCost.setLooping(true);
-    sunkenCost.play();
-    sunkenCost.resize();
     let sunkenContainer = document.getElementsByClassName("sunken-cost")[0];
     sunkenContainer.style.width = "100%";
-    sunkenContainer.style.height = "100%";
     });
   };
 
   function startTest(entries, observer) {
   entries.forEach(entry => {
-    test.style.width = "100%";
-    test.style.height = "100%";
+    test.style.width = test.style.width;
     });
   };
 
