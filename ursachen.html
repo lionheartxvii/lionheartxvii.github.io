@@ -643,13 +643,13 @@
 
                 <div>
                     <div class="curious-curio">
-                        <lottie-interactive id="curious-curio" path="./json/bandwagon-curio.json" loop autoplay interaction="play-on-show"></lottie-interactive>
+                        <lottie-interactive id="curious-curio" path="./json/bandwagon-curio.json" interaction="play-on-show"></lottie-interactive>
                     </div>
     
                     <div class="train-container">
                         <div class="train">
-                            <!-- <lottie-interactive path="./json/bandwagon.json" loop autoplay interaction="play-on-show"></lottie-interactive> -->
-                            <lottie-player id="trainAnimation" loop mode="normal" src="./json/bandwagon.json"></lottie-player>
+                            <lottie-interactive path="./json/bandwagon.json" interaction="play-on-show"></lottie-interactive>
+                            <!-- <lottie-player id="trainAnimation" src="./json/bandwagon.json"></lottie-player> -->
                         </div>
                     </div>
                 </div>
@@ -874,14 +874,15 @@
         </div>
     </footer>
 
-
+ 
     <script src="/javascript/Gradient.js"></script>
     <script src="/javascript/script.js"></script>
 
     <!-- Lottie Libraries -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
     <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
 
     <script>
         const gradient5 = new Gradient()
@@ -891,6 +892,7 @@
 
         maxSelectedBoxes = 2;
     </script>
+
 
     <!-- Quelle: Frontend-Developer. Funktion: Beispiel von Entscheidungsmüdigkeit -->
     <script>
