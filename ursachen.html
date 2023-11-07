@@ -578,7 +578,7 @@
 
                     <div class="beispiel-paradox inner-content analysis">
                         <div class="sunken-cost">
-                            <lottie-interactive path="./json/sunken-cost.json" interaction="click">
+                            <lottie-interactive id="sunkenCost"path="./json/sunken-cost.json" interaction="click">
                             </lottie-interactive>
                         </div>
                     </div>
@@ -649,14 +649,14 @@
                     <div class="train-container">
                         <div class="train">
                             <!-- <lottie-interactive path="./json/bandwagon.json" interaction="play-on-show"></lottie-interactive> -->
-                            <lottie-player id="trainAnimation" src="./json/bandwagon.json"></lottie-player>
+                            <lottie-player id="trainAnimation" src="./json/bandwagon.json" autoplay loop></lottie-player>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <div class="article-container" id="article-container-3">
+            <div class="article-container" id="article-container-3">    
                 <div class="article">
                     <div class="inner-content sticky article-headline">
                         <h2>Planungsparalyse - worum geht's?</h2>
@@ -948,23 +948,26 @@
         }
 
 
-const train = document.querySelector('#trainAnimation');
+// const train = document.querySelector('#trainAnimation');
+// const sunkenCost = document.querySelector('#sunkenCost');
 
-function startTrain(entries, observer) {
-  entries.forEach(entry => {
-    train.play();
-    });
-  };
+// function startTrain(entries, observer) {
+//   entries.forEach(entry => {
+//     train.play();
+//     train.setLooping(true);
+//     sunkenCost.hasAttributeNS("interaction","play-once");
+//     });
+//   };
 
-const options = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.5
-};
+// const options = {
+//   root: null,
+//   rootMargin: '0px',
+//   threshold: 0.5
+// };
 
-const observer = new IntersectionObserver(startTrain, options);
+// const observer = new IntersectionObserver(startTrain, options);
 
-observer.observe(train);
+// observer.observe(train);
 
     </script>
 
