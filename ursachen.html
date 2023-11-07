@@ -648,8 +648,8 @@
     
                     <div class="train-container">
                         <div class="train">
-                            <!-- <lottie-interactive path="./json/bandwagon.json" interaction="play-on-show"></lottie-interactive> -->
-                            <lottie-player id="trainAnimation" src="./json/bandwagon.json" autoplay loop></lottie-player>
+                            <lottie-interactive id="trainAnimation" path="./json/bandwagon.json" interaction="click"></lottie-interactive>
+                            <!-- <lottie-player id="trainAnimation" src="./json/bandwagon.json" mode="cursor"></lottie-player> -->
                         </div>
                     </div>
                 </div>
@@ -948,26 +948,27 @@
         }
 
 
-// const train = document.querySelector('#trainAnimation');
-// const sunkenCost = document.querySelector('#sunkenCost');
+const train = document.querySelector('#trainAnimation');
+const sunkenCost = document.querySelector('#sunkenCost');
 
-// function startTrain(entries, observer) {
-//   entries.forEach(entry => {
-//     train.play();
-//     train.setLooping(true);
-//     sunkenCost.hasAttributeNS("interaction","play-once");
-//     });
-//   };
+function startTrain(entries, observer) {
+  entries.forEach(entry => {
+    train.setAttribute("interaction","play-on-show");
+    train.setAttribute("loop","");
+    sunkenCost.setAttribute("interaction","play-on-show");
+    sunkenCost.setAttribute("loop","");
+    });
+  };
 
-// const options = {
-//   root: null,
-//   rootMargin: '0px',
-//   threshold: 0.5
-// };
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
+};
 
-// const observer = new IntersectionObserver(startTrain, options);
+const observer = new IntersectionObserver(startTrain, options);
 
-// observer.observe(train);
+observer.observe(train);
 
     </script>
 
