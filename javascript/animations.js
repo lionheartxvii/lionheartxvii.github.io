@@ -62,8 +62,6 @@ LottieInteractivity.create({
     ],
   });
 
-
-
   
 
 //   More tipps animation
