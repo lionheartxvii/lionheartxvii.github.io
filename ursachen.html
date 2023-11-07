@@ -947,17 +947,35 @@
             }
         }
 
-    // LottieInteractivity.create({
-    //     player: '#trainAnimation',
-    //     mode: 'scroll',
-    //     actions: [
-    //     {
-    //         visibility: [0,1],
-    //         type: 'loop',
-    //         frames: [0],
-    //     },
-    //     ]
-    // });
+
+const train = document.querySelector('#trainAnimation');
+
+function startTrain(entries, observer) {
+  entries.forEach(entry => {
+    LottieInteractivity.create({
+        player: '#trainAnimation',
+        mode: 'scroll',
+        actions: [
+        {
+            visibility: [0,1],
+            type: 'loop',
+            frames: [0],
+        },
+        ]
+    });
+  });
+}
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
+};
+
+const observer = new IntersectionObserver(startTrain, options);
+
+observer.observe(train);
+
     </script>
 
 </body>
