@@ -578,8 +578,7 @@
 
                     <div class="beispiel-paradox inner-content analysis">
                         <div class="sunken-cost">
-                            <lottie-interactive id="sunkenCost"path="./json/sunken-cost.json" interaction="play-on-show" loop>
-                            </lottie-interactive>
+                            <lottie-player id="sunkenCost" src="./json/sunken-cost.json"></lottie-player>
                         </div>
                     </div>
 
@@ -648,7 +647,6 @@
     
                     <div class="train-container">
                         <div class="train">
-                            <!-- <lottie-interactive id="trainAnimation" path="./json/bandwagon.json" interaction="click"></lottie-interactive> -->
                             <lottie-player id="trainAnimation" src="./json/bandwagon.json"></lottie-player>
                         </div>
                     </div>
@@ -950,13 +948,23 @@
 
     const train = document.querySelector('#trainAnimation');
     const sunkenCost = document.querySelector('#sunkenCost');
+    const train = document.querySelector('#trainAnimation');
+    const sunkenCost = document.querySelector('#sunkenCost');
 
 function startTrain(entries, observer) {
   entries.forEach(entry => {
     train.setLooping(true);
     train.play();
-    train.resize()
-    train.setAttribute("interaction","play-once");
+    train.resize();
+    });
+  };
+
+
+  function startFishing(entries, observer) {
+  entries.forEach(entry => {
+    sunkenCost.setLooping(true);
+    sunkenCost.play();
+    sunkenCost.resize();
     });
   };
 
@@ -967,9 +975,10 @@ const options = {
   threshold: 0.5
 };
 
-const observer = new IntersectionObserver(startTrain, options);
-
-observer.observe(sunkenCost);
+const observerTrain = new IntersectionObserver(startTrain, options);
+const observerFishing = new IntersectionObserver(startFishing, options);
+observerTrain.observe(train);
+observerFishing.observe(sunkenCost);
 
     </script>
 
