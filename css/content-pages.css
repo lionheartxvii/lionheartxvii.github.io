@@ -736,6 +736,16 @@ td {
 
 /* Illustrationen */
 
+#animation-container{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#animation{
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .train {
   position: relative;
   height: auto;
