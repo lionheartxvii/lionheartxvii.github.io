@@ -920,8 +920,14 @@ rect,
     }
 
     .box-container {
-        width: 80vw;
+        width: 94vw;
     }
+
+    .box {
+        width: 194px;
+        height: 220px;
+    }
+
 
     .center p {
         width: 47vw;
@@ -988,6 +994,11 @@ rect,
 
     .box {
         margin-top: 1.5rem;
+    }
+
+    .box {
+        width: 200px;
+        height: 220px;
     }
 
     #section4 h2 {
