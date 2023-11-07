@@ -647,7 +647,7 @@
     
                     <div class="train-container">
                         <div class="train">
-                            <lottie-player id="trainAnimation" src="./json/bandwagon.json"></lottie-player>
+                            <lottie-player id="trainAnimation" src="./json/bandwagon.json" disableCheck></lottie-player>
                         </div>
                     </div>
                 </div>
@@ -954,6 +954,10 @@ function startTrain(entries, observer) {
     train.setLooping(true);
     train.play();
     train.resize();
+    let trainContainer = document.getElementsByClassName("train-container")[0];
+    trainContainer.style.width = "100%";
+    trainContainer.style.height = "100%";
+    console.log(trainContainer);
     });
   };
 
