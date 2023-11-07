@@ -648,8 +648,8 @@
     
                     <div class="train-container">
                         <div class="train">
-                            <lottie-interactive path="./json/bandwagon.json" interaction="play-on-show"></lottie-interactive>
-                            <!-- <lottie-player id="trainAnimation" src="./json/bandwagon.json"></lottie-player> -->
+                            <!-- <lottie-interactive path="./json/bandwagon.json" interaction="play-on-show"></lottie-interactive> -->
+                            <lottie-player id="trainAnimation" src="./json/bandwagon.json"></lottie-player>
                         </div>
                     </div>
                 </div>
@@ -946,6 +946,18 @@
                 progressBarOpposite.style.height = '100%';
             }
         }
+
+    LottieInteractivity.create({
+        player: '#trainAnimation',
+        mode: 'scroll',
+        actions: [
+        {
+            visibility: [0,1],
+            type: 'loop',
+            frames: [0],
+        },
+        ]
+    });
     </script>
 
 </body>
