@@ -62,6 +62,19 @@ LottieInteractivity.create({
     ],
   });
 
+  // LottieInteractivity.create({
+  //   player: '#trainAnimation',
+  //   mode:"scroll",
+  //   actions: [
+  //     {
+  //       visibility: [0.50, 1.0],
+  //       type: "play"
+  //     }
+  //   ]
+  // });
+
+  
+
 //   More tipps animation
   LottieInteractivity.create({
     mode: 'scroll',

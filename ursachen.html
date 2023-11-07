@@ -648,7 +648,8 @@
     
                     <div class="train-container">
                         <div class="train">
-                            <lottie-interactive path="./json/bandwagon.json" loop autoplay interaction="play-on-show"></lottie-interactive>
+                            <!-- <lottie-interactive path="./json/bandwagon.json" loop autoplay interaction="play-on-show"></lottie-interactive> -->
+                            <lottie-player id="trainAnimation" autoplay loop mode="normal" src="./json/bandwagon.json"></lottie-player>
                         </div>
                     </div>
                 </div>
@@ -658,25 +659,24 @@
             <div class="article-container" id="article-container-3">
                 <div class="article">
                     <div class="inner-content sticky article-headline">
-                        <h2>Worum handelt es sich bei der Planungsanalyse?</h2>
+                        <h2>Planungsparalyse - worum geht's?</h2>
                     </div>
 
                     <div class="buffer"></div>
 
                     <div class="inner-content text">
                         <p class="absatz">
-                            Analysis Paralysis beschreibt die Tendenz, Entscheidungen aufzuschieben oder sich zu sehr in
+                            Die Planungs Paralyse beschreibt die Tendenz, Entscheidungen aufzuschieben oder sich zu sehr in
                             einer Planungsphase zu vertiefen, weil man glaubt, durch das Sammeln neuer Informationen ein
                             besseres Ergebnis zu erzielen. Dadurch entsteht das Gefühl, dass es weitere Informationen
-                            gibt,
-                            welche benötigt werden, um voranzukommen. Doch dieser Ansatz hat seine Grenzen, da mit der
+                            gibt, welche benötigt werden, um voranzukommen. Doch dieser Ansatz hat seine Grenzen, da mit der
                             Zeit der Nutzen der zusätzlichen Informationen und Analysen abnimmt.<a id="reference12"
                                 class="reference" href="#quelle12">12</a>
                             Es ist wichtig, ein Gleichgewicht zu finden und nicht zwischen zwei Extremen zu schwanken:
                             Entscheidungen ohne gründliche Studien und Reflexion („Extinction by Instinct“) oder die
                             übermäßige Verwendung von Zahlen, Analysen und Berichten ohne klares Ziel („Paralysis by
                             Analysis“).<a id="reference13" class="reference" href="#quelle13">13</a> <br><br>
-                            Es kann schnell zu einer Analysis Paralysis / Entscheidungslähmung kommen, wenn es zu viele
+                            Es kann schnell zu einer Entscheidungslähmung kommen, wenn es zu viele
                             Informationen gibt und man sich in einem Übermaß von Informationen verliert. Darüber hinaus
                             kann ein Auslöser sein, dass versucht wird, sich vor der eigentlichen Umsetzung der Aufgabe
                             oder
@@ -686,16 +686,14 @@
                             Entscheidungsfindung vorgegeben ist.<a id="reference12" class="reference" href="#quelle12">12</a>
                         </p>
                         <p class="absatz">
-                            Die Ursachen für Analysis Paralysis können vielfältig sein: Zum Beispiel könnte man mit
+                            Die Ursachen für Planungs Paralyse können vielfältig sein: Zum Beispiel könnte man mit
                             einer Lösung für ein Problem starten, nur um später herauszufinden, dass diese nicht funktioniert.
                             Dann beginnt man verzweifelt nach weiteren Beweisen zu suchen, um die ursprüngliche Theorie zu
                             stützen oder eine neue zu entwickeln. Manchmal sucht man auch nach zusätzlichen Beweisen, um
-                            eine Empfehlung zu unterstützen, von der man glaubt, dass sie nicht gut aufgenommen wird.
+                            eine Aussage zu unterstützen, von der man glaubt, dass sie nicht gut aufgenommen wird.
                             Ein Mangel an Selbstvertrauen in die eigene Arbeit oder Angst und Unentschlossenheit können
-                            ebenfalls zu Analysis Paralysis führen.<a id="reference12" class="reference"
+                            ebenfalls zu Planungs Paralyse führen.<a id="reference12" class="reference"
                                 href="#quelle12">12</a> <br>
-                            Dieses Phänomen ist vergleichbar mit der „Planungsparalyse“, bei der die Planung einen
-                            höheren Stellenwert einnimmt als das eigentliche Handeln.
                             Planen und Analysieren sind Komfortzonen, da diese leicht auszuführen sind und kein aktives
                             Handeln benötigen, welche Risiken mit sich führen könnten. Es ist einfacher, in der
                             Komfortzone der Planung zu bleiben, weil es technisch gesehen zu der Erfüllung der Aufgabe
@@ -709,8 +707,7 @@
                 <div class="beispiel-section">
 
                     <div class="beispiel-paradox inner-content pointer analysis">
-                        <lottie-interactive path="./json/analysis-paralysis.json" interaction="click">
-                        </lottie-interactive>
+                        <lottie-interactive path="./json/analysis-paralysis.json" interaction="click"> </lottie-interactive>
                     </div>
 
                     <div class="radial-gradient-container">
@@ -882,9 +879,9 @@
     <script src="/javascript/script.js"></script>
 
     <!-- Lottie Libraries -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
     <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <script>
         const gradient5 = new Gradient()
