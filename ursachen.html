@@ -578,7 +578,7 @@
 
                     <div class="beispiel-paradox inner-content analysis">
                         <div class="sunken-cost">
-                            <lottie-player id="sunkenCost" src="./json/sunken-cost.json"></lottie-player>
+                            <lottie-player id="sunkenCost" src="./json/sunken-cost.json" disableCheck></lottie-player>
                         </div>
                     </div>
 
@@ -957,7 +957,6 @@ function startTrain(entries, observer) {
     let trainContainer = document.getElementsByClassName("train-container")[0];
     trainContainer.style.width = "100%";
     trainContainer.style.height = "100%";
-    console.log(trainContainer);
     });
   };
 
@@ -966,6 +965,9 @@ function startTrain(entries, observer) {
     sunkenCost.setLooping(true);
     sunkenCost.play();
     sunkenCost.resize();
+    let sunkenContainer = document.getElementsByClassName("sunken-cost")[0];
+    sunkenContainer.style.width = "100%";
+    sunkenContainer.style.height = "100%";
     });
   };
 
