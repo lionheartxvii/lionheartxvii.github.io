@@ -590,7 +590,7 @@
 
                 <div class="beispiel-section">
 
-                    <div class="beispiel-paradox inner-content analysis">
+                    <div class="beispiel-paradox inner-content analysis" style="width: auto; height: 70%;">
                         <div class="sunken-cost">
                             <lottie-player autoplay loop id="sunkenCost" src="./json/sunken-cost.json"></lottie-player>
                         </div>
@@ -658,7 +658,7 @@
                 </div>
 
 
-                <div>
+                <div style="width: 100%; height: auto;">
                     <div class="curious-curio">
                         <lottie-interactive id="curious-curio" path="./json/bandwagon-curio.json"
                             interaction="play-on-show"></lottie-interactive>
@@ -666,7 +666,7 @@
 
                     <div class="train-container">
                         <div class="train">
-                            <lottie-player autoplay loop id="trainAnimation" src="./json/bandwagon.json"></lottie-player>
+                            <lottie-player id="trainAnimation" src="./json/bandwagon.json"></lottie-player>
                         </div>
                     </div>
                 </div>
@@ -767,7 +767,7 @@
 
             <div>
                 <div class="illustration verschieben" id="fiveHatCurio">
-                    <lottie-player autoplay loop path="./json/methoden-illu.json">
+                    <lottie-player autoplay loop src="./json/methoden-illu.json">
                     </lottie-player>
                 </div>
             </div>
@@ -977,12 +977,15 @@
 
         const train = document.querySelector('#trainAnimation');
         const sunkenCost = document.querySelector('#sunkenCost');
-        const test = document.querySelector('#fiveHatCurio');
 
         function startTrain(entries, observer) {
             entries.forEach(entry => {
+                train.play();
+                train.setLooping(true);
+                train.resize();
                 let trainContainer = document.getElementsByClassName("train-container")[0];
                 trainContainer.style.width = "100%";
+                trainContainer.style.height = "100%";
             });
         };
 
@@ -990,12 +993,6 @@
             entries.forEach(entry => {
                 let sunkenContainer = document.getElementsByClassName("sunken-cost")[0];
                 sunkenContainer.style.width = "70%";
-            });
-        };
-
-        function startTest(entries, observer) {
-            entries.forEach(entry => {
-                test.style.width = test.style.width;
             });
         };
 
@@ -1007,10 +1004,8 @@ const options = {
 
 const observerTrain = new IntersectionObserver(startTrain, options);
 const observerFishing = new IntersectionObserver(startFishing, options);
-const observerTest = new IntersectionObserver(startTest, options);
 observerTrain.observe(train);
 observerFishing.observe(sunkenCost);
-observerTest.observe(test);
 
     </script>
 
