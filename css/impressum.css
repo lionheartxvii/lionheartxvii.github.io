@@ -183,10 +183,6 @@ h1 {
     font-size: 40px;
     font-weight: 200;
     color: var(--main-fg-color);
-    /* margin-top: 3rem; */
-    /* text-transform: uppercase;
-    letter-spacing: 5px; */
-
     font-family: "headlinefont" !important;
 }
 
@@ -195,8 +191,6 @@ h3 {
     font-weight: 200;
     color: var(--main-fg-color);
     margin-top: 3rem;
-    /* text-transform: uppercase;
-    letter-spacing: 2px; */
     font-family: "headlinefont" !important;
 }
 
@@ -224,9 +218,7 @@ a {
     font-size: 1.125rem;
     line-height: 1.5;
     color: var(--main-fg-color);
-
 }
-
 
 /* Navbar */
 
@@ -239,7 +231,6 @@ a {
     border-bottom: 1px solid var(--main-fg-color);
     z-index: 1000;
     
-
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -281,7 +272,6 @@ a {
 .nav-list li a{
     font-weight: 400 !important;
     text-transform: uppercase;
-
     font-size: 14px;
 }
 
@@ -375,7 +365,6 @@ li.dropdown {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* max-width: 1200px; */
     max-width: 67%;
     margin: 0 auto;
 }
@@ -401,7 +390,6 @@ li.dropdown {
 .article-container {
     border-left: 0px !important;
   }
-
 
 
 @media only screen and (max-width: 1400px) and (orientation: landscape) {
@@ -442,10 +430,6 @@ h3 {
     font-size: 12px;
     line-height: 20px;
 }
-
-/* a {
-    font-size: 12px;
-} */
 
 footer a,
 .back{
@@ -580,8 +564,6 @@ footer a,
 
     .hamburger-content a {
         text-align: left;
-        /* margin: 0 auto; */
-        /* padding: 12px 0; */
         font-family: 'textfont-medium', Arial, Helvetica, sans-serif;
         font-weight: 500;
         font-size: 1.125rem;
@@ -599,8 +581,6 @@ footer a,
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        /* margin-top: 33vh; */
-        /* padding-bottom: 10vh; */
         line-height: 3;
         z-index: 200;
     }
@@ -621,7 +601,6 @@ footer a,
         overflow: hidden;
         transition: height 0.3s;
         width: 100%;
-
     }
 
     .dropdownOptions ul {
@@ -649,7 +628,6 @@ footer a,
         transform: rotate(180deg);
     }
 
-
     .mobile-nav-arrow .menu-item {
         cursor: pointer;
     }
@@ -658,8 +636,6 @@ footer a,
         height: auto;
     }
 
-
-    
     #gradient-canvas3 {
         height: 100%;
         width: auto;
@@ -669,7 +645,6 @@ footer a,
         width: 45px;
         height: 45px;
     }
-
 
         /* Footer */
 

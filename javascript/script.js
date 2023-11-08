@@ -411,13 +411,3 @@ function dropdownMenu(){
         }
     }
 }
-
-// Code von: https://stackoverflow.com/questions/49923588/input-type-number-with-pattern-0-9-allows-letters-in-firefox
-function preventNonNumericalInput(e) {
-  e = e || window.event;
-  var charCode = (typeof e.which == "undefined") ? e.keyCode : e.which;
-  var charStr = String.fromCharCode(charCode);
-
-  if (!charStr.match(/^[0-9]+$/))
-    e.preventDefault();
-}

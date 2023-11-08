@@ -30,11 +30,6 @@ a.nav-box-link {
   background-color: var(--main-fg-color);
 }
 
-
-/* .beispiel-section h2{
-  width: auto !important;
-} */
-
 /* Ausnahmen */
 .hero-banner {
   height: 85vh !important;
@@ -80,16 +75,9 @@ h2 {
   width: 20vw;
 }
 
-
 .paradox-headline {
   padding-bottom: 0 !important;
 }
-
-/* save for later */
-/* .article-content p {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-  } */
 
 /* Nav-Box */
 
@@ -100,7 +88,6 @@ h2 {
 }
 
 .nav-box {
-  /* background-color: var(--primary-bg-color); */
   border: 1px solid var(--main-fg-color);
 
   display: flex;
@@ -140,7 +127,6 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 10px; */
   cursor: pointer;
   height: 80px;
 
@@ -191,7 +177,6 @@ h2 {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  /* padding-top: 20rem; */
 
   z-index: 0;
   background-color: var(--primary-bg-color);
@@ -302,8 +287,6 @@ h2 {
   width: 50px;
   height: 50px;
   padding-bottom: 0.5rem;
-  /* max-width: 100%;
-  height: auto; */
 }
 
 .circle-element span {
@@ -405,7 +388,6 @@ h2 {
 
 .small-box {
   width: calc(40vw / 4 - 10px);
-  /* Berücksichtigt den Rand */
   height: 70px;
   border: 1px solid var(--main-fg-color);
   padding: 5px;
@@ -419,7 +401,6 @@ h2 {
   cursor: pointer;
 }
 
-/* Zur Behandlung der letzten Elemente in einer Reihe */
 .small-box:nth-child(4n) {
   margin-right: 0;
 }
@@ -489,16 +470,11 @@ h2 {
   margin-bottom: 0px !important;
 }
 
-/* .paradox:nth-child(3n) {
-  margin-right: 30px !important;
-} */
-
 .paradox:nth-child(5n) {
   margin-right: 0 !important;
 }
 
 /* Six Hat Method */
-
 
 .speech-bubble {
   position: relative;
@@ -570,7 +546,6 @@ h2 {
 .beispiel-hats {
   height: 55vh;
 }
-
 
 /* Beispiel 10 / 10 / 10 */
 
@@ -731,9 +706,6 @@ td {
   width: 50%;
 }
 
-
-
-
 /* Illustrationen */
 
 .train {
@@ -775,7 +747,6 @@ td {
 .sunken-cost {
   scale: 0.75;
 }
-
 
 /* Container für das Layout */
 .df-interactive {
@@ -859,14 +830,16 @@ td {
   display: none;
 }
 
-.verschieben{
+.verschieben {
   transform: translateX(80px);
 }
 
 
 /* Kleinere Bildschirme */
 @media only screen and (max-width: 1550px) and (orientation: landscape) {
-  .text, .article-headline {
+
+  .text,
+  .article-headline {
     padding-top: 8rem;
   }
 
@@ -876,10 +849,11 @@ td {
 
   .sunken-cost {
     max-width: 65%;
-    
+
   }
 
-  .scale-08, .analysis {
+  .scale-08,
+  .analysis {
     scale: 0.8;
   }
 }
@@ -911,7 +885,7 @@ td {
     min-width: 140px;
   }
 
-  .verschieben{
+  .verschieben {
     transform: translateX(0px);
   }
 
@@ -967,13 +941,8 @@ td {
   .sunken-cost {
     max-width: 80%;
     height: 70vh;
-    
-  }
 
-  /* #train-inhalt{
-    height: 20vh;
-    width: 100%;
-  } */
+  }
 
   .curious-curio {
     scale: 0.7;
@@ -1017,8 +986,6 @@ td {
 
 /* Tablett landscape*/
 @media only screen and (min-width: 769px) and (max-width: 1100px) and (orientation: landscape) {
-
-
 
   .text,
   .article-headline {
@@ -1114,19 +1081,17 @@ td {
     scale: 0.8;
   }
 
-
-
 }
 
 /* Tablett portrait */
 @media only screen and (max-width: 1050px) and (orientation: portrait) {
   /* 768 / 769 */
 
-  .verschieben{
+  .verschieben {
     transform: translateX(0px);
   }
 
-  .absprungSection{
+  .absprungSection {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -1142,8 +1107,6 @@ td {
   }
 
   .article {
-    /* justify-content: center !important;
-              align-items: center !important; */
     flex-direction: column !important;
     max-width: 70% !important;
   }
@@ -1151,10 +1114,6 @@ td {
   .single-content-container {
     height: 65vh;
   }
-
-  /* .sticky {
-      position: relative !important;
-    } */
 
   .text {
     padding-top: 1.25rem;
@@ -1431,7 +1390,6 @@ td {
   .hidden-box p {
     width: 70vw !important;
     height: auto;
-    /* padding: 0 10px !important; */
   }
 
   /* 10 / 10 / 10 */
@@ -1549,8 +1507,6 @@ td {
   }
 
   .article {
-    /* justify-content: center !important;
-            align-items: center !important; */
     flex-direction: column !important;
     max-width: 90% !important;
   }
@@ -1558,10 +1514,6 @@ td {
   .single-content-container {
     height: 100vh;
   }
-
-  /* .sticky {
-    position: relative !important;
-  } */
 
   .text {
     padding-top: 1.25rem;
@@ -1595,21 +1547,6 @@ td {
     bottom: -4% !important;
   }
 
-  /* Quellen */
-
-  /* .quellen-header h2 {
-    font-size: 33px;
-  }
-
-  .quellen-container,
-  .quellen-content {
-    width: 90vw;
-  }
-
-  .quellen-arrow {
-    height: 15%;
-  } */
-
   .circle-section h2 {
     width: 90vw !important;
     padding-bottom: 18px;
@@ -1622,84 +1559,11 @@ td {
     scale: 0.6;
   }
 
-  /* .circle-element .fs-16,
-  .hidden-box p{
-    font-size: 20px !important;
-  }
-
-  .circle-element img {
-    width: 65px;
-    height: 65px;
-  }
-
-  .hidden-box h3{
-    font-size: 26px !important;
-  } */
-
-
-  /* Values Beispiel */
-
-  /* .beispiel-values, .beispiel-paradox, .beispiel-hats, .beispiel-10{
-    height: 100%;
-    width: 90%;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left-side {
-    min-width: 90%;
-    border-right: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 6vh 0;
-  }
-
-  .left-side h2 {
-    text-align: center;
-  }
-
-  .box-values {
-    width: 90%;
-  }
-
-  .row {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0 10px;
-  }
-
-  .small-box {
-    width: 40vw;
-    height: 70px;
-
-    padding: 5px;
-    margin-right: 0px;
-  }
-
-  .beispiel-section {
-    height: auto !important;
-    margin: 10vh 0;
-  }
-
-
-  #beispiel-section-values .radial-gradient-container {
-    height: 100vh;
-  } */
-
   /* Nav Box */
   .nav-box-container {
     width: 90%;
     overflow-x: hidden;
   }
-
-  /* .nav-box .fs-16{
-    font-size: 11px !important;
-    max-width: 70px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-  } */
 
   /*+++++++++++++++++++++++ Reasons Iphone Beispiele +++++++++++++++++++++++*/
 
@@ -1734,16 +1598,6 @@ td {
   .analysis {
     scale: 1;
   }
-
-  /* .stamina-bar-outer {
-    width: 12px;
-    margin-top: 80px;
-    margin-left: 20px;
-  }
-
-  .side-box img {
-    padding-bottom: 12px;
-  } */
 
   .paradox {
     width: 37vw !important;
@@ -1793,7 +1647,6 @@ td {
   .hidden-box p {
     width: 85vw !important;
     height: auto;
-    /* padding: 0 10px !important; */
   }
 
   /* 10 / 10 / 10 */
@@ -1815,18 +1668,6 @@ td {
     width: 90vw;
   }
 
-  /* pro kontra */
-
-  /* .table-pc td {
-  height: 65px;
-}
-
-.table-h3 {
-  font-size: 22px;
-  margin: 0;
-  padding-bottom: 0.5rem;
-} */
-
   /* ice */
 
   .ice-table-h3 {
@@ -1838,43 +1679,6 @@ td {
   table td {
     height: 10vh;
   }
-
-  /* .ice-input-mobile{
-  width: 100%;
-}
-
-tr:nth-child(1) td:nth-child(1),
-tr:nth-child(1) td:nth-child(2){
-  border-top: none;
-}
-
-tr:nth-child(1) td:nth-child(1),
-tr:nth-child(1) td:nth-child(2){
-  border-top: none;
-}
-
-tr:nth-child(5) td:nth-child(1),
-tr:nth-child(5) td:nth-child(2){
-  border-bottom: none;
-} */
-
-  /* ausschlussverfahren */
-
-  /* .paradox-headline{
-  padding-bottom: 1.25rem !important;
-}
-
-.row-paradox{
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.row-paradox .small-box:nth-child(1),
-.row-paradox .small-box:nth-child(3){
-  margin-right: 10px !important;
-} */
 
   /*+++++++++++++++++++++++ Tipps Iphone Beispiele +++++++++++++++++++++++*/
 
@@ -1890,7 +1694,6 @@ tr:nth-child(5) td:nth-child(2){
   .scale-08 {
     scale: 1;
   }
-
 
   /* Navbar mobile */
 
