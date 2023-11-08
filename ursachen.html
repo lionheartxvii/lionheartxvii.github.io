@@ -765,7 +765,7 @@
 
             <div class="buffer"></div>
 
-            <div style="width: 70%; height: auto;">
+            <div>
                 <div class="illustration verschieben" id="fiveHatCurio">
                     <lottie-player autoplay loop src="./json/methoden-illu.json">
                     </lottie-player>
@@ -983,9 +983,6 @@
                 train.play();
                 train.setLooping(true);
                 train.resize();
-                let trainContainer = document.getElementsByClassName("train-container")[0];
-                trainContainer.style.width = "100%";
-                trainContainer.style.height = "100%";
             });
         };
 
@@ -994,8 +991,6 @@
                 sunkenCost.play();
                 sunkenCost.setLooping(true);
                 sunkenCost.resize();
-                let sunkenContainer = document.getElementsByClassName("sunken-cost")[0];
-                sunkenContainer.style.width = "70%";
             });
         };
 
