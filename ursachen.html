@@ -991,6 +991,9 @@
 
         function startFishing(entries, observer) {
             entries.forEach(entry => {
+                sunkenCost.play();
+                sunkenCost.setLooping(true);
+                sunkenCost.resize();
                 let sunkenContainer = document.getElementsByClassName("sunken-cost")[0];
                 sunkenContainer.style.width = "70%";
             });
