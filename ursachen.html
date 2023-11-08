@@ -653,7 +653,7 @@
                 </div>
 
 
-                <!-- <div style="width: 100%; height: auto;">
+                <div style="width: 100%; height: auto; overflow: hidden">
                     <div class="curious-curio">
                         <lottie-interactive id="curious-curio" path="./json/bandwagon-curio.json"
                             interaction="play-on-show"></lottie-interactive>
@@ -664,7 +664,7 @@
                             <lottie-player id="trainAnimation" src="./json/bandwagon.json"></lottie-player>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
             </div>
 
@@ -971,7 +971,7 @@
 
 
         const train = document.querySelector('#trainAnimation');
-        const sunkenCost = document.querySelector('#sunkenCost');
+        // const sunkenCost = document.querySelector('#sunkenCost');
 
         function startTrain(entries, observer) {
             entries.forEach(entry => {
@@ -981,13 +981,13 @@
             });
         };
 
-        function startFishing(entries, observer) {
-            entries.forEach(entry => {
-                sunkenCost.play();
-                sunkenCost.setLooping(true);
-                sunkenCost.resize();
-            });
-        };
+        // function startFishing(entries, observer) {
+        //     entries.forEach(entry => {
+        //         sunkenCost.play();
+        //         sunkenCost.setLooping(true);
+        //         sunkenCost.resize();
+        //     });
+        // };
 
 const options = {
   root: null,
@@ -996,9 +996,9 @@ const options = {
 };
 
 const observerTrain = new IntersectionObserver(startTrain, options);
-const observerFishing = new IntersectionObserver(startFishing, options);
+// const observerFishing = new IntersectionObserver(startFishing, options);
 observerTrain.observe(train);
-observerFishing.observe(sunkenCost);
+// observerFishing.observe(sunkenCost);
 
     </script>
 

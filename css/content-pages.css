@@ -1582,6 +1582,11 @@ td {
     width: 90%;
   }
 
+  .train-container{
+    width: 100vw !important;
+    overflow: hidden;
+  }
+
   .train {
     scale: 2.6;
     margin-top: 0vh;
