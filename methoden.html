@@ -1408,6 +1408,15 @@
             document.getElementById(`summary_${row}`).textContent = totalScore;
         }
 
+        document.getElementById('uname').addEventListener('input', function () {
+            var value = this.value;
+            if (!value.match(/^\d+$/) || value < 1 || value > 10) {
+                this.setCustomValidity('Bitte geben Sie eine Zahl zwischen 1 und 10 ein.');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+
         // Quelle slee423 (2018, 19. April) unter:
         //https://stackoverflow.com/questions/49923588/input-type-number-with-pattern-0-9-allows-letters-in-firefox
         function preventNonNumericalInput(e) {
@@ -1418,6 +1427,7 @@
             if (!charStr.match(/^[0-9]+$/))
                 e.preventDefault();
         }
+
 
         // Quelle: Front-End Developer. Funktion: 10/10/10 Bildwechsel
         const basePath = "assets/icons/";
@@ -1439,15 +1449,6 @@
                     console.error("unexpected case on changeImage");
             }
         }
-
-        document.getElementById('uname').addEventListener('input', function () {
-            var value = this.value;
-            if (!value.match(/^\d+$/) || value < 1 || value > 10) {
-                this.setCustomValidity('Bitte geben Sie eine Zahl zwischen 1 und 10 ein.');
-            } else {
-                this.setCustomValidity('');
-            }
-        });
     </script>
 
 </body>
