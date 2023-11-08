@@ -658,7 +658,7 @@
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
                                         class="table-score" oninput="updateInputSummary(this, 'pro_score')"
-                                        onkeypress="preventNonNumericalInput(event)" /></td>
+                                        onkeypress="preventNonNumericalInputProContra(event)" /></td>
                             </tr>
 
 
@@ -670,7 +670,7 @@
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
                                         class="table-score" oninput="updateInputSummary(this, 'pro_score')"
-                                        onkeypress="preventNonNumericalInput(event)" /></td>
+                                        onkeypress="preventNonNumericalInputProContra(event)" /></td>
                             </tr>
 
                             <tr>
@@ -681,7 +681,7 @@
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
                                         class="table-score" oninput="updateInputSummary(this, 'pro_score')"
-                                        onkeypress="preventNonNumericalInput(event)" /></td>
+                                        onkeypress="preventNonNumericalInputProContra(event)" /></td>
                             </tr>
 
                             <tr>
@@ -692,7 +692,7 @@
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
                                         class="table-score" oninput="updateInputSummary(this, 'pro_score')"
-                                        onkeypress="preventNonNumericalInput(event)" /></td>
+                                        onkeypress="preventNonNumericalInputProContra(event)" /></td>
                             </tr>
 
 
@@ -705,7 +705,7 @@
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
                                         class="table-score" oninput="updateInputSummary(this, 'pro_score')"
-                                        onkeypress="preventNonNumericalInput(event)" /></td>
+                                        onkeypress="preventNonNumericalInputProContra(event)" /></td>
                             </tr>
 
                             <tr>
@@ -716,7 +716,7 @@
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
                                         class="table-score" oninput="updateInputSummary(this, 'pro_score')"
-                                        onkeypress="preventNonNumericalInput(event)" /></td>
+                                        onkeypress="preventNonNumericalInputProContra(event)" /></td>
                             </tr>
 
                             <tr>
@@ -727,7 +727,7 @@
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
                                         class="table-score" oninput="updateInputSummary(this, 'pro_score')"
-                                        onkeypress="preventNonNumericalInput(event)" /></td>
+                                        onkeypress="preventNonNumericalInputProContra(event)" /></td>
                             </tr>
 
                             <tr>
@@ -738,7 +738,7 @@
                                 <td>
                                     <input type="number" id="uname" name="pro_score" min="-5" max="5"
                                         class="table-score" oninput="updateInputSummary(this, 'pro_score')"
-                                        onkeypress="preventNonNumericalInput(event)" /></td>
+                                        onkeypress="preventNonNumericalInputProContra(event)" /></td>
                             </tr>
 
                             <tr>
@@ -1425,6 +1425,15 @@
             var charStr = String.fromCharCode(charCode);
 
             if (!charStr.match(/^[0-9]+$/))
+                e.preventDefault();
+        }
+
+        function preventNonNumericalInputProContra(e) {
+            e = e || window.event;
+            var charCode = (typeof e.which == "undefined") ? e.keyCode : e.which;
+            var charStr = String.fromCharCode(charCode);
+
+            if (!charStr.match(/^[0-9-]+$/))
                 e.preventDefault();
         }
 

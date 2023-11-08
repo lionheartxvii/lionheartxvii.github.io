@@ -585,9 +585,10 @@
 
                 <div class="beispiel-section">
 
-                    <div class="beispiel-paradox inner-content analysis">
+                    <div class="beispiel-paradox inner-content analysis pointer">
                         <div class="sunken-cost">
-                            <lottie-interactive id="sunkenCost" path="./json/sunken-cost.json" interaction="click"></lottie-interactive>
+                            <lottie-interactive id="sunkenCost" path="./json/sunken-cost.json" interaction="click">
+                            </lottie-interactive>
                         </div>
                     </div>
 
@@ -971,7 +972,6 @@
 
 
         const train = document.querySelector('#trainAnimation');
-        // const sunkenCost = document.querySelector('#sunkenCost');
 
         function startTrain(entries, observer) {
             entries.forEach(entry => {
@@ -981,25 +981,14 @@
             });
         };
 
-        // function startFishing(entries, observer) {
-        //     entries.forEach(entry => {
-        //         sunkenCost.play();
-        //         sunkenCost.setLooping(true);
-        //         sunkenCost.resize();
-        //     });
-        // };
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
 
-const options = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.5
-};
-
-const observerTrain = new IntersectionObserver(startTrain, options);
-// const observerFishing = new IntersectionObserver(startFishing, options);
-observerTrain.observe(train);
-// observerFishing.observe(sunkenCost);
-
+        const observerTrain = new IntersectionObserver(startTrain, options);
+        observerTrain.observe(train);
     </script>
 
 </body>
