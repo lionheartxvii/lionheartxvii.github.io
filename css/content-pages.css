@@ -634,6 +634,10 @@ table td {
   visibility: hidden;
 }
 
+#fiveHatCurio{
+  scale: 0.9;
+}
+
 .icecream {
   scale: 0.4;
 }
